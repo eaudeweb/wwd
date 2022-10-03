@@ -1,0 +1,90 @@
+#!/bin/sh
+
+# Set Colors
+bold=$(tput bold)
+underline=$(tput sgr 0 1)
+reset=$(tput sgr0)
+
+purple=$(tput setaf 171)
+red=$(tput setaf 1)
+green=$(tput setaf 76)
+tan=$(tput setaf 3)
+blue=$(tput setaf 38)
+
+# Headers and  Logging
+e_header() {
+    printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@"
+}
+e_arrow() {
+    printf "➜ $@\n"
+}
+e_success() {
+    printf "${green}✔ %s${reset}\n" "$@"
+}
+e_error() {
+    printf "${red}✖ %s${reset}\n" "$@"
+}
+e_warning() {
+    printf "${tan}➜ %s${reset}\n" "$@"
+}
+e_underline() {
+    printf "${underline}${bold}%s${reset}\n" "$@"
+}
+e_bold() {
+    printf "${bold}%s${reset}\n" "$@"
+}
+e_note() {
+    printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
+}
+
+
+PROJECT=`php -r "echo dirname(dirname(dirname(realpath('$0'))));"`
+STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep "\/modules/custom\/" | grep "\\.install\|\\.module\|\\.inc\|\\.php\|\\.yml\|\\.js"`
+#STAGED_FILES_CMD=`git diff --name-only --diff-filter=ACMR HEAD`
+
+# Determine if a file list is passed
+if [ "$#" -eq 1 ]
+then
+  oIFS=$IFS
+  IFS='
+  '
+  SFILES="$1"
+  IFS=$oIFS
+fi
+SFILES=${SFILES:-$STAGED_FILES_CMD}
+
+e_header "Running PHP Lint..."
+for FILE in $SFILES
+do
+  docker run --rm -v $(pwd):/data cytopia/phplint $FILE
+  if [ $? != 0 ]
+    then
+      e_error "Fix the error before commit."
+      exit 1
+  fi
+  FILES="$FILES $FILE"
+done
+
+if [ "$FILES" != "" ]
+then
+  e_header "Running Drupal Code Sniffer..."
+  # TODO: validate and update required extensions.
+  docker run --rm -v $(pwd):/work skilldlabs/docker-phpcs-drupal phpcs --colors --ignore=.md,*.png,*.svg,*/dist/*,*.min.js,*.min.css,*/libraries/*,settings* --standard=Drupal,DrupalPractice,DrupalSecure --encoding=utf-8 -p --extensions=php,install $FILES
+  if [ $? != 0 ]
+    then
+      e_error "Fix the error(s) before commit."
+      exit 1
+    else
+      e_success "Congrats, all good =)"
+  fi
+
+#  e_header "Running CS Drupal Best Practices...(includes warnings)"
+#  docker run --rm -v $(pwd):/work skilldlabs/docker-phpcs-drupal phpcs --standard=DrupalPractice --encoding=utf-8 -p $FILES
+#  if [ $? != 0 ]
+#  then
+#    echo "Fix the error before commit."
+#    exit 1
+#  fi
+fi
+
+exit $?
