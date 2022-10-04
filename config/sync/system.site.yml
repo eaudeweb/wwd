@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 8f642508-97a8-4420-aba6-4eb1b8079cbf
+name: 'Official website of UN World Wildlife Day'
+mail: nick@selk.global
+slogan: ''
+page:
+  403: ''
+  404: /search404
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
