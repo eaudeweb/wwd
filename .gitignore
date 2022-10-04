@@ -77,3 +77,5 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+robo.yml
