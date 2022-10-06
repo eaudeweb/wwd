@@ -1,0 +1,19 @@
+uuid: ba3ad2d1-1875-42a8-848c-070725419ffe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_message_position
+    - node.type.message
+id: node.message.field_message_position
+field_name: field_message_position
+entity_type: node
+bundle: message
+label: Position
+description: 'E.x John Doe, CEO of John Doe Enterprise'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

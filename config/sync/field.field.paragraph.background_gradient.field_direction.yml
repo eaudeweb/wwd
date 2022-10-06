@@ -1,0 +1,23 @@
+uuid: bca727ff-0e05-4663-9684-3965328471b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_direction
+    - paragraphs.paragraphs_type.background_gradient
+  module:
+    - options
+id: paragraph.background_gradient.field_direction
+field_name: field_direction
+entity_type: paragraph
+bundle: background_gradient
+label: Direction
+description: 'Only works if gradient type is set to Linear'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'to bottom right'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

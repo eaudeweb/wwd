@@ -1,0 +1,72 @@
+uuid: 0e8c1835-fd9e-4f41-9842-a6254b805b14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.background_gradient.field_background_color
+    - field.field.paragraph.background_gradient.field_direction
+    - field.field.paragraph.background_gradient.field_gradient_first_color
+    - field.field.paragraph.background_gradient.field_gradient_second_colour
+    - field.field.paragraph.background_gradient.field_gradient_type
+    - field.field.paragraph.background_gradient.field_use_gradient
+    - paragraphs.paragraphs_type.background_gradient
+  module:
+    - color_field
+    - options
+id: paragraph.background_gradient.default
+targetEntityType: paragraph
+bundle: background_gradient
+mode: default
+content:
+  field_background_color:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_direction:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_gradient_first_color:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_gradient_second_colour:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_gradient_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_use_gradient:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

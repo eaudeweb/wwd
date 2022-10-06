@@ -1,0 +1,25 @@
+uuid: 621bf703-5b2d-4db3-8b1f-d90e604ff34a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_text_block
+    - field.field.block_content.video_text_block.field_component
+  module:
+    - entity_reference_revisions
+id: block_content.video_text_block.default
+targetEntityType: block_content
+bundle: video_text_block
+mode: default
+content:
+  field_component:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

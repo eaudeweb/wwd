@@ -1,0 +1,23 @@
+uuid: fe73cb91-e922-4def-a8b2-99e19c8b9fd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.message
+  module:
+    - text
+id: node.message.body
+field_name: body
+entity_type: node
+bundle: message
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,16 @@
+uuid: 8079749c-00c5-48e6-964d-fb7df5b22afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.message
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.message
+target_entity_type_id: node
+target_bundle: message
+default_langcode: site_default
+language_alterable: true

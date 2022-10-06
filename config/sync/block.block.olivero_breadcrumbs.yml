@@ -6,6 +6,9 @@ dependencies:
     - system
   theme:
     - olivero
+third_party_settings:
+  block_class:
+    classes: null
 _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: olivero_breadcrumbs

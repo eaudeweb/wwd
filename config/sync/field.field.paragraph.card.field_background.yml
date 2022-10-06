@@ -1,0 +1,34 @@
+uuid: c45e2b53-edb1-4c03-b5e8-0711555b9e8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background
+    - paragraphs.paragraphs_type.background_gradient
+    - paragraphs.paragraphs_type.card
+  module:
+    - entity_reference_revisions
+id: paragraph.card.field_background
+field_name: field_background
+entity_type: paragraph
+bundle: card
+label: Background
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      background_gradient: background_gradient
+    negate: 0
+    target_bundles_drag_drop:
+      background_gradient:
+        weight: 3
+        enabled: true
+      card:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

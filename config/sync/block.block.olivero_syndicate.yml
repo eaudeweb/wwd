@@ -6,6 +6,9 @@ dependencies:
     - node
   theme:
     - olivero
+third_party_settings:
+  block_class:
+    classes: null
 _core:
   default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
 id: olivero_syndicate

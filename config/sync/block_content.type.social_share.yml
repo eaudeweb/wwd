@@ -1,0 +1,8 @@
+uuid: 04e12d9a-a6cf-404f-84c8-393aa5721e41
+langcode: en
+status: true
+dependencies: {  }
+id: social_share
+label: 'Social Share'
+revision: 1
+description: 'Contains title/description/social media share block'

@@ -1,0 +1,30 @@
+uuid: 8247eb3a-5673-492f-8150-b515d7b588f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_direction
+field_name: field_direction
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'to bottom right'
+      label: Diagonal
+    -
+      value: default
+      label: 'Top to Bottom'
+    -
+      value: 'to right'
+      label: 'Left to Right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

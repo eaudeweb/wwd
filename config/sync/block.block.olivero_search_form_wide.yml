@@ -6,6 +6,9 @@ dependencies:
     - search
   theme:
     - olivero
+third_party_settings:
+  block_class:
+    classes: null
 _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
 id: olivero_search_form_wide

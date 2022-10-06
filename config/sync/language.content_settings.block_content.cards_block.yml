@@ -1,0 +1,16 @@
+uuid: 4703f502-79da-4a0b-b946-b275a55a3700
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cards_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.cards_block
+target_entity_type_id: block_content
+target_bundle: cards_block
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,16 @@
+uuid: 2bff3907-8a9f-489a-a8cc-a23b0985927b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.important_messages
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.important_messages
+target_entity_type_id: block_content
+target_bundle: important_messages
+default_langcode: site_default
+language_alterable: true

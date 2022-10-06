@@ -1,0 +1,14 @@
+uuid: 90426d59-ece7-4fc8-acf9-4d12609b7d61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.multimedia
+id: node_type_multimedia
+entity_type_id: node_type
+entity_id: multimedia
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

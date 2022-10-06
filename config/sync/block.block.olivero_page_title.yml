@@ -4,6 +4,9 @@ status: true
 dependencies:
   theme:
     - olivero
+third_party_settings:
+  block_class:
+    classes: null
 _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: olivero_page_title

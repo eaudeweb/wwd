@@ -1,0 +1,61 @@
+uuid: dc076cb2-b79e-48f1-a754-971cf41a404c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.important_messages
+    - field.storage.block_content.field_important_messages
+    - views.view.messages
+  module:
+    - viewsreference
+id: block_content.important_messages.field_important_messages
+field_name: field_important_messages
+entity_type: block_content
+bundle: important_messages
+label: 'Important Messages'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: slider_block
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 6fccc053-f77d-4b0c-af42-eb8a809864e5
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    embed: embed
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    messages: 0
+    multimedia: 0
+    partners: 0
+    redirect: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

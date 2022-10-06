@@ -1,0 +1,23 @@
+uuid: 2510d75c-8749-4b12-90ef-caa4f8ce5678
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid_type
+    - paragraphs.paragraphs_type.video_text
+  module:
+    - options
+id: paragraph.video_text.field_grid_type
+field_name: field_grid_type
+entity_type: paragraph
+bundle: video_text
+label: 'Grid Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: row
+default_value_callback: ''
+settings: {  }
+field_type: list_string

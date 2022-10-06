@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_media_image
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_yoast_seo
     - node.type.page
@@ -18,6 +19,11 @@ targetEntityType: node
 bundle: page
 mode: teaser
 content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
   body:
     type: text_summary_or_trimmed
     label: hidden
@@ -30,6 +36,7 @@ content:
     weight: 101
     region: content
 hidden:
+  field_media_image: true
   field_meta_tags: true
   field_yoast_seo: true
   langcode: true

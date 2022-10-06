@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.full_html
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
@@ -10,6 +12,7 @@ dependencies:
     - comment
     - contextual
     - file
+    - filter
     - node
     - path
     - system
@@ -18,7 +21,7 @@ dependencies:
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
 id: content_editor
-label: 'Content editor'
+label: 'Content manager'
 weight: 2
 is_admin: false
 permissions:
@@ -41,6 +44,8 @@ permissions:
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'use text format basic_html'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

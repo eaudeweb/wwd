@@ -1,0 +1,27 @@
+uuid: 2bfd7241-32ee-4039-b9a9-164f6af2fb05
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_grid_type
+field_name: field_grid_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: row
+      label: Row
+    -
+      value: column
+      label: Column
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
