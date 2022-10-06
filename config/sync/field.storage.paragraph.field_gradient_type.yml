@@ -1,0 +1,27 @@
+uuid: 6ffbf31a-5b3b-4535-921c-2fba643a2923
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_gradient_type
+field_name: field_gradient_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: linear-gradient
+      label: Linear
+    -
+      value: radial-gradient
+      label: Radial
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

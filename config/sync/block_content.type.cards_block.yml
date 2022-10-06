@@ -1,0 +1,8 @@
+uuid: 8e9f346e-4dd0-4268-bb0f-18dc3d3824ff
+langcode: en
+status: true
+dependencies: {  }
+id: cards_block
+label: 'Cards Block'
+revision: 1
+description: ''

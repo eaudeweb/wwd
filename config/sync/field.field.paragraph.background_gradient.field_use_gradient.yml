@@ -1,0 +1,23 @@
+uuid: 9e81538e-a316-4bd4-a2a4-d94f99f5db51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_gradient
+    - paragraphs.paragraphs_type.background_gradient
+id: paragraph.background_gradient.field_use_gradient
+field_name: field_use_gradient
+entity_type: paragraph
+bundle: background_gradient
+label: 'Use Gradient'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

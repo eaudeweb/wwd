@@ -1,0 +1,25 @@
+uuid: 6adeb258-224e-4539-90ae-ee2edba58ba0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.message
+id: node.message.field_weight
+field_name: field_weight
+entity_type: node
+bundle: message
+label: Weight
+description: 'Set weight for this message to appear in a certain order on listing pages.'
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 1
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

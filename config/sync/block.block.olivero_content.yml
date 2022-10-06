@@ -6,12 +6,15 @@ dependencies:
     - system
   theme:
     - olivero
+third_party_settings:
+  block_class:
+    classes: null
 _core:
   default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
 id: olivero_content
 theme: olivero
 region: content
-weight: 0
+weight: -6
 provider: null
 plugin: system_main_block
 settings:

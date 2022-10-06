@@ -1,0 +1,10 @@
+uuid: 34e54db4-7a67-4f68-92a9-3d80b3c598f7
+langcode: en
+status: true
+dependencies: {  }
+id: background_gradient
+label: 'Background / gradient'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,41 @@
+uuid: 6457448e-1255-4c1e-b211-71f7478dda2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.message.body
+    - field.field.node.message.field_media_image
+    - field.field.node.message.field_message_date
+    - field.field.node.message.field_message_position
+    - field.field.node.message.field_video
+    - field.field.node.message.field_weight
+    - node.type.message
+  module:
+    - text
+    - user
+id: node.message.teaser
+targetEntityType: node
+bundle: message
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_media_image: true
+  field_message_date: true
+  field_message_position: true
+  field_video: true
+  field_weight: true
+  langcode: true

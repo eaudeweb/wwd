@@ -1,0 +1,48 @@
+uuid: d5320377-f2ae-48e4-a24c-b485e7a6425f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_share
+    - field.field.block_content.social_share.body
+    - field.field.block_content.social_share.field_background
+    - field.field.block_content.social_share.field_title
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.social_share.default
+targetEntityType: block_content
+bundle: social_share
+mode: default
+content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_background:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

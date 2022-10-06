@@ -1,0 +1,22 @@
+uuid: e0de0901-c255-4275-9454-6bc2b0ced893
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gradient_second_colour
+    - paragraphs.paragraphs_type.background_gradient
+  module:
+    - color_field
+id: paragraph.background_gradient.field_gradient_second_colour
+field_name: field_gradient_second_colour
+entity_type: paragraph
+bundle: background_gradient
+label: 'Gradient second colour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

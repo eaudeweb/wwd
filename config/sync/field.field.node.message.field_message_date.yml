@@ -1,0 +1,21 @@
+uuid: c209ce59-d5ff-479c-910e-25c68e3a49e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_message_date
+    - node.type.message
+  module:
+    - datetime
+id: node.message.field_message_date
+field_name: field_message_date
+entity_type: node
+bundle: message
+label: 'Message Date'
+description: 'Provide a date for that message to display, otherwise, the published date for this message will be displayed.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

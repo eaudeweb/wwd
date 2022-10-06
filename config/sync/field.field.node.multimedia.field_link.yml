@@ -1,0 +1,23 @@
+uuid: 607a9a02-201b-4ba9-943f-015f3d861676
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.multimedia
+  module:
+    - link
+id: node.multimedia.field_link
+field_name: field_link
+entity_type: node
+bundle: multimedia
+label: 'CTA Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

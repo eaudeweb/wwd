@@ -1,0 +1,14 @@
+uuid: 8595e468-5581-4931-868a-ffeb7cc023c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.message
+id: node_type_message
+entity_type_id: node_type
+entity_id: message
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

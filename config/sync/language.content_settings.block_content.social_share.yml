@@ -1,0 +1,16 @@
+uuid: 1083287d-0df7-4100-96dc-0124ced21079
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_share
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.social_share
+target_entity_type_id: block_content
+target_bundle: social_share
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,22 @@
+uuid: 027eef4c-a5fd-4b03-83b0-658c626fd255
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gradient_first_color
+    - paragraphs.paragraphs_type.background_gradient
+  module:
+    - color_field
+id: paragraph.background_gradient.field_gradient_first_color
+field_name: field_gradient_first_color
+entity_type: paragraph
+bundle: background_gradient
+label: 'Gradient first color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

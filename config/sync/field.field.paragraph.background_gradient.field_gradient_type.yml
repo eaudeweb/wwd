@@ -1,0 +1,23 @@
+uuid: 2ff280ee-4c86-4229-b03a-438ff7422af3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gradient_type
+    - paragraphs.paragraphs_type.background_gradient
+  module:
+    - options
+id: paragraph.background_gradient.field_gradient_type
+field_name: field_gradient_type
+entity_type: paragraph
+bundle: background_gradient
+label: 'Gradient Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: linear-gradient
+default_value_callback: ''
+settings: {  }
+field_type: list_string
