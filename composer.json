@@ -45,7 +45,8 @@
         "drupal/webform": "^6.1",
         "drupal/yearonly": "^9.0",
         "drupal/yoast_seo": "^1.7",
-        "drush/drush": "^11"
+        "drush/drush": "^11",
+        "eaudeweb/heavy-lifter": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"

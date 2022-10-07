@@ -31,4 +31,5 @@ content:
     weight: 1
     region: content
 hidden:
+  addtoany: true
   langcode: true

@@ -33,6 +33,7 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_media_image: true
   field_message_date: true
   field_message_position: true
