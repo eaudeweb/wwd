@@ -1,0 +1,155 @@
+# Libraries for the configuration the Eau de Web Theme theme.
+
+global-styling:
+  css:
+    theme:
+      css/root.css: {}
+      css/reboot.css: {}
+      css/style.css: {}
+  js:
+    js/script.js: {}
+
+theme-fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css2?family=Mulish&family=Raleway:wght@600;700;900&display=swap': { type: external, minified: true }
+
+js-latest:
+  version: '5.2.2'
+  js:
+    https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js: { type: external, minified: true }
+  dependencies:
+    - core/popperjs
+
+# Components.
+bc--accordion:
+  css:
+    component:
+      css/components/accordion.css: {}
+
+# bc--alert:
+#   css:
+#     component:
+#       css-sass/bootstrap/alert.css: {}
+#   dependencies:
+#     - edwt/bc--close
+
+# bc--toasts:
+#   css:
+#     component:
+#       css-sass/bootstrap/toasts.css: {}
+#   js:
+#     js/toast.js: {}
+#   dependencies:
+#     - edwt/bc--close
+#     - core/drupal
+
+# bc--badge:
+#   css:
+#     component:
+#       css-sass/bootstrap/badge.css: {}
+
+# bc--breadcrumb:
+#   css:
+#     component:
+#       css-sass/bootstrap/breadcrumb.css: {}
+
+# bc--button-group:
+#   css:
+#     component:
+#       css-sass/bootstrap/button-group.css: {}
+
+# bc--card:
+#   css:
+#     component:
+#       css-sass/bootstrap/card.css: {}
+
+# bc--carousel:
+#   css:
+#     component:
+#       css-sass/bootstrap/carousel.css: {}
+
+# bc--close:
+#   css:
+#     component:
+#       css-sass/bootstrap/close.css: {}
+
+# bc--dropdowns:
+#   css:
+#     component:
+#       css-sass/bootstrap/dropdowns.css: {}
+
+# bc--forms:
+#   css:
+#     component:
+#       css-sass/bootstrap/forms.css: {}
+
+# bc--list-group:
+#   css:
+#     component:
+#       css-sass/bootstrap/list-group.css: {}
+
+# bc--modal:
+#   css:
+#     component:
+#       css-sass/bootstrap/modal.css: {}
+#   dependencies:
+#     - edwt/bc--close
+
+# bc--nav:
+#   css:
+#     component:
+#       css-sass/bootstrap/nav.css: {}
+
+# bc--navbar:
+#   css:
+#     component:
+#       css-sass/bootstrap/navbar.css: {}
+
+# bc--pagination:
+#   css:
+#     component:
+#       css-sass/bootstrap/pagination.css: {}
+
+# bc--popover:
+#   css:
+#     component:
+#       css-sass/bootstrap/popover.css: {}
+
+# bc--progress:
+#   css:
+#     component:
+#       css-sass/bootstrap/progress.css: {}
+
+# bc--spinner:
+#   css:
+#     component:
+#       css-sass/bootstrap/spinner.css: {}
+
+# bc--table:
+#   css:
+#     component:
+#       css-sass/bootstrap/table.css: {}
+
+# bc--tooltip:
+#   css:
+#     component:
+#       css-sass/bootstrap/tooltip.css: {}
+
+# Theme layout
+t--layout:
+  css:
+    layout:
+      css-sass/layout/layout.css: {}
+
+# # Custom layout
+# cl--layout:
+#   css:
+#     layout:
+#       css-sass/layout/layout.css: {}
+
+# # Custom library.
+# cl--custom:
+#   css:
+#     layout:
+#       css-sass/custom/custom.css: {}

@@ -1,0 +1,140 @@
+/* Base styles */
+
+.accordion {
+  --ba-color:;
+  --ba-bg:;
+  --ba-transition:($accordion-transition);
+  --ba-border-color: ($accordion-border-color);
+  --ba-border-width: (accordion-border-width);
+  --ba-border-radius: (accordion-border-radius);
+  --ba-inner-border-radius: (accordion-inner-border-radius);
+  --ba-btn-padding-x: (accordion-button-padding-x);
+  --ba-btn-padding-y: (accordion-button-padding-y);
+  --ba-btn-color: (accordion-button-color);
+  --ba-btn-bg: (accordion-button-bg);
+  --ba-btn-icon: (escape-svg($accordion-button-icon));
+  --ba-btn-icon-width: (accordion-icon-width);
+  --ba-btn-icon-transform: (accordion-icon-transform);
+  --ba-btn-icon-transition: (accordion-icon-transition);
+  --ba-btn-active-icon: (escape-svg($accordion-button-active-icon));
+  --ba-btn-focus-border-color: (accordion-button-focus-border-color);
+  --ba-btn-focus-box-shadow: (accordion-button-focus-box-shadow);
+  --ba-body-padding-x: (accordion-body-padding-x);
+  --ba-body-padding-y: (accordion-body-padding-y);
+  --ba-active-color: (accordion-button-active-color);
+  --ba-active-bg: (accordion-button-active-bg);
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--ba-btn-padding-y) var(--ba-btn-padding-x);
+  font-size: (font-size);
+  color: var(--ba-btn-color);
+  text-align: left;
+  background-color: var(--ba-btn-bg);
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--ba-transition);
+
+  &:not(.collapsed) {
+    color: var(--ba-active-color);
+    background-color: var(--ba-active-bg);
+    box-shadow: inset 0 calc(-1 * var(--ba-border-width)) 0 var(--ba-border-color);
+
+    &::after {
+      background-image: var(--ba-btn-active-icon);
+      transform: var(--ba-btn-icon-transform);
+    }
+  }
+
+  &::after {
+    flex-shrink: 0;
+    width: var(--ba-btn-icon-width);
+    height: var(--ba-btn-icon-width);
+    margin-left: auto;
+    content: "";
+    background-image: var(--ba-btn-icon);
+    background-repeat: no-repeat;
+    background-size: var(--ba-btn-icon-width);
+    transition: var(--ba-btn-icon-transition);
+  }
+
+  &:hover {
+    z-index: 2;
+  }
+
+  &:focus {
+    z-index: 3;
+    border-color: var(--ba-btn-focus-border-color);
+    outline: 0;
+    box-shadow: var(--ba-btn-focus-box-shadow);
+  }
+}
+
+.accordion-header {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  color: var(--ba-color);
+  background-color: var(--ba-bg);
+  border: var(--ba-border-width) solid var(--ba-border-color);
+
+  &:first-of-type {
+    border-top-left-radius: var(--ba-border-radius);
+    border-top-right-radius: var(--ba-border-radius);
+
+    &.accordion-button {
+      @include border-top-radius(var(--ba-inner-border-radius));
+    }
+  }
+
+  &:not(:first-of-type) {
+    border-top: 0;
+  }
+
+  &:last-of-type {
+    @include border-bottom-radius(var(--ba-border-radius));
+
+    .accordion-button {
+      &.collapsed {
+        @include border-bottom-radius(var(--ba-inner-border-radius));
+      }
+    }
+
+    .accordion-collapse {
+      @include border-bottom-radius(var(--ba-border-radius));
+    }
+  }
+}
+
+.accordion-body {
+  padding: var(--ba-body-padding-y) var(--ba-body-padding-x);
+}
+
+/* Flush accordion items */
+.accordion-flush {
+  & .accordion-collapse {
+    border-width: 0;
+  }
+
+  & .accordion-item {
+    border-right: 0;
+    border-left: 0;
+    @include border-radius(0);
+
+    &:first-child { border-top: 0; }
+    &:last-child { border-bottom: 0; }
+
+    .accordion-button {
+      &,
+      &.collapsed {
+        @include border-radius(0);
+      }
+    }
+  }
+}

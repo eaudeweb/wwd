@@ -1,0 +1,60 @@
+:root {
+  /* // Root and body
+  // @if $font-size-root != null {
+  //   --#{$variable-prefix}root-font-size: #{$font-size-root};
+  // }
+  // --#{$variable-prefix}body-font-size: #{$font-size-base}; */
+  /* --#{$variable-prefix}body-font-weight: #{$font-weight-base};
+  --#{$variable-prefix}body-line-height: #{$line-height-base};
+  --#{$variable-prefix}body-color: #{$body-color};
+  @if $body-text-align != null {
+    --#{$variable-prefix}body-text-align: #{$body-text-align};
+  }
+  --#{$variable-prefix}body-bg: #{$body-bg}; */
+
+  /* Temp. */
+  --spacer: 1rem;
+  --border-width: 1px;
+
+  --font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --small-font-size: .875em;
+
+  --border-radius: .375rem;
+  --border-radius-sm: .25rem;
+  --border-radius-lg: .5rem;
+
+  --hr-margin-y: var(--spacer);
+  --hr-color: inherit;
+  --hr-border-width: var(--border-width);
+  --hr-border-color: transparent;
+  --hr-opacity: 0.25;
+
+  --headings-margin-bottom: .5rem;
+  --headings-font-family: null;
+  --headings-font-style: null;
+  --headings-font-weight: 500;
+  --headings-line-height: 1.2;
+  --headings-color: null;
+
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.5rem;
+  --h5-font-size: 1.25rem;
+  --h6-font-size: 1rem;
+
+  --font-weight-lighter: lighter;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-bolder: bolder;
+
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: var(--c-gray-300);
+  --border-opacity: .75;
+
+  --bg-opacity: 1;
+}

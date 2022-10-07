@@ -1,0 +1,34 @@
+.alignTop {
+  top: 0;
+
+  .toolbar-fixed:not(.toolbar-tray-open) & {
+    top: 39px;
+  }
+
+  .toolbar-fixed.toolbar-horizontal.toolbar-tray-open & {
+    top: 79px;
+  }
+}
+
+.min-height {
+  min-height:100vh;
+
+  .toolbar-fixed:not(.toolbar-tray-open) & {
+    min-height:calc(100vh - 39px);
+  }
+
+  .toolbar-fixed.toolbar-horizontal.toolbar-tray-open & {
+    min-height:calc(100vh - 79px);
+  }
+}
+
+.img-fit {
+  width: 100%;
+  height: 100vh;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

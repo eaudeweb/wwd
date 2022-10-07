@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * WWD Theme override to display a single page.
+ */
+#}
+
+{% set header_attribute = create_attribute() %}
+{% set footer_attribute = create_attribute() %}
+
+{%
+  set header_classes = [
+    'header',
+    navbar.position ? navbar.position,
+    'position-relative',
+  ]
+%}
+
+{%
+  set footer_classes = [
+    'footer',
+    'bg-primary',
+  ]
+%}
+
+{% block wrap_header %}
+  <header
+    {{- header_attribute
+      .setAttribute('id', 'header')
+      .addclass(header_classes)
+    -}}
+  >
+    {% block header %}
+      {%- include '@wwd/components/sections/header/header.html.twig' -%}
+    {% endblock %}
+
+    {{ page.highlighted }}
+    {{ page.title }}
+  </header>
+{% endblock %}
+
+{% block wrap_main %}
+  <main role="main" class="flex-grow-1">
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+  {% block main %}
+    {% include '@wwd/components/sections/main/main.html.twig' %}
+  {% endblock %}
+</main>
+{% endblock %}
+
+{% block wrap_footer %}
+  <footer
+    {{- footer_attribute
+      .setAttribute('id', 'footer')
+      .addclass(footer_classes)
+    -}}
+  >
+    {% block footer %}
+      {% include '@wwd/components/sections/footer/footer.html.twig' %}
+    {% endblock %}
+  </footer>
+{% endblock %}
