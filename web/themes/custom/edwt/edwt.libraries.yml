@@ -5,6 +5,14 @@ global-styling:
     theme:
       css/root.css: {}
       css/reboot.css: {}
+      css/type.css: {}
+      css/api.css: {}
+      css/containers.css: {}
+      css/rows.css: {}
+      css/buttons.css: {}
+      css/transitions.css: {}
+      css/images.css: {}
+      css/helpers.css: {}
       css/style.css: {}
   js:
     js/script.js: {}
