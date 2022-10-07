@@ -1,0 +1,25 @@
+uuid: 8bbf6b0e-aa1e-417b-a6e2-aa7fb2246000
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multimedia
+    - field.storage.block_content.field_poster
+id: block_content.multimedia.field_poster
+field_name: field_poster
+entity_type: block_content
+bundle: multimedia
+label: Posters
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: multimedia_poster_reference
+      display_name: entity_reference
+      arguments: {  }
+field_type: entity_reference

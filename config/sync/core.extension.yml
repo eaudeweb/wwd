@@ -88,6 +88,7 @@ module:
   webform: 0
   webform_submission_export_import: 0
   webform_ui: 0
+  wwd_core: 0
   yearonly: 0
   yoast_seo: 0
   pathauto: 1

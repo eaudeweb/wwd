@@ -1,0 +1,11 @@
+{
+  "name": "drupal/wwd_core",
+  "description": "WWD Core module",
+  "type": "drupal-module",
+  "license": "proprietary",
+  "authors": [],
+  "keywords": [
+    "wwd",
+    "worldlifeday"
+  ]
+}

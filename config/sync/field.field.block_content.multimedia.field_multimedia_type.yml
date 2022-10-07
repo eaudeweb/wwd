@@ -1,0 +1,21 @@
+uuid: 25eac1c1-3990-4d00-830f-3d5a54f29550
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multimedia
+    - field.storage.block_content.field_multimedia_type
+  module:
+    - options
+id: block_content.multimedia.field_multimedia_type
+field_name: field_multimedia_type
+entity_type: block_content
+bundle: multimedia
+label: 'Multimedia type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,6 @@
+{# Provide custom template for social follow links block #}
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow">
+  {% for class, id in links %}
+    <a class="a2a_button_{{ class }}" data-a2a-follow="{{ id }}"></a>
+  {% endfor %}
+</div>

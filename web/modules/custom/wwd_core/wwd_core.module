@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks and custom functions for WWD Core module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function wwd_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wwd_core module.
+    case 'help.page.wwd_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('WWD Core Functionality') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function wwd_core_theme() {
+  return [
+    'add_to_any_follow' => [
+      'variables' => [
+        'links' => [],
+      ],
+      'template' => 'social-follow-links-block',
+    ],
+  ];
+}
