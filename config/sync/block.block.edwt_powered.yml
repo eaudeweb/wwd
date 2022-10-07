@@ -1,0 +1,25 @@
+uuid: 73a5c0b4-c857-4f0a-aca2-20475275d16b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - edwt
+third_party_settings:
+  block_class:
+    classes: null
+_core:
+  default_config_hash: sUcM_vfRk9QiJEfqC2nMHEor7con_iCa96yY6zfCaBY
+id: edwt_powered
+theme: edwt
+region: footer
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

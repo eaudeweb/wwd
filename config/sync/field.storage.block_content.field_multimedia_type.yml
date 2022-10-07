@@ -15,9 +15,6 @@ settings:
       value: individual
       label: 'Individual posters'
     -
-      value: videos
-      label: 'Video Listing'
-    -
       value: posters
       label: 'Poster Listing'
   allowed_values_function: ''

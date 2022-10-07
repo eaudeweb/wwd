@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * WWD Theme override the display for multimedia block.
+ */
+#}
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{title_attributes}}>
+      <span>
+        {{- label -}}
+      </span>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+  <div class="multimedia-rows">
+    {% for type, rows in content.referenced_nodes %}
+      {% for row in rows %}
+        <div class="row-{{ type }}">{{ row }}</div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
