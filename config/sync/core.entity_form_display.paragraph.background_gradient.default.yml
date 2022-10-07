@@ -42,7 +42,8 @@ content:
             values_set: 1
             value: ''
             values: {  }
-            value_form: {  }
+            value_form:
+              value: 1
             effect: show
             effect_options: {  }
             selector: ''
@@ -64,7 +65,8 @@ content:
             values_set: 1
             value: ''
             values: {  }
-            value_form: {  }
+            value_form:
+              value: 1
             effect: show
             effect_options: {  }
             selector: ''
@@ -86,7 +88,8 @@ content:
             values_set: 1
             value: ''
             values: {  }
-            value_form: {  }
+            value_form:
+              value: 1
             effect: show
             effect_options: {  }
             selector: ''
@@ -108,7 +111,8 @@ content:
             values_set: 1
             value: ''
             values: {  }
-            value_form: {  }
+            value_form:
+              value: 1
             effect: show
             effect_options: {  }
             selector: ''

@@ -1,0 +1,16 @@
+uuid: ba2542ed-6198-4745-9bfa-4ec483922e1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multimedia
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.multimedia
+target_entity_type_id: block_content
+target_bundle: multimedia
+default_langcode: site_default
+language_alterable: true

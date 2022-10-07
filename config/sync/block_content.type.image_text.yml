@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: image_text
 label: 'Image Text'
-revision: 0
-description: ''
+revision: 1
+description: 'Simple image with text block'

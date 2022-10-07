@@ -1,0 +1,57 @@
+uuid: 34dd251d-dd16-4304-90d0-1184182e50f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.poster_teaser
+    - field.field.node.multimedia.body
+    - field.field.node.multimedia.field_link
+    - field.field.node.multimedia.field_media_image
+    - field.field.node.multimedia.field_type
+    - field.field.node.multimedia.field_video
+    - node.type.multimedia
+  module:
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.multimedia.poster_teaser
+targetEntityType: node
+bundle: multimedia
+mode: poster_teaser
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_type: true
+  field_video: true
+  langcode: true

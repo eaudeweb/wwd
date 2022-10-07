@@ -1,0 +1,27 @@
+uuid: 5f43a00d-edc1-4e51-8a05-6432063f0e96
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - node
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: wwd_syndicate
+theme: wwd
+region: branding
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

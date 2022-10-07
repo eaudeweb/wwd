@@ -1,0 +1,25 @@
+uuid: 13d36d3d-dc9f-4b7f-b452-85b319f62c7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: wwd_page_title
+theme: wwd
+region: branding
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

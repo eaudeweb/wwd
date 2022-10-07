@@ -25,7 +25,6 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/ctools": "^4.0",
-        "drupal/devel": "^5.0",
         "drupal/entity_embed": "^1.2",
         "drupal/field_group": "^3.3",
         "drupal/google_analytics": "^4.0",
@@ -46,7 +45,8 @@
         "drupal/webform": "^6.1",
         "drupal/yearonly": "^9.0",
         "drupal/yoast_seo": "^1.7",
-        "drush/drush": "^11"
+        "drush/drush": "^11",
+        "eaudeweb/heavy-lifter": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -74,7 +74,9 @@
         ]
     },
     "require-dev": {
-        "neronmoon/scriptsdev": "^0.1.9"
+        "neronmoon/scriptsdev": "^0.1.9",
+        "drupal/backup_migrate": "^5.0",
+        "drupal/devel": "^5.0"
     },
     "extra": {
         "enable-patching": true,
@@ -115,6 +117,11 @@
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
+        },
+        "patches": {
+          "drupal/conditional_fields": {
+            "Issue #2902164: Enable conditional_fields for paragraphs": "https://www.drupal.org/files/issues/2022-05-10/conditional-fields-and-paragraphs-2902164--using-ids--v6.patch"
+          }
         },
         "drupal-core-project-message": {
             "include-keys": [
