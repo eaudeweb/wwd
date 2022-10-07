@@ -1,8 +1,9 @@
-uuid: 9494a460-291e-49e4-922b-fabc16ec4816
+uuid: 34dd251d-dd16-4304-90d0-1184182e50f5
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.poster_teaser
     - field.field.node.multimedia.body
     - field.field.node.multimedia.field_link
     - field.field.node.multimedia.field_media_image
@@ -10,22 +11,18 @@ dependencies:
     - field.field.node.multimedia.field_video
     - node.type.multimedia
   module:
+    - layout_builder
     - link
-    - options
-    - text
     - user
-id: node.multimedia.default
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.multimedia.poster_teaser
 targetEntityType: node
 bundle: multimedia
-mode: default
+mode: poster_teaser
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
   field_link:
     type: link
     label: hidden
@@ -36,37 +33,25 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 105
+    weight: 2
     region: content
   field_media_image:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  field_type:
-    type: list_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  field_video:
     type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   addtoany: true
+  body: true
+  field_type: true
+  field_video: true
   langcode: true

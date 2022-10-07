@@ -2,6 +2,8 @@ uuid: c481b0b9-640c-4344-a983-a54118f5781f
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_class
   theme:
     - olivero
 third_party_settings:

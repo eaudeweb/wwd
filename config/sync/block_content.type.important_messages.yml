@@ -5,4 +5,4 @@ dependencies: {  }
 id: important_messages
 label: 'Important Messages'
 revision: 1
-description: ''
+description: 'Displaying important messages in a slider with a configurable background option'

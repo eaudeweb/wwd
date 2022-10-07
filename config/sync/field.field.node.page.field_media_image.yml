@@ -5,12 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_media_image
     - media.type.image
+    - media.type.remote_video
     - node.type.page
 id: node.page.field_media_image
 field_name: field_media_image
 entity_type: node
 bundle: page
-label: 'Banner Image'
+label: 'Banner Image/Video'
 description: ''
 required: false
 translatable: true
@@ -21,9 +22,10 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      remote_video: remote_video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference
