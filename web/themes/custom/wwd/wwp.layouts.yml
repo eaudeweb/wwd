@@ -1,0 +1,14 @@
+# wwd-layout:
+#   label: 'WWD Main layout'
+#   category: 'WWD Layouts'
+#   path: templates/components/layouts
+#   template: folder/folder
+#   library: wwd/library_name
+#   default_region: main
+#   icon_map:
+#     - [main, sidebar]
+#   regions:
+#     main:
+#       label: Main Content
+#     sidebar:
+#       label: Sidebar

@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * WWP Theme implementation for a 'form' element.
+ */
+#}
+
+{# {{ attach_library('wwp/sbc--forms') }} #}
+
+{% block form %}
+  <form{{ attributes }}>
+    {{ children }}
+  </form>
+{% endblock %}

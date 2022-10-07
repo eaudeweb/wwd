@@ -1,0 +1,26 @@
+name: 'World wildlife Day'
+type: theme
+description: 'Theme for WWD'
+core_version_requirement: ^8.9 || ^9.0
+base theme: edwt
+
+
+libraries-override:
+  # edwt/global-styling: wwd/global-styling
+  # edwt/theme-fonts: wwd/theme-fonts
+
+regions:
+  branding: 'Branding'
+  nav_main: 'Main navigation region'
+  header: Header
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  highlighted: Highlighted
+  title: 'Page title'
+  hero: 'Hero (full width)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer_top: 'Footer Top'
+  footer: Footer
+  disable_region: 'Disabled Region'
