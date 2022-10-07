@@ -25,7 +25,6 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/ctools": "^4.0",
-        "drupal/devel": "^5.0",
         "drupal/entity_embed": "^1.2",
         "drupal/field_group": "^3.3",
         "drupal/google_analytics": "^4.0",
@@ -74,7 +73,9 @@
         ]
     },
     "require-dev": {
-        "neronmoon/scriptsdev": "^0.1.9"
+        "neronmoon/scriptsdev": "^0.1.9",
+        "drupal/backup_migrate": "^5.0",
+        "drupal/devel": "^5.0"
     },
     "extra": {
         "enable-patching": true,
