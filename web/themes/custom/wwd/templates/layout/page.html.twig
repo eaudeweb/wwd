@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * WWP Theme override to display a single page.
+ * WWD Theme override to display a single page.
  */
 #}
 
@@ -39,10 +39,8 @@
   </header>
 {% endblock %}
 
-{{ page.header }}
-
 {% block wrap_main %}
-  <main role="main" class="flex-grow-1 bg-white">
+  <main role="main" class="flex-grow-1">
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
   {% block main %}

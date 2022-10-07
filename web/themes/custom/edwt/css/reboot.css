@@ -327,7 +327,7 @@ select:disabled {
   :not([type="week"])
   :not([type="time"])
   ::-webkit-calendar-picker-indicator {
-  display: none !important;
+  display: none;
 }
 
 button,
@@ -427,5 +427,5 @@ progress {
 /* Hidden attribute */
 
 [hidden] {
-  display: none !important;
+  display: none ;
 }

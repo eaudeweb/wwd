@@ -45,18 +45,18 @@ function _root($color, $link) {
   }
 
   $root .= '
-    --rgb-white: ' . hexToRgb($color['white']) . ';
-    --rgb-black: ' . hexToRgb($color['black']) . ';
-    --rgb-primary: ' . hexToRgb($color['primary']) . ';
-    --rgb-secondary: ' . hexToRgb($color['secondary']) . ';
-    --rgb-success: ' . hexToRgb($color['success']) . ';
-    --rgb-warning: ' . hexToRgb($color['warning']) . ';
-    --rgb-info: ' . hexToRgb($color['info']) . ';
-    --rgb-danger: ' . hexToRgb($color['danger']) . ';
-    --rgb-light: ' . hexToRgb($color['light']) . ';
-    --rgb-dark: ' . hexToRgb($color['dark']) . ';
-    --rgb-body-color: ' . hexToRgb($color['dark']) . '??;
-    --rgb-body-bg: ' . hexToRgb($color['dark']) . '??;
+    --white-rgb: ' . hexToRgb($color['white']) . ';
+    --black-rgb: ' . hexToRgb($color['black']) . ';
+    --primary-rgb: ' . hexToRgb($color['primary']) . ';
+    --secondary-rgb: ' . hexToRgb($color['secondary']) . ';
+    --success-rgb: ' . hexToRgb($color['success']) . ';
+    --warning-rgb: ' . hexToRgb($color['warning']) . ';
+    --info-rgb: ' . hexToRgb($color['info']) . ';
+    --danger-rgb: ' . hexToRgb($color['danger']) . ';
+    --light-rgb: ' . hexToRgb($color['light']) . ';
+    --dark-rgb: ' . hexToRgb($color['dark']) . ';
+    --body-color: ' . hexToRgb($color['dark']) . '??;
+    --body-bg: ' . hexToRgb($color['dark']) . '??;
     --font-heading: ' . theme_get_setting('sf__f') . ';
     --font-monospace: ' . theme_get_setting('sf__sans_serif') . '??;
     --body-font-family: ' . theme_get_setting('sf__body') . ';

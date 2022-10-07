@@ -795,14 +795,3 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 $settings['config_sync_directory'] = '../config/sync';
-$databases['default']['default'] = array (
-  'database' => 'wwd',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
