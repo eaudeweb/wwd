@@ -1,0 +1,27 @@
+uuid: 679bcce5-0b93-4ab7-bdfa-d256c070fd24
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: wwd_secondary_local_tasks
+theme: wwd
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

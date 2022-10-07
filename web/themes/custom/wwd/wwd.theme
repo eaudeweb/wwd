@@ -4,7 +4,9 @@
  * @file
  * WWD Theme theme file.
  */
+
 use Drupal\block\Entity\Block;
+use Drupal\wwd\WwdThemeProcess;
 
 /**
  * Implements hook_theme_suggestions_alter().
@@ -60,8 +62,7 @@ function wwd_theme_suggestions_alter(
  * Implements hook_preprocess_HOOK() for block.html.twig.
  */
 function wwd_preprocess_block(&$variables) {
-  if ($variables['elements']['#base_plugin_id'] == 'block_content') {
-    $blockType = strtr($variables['content']['#block_content']->bundle(), '_', '-');
-    $variables['attributes']['class'][] = 'block--' . $blockType;
-  }
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(WwdThemeProcess::class)
+    ->preprocessBlock($variables);
 }

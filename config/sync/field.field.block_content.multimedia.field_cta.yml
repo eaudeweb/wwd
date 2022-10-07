@@ -1,0 +1,23 @@
+uuid: 8d30351b-4723-4d2a-89d5-ea141bb090c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multimedia
+    - field.storage.block_content.field_cta
+  module:
+    - link
+id: block_content.multimedia.field_cta
+field_name: field_cta
+entity_type: block_content
+bundle: multimedia
+label: CTA
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

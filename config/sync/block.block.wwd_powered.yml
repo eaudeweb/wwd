@@ -1,0 +1,26 @@
+uuid: 0d0b2115-49fc-43dc-aa70-834a0738753a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: wwd_powered
+theme: wwd
+region: branding
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

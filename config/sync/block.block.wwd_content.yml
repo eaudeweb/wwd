@@ -1,0 +1,26 @@
+uuid: 31582bf1-de8f-4bdc-a747-5f0468114cf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: wwd_content
+theme: wwd
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
