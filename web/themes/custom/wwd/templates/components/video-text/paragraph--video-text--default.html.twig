@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * WWD theme implementation to display a paragraph.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="row">
+    <div class="col-md-6">
+      {{- content.field_video -}}
+    </div>
+
+    <div class="col-md-6">
+      {{- content|without('field_video') -}}
+    </div>
+  </div>
+</div>

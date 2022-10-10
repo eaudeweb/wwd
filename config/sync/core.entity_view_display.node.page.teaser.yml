@@ -40,3 +40,4 @@ hidden:
   field_meta_tags: true
   field_yoast_seo: true
   langcode: true
+  layout_builder__layout: true

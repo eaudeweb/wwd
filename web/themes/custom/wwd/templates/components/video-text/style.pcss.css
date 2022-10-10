@@ -1,0 +1,30 @@
+.block-inline-blockvideo-text-block {
+  padding-block: 40px;
+  position: relative;
+  isolation: isolate;
+
+  & .block--title {
+    --headings-color: var(--c-white);
+    margin-bottom: 26px;
+  }
+
+  &:after {
+    content: '';
+    background: linear-gradient(75.52deg, #6B8C67 0%, #51E3C0 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 55%;
+    width: 45vw;
+    max-height: 340px;
+  }
+
+  & .media-oembed-content {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}

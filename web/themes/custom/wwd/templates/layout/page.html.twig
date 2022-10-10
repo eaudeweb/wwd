@@ -33,31 +33,21 @@
     {% block header %}
       {%- include '@wwd/components/sections/header/header.html.twig' -%}
     {% endblock %}
-
-    {{ page.highlighted }}
-    {{ page.title }}
   </header>
 {% endblock %}
 
 {% block wrap_main %}
   <main role="main" class="flex-grow-1">
-  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ page.highlighted }}
+    {{ page.title }}
 
-  {% block main %}
-    {% include '@wwd/components/sections/main/main.html.twig' %}
-  {% endblock %}
-</main>
-{% endblock %}
-
-{% block wrap_footer %}
-  <footer
-    {{- footer_attribute
-      .setAttribute('id', 'footer')
-      .addclass(footer_classes)
-    -}}
-  >
-    {% block footer %}
-      {% include '@wwd/components/sections/footer/footer.html.twig' %}
+    {% block main %}
+      {% include '@wwd/components/sections/main/main.html.twig' %}
     {% endblock %}
-  </footer>
+  </main>
 {% endblock %}
+
+{%- block footer -%}
+  {%- include '@wwd/components/sections/footer/footer.html.twig' -%}
+{%- endblock -%}

@@ -5,5 +5,14 @@
  */
 #}
 
-{{ page.footer }}
+{% if page.footer %}
+  <footer
+    {{- footer_attribute
+      .setAttribute('id', 'footer')
+      .addclass(footer_classes)
+    -}}
+  >
+    {{- page.footer -}}
+  </footer>
+{% endif %}
 

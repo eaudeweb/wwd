@@ -14,8 +14,8 @@ _core:
   default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
 id: wwd_site_branding
 theme: wwd
-region: header
-weight: 0
+region: branding
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:
@@ -24,6 +24,6 @@ settings:
   label_display: '0'
   provider: system
   use_site_logo: true
-  use_site_name: true
+  use_site_name: false
   use_site_slogan: false
 visibility: {  }

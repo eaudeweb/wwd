@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="254" height="116" viewBox="0 0 254 116">
+  <rect width="254" height="116" rx="2" fill="#ecf0f8"/>
+  <rect width="80" height="8" rx="4" transform="translate(15 37)" fill="#c9cbd6"/>
+  <rect width="68" height="8" rx="4" transform="translate(15 48)" fill="#c9cbd6"/>
+  <rect width="73" height="8" rx="4" transform="translate(15 59)" fill="#c9cbd6"/>
+  <rect width="81" height="8" rx="4" transform="translate(15 70)" fill="#c9cbd6"/>
+  <circle cx="4.5" cy="4.5" r="4.5" transform="translate(14 93)" fill="#c9cbd6"/>
+  <circle cx="4.5" cy="4.5" r="4.5" transform="translate(26 93)" fill="#c9cbd6"/>
+  <circle cx="4.5" cy="4.5" r="4.5" transform="translate(38 93)" fill="#c9cbd6"/>
+  <circle cx="4.5" cy="4.5" r="4.5" transform="translate(50 93)" fill="#c9cbd6"/>
+  <circle cx="4.5" cy="4.5" r="4.5" transform="translate(62 93)" fill="#c9cbd6"/>
+  <path d="M0,0H27a0,0,0,0,1,0,0V6a8,8,0,0,1-8,8H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(183 88)" fill="#c9cbd6"/>
+  <path d="M0,0H27a0,0,0,0,1,0,0V6a8,8,0,0,1-8,8H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(213 88)" fill="#c9cbd6"/>
+  <rect width="12" height="2" rx="1" transform="translate(191 98)" fill="#0040ff"/>
+  <rect width="12" height="2" rx="1" transform="translate(222 98)" fill="#0040ff"/>
+</svg>

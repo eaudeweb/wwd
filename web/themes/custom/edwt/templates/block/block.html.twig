@@ -37,8 +37,12 @@
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
   {% endif %}
+
   {{ title_suffix }}
+
   {% block content %}
-    {{ content }}
+    <div{{ content_attributes.addClass('block__content') }}>
+      {{ content }}
+    </div>
   {% endblock %}
 </div>

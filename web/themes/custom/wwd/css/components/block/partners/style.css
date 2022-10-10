@@ -1,0 +1,8 @@
+.row.g-partners {
+  --gutter-x: 5.125rem;
+}
+
+.block-views-blockpartners-block {
+  padding-top: var(--p-block);
+  padding-bottom: var(--p-block);
+}

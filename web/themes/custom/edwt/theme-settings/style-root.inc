@@ -55,12 +55,13 @@ function _root($color, $link) {
     --danger-rgb: ' . hexToRgb($color['danger']) . ';
     --light-rgb: ' . hexToRgb($color['light']) . ';
     --dark-rgb: ' . hexToRgb($color['dark']) . ';
-    --body-color: ' . hexToRgb($color['dark']) . '??;
-    --body-bg: ' . hexToRgb($color['dark']) . '??;
-    --font-heading: ' . theme_get_setting('sf__f') . ';
-    --font-monospace: ' . theme_get_setting('sf__sans_serif') . '??;
+    --body-color: ' . hexToRgb($color['dark']) . ';
+    --body-bg: ' . hexToRgb($color['dark']) . ';
+    --font-monospace: ' . theme_get_setting('sf__sans_serif') . ';
     --body-font-family: ' . theme_get_setting('sf__body') . ';
     --body-font-size: ' . theme_get_setting('sf__size') . 'rem;
+    --body-font-weight: ' . theme_get_setting('sf__weight') . ';
+    --headings-font-family: ' . theme_get_setting('sf__h') . ';
     --body-line-height: ' . theme_get_setting('sf__line-height') . ';
     --link-color: ' . $link['color'] . ';
     --link-color-h: ' . $link['h-color'] . ';

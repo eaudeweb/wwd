@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * WWD Theme override the display for multimedia block.
+ */
+#}
+
+{{ attach_library('wwd/b--partners') }}
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      {% if label %}
+        <h2{{title_attributes.addClass('h1', 'mb-0')}}>
+          {{- label -}}
+        </h2>
+      {% endif %}
+
+      <div{{ content_attributes.addClass('block__content') }}>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
+

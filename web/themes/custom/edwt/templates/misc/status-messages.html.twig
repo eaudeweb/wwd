@@ -14,8 +14,7 @@
 #}
 
 {% block messages %}
-  {% if tsg__status_message__type == 'default' %}
-    {{ attach_library('edwt/bc--alert') }}
+    {{ attach_library('edwt/c--alert') }}
     {% for type, messages in message_list %}
       {%
         set classes = [
@@ -50,6 +49,9 @@
       {# Remove type specific classes. #}
       {% set attributes = attributes.removeClass(classes) %}
     {% endfor %}
+
+  {# Unde working... #}
+  {# {% if tsg__status_message__type == 'default' %}
   {% else %}
     {{ attach_library('edwt/bc--toasts') }}
     <div class="toast-container position-absolute p-3 bottom-0 end-0">
@@ -68,7 +70,7 @@
         %}
         <div
           aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('aria-label') }}
-          {# data-bs-autohide="false" #}
+          {# data-bs-autohide="false" #..}
           data-bs-delay="6000"
           aria-live="assertive"
           aria-atomic="true"
@@ -93,9 +95,9 @@
             {% endif %}
           </div>
         </div>
-        {# Remove type specific classes. #}
+        {# Remove type specific classes. #..}
         {% set attributes = attributes.removeClass(classes) %}
       {% endfor %}
     </div>
-  {% endif %}
+  {% endif %} #}
 {% endblock messages %}

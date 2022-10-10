@@ -1,0 +1,23 @@
+.btn {
+  --btn-font-family: var(--headings-font-family);
+  text-transform: uppercase;
+  letter-spacing: .24rem;
+}
+
+.btn-link {
+  --btn-hover-color: var(--link-color);
+}
+
+.btn-arrow {
+  --btn-padding-x: 0;
+
+  &:after {
+    content: url("../../img/icons/btn-arrow.svg");
+    transition: var(--transition-base);
+    margin-left: var(--btn-arrow-ml, .5rem);
+  }
+
+  &:hover {
+    --btn-arrow-ml: 1rem
+  }
+}

@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * WWD override for a field.
+ */
+#}
+
+
+<div{{ attributes.addClass(classes, 'w--img') }}>
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+</div>

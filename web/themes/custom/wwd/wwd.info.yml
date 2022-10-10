@@ -4,10 +4,12 @@ description: 'Theme for WWD'
 core_version_requirement: ^8.9 || ^9.0
 base theme: edwt
 
+libraries:
+  - wwd/global-styling
 
 libraries-override:
   # edwt/global-styling: wwd/global-styling
-  # edwt/theme-fonts: wwd/theme-fonts
+  edwt/theme-fonts: wwd/theme-fonts
 
 regions:
   branding: 'Branding'
@@ -19,8 +21,8 @@ regions:
   hero: 'Hero (full width)'
   breadcrumb: Breadcrumbs
   content: 'Main content'
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
+  # sidebar_first: 'Sidebar first'
+  # sidebar_second: 'Sidebar second'
   footer_top: 'Footer Top'
   footer: Footer
   disable_region: 'Disabled Region'

@@ -1,0 +1,82 @@
+{#
+/**
+ * @file
+ * WWD theme implementation to display a Header.
+ *
+ * Available variables:
+ * - bg_img: Image bg
+ * - title: Title
+ * - left: Intro Hero left
+ * - right: Intro Hero right
+ */
+#}
+
+{% if attributes['data-layout-update-url'] %}
+  {% set view_edit = true %}
+{% endif %}
+
+{%
+  set classes = [
+    'layout',
+    view_edit ? 'l-admin' : '',
+    'layout-builder__layout',
+    'layout-header',
+  ]
+%}
+
+{% set bg_img_classes = [
+  'layout-region',
+  'layout-region--bg-img',
+] %}
+
+{% set title_classes = [
+  'layout-region',
+  'layout-region--title',
+  'col-xl-5',
+  'col-lg-6',
+  'col-md-8',
+  'col-xm-10',
+] %}
+
+{% set left_classes = [
+  'layout-region',
+  'layout-region--left',
+  'col',
+] %}
+
+{% set right_classes = [
+  'layout-region',
+  'layout-region--right',
+  'col-auto',
+] %}
+
+
+{% if content|render|striptags|trim is not empty %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if view_edit %}
+      <div {{ region_attributes.bg_img.addClass(bg_img_classes) }}>
+        {{ content.bg_img }}
+      </div>
+    {% else %}
+      {{- content.bg_img -}}
+    {% endif %}
+
+    <div class="container">
+      <div class="row">
+        <div {{ region_attributes.title.addClass(title_classes) }}>
+          {{ content.title }}
+        </div>
+      </div>
+
+      <div class="row justify-content-between">
+        <div {{ region_attributes.left.addClass(left_classes) }}>
+          {{ content.left }}
+        </div>
+
+        <div {{ region_attributes.right.addClass(right_classes) }}>
+          {{ content.right }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
