@@ -42,7 +42,7 @@ $form['style']['s_fonts']['sf__weight'] = [
 $form['style']['s_fonts']['sf__line-height'] = [
   '#type' => 'number',
   '#step' => '.01',
-  '#title' => t('Font weight'),
+  '#title' => t('Line height'),
   '#default_value' => theme_get_setting('sf__line-height'),
   '#description' => 'root: --body-line-height <br>All value is number format',
 ];

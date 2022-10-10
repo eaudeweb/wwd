@@ -5,8 +5,8 @@
  */
 #}
 
-{{ attach_library('edwt/bc--navbar') }}
-{{ attach_library('edwt/bc--nav') }}
+{{ attach_library('edwt/c--navbar') }}
+{{ attach_library('edwt/c--nav') }}
 
 {% set navbar_attribute = create_attribute() %}
 {%
@@ -21,11 +21,11 @@
 %}
 
 <nav{{ navbar_attribute.addclass(header_classes) }}>
-  <div class="{{ global.container }}">
+  <div class="container">
     {{ page.branding }}
 
     <button
-      class="navbar-toggler"
+      class="navbar-toggler collapsed hamburger hamburger--collapse"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#mainSidebar"
@@ -33,7 +33,9 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
     </button>
 
     <div class="collapse navbar-collapse" id="mainSidebar">
@@ -41,10 +43,9 @@
         {{ page.nav_main }}
       </div>
 
-      {{ page.header }}
+      {{ page.nav_additional }}
     </div>
   </div>
 </nav>
 
-{# temp #}
-{{ page.nav_additional }}
+{{ page.header }}

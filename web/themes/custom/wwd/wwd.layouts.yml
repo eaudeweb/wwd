@@ -1,14 +1,17 @@
-# wwd-layout:
-#   label: 'WWD Main layout'
-#   category: 'WWD Layouts'
-#   path: templates/components/layouts
-#   template: folder/folder
-#   library: wwd/library_name
-#   default_region: main
-#   icon_map:
-#     - [main, sidebar]
-#   regions:
-#     main:
-#       label: Main Content
-#     sidebar:
-#       label: Sidebar
+wwd-header:
+  label: 'WWD Header'
+  category: 'WWD Layouts'
+  path: templates/components/layouts
+  template: header/wwd-header
+  library: wwd/l--header
+  default_region: title
+  icon: header/img/header.svg
+  regions:
+    bg_img:
+      label: Image bg
+    title:
+      label: Title
+    left:
+      label: 'Intro Header left'
+    right:
+      label: 'Intro Header right'

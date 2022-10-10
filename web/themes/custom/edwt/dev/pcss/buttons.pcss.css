@@ -14,6 +14,7 @@
   --btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --btn-disabled-opacity: 0.65;
   --btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--btn-focus-shadow-rgb), 0.5);
+
   display: inline-block;
   padding: var(--btn-padding-y) var(--btn-padding-x);
   font: var(--btn-font-weight) var(--btn-font-size) / var(--btn-line-height) var(--btn-font-family);
@@ -29,25 +30,28 @@
   border: var(--btn-border-width) solid var(--btn-border-color);
   border-radius: var(--btn-border-radius);
   background-color: var(--btn-bg);
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
       -webkit-transition: none;
       transition: none;
   }
 }
+
 .btn:hover {
   color: var(--btn-hover-color);
   background-color: var(--btn-hover-bg);
   border-color: var(--btn-hover-border-color);
 }
+
 .btn-check + .btn:hover {
   color: var(--btn-color);
   background-color: var(--btn-bg);
   border-color: var(--btn-border-color);
 }
+
 .btn:focus-visible {
   color: var(--btn-hover-color);
   background-color: var(--btn-hover-bg);
@@ -55,11 +59,13 @@
   outline: 0;
   box-shadow: var(--btn-focus-box-shadow);
 }
+
 .btn-check:focus-visible + .btn {
   border-color: var(--btn-hover-border-color);
   outline: 0;
   box-shadow: var(--btn-focus-box-shadow);
 }
+
 .btn-check:checked + .btn,
 :not(.btn-check) + .btn:active,
 .btn:first-child:active,
@@ -69,6 +75,7 @@
   background-color: var(--btn-active-bg);
   border-color: var(--btn-active-border-color);
 }
+
 .btn-check:checked + .btn:focus-visible,
 :not(.btn-check) + .btn:active:focus-visible,
 .btn:first-child:active:focus-visible,
@@ -76,6 +83,7 @@
 .btn.show:focus-visible {
   box-shadow: var(--btn-focus-box-shadow);
 }
+
 .btn:disabled,
 .btn.disabled,
 fieldset:disabled .btn {
@@ -85,6 +93,7 @@ fieldset:disabled .btn {
   border-color: var(--btn-disabled-border-color);
   opacity: var(--btn-disabled-opacity);
 }
+
 .btn-primary {
   --btn-color: #fff;
   --btn-bg: #0d6efd;
@@ -101,6 +110,7 @@ fieldset:disabled .btn {
   --btn-disabled-bg: #0d6efd;
   --btn-disabled-border-color: #0d6efd;
 }
+
 .btn-secondary {
   --btn-color: #fff;
   --btn-bg: #6c757d;
@@ -117,6 +127,7 @@ fieldset:disabled .btn {
   --btn-disabled-bg: #6c757d;
   --btn-disabled-border-color: #6c757d;
 }
+/* 
 .btn-success {
   --btn-color: #fff;
   --btn-bg: #198754;
@@ -180,7 +191,7 @@ fieldset:disabled .btn {
   --btn-disabled-color: #fff;
   --btn-disabled-bg: #dc3545;
   --btn-disabled-border-color: #dc3545;
-}
+} */
 .btn-light {
   --btn-color: #000;
   --btn-bg: #f8f9fa;
@@ -197,6 +208,7 @@ fieldset:disabled .btn {
   --btn-disabled-bg: #f8f9fa;
   --btn-disabled-border-color: #f8f9fa;
 }
+
 .btn-dark {
   --btn-color: #fff;
   --btn-bg: #212529;
@@ -213,6 +225,7 @@ fieldset:disabled .btn {
   --btn-disabled-bg: #212529;
   --btn-disabled-border-color: #212529;
 }
+
 .btn-outline-primary {
   --btn-color: #0d6efd;
   --btn-border-color: #0d6efd;
@@ -245,7 +258,7 @@ fieldset:disabled .btn {
   --btn-disabled-border-color: #6c757d;
   --gradient: none;
 }
-.btn-outline-success {
+/* .btn-outline-success {
   --btn-color: #198754;
   --btn-border-color: #198754;
   --btn-hover-color: #fff;
@@ -308,7 +321,7 @@ fieldset:disabled .btn {
   --btn-disabled-bg: transparent;
   --btn-disabled-border-color: #dc3545;
   --gradient: none;
-}
+} */
 .btn-outline-light {
   --btn-color: #f8f9fa;
   --btn-border-color: #f8f9fa;
@@ -341,6 +354,7 @@ fieldset:disabled .btn {
   --btn-disabled-border-color: #212529;
   --gradient: none;
 }
+
 .btn-link {
   --btn-font-weight: 400;
   --btn-color: var(--link-color);
@@ -354,20 +368,23 @@ fieldset:disabled .btn {
   --btn-disabled-border-color: transparent;
   --btn-box-shadow: none;
   --btn-focus-shadow-rgb: 49, 132, 253;
-  text-decoration: underline;
 }
+
 .btn-link:focus-visible {
   color: var(--btn-color);
 }
+
 .btn-link:hover {
   color: var(--btn-hover-color);
 }
+
 .btn-lg {
   --btn-padding-y: 0.5rem;
   --btn-padding-x: 1rem;
   --btn-font-size: 1.25rem;
   --btn-border-radius: 0.5rem;
 }
+
 .btn-sm {
   --btn-padding-y: 0.25rem;
   --btn-padding-x: 0.5rem;

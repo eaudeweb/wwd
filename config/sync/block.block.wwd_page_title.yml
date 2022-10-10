@@ -13,8 +13,8 @@ _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: wwd_page_title
 theme: wwd
-region: branding
-weight: -5
+region: title
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

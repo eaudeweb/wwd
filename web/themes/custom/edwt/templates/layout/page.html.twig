@@ -81,15 +81,8 @@
 </main>
 {% endblock %}
 
-{% block wrap_footer %}
-  <footer
-    {{- footer_attribute
-      .setAttribute('id', 'footer')
-      .addclass(footer_classes)
-    -}}
-  >
-    {% block footer %}
-      {% include '@edwt/components/sections/footer/footer.html.twig' %}
-    {% endblock %}
-  </footer>
-{% endblock %}
+{%- block wrap_footer -%}
+  {%- block footer -%}
+    {%- include '@edwt/components/sections/footer/footer.html.twig' -%}
+  {%- endblock -%}
+{%- endblock -%}

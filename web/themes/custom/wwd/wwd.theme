@@ -53,6 +53,17 @@ function wwd_theme_suggestions_alter(
       }
       break;
 
+    case 'page':
+      if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
+        $term = Term::load($tid);
+        array_splice($suggestions, 1, 0, $hook . '__taxonomy__' . $term->bundle());
+      }
+
+      if ($node = \Drupal::request()->attributes->get('node')) {
+        array_splice($suggestions, 1, 0, $hook . '__node__' . $node->getType());
+      }
+      break;
+
     default:
       break;
   }

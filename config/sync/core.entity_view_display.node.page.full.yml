@@ -1,0 +1,174 @@
+uuid: 5111c854-3e91-4053-8a26-799222d04754
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.page.body
+    - field.field.node.page.field_media_image
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_yoast_seo
+    - field.field.node.page.layout_builder__layout
+    - node.type.page
+  module:
+    - layout_builder
+    - layout_discovery
+    - metatag
+    - system
+    - text
+    - user
+    - wwd_core
+    - yoast_seo
+  theme:
+    - wwd
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: wwd-header
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          9e8d2537-03e9-4ee2-bf24-b6f4723b1b3b:
+            uuid: 9e8d2537-03e9-4ee2-bf24-b6f4723b1b3b
+            region: bg_img
+            configuration:
+              id: 'field_block:node:page:field_media_image'
+              label: 'Banner Image/Video'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9fb645f9-923f-4520-9b5a-29ee7fc09fc8:
+            uuid: 9fb645f9-923f-4520-9b5a-29ee7fc09fc8
+            region: left
+            configuration:
+              id: add_to_any_follow_block
+              label: 'Social Follow Links'
+              label_display: '0'
+              provider: wwd_core
+              context_mapping: {  }
+              facebook: WorldWildlifeDay
+              twitter: wildlifeday
+              instagram: worldwildlifeday
+              youtube: WorldWildlifeDay
+              flickr: worldwildlifeday
+            weight: 0
+            additional: {  }
+          0c6ee4f1-7c9d-475e-adc8-3f6c3f523261:
+            uuid: 0c6ee4f1-7c9d-475e-adc8-3f6c3f523261
+            region: title
+            configuration:
+              id: 'field_block:node:page:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          28e89aa2-0c60-4340-a36a-e509c4b1012c:
+            uuid: 28e89aa2-0c60-4340-a36a-e509c4b1012c
+            region: right
+            configuration:
+              id: system_powered_by_block
+              label: 'Powered by Drupal'
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2973fb05-e563-4cdf-bda4-2d561365bed9:
+            uuid: 2973fb05-e563-4cdf-bda4-2d561365bed9
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.full
+targetEntityType: node
+bundle: page
+mode: full
+content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_yoast_seo:
+    type: yoastseo_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true

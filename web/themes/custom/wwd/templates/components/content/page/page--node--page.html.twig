@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * WWD Theme override to display a single page.
+ */
+#}
+
+{% extends "page.html.twig" %}
+
+
+{% block wrap_main %}
+  <main role="main" class="flex-grow-1">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    {% block main %}
+      {% include '@wwd/components/sections/main/main.html.twig' %}
+    {% endblock %}
+  </main>
+{% endblock %}

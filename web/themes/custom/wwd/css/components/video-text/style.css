@@ -1,0 +1,25 @@
+.block-inline-blockvideo-text-block {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+  isolation: isolate;
+}.block-inline-blockvideo-text-block .block--title {
+    --headings-color: var(--c-white);
+    margin-bottom: 1.625rem;
+  }.block-inline-blockvideo-text-block:after {
+    content: '';
+    background: linear-gradient(75.52deg, #6B8C67 0%, #51E3C0 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 55%;
+    width: 45vw;
+    max-height: 21.25rem;
+  }.block-inline-blockvideo-text-block .media-oembed-content {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }

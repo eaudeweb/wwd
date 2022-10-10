@@ -2,10 +2,33 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/theme/theme.css: {}
+      css/theme/buttons.css: {}
   js:
     js/script.js: {}
 
 theme-fonts:
   css:
     theme:
-      'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Spartan:wght@400;500;600;700;800;900&display=swap': { type: external, minified: true }
+      'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap': { type: external, minified: true }
+
+# Node.
+## Page.
+n--page--full:
+  css:
+    component:
+      css/components/content/page/vm-full/style.css: {}
+
+# Components.
+## Video text.
+c--video-text:
+  css:
+    component:
+      css/components/video-text/style.css: {}
+
+# Blocks.
+## Partners.
+b--partners:
+  css:
+    component:
+      css/components/block/partners/style.css: {}

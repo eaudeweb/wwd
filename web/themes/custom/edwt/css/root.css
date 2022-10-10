@@ -31,7 +31,6 @@
   --hr-opacity: 0.25;
 
   --headings-margin-bottom: .5rem;
-  --headings-font-family: null;
   --headings-font-style: null;
   --headings-font-weight: 500;
   --headings-line-height: 1.2;
@@ -57,4 +56,6 @@
   --border-opacity: .75;
 
   --bg-opacity: 1;
+
+  --transition-base: all .2s ease-in-out;
 }

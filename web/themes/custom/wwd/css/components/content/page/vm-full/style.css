@@ -1,0 +1,33 @@
+
+  .node--page--full .w--img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .node--page--full .w--img img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }.node--page--full .node--title {
+    --headings-color: var(--c-white);
+  }.node--page--full .row + .row {
+    padding-top: var(--p5);
+    padding-bottom: var(--p5);
+  }
+
+/* Layout head */
+
+.layout-header {
+  position: relative;
+  isolation: isolate;
+}
+
+.layout-header > .container {
+    margin-top: calc(var(--navbar-mh)*-1);
+    padding-top: calc(var(--navbar-mh) + var(--p5));
+    padding-bottom: var(--p5);
+  }

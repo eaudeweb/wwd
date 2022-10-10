@@ -27,6 +27,8 @@
   {{ title_suffix }}
 
   {% block content %}
-    {{ content }}
+    <div{{ content_attributes.addClass('block__content') }}>
+      {{ content }}
+    </div>
   {% endblock %}
 </div>
