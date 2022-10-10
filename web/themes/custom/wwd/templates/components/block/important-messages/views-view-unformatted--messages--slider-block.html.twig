@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * WWD override to display a view of unformatted rows.
+ */
+#}
+
+{% set id = 'im-' ~ view.id %}
+{% set cols = 2 %}
+
+<div id="{{ id }}" class="carousel slide carousel-fade" data-bs-ride="true">
+  <div class="carousel-inner">
+    {% for row in rows %}
+      {% if loop.index0 % cols == 0 %}
+        {%
+          set row_classes = [
+            'carousel-item',
+            loop.first ? 'active',
+          ]
+        %}
+        <div{{ row.attributes.addClass(row_classes) }}>
+          <div class="row">
+      {% endif %}
+
+        <div class="col-md-6">
+          {{- row.content -}}
+        </div>
+      {% if (loop.index0 % cols == cols - 1 or loop.last) %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="carousel-indicators">
+    {% for row in rows %}
+      {% if loop.index0 is divisible by(cols) %}
+        <button
+          type="button"
+          data-bs-target="#{{ id }}"
+          data-bs-slide-to="{{ loop.index0 / cols }}"
+          class="{{ loop.first ? 'active' }}"
+          aria-current="true"
+          aria-label="Slide {{ loop.index / cols }}"
+        ></button>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#{{ id }}" data-bs-slide="prev">
+    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+      <rect width="42" height="42" rx="21" fill="#fff"/>
+      <path class="arrow" d="M28.53,21.53a.75.75,0,0,0,0-1.061L23.757,15.7A.75.75,0,1,0,22.7,16.757L26.939,21,22.7,25.243A.75.75,0,0,0,23.757,26.3ZM14,21.75H28v-1.5H14Z" transform="translate(42.75 42) rotate(180)" fill="#6C7D9E"/>
+    </svg>
+
+    <span class="visually-hidden">{{ "Previous"|t }}</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#{{ id }}" data-bs-slide="next">
+    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+       <rect width="42" height="42" rx="21" fill="#fff"/>
+      <path class="arrow" d="M28.53,21.53a.75.75,0,0,0,0-1.061L23.757,15.7A.75.75,0,1,0,22.7,16.757L26.939,21,22.7,25.243A.75.75,0,0,0,23.757,26.3ZM14,21.75H28v-1.5H14Z" fill="#6c7d9e"/>
+    </svg>
+
+    <span class="visually-hidden">{{ "Next"|t }}</span>
+  </button>
+</div>
