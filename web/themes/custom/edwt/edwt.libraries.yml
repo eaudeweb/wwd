@@ -14,6 +14,7 @@ global-styling:
       css/images.css: {}
       css/helpers.css: {}
       css/style.css: {}
+      css/theme/heights.css: {}
   js:
     js/script.js: {}
 
@@ -30,12 +31,29 @@ js-latest:
     - core/popperjs
 
 # Components.
-bc--accordion:
+c--navbar:
+  css:
+    component:
+      css/components/navbar.css: {}
+
+c--nav:
+  css:
+    component:
+      css/components/hamburger.css: {}
+      css/components/nav.css: {}
+
+c--accordion:
   css:
     component:
       css/components/accordion.css: {}
 
-# bc--alert:
+c--alert:
+  css:
+    component:
+      css/components/alert.css: {}
+
+
+# c--alert:
 #   css:
 #     component:
 #       css-sass/bootstrap/alert.css: {}
@@ -103,16 +121,6 @@ bc--accordion:
 #       css-sass/bootstrap/modal.css: {}
 #   dependencies:
 #     - edwt/bc--close
-
-# bc--nav:
-#   css:
-#     component:
-#       css-sass/bootstrap/nav.css: {}
-
-# bc--navbar:
-#   css:
-#     component:
-#       css-sass/bootstrap/navbar.css: {}
 
 # bc--pagination:
 #   css:
