@@ -62,3 +62,4 @@ content:
     region: content
 hidden:
   langcode: true
+  layout_builder__layout: true
