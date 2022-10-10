@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.multimedia.field_video
     - node.type.multimedia
   module:
+    - field_states_ui
     - link
     - media_library
     - path
@@ -28,7 +29,25 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            838aca0d-5038-4485-9303-7b9ac1716aa4:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          838aca0d-5038-4485-9303-7b9ac1716aa4:
+            uuid: 838aca0d-5038-4485-9303-7b9ac1716aa4
+            id: visible
+            data:
+              target: field_type
+              comparison: value
+              value: video
+              submit: 'Add Cancel'
   created:
     type: datetime_timestamp
     weight: 3
@@ -42,14 +61,50 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            541938e9-4a24-4467-9119-67462c6d1cb5:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          541938e9-4a24-4467-9119-67462c6d1cb5:
+            uuid: 541938e9-4a24-4467-9119-67462c6d1cb5
+            id: visible
+            data:
+              target: field_type
+              comparison: value
+              value: poster
+              submit: 'Update State Cancel'
   field_media_image:
     type: media_library_widget
     weight: 12
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            4724a526-51a1-41b3-9877-5d5c6a02e3b9:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          4724a526-51a1-41b3-9877-5d5c6a02e3b9:
+            uuid: 4724a526-51a1-41b3-9877-5d5c6a02e3b9
+            id: visible
+            data:
+              target: field_type
+              comparison: value
+              value: poster
+              submit: 'Update State Cancel'
   field_type:
     type: options_select
     weight: 11
@@ -62,7 +117,25 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            89f030fd-fad9-48b4-8170-ecc3943c36f4:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          89f030fd-fad9-48b4-8170-ecc3943c36f4:
+            uuid: 89f030fd-fad9-48b4-8170-ecc3943c36f4
+            id: visible
+            data:
+              target: field_type
+              comparison: value
+              value: video
+              submit: 'Add Cancel'
   langcode:
     type: language_select
     weight: 1

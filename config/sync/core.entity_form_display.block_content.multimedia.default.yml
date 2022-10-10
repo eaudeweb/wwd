@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.multimedia.field_multimedia_type
     - field.field.block_content.multimedia.field_poster
   module:
+    - field_states_ui
     - link
     - text
 id: block_content.multimedia.default
@@ -53,7 +54,25 @@ content:
     weight: 5
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            ba1fe61e-be48-4346-8f9b-f36ab0f356d0:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          ba1fe61e-be48-4346-8f9b-f36ab0f356d0:
+            uuid: ba1fe61e-be48-4346-8f9b-f36ab0f356d0
+            id: visible
+            data:
+              target: field_multimedia_type
+              comparison: value
+              value: individual
+              submit: 'Add Cancel'
   info:
     type: string_textfield
     weight: 0

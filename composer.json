@@ -20,13 +20,13 @@
         "drupal/advagg": "^5.0",
         "drupal/block_class": "^2.0",
         "drupal/color_field": "^2.5",
-        "drupal/conditional_fields": "^4.0@alpha",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/ctools": "^4.0",
         "drupal/entity_embed": "^1.2",
         "drupal/field_group": "^3.3",
+        "drupal/field_states_ui": "^2.0",
         "drupal/google_analytics": "^4.0",
         "drupal/layout_builder_component_attributes": "^2.1",
         "drupal/layout_builder_modal": "^1.1",
@@ -123,7 +123,9 @@
             ]
         },
         "patches": {
-
+          "drupal/field_states_ui": {
+            "Issue #3225009: Enable conditional_fields for paragraphs": "https://www.drupal.org/files/issues/2022-03-07/3225009-5.patch"
+          }
         },
         "drupal-core-project-message": {
             "include-keys": [

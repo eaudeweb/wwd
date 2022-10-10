@@ -14,7 +14,7 @@ bundle: background_gradient
 label: Direction
 description: 'Only works if gradient type is set to Linear'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 'to bottom right'

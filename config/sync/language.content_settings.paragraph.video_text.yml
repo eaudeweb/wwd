@@ -1,9 +1,9 @@
-uuid: 6ebfea7b-955e-4cd2-aa79-728a842ec381
+uuid: c84f4122-aad2-4108-92b8-24ee78a1418f
 langcode: en
 status: true
 dependencies:
   config:
-    - media.type.remote_video
+    - paragraphs.paragraphs_type.video_text
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: media.remote_video
-target_entity_type_id: media
-target_bundle: remote_video
+id: paragraph.video_text
+target_entity_type_id: paragraph
+target_bundle: video_text
 default_langcode: site_default
 language_alterable: true

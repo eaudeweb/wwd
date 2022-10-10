@@ -10,10 +10,10 @@ qty_classes_per_block: 10
 items_per_page: 50
 enable_special_chars: false
 qty_attributes_per_block: 10
-enable_id_replacement: true
-weight_attributes: 0
-weight_class: 0
-weight_id: 0
+enable_id_replacement: false
+weight_attributes: null
+weight_class: null
+weight_id: null
 filter_html_clean_css_identifier: ''
-maxlength_attributes: 0
+maxlength_attributes: 10000
 maxlength_id: 255
