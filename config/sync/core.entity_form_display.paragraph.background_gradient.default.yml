@@ -12,7 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.background_gradient
   module:
     - color_field
-    - conditional_fields
 id: paragraph.background_gradient.default
 targetEntityType: paragraph
 bundle: background_gradient
@@ -29,93 +28,25 @@ content:
     weight: 5
     region: content
     settings: {  }
-    third_party_settings:
-      conditional_fields:
-        ab411cfd-f600-465c-8a47-8e935411e7d3:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   field_gradient_first_color:
     type: color_field_widget_html5
     weight: 3
     region: content
     settings: {  }
-    third_party_settings:
-      conditional_fields:
-        6c1332a7-1349-48fd-9f81-736273e22919:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   field_gradient_second_colour:
     type: color_field_widget_html5
     weight: 4
     region: content
     settings: {  }
-    third_party_settings:
-      conditional_fields:
-        e4ea6436-f2d3-4dc7-8cae-e5848588734e:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   field_gradient_type:
     type: options_select
     weight: 2
     region: content
     settings: {  }
-    third_party_settings:
-      conditional_fields:
-        d11d31b4-9083-4368-9b84-28b0d315195c:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   field_use_gradient:
     type: boolean_checkbox
     weight: 1

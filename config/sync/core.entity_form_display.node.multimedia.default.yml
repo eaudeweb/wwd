@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.multimedia.field_video
     - node.type.multimedia
   module:
-    - conditional_fields
     - link
     - media_library
     - path
@@ -29,25 +28,7 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings:
-      conditional_fields:
-        49c612cd-2426-4d2d-8887-ffde93c5f070:
-          entity_type: node
-          bundle: multimedia
-          dependee: field_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: video
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 3
@@ -61,50 +42,14 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings:
-      conditional_fields:
-        e28894a7-c4dd-4afd-8c5c-f12789232761:
-          entity_type: node
-          bundle: multimedia
-          dependee: field_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: poster
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   field_media_image:
     type: media_library_widget
     weight: 12
     region: content
     settings:
       media_types: {  }
-    third_party_settings:
-      conditional_fields:
-        fa76fd27-97ae-4a80-9371-7e1a827d95a2:
-          entity_type: node
-          bundle: multimedia
-          dependee: field_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: poster
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   field_type:
     type: options_select
     weight: 11
@@ -117,25 +62,7 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings:
-      conditional_fields:
-        b63f6a00-cdd1-4853-a530-eee2944fbc28:
-          entity_type: node
-          bundle: multimedia
-          dependee: field_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: video
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1

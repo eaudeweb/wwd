@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.important_messages.field_important_messages
   module:
     - paragraphs
-    - viewsreference
 id: block_content.important_messages.default
 targetEntityType: block_content
 bundle: important_messages
@@ -16,7 +15,7 @@ mode: default
 content:
   field_background:
     type: paragraphs
-    weight: 27
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -32,15 +31,9 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_important_messages:
-    type: viewsreference_select
-    weight: 28
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   info:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -48,14 +41,15 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_important_messages: true

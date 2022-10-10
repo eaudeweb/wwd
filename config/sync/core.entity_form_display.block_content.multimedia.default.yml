@@ -10,7 +10,6 @@ dependencies:
     - field.field.block_content.multimedia.field_multimedia_type
     - field.field.block_content.multimedia.field_poster
   module:
-    - conditional_fields
     - link
     - text
 id: block_content.multimedia.default
@@ -42,8 +41,7 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings:
-      conditional_fields: {  }
+    third_party_settings: {  }
   field_multimedia_type:
     type: options_select
     weight: 3
@@ -55,25 +53,7 @@ content:
     weight: 5
     region: content
     settings: {  }
-    third_party_settings:
-      conditional_fields:
-        a5c488b5-816e-489d-87a6-5b84f1f17f3f:
-          entity_type: block_content
-          bundle: multimedia
-          dependee: field_multimedia_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: individual
-            effect: show
-            effect_options: {  }
-            selector: ''
+    third_party_settings: {  }
   info:
     type: string_textfield
     weight: 0
