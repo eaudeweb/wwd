@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.card.field_title
     - paragraphs.paragraphs_type.card
   module:
-    - link
+    - link_class
     - paragraphs
     - text
 id: paragraph.card.default
@@ -36,12 +36,15 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_cta_link:
-    type: link_default
+    type: link_class_field_widget
     weight: 3
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      link_class_mode: force_class
+      link_class_force: 'btn btn-link btn-arrow'
+      link_class_select: ''
     third_party_settings: {  }
   field_description:
     type: text_textarea

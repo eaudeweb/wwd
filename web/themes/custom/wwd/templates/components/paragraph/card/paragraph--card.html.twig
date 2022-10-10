@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * WWD theme implementation to display a paragraph.
+ */
+#}
+
+{{ attach_library('wwd/p--card') }}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--' ~ paragraph.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+    'text-white',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }} style="{{- content.field_background|render|striptags -}}">
+  {{ content|without('field_background') }}
+</div>

@@ -1,0 +1,12 @@
+.paragraph--card {
+  padding: 60px 40px 90px;
+  height: 100%;
+
+  & .paragraph--title {
+    padding-bottom: 26px;
+  }
+
+  & .btn-link {
+    --btn-color: var(--c-white);
+  }
+}

@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * WWD theme implementation to display a paragraph.
+ */
+#}
+
+{%- if 'On' in content.field_use_gradient.0 -%}
+  background: {{ content.field_gradient_type.0 }}(-45deg, {{ content.field_gradient_first_color.0 }} 0%, {{ content.field_gradient_second_colour.0 }} 100%);
+  {# --p--bg-gradient--bg: {{ content.field_background_color.0 }};
+  --p--bg-gradient--direction: {{ content.field_direction.0 }}; #}
+{%- else -%}
+  background-color: {{ content.field_background_color.0 }};
+{%- endif -%}
+
