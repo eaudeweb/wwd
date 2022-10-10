@@ -8,19 +8,11 @@ dependencies:
     - field.field.block_content.cards_block.field_cards
   module:
     - entity_reference_revisions
-    - text
 id: block_content.cards_block.default
 targetEntityType: block_content
 bundle: cards_block
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_cards:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -28,8 +20,9 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   addtoany: true
+  body: true
   langcode: true

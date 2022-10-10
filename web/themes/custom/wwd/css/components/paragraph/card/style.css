@@ -1,0 +1,8 @@
+.paragraph--card {
+  padding: 3.75rem 2.5rem 5.625rem;
+  height: 100%;
+}.paragraph--card .paragraph--title {
+    padding-bottom: 1.625rem;
+  }.paragraph--card .btn-link {
+    --btn-color: var(--c-white);
+  }
