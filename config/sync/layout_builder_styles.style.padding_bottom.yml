@@ -1,0 +1,12 @@
+uuid: 2d89e2ad-98b6-4373-9b6c-c46c55c474db
+langcode: en
+status: true
+dependencies: {  }
+id: padding_bottom
+label: 'Padding bottom'
+classes: pb-region
+type: section
+group: paddings
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

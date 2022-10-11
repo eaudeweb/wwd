@@ -1,0 +1,18 @@
+
+  .node--multimedia--video-teaser .node--date {
+    font-style: 0.75rem;
+    font-style: italic;
+    color: #6C7D9E;
+    margin-bottom: 0.5rem;
+  }.node--multimedia--video-teaser .node--title {
+    --headings-font-family: var(--body-font-family);
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }.node--multimedia--video-teaser .node--title a {
+      color: #5BC09C;
+    }.node--multimedia--video-teaser .field--name-field-video {
+    min-width: 40%;
+    max-width: 40%;
+  }

@@ -2,12 +2,33 @@ body {
   --navbar-mh: 6.25rem;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 .header {
   z-index: 1;
 }
 
 .mt-block {
   margin-top: 6.25rem;
+}
+
+.pt-grid {
+  padding-top: 1.25rem;
+}
+
+.pt-region {
+  padding-top: var(--p-block);
+}
+
+.pb-region {
+  padding-bottom: var(--p-block);
+}
+
+.py-region {
+  padding-top: var(--p-block);
+  padding-bottom: var(--p-block);
 }
 
 .navbar {
@@ -39,6 +60,10 @@ body {
   right: 3.125rem;
   bottom: 3.125rem;
 }
+
+.block .block--title.h1 {
+    margin-bottom: 2.375rem;
+  }
 
 /* Social */
 

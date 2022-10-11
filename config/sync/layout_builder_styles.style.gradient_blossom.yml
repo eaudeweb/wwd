@@ -1,0 +1,12 @@
+uuid: dcb15b48-8fcb-44f3-a065-032512f50b2d
+langcode: en
+status: true
+dependencies: {  }
+id: gradient_blossom
+label: 'Gradient Blossom'
+classes: gr-blossom
+type: section
+group: backgrounds
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

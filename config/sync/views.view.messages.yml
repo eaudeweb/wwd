@@ -245,7 +245,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 6
       filters:
         status:
           id: status

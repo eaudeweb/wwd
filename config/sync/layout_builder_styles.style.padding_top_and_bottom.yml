@@ -1,0 +1,12 @@
+uuid: 2a64b73f-11a9-4bb3-9801-346d34e09601
+langcode: en
+status: true
+dependencies: {  }
+id: padding_top_and_bottom
+label: 'Padding top and bottom'
+classes: py-region
+type: section
+group: paddings
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

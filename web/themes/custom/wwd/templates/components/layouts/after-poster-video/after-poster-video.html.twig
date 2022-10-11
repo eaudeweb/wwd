@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * WWD theme implementation to display a two-column layout.
+ */
+#}
+
+{% if '33-67' in attributes.class|render %}
+  {% set col1 = 4 %}
+  {% set col2 = 8 %}
+{% endif %}
+
+{% set first_classes = [
+  'region',
+  'region--first',
+  'col-' ~ col1,
+] %}
+
+{% set second_classes = [
+  'region',
+  'region--second',
+  'col-' ~ col2,
+] %}
+
+{% if content %}
+  <div{{ attributes.addClass('pt-grid') }}>
+    <div class="container">
+      <div class="row g-3">
+        {% if content.first %}
+          <div {{ region_attributes.first.addClass(first_classes) }}>
+            {{ content.first }}
+          </div>
+        {% endif %}
+
+        {% if content.second %}
+          <div {{ region_attributes.second.addClass(second_classes) }}>
+            {{ content.second }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

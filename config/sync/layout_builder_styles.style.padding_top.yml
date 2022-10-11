@@ -1,0 +1,12 @@
+uuid: bfaf73c7-d589-47b0-9ad6-22f47f381efb
+langcode: en
+status: true
+dependencies: {  }
+id: padding_top
+label: 'Padding Top'
+classes: pt-region
+type: section
+group: paddings
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -2,12 +2,32 @@ body {
   --navbar-mh: 100px;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 .header {
   z-index: 1;
 }
 
 .mt-block {
   margin-top: 100px;
+}
+
+.pt-grid {
+  padding-top: 20px;
+}
+
+.pt-region {
+  padding-top: var(--p-block);
+}
+
+.pb-region {
+  padding-bottom: var(--p-block);
+}
+
+.py-region {
+  padding-block: var(--p-block);
 }
 
 .navbar {
@@ -39,6 +59,12 @@ body {
   position: fixed;
   right: 50px;
   bottom: 50px;
+}
+
+.block {
+  & .block--title.h1 {
+    margin-bottom: 38px;
+  }
 }
 
 /* Social */
