@@ -17,6 +17,10 @@ global-styling:
       css/theme/heights.css: {}
   js:
     js/script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
 
 theme-fonts:
   css:
@@ -52,6 +56,10 @@ c--alert:
     component:
       css/components/alert.css: {}
 
+c--carousel:
+  css:
+    component:
+      css/components/carousel.css: {}
 
 # c--alert:
 #   css:
@@ -89,11 +97,6 @@ c--alert:
 #   css:
 #     component:
 #       css-sass/bootstrap/card.css: {}
-
-# bc--carousel:
-#   css:
-#     component:
-#       css-sass/bootstrap/carousel.css: {}
 
 # bc--close:
 #   css:
@@ -157,15 +160,3 @@ t--layout:
   css:
     layout:
       css-sass/layout/layout.css: {}
-
-# # Custom layout
-# cl--layout:
-#   css:
-#     layout:
-#       css-sass/layout/layout.css: {}
-
-# # Custom library.
-# cl--custom:
-#   css:
-#     layout:
-#       css-sass/custom/custom.css: {}

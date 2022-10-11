@@ -17,12 +17,11 @@
   {{ title_prefix }}
   {% if label %}
     <h2{{title_attributes}}>
-      <span>
-        {{- label -}}
-      </span>
+      {{- label -}}
     </h2>
   {% endif %}
   {{ title_suffix }}
+
   <div class="multimedia-rows">
     {% for type, rows in content.referenced_nodes %}
       {% for row in rows %}

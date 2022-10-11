@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * WWD Theme override the display for multimedia block.
+ */
+#}
+
+{{ attach_library('edwt/c--carousel') }}
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'text-white',
+    'py-5',
+    'mt-block',
+  ]
+%}
+
+<div{{attributes.addClass(classes)}} style="{{- content.field_background|render|striptags -}}">
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div class="container">
+    {% if label %}
+      <h2{{title_attributes.addClass('h1', 'mb-5')}}>
+        {{- label -}}
+      </h2>
+    {% endif %}
+
+    {{ content|without('field_background') }}
+  </div>
+</div>
+

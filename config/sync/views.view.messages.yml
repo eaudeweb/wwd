@@ -358,9 +358,22 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: slider
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         filters: false
         filter_groups: false
       display_description: ''

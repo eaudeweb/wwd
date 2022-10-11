@@ -6,6 +6,10 @@ body {
   z-index: 1;
 }
 
+.mt-block {
+  margin-top: 6.25rem;
+}
+
 .navbar {
   min-height: var(--navbar-mh);
   background-color: rgba(var(--white-rgb), .12);
@@ -29,3 +33,53 @@ body {
       --bs-nav-link-padding-y: 0.875rem;
       text-transform: uppercase;
     }
+
+.back-to-top {
+  position: fixed;
+  right: 3.125rem;
+  bottom: 3.125rem;
+}
+
+/* Social */
+
+.a2a_default_style:not(.a2a_flex_style) a:not(:last-child) {
+  padding-right: 0.875rem;
+}
+
+.carousel .carousel-indicators {
+    position: relative;
+    margin: 1.25rem 0;
+  }
+
+.carousel .carousel-indicators [data-bs-target] {
+    border: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    opacity: .5;
+
+  }
+
+.carousel .carousel-indicators .active[data-bs-target] {
+    opacity: 1;
+  }
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+
+.carousel-control-prev:hover .arrow, .carousel-control-next:hover .arrow {
+    fill:var(--c-primary);
+  }
+
+.carousel-control-prev {
+  width: 5.625rem;
+  right: 100%;
+  left: inherit;
+}
+
+.carousel-control-next {
+  width: 5.625rem;
+  left: 100%;
+}
