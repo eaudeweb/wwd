@@ -41,3 +41,4 @@ hidden:
   field_yoast_seo: true
   langcode: true
   layout_builder__layout: true
+  layout_builder__translation: true

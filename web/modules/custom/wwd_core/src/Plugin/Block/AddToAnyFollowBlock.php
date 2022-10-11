@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   category = @Translation("WWD"),
  * )
  */
-class AddToAnyFollowBlock extends BlockBase implements ContainerFactoryPluginInterface {
+class AddToAnyFollowBlock extends BlockBase {
 
   /**
    * Default links.
@@ -32,23 +32,6 @@ class AddToAnyFollowBlock extends BlockBase implements ContainerFactoryPluginInt
   ];
 
   /**
-   * The entity type manager.
-   *
-   * @var \Drupal\Entity\EntityTypeManagerInterface
-   */
-  protected $entityTypeManager;
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    $instance = new static($configuration, $plugin_id, $plugin_definition);
-    $instance->entityTypeManager = $container->get('entity_type.manager');
-
-    return $instance;
-  }
-
-  /**
    * {@inheritdoc}
    */
   public function build() {
@@ -62,6 +45,7 @@ class AddToAnyFollowBlock extends BlockBase implements ContainerFactoryPluginInt
     return [
       '#theme' => 'add_to_any_follow',
       '#links' => $links,
+      '#drop' => $config['drop_button'] ?? FALSE,
       '#cache' => [
         'contexts' => [
           'url',
@@ -95,6 +79,12 @@ class AddToAnyFollowBlock extends BlockBase implements ContainerFactoryPluginInt
       ];
     }
 
+    $form['drop_button'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Provide a drop button?'),
+      '#default_value' => $config['drop_button'] ?? FALSE,
+    ];
+
     return $form;
   }
 
@@ -108,6 +98,7 @@ class AddToAnyFollowBlock extends BlockBase implements ContainerFactoryPluginInt
     foreach ($options as $option) {
       $this->configuration[$option] = $values[$option];
     }
+    $this->configuration['drop_button'] = $values['drop_button'];
 
   }
 

@@ -12,7 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.background_gradient
   module:
     - color_field
-    - conditional_fields
+    - field_states_ui
 id: paragraph.background_gradient.default
 targetEntityType: paragraph
 bundle: background_gradient
@@ -30,92 +30,96 @@ content:
     region: content
     settings: {  }
     third_party_settings:
-      conditional_fields:
-        ab411cfd-f600-465c-8a47-8e935411e7d3:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            a01d77c1-8808-4f6d-b9f7-2e86079f8cd6:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          a01d77c1-8808-4f6d-b9f7-2e86079f8cd6:
+            uuid: a01d77c1-8808-4f6d-b9f7-2e86079f8cd6
+            id: visible
+            data:
+              target: field_use_gradient
+              comparison: checked
+              value: ''
+              submit: 'Add Cancel'
   field_gradient_first_color:
     type: color_field_widget_html5
     weight: 3
     region: content
     settings: {  }
     third_party_settings:
-      conditional_fields:
-        6c1332a7-1349-48fd-9f81-736273e22919:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            91549ca4-d4ac-4736-8814-51d7a62fd0d4:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          91549ca4-d4ac-4736-8814-51d7a62fd0d4:
+            uuid: 91549ca4-d4ac-4736-8814-51d7a62fd0d4
+            id: visible
+            data:
+              target: field_use_gradient
+              comparison: checked
+              value: ''
+              submit: 'Add Cancel'
   field_gradient_second_colour:
     type: color_field_widget_html5
     weight: 4
     region: content
     settings: {  }
     third_party_settings:
-      conditional_fields:
-        e4ea6436-f2d3-4dc7-8cae-e5848588734e:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            be941bce-2c8a-4da9-8c64-dcb8ce027690:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          be941bce-2c8a-4da9-8c64-dcb8ce027690:
+            uuid: be941bce-2c8a-4da9-8c64-dcb8ce027690
+            id: visible
+            data:
+              target: field_use_gradient
+              comparison: checked
+              value: ''
+              submit: 'Add Cancel'
   field_gradient_type:
     type: options_select
     weight: 2
     region: content
     settings: {  }
     third_party_settings:
-      conditional_fields:
-        d11d31b4-9083-4368-9b84-28b0d315195c:
-          entity_type: paragraph
-          bundle: background_gradient
-          dependee: field_use_gradient
-          settings:
-            state: visible
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: 1
-            effect: show
-            effect_options: {  }
-            selector: ''
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            ced36c54-ad07-43ba-9054-d7b7260438d4:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          ced36c54-ad07-43ba-9054-d7b7260438d4:
+            uuid: ced36c54-ad07-43ba-9054-d7b7260438d4
+            id: visible
+            data:
+              target: field_use_gradient
+              comparison: checked
+              value: ''
+              submit: 'Add Cancel'
   field_use_gradient:
     type: boolean_checkbox
     weight: 1

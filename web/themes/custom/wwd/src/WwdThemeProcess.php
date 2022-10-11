@@ -3,6 +3,8 @@
 namespace Drupal\wwd;
 
 use Drupal\views\Views;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\block_content\Entity\BlockContent;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -68,11 +70,13 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     $view_builder = $this->entityTypeManager->getViewBuilder('node');
     // Get current langcode.
     $langcode = $this->languageManager->getCurrentLanguage()->getId();
+    // Get content.
+    $content = $element['content']['#block_content'] ?? NULL;
     // Parse multimedia block.
     if ($element['#derivative_plugin_id'] == 'multimedia' ||
-    (!empty($element['content']['#block_content']->type->target_id) && $element['content']['#block_content']->type->target_id == 'multimedia')) {
-      // Get content.
-      $content = $element['content']['#block_content'];
+    (!empty($content->type->target_id) &&
+    $content->type->target_id == 'multimedia')) {
+
       $variables['content']['referenced_nodes'] = [];
       $view_result = [];
       // Check what we want to show.
@@ -128,6 +132,33 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           // Check for translation.
           $variables['content']['referenced_nodes'][$type] = $view_builder
             ->view($translated, 'video_teaser');
+        }
+      }
+    }
+
+    // Get all gradient/background options for background_gradient paragraph.
+    if ($content instanceof BlockContent && $content->hasField('field_background') &&
+      !$content->get('field_background')->isEmpty()) {
+      $paragraph = $content->get('field_background')->entity;
+      if ($paragraph instanceof Paragraph && $paragraph->bundle() == 'background_gradient') {
+        $useGradient = $paragraph->get('field_use_gradient')->value ? $paragraph->get('field_use_gradient')->value : 0;
+        $variables['background_color'] = $paragraph->get('field_background_color')->getString();
+        $variables['gradient_type'] = $paragraph->get('field_gradient_type')->getString();
+        if ($useGradient == 1) {
+          $gradientOptions = '';
+          $variables['use_gradient'] = TRUE;
+          if ($variables['gradient_type'] !== 'radial-gradient') {
+            $variables['direction'] = $paragraph->get('field_direction')->getString();
+            if ($variables['direction'] !== 'default') {
+              $gradientOptions .= $variables['direction'] . ', ';
+            }
+          }
+          $variables['first_color'] = $paragraph->get('field_gradient_first_color')->getString();
+          $gradientOptions .= $variables['first_color'] . ',';
+          $variables['second_color'] = $paragraph->get('field_gradient_second_colour')->getString();
+          $gradientOptions .= $variables['second_color'];
+
+          $variables['gradient_options'] = $gradientOptions;
         }
       }
     }
