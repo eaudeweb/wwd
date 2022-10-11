@@ -1,0 +1,15 @@
+uuid: 683ac7cb-c57d-451c-9446-6cb836851ffe
+langcode: en
+status: true
+dependencies: {  }
+name: message_slide
+label: 'Message slide (180 x 180)'
+effects:
+  a1f891af-f426-4bc5-a7b0-45a4d6ba6219:
+    uuid: a1f891af-f426-4bc5-a7b0-45a4d6ba6219
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 180
+      anchor: center-center

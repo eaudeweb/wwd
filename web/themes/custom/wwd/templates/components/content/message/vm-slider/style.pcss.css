@@ -1,0 +1,31 @@
+.node--message--slider {
+  background: var(--c-white);
+  border-end-end-radius: 120px;
+  padding: 26px 36px 26px 26px;
+  color: #6C7D9E;
+
+  & img {
+    border-radius: 50%;
+    overflow: hidden
+  }
+
+  & .node--title {
+    color: #0D1B2A;
+    font-size: 24px;
+  }
+
+  & .field--name-field-message-date {
+    color: #6C7D9E;
+    font-size: 12px;
+    line-height: 18px;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+
+  & .field--name-field-message-position {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+}

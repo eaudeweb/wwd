@@ -6,6 +6,10 @@ global-styling:
       css/theme/buttons.css: {}
   js:
     js/script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
 
 theme-fonts:
   css:
@@ -18,6 +22,12 @@ n--page--full:
   css:
     component:
       css/components/content/page/vm-full/style.css: {}
+
+## Message.
+n--message--slider:
+  css:
+    component:
+      css/components/content/message/vm-slider/style.css: {}
 
 # Components.
 ## Video text.

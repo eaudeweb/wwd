@@ -10,10 +10,12 @@ dependencies:
     - field.field.node.message.field_message_position
     - field.field.node.message.field_video
     - field.field.node.message.field_weight
+    - image.style.message_slide
     - node.type.message
   module:
     - datetime
     - layout_builder
+    - media
     - text
     - user
 third_party_settings:
@@ -26,19 +28,23 @@ bundle: message
 mode: slider
 content:
   body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_media_image:
-    type: entity_reference_label
+    type: text_trimmed
     label: hidden
     settings:
-      link: true
+      trim_length: 200
     third_party_settings: {  }
-    weight: 1
+    weight: 3
+    region: content
+  field_media_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: message_slide
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_message_date:
     type: datetime_default
@@ -47,22 +53,18 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_message_position:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
 hidden:
   addtoany: true
   field_video: true
   field_weight: true
   langcode: true
+  links: true
