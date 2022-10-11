@@ -15,3 +15,32 @@ wwd-header:
       label: 'Intro Header left'
     right:
       label: 'Intro Header right'
+
+wwd-poster-video:
+  label: 'WWD Posters Video'
+  category: 'WWD Layouts'
+  path: templates/components/layouts
+  template: poster-video/poster-video
+  library: wwd/l--poster-video
+  default_region: poster
+  icon: poster-video/img/poster-video.svg
+  regions:
+    poster:
+      label: Posters
+    video:
+      label: Video
+
+wwd-after-poster-video:
+  label: 'WWD After Posters Video'
+  category: 'WWD Layouts'
+  path: templates/components/layouts
+  template: after-poster-video/after-poster-video
+  class: '\Drupal\layout_builder\Plugin\Layout\TwoColumnLayout'
+  library: wwd/l--poster-video
+  default_region: poster
+  icon: after-poster-video/img/after-poster-video.svg
+  regions:
+    first:
+      label: first
+    second:
+      label: second

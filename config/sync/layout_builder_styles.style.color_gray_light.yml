@@ -1,0 +1,19 @@
+uuid: 3b49fa32-5b89-4d34-a8c6-4cda61ea65d8
+langcode: en
+status: true
+dependencies: {  }
+id: color_gray_light
+label: 'Color Gray light'
+classes: bg-gray-light
+type: section
+group: backgrounds
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+  - layout_twocol_section
+  - layout_threecol_section
+  - layout_fourcol_section
+  - wwd-header
+  - wwd-poster-video
+  - wwd-after-poster-video
+weight: 0

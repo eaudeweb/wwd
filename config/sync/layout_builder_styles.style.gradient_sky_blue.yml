@@ -1,0 +1,12 @@
+uuid: 081d58c4-58c0-49cf-ad73-08fe9d5cba9f
+langcode: en
+status: true
+dependencies: {  }
+id: gradient_sky_blue
+label: 'Gradient Sky blue'
+classes: bg-g-sky-blue
+type: section
+group: backgrounds
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

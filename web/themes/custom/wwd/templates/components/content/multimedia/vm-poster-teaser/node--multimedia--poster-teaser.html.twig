@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * WWD override to display a node.
+ */
+#}
+
+{{ attach_library('wwd/n--multimedia--poster-teaser') }}
+
+{%
+  set classes = [
+    'node',
+    'node--' ~ node.bundle|clean_class,
+    'node--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <a href="{{ content.field_link.0|render }}">
+    {{ content.field_media_image }}
+  </a>
+</article>

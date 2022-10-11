@@ -1,0 +1,10 @@
+uuid: 3d415186-dec4-43cd-b598-cc02bc81580f
+langcode: en
+status: true
+dependencies: {  }
+id: backgrounds
+label: Backgrounds
+multiselect: single
+form_type: checkboxes
+required: false
+weight: 0

@@ -1,0 +1,17 @@
+.user-mode .layout-region--video {
+  & .block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  & .block__content {
+    flex-grow: 1;
+    overflow-x: hidden;
+  }
+
+  & .views-view-grid {
+    position: absolute;
+    inset: 0;
+  }
+}

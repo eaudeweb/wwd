@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * WWD theme implementation to display a Header.
+ *
+ * Available variables:
+ * - poster: Poster
+ * - video: video
+ */
+#}
+
+{% if attributes['data-layout-update-url'] %}
+  {% set view_edit = true %}
+{% endif %}
+
+{%
+  set classes = [
+    'layout',
+    view_edit ? 'l-admin' : '',
+    'layout-builder__layout',
+    'layout-poster-video',
+    not view_edit ? 'user-mode',
+  ]
+%}
+
+{% set poster_classes = [
+  'layout-region',
+  'layout-region--poster',
+  'col-lg-7',
+] %}
+
+{% set video_classes = [
+  'layout-region',
+  'layout-region--video',
+  'col-lg-5'
+] %}
+
+{% if content|render|striptags|trim is not empty %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="container">
+      <div class="row">
+        <div {{ region_attributes.poster.addClass(poster_classes) }}>
+          {{ content.poster }}
+        </div>
+
+        {% if content.video %}
+          <div {{ region_attributes.video.addClass(video_classes) }}>
+            {{ content.video }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+

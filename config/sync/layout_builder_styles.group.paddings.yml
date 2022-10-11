@@ -1,0 +1,10 @@
+uuid: c39a04f9-eadb-4dc6-a54c-8e22b8769e54
+langcode: en
+status: true
+dependencies: {  }
+id: paddings
+label: Paddings
+multiselect: single
+form_type: checkboxes
+required: false
+weight: 0
