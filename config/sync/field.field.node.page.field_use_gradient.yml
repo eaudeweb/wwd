@@ -1,0 +1,23 @@
+uuid: 6f596c7f-5d96-40b1-b532-1e5aec7bf085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_use_gradient
+    - node.type.page
+id: node.page.field_use_gradient
+field_name: field_use_gradient
+entity_type: node
+bundle: page
+label: 'Use Background'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
