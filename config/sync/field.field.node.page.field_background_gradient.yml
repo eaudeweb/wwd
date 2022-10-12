@@ -1,0 +1,37 @@
+uuid: 2123380c-707f-4367-8467-2411cd62b34e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_gradient
+    - node.type.page
+    - paragraphs.paragraphs_type.background_gradient
+  module:
+    - entity_reference_revisions
+id: node.page.field_background_gradient
+field_name: field_background_gradient
+entity_type: node
+bundle: page
+label: 'Background Gradient'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      background_gradient: background_gradient
+    negate: 0
+    target_bundles_drag_drop:
+      background_gradient:
+        weight: 4
+        enabled: true
+      card:
+        weight: 5
+        enabled: false
+      video_text:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

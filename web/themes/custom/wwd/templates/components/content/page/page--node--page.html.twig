@@ -7,8 +7,25 @@
 
 {% extends "page.html.twig" %}
 
-
 {% block wrap_main %}
+  {% if use_banner %}
+    <div class="banner--wrap">
+      <div class="banner--wrapp-background" style="{{ use_gradient ? background_gradient|render|striptags|trim : ''}}">
+        {% if use_gradient == 0 %}
+          {% if has_video %}
+            <video autoplay muted loop id="video-background">
+              <source src="{{- media_url|render|striptags|trim -}}" type="video/mp4">
+            </video>
+          {% else %}
+            <img src="{{- media_url|render|striptags|trim -}}"/>
+          {% endif %}
+        {% endif %}
+      </div>
+      <div class="banner--wrap-title">
+        {{ banner_title }}
+      </div>
+    </div>
+  {% endif %}
   <main role="main" class="flex-grow-1">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 

@@ -77,3 +77,21 @@ function wwd_preprocess_block(&$variables) {
     ->getInstanceFromDefinition(WwdThemeProcess::class)
     ->preprocessBlock($variables);
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function wwd_preprocess_page(&$variables) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(WwdThemeProcess::class)
+    ->preprocessPage($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function wwd_preprocess_html(&$variables) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(WwdThemeProcess::class)
+    ->preprocessHtml($variables);
+}
