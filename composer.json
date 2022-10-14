@@ -20,21 +20,21 @@
         "drupal/advagg": "^5.0",
         "drupal/block_class": "^2.0",
         "drupal/color_field": "^2.5",
-        "drupal/conditional_fields": "^4.0@alpha",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/ctools": "^4.0",
         "drupal/entity_embed": "^1.2",
         "drupal/field_group": "^3.3",
+        "drupal/field_states_ui": "^2.0",
         "drupal/google_analytics": "^4.0",
         "drupal/layout_builder_component_attributes": "^2.1",
         "drupal/layout_builder_modal": "^1.1",
-        "drupal/layout_builder_st": "^1.0@alpha",
         "drupal/layout_builder_styles": "^2.0",
         "drupal/link_class": "^2.0",
         "drupal/metatag": "^1.22",
         "drupal/paragraphs": "^1.15",
+        "drupal/paragraphs_asymmetric_translation_widgets": "^1.0",
         "drupal/pathauto": "^1.11",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/recaptcha": "^3.1",
@@ -123,8 +123,19 @@
             ]
         },
         "patches": {
-          "drupal/conditional_fields": {
-            "Issue #2902164: Enable conditional_fields for paragraphs": "https://www.drupal.org/files/issues/2022-05-10/conditional-fields-and-paragraphs-2902164--using-ids--v6.patch"
+          "drupal/field_states_ui": {
+            "Issue #3225009: Enable conditional_fields for paragraphs": "https://www.drupal.org/files/issues/2022-03-07/3225009-5.patch",
+            "Issue #3196272: Not working with paragraphs": "https://www.drupal.org/files/issues/2021-06-08/3196272-3.patch",
+            "Issue : Undefined offset 0 for parents": "https://www.drupal.org/files/issues/2020-10-28/3145195-13661358_6.patch"
+          },
+          "drupal/core": {
+            "Issue #2946333: Allow synced Layout override Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2022-07-25/2946333-288.patch",
+            "Issue #3047022: Layout builder fails to assign inline block access dependencies": "https://www.drupal.org/files/issues/2021-11-16/2786735.patch",
+            "Issue #3101231: Fix multilingual site's layout edit context issue": "https://www.drupal.org/files/issues/2022-02-16/layout-builder-translation-issue-3101231-34.patch"
+        },
+          "drupal/paragraphs": {
+            "Issue #2904705: Support asymm translations": "https://www.drupal.org/files/issues/2020-11-27/paragraphs_support_asym_translations-2904705-122.patch",
+            "Issue #3090200: Access control issues": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
           }
         },
         "drupal-core-project-message": {

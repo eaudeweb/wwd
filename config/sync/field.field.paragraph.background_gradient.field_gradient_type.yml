@@ -14,7 +14,7 @@ bundle: background_gradient
 label: 'Gradient Type'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: linear-gradient

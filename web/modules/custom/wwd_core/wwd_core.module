@@ -31,6 +31,7 @@ function wwd_core_theme() {
     'add_to_any_follow' => [
       'variables' => [
         'links' => [],
+        'drop' => FALSE,
       ],
       'template' => 'social-follow-links-block',
     ],

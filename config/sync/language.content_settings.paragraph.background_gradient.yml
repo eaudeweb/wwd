@@ -1,0 +1,18 @@
+uuid: ee2ddf22-1edd-411d-b9fe-4c0b2a3293a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.background_gradient
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.background_gradient
+target_entity_type_id: paragraph
+target_bundle: background_gradient
+default_langcode: site_default
+language_alterable: true
