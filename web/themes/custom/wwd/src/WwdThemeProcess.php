@@ -102,12 +102,8 @@ class WwdThemeProcess implements ContainerInjectionInterface {
             $posterNodes = $content->get('field_poster')->referencedEntities();
             $referencedPosters = [];
             foreach ($posterNodes as $key => $node) {
-              $translated = $node;
-              if ($node->hasTranslation($langcode)) {
-                $translated = $node->getTranslation($langcode);
-              }
               $referencedPosters[$key] = $view_builder
-                ->view($translated, 'poster_teaser');
+                ->view($node, 'poster_teaser', $langcode);
             }
             $variables['content']['referenced_nodes']['posters'] = $referencedPosters;
           }
@@ -124,29 +120,27 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           // Get the results of the view.
           $view_result['posters'] = $view->result;
           break;
-      }
-      if ($content->get('field_include_video_list')->value == 1) {
-        // Get view name.
-        $viewName = 'multimedia';
-        $displayId = 'videos';
-        $view = Views::getView($viewName);
-        // $view->setArguments($args);
-        $view->setDisplay($displayId);
-        $view->execute();
-        // Get the results of the view.
-        $view_result['videos'] = $view->result;
+
+        case 'videos':
+          // Get view name.
+          $viewName = 'multimedia';
+          $displayId = 'videos';
+          $view = Views::getView($viewName);
+          // $view->setArguments($args);
+          $view->setDisplay($displayId);
+          $view->execute();
+          // Get the results of the view.
+          $view_result['videos'] = $view->result;
+          break;
       }
       // Check if the view is not empty and return results.
       if (!empty($view_result)) {
         // If the view returns results...
         foreach ($view->result as $type => $row) {
           $node = $row->_entity;
-          if ($node->hasTranslation($langcode)) {
-            $node = $node->getTranslation($langcode);
-          }
           // Check for translation.
-          $variables['content']['referenced_nodes'][$type] = $view_builder
-            ->view($translated, 'video_teaser');
+          $variables['content']['referenced_nodes'][$type][] = $view_builder
+            ->view($node, 'video_teaser', $langcode);
         }
       }
     }
@@ -214,7 +208,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
                   ->view($paragraph);
               }
             }
-  
+
           }
           // Retrieve banner title.
           $bannerTitle = $node->get('field_banner_title')->getString();
