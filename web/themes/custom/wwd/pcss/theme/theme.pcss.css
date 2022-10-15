@@ -143,6 +143,15 @@ p:last-child {
   left: 100%;
 }
 
+.w--video--scroll {
+  position: relative;
+
+  & > * {
+    position: absolute;
+    inset: 0;
+  }
+}
+
 /* Temp. */
 .nav-tabs.primary {
   justify-content: center;

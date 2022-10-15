@@ -22,4 +22,8 @@
     min-width: 40%;
     max-width: 40%;
   }
+
+  & .field--name-field-media-oembed-video {
+    display: flex;
+  }
 }

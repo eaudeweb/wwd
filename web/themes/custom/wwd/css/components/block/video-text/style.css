@@ -26,3 +26,7 @@
   }.block--video-text-block .field--name-field-media-oembed-video {
     display: flex; /* remove white space bottom. */
   }
+
+.multimedia-rows {
+  gap: 1.25rem;
+}

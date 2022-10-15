@@ -22,12 +22,14 @@
   {% endif %}
   {{ title_suffix }}
 
-  <div class="multimedia-rows">
-    {% for type, rows in content.referenced_nodes %}
-      {% for row in rows %}
-        <div class="row-{{ type }}">{{ row|render }}</div>
+  <div{{ content_attributes.addClass('block__content') }}>
+    <div class="row multimedia-rows">
+      {% for type, rows in content.referenced_nodes %}
+        {% for row in rows %}
+          <div class="row-{{ type }}">{{ row|render }}</div>
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
+    </div>
   </div>
 </div>
 
