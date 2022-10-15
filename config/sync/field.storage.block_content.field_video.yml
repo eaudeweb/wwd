@@ -1,13 +1,13 @@
-uuid: b2daf1c4-09ba-46bf-b628-9217e948c386
+uuid: a13b7492-69d8-4e5a-b958-7efb75c67dbb
 langcode: en
 status: true
 dependencies:
   module:
+    - block_content
     - media
-    - paragraphs
-id: paragraph.field_video
+id: block_content.field_video
 field_name: field_video
-entity_type: paragraph
+entity_type: block_content
 type: entity_reference
 settings:
   target_type: media

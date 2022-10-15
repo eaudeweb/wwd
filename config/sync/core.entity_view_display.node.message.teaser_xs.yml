@@ -1,0 +1,47 @@
+uuid: f2dfca53-8e3c-4b4d-b8b6-d15593931d7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_xs
+    - field.field.node.message.body
+    - field.field.node.message.field_media_image
+    - field.field.node.message.field_message_date
+    - field.field.node.message.field_message_position
+    - field.field.node.message.field_video
+    - field.field.node.message.field_weight
+    - image.style.message_header_front_page
+    - node.type.message
+  module:
+    - layout_builder
+    - media
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.message.teaser_xs
+targetEntityType: node
+bundle: message
+mode: teaser_xs
+content:
+  field_media_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: message_header_front_page
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_message_date: true
+  field_message_position: true
+  field_video: true
+  field_weight: true
+  langcode: true
+  links: true

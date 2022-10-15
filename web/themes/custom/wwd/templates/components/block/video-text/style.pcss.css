@@ -1,4 +1,4 @@
-.block-inline-blockvideo-text-block {
+.block--video-text-block {
   padding-block: 40px;
   position: relative;
   isolation: isolate;
@@ -6,6 +6,7 @@
   & .block--title {
     --headings-color: var(--c-white);
     margin-bottom: 26px;
+    max-width: 84%;
   }
 
   &:after {
@@ -26,5 +27,9 @@
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+  }
+
+  & .field--name-field-media-oembed-video {
+    display: flex; /* remove white space bottom. */
   }
 }

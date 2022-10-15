@@ -1,15 +1,15 @@
-uuid: 8b061191-7c43-4d24-b315-5e4a3c7c890d
+uuid: 9556b3bc-54b3-4cd4-b088-2f59cb4c9257
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_video
+    - block_content.type.video_text_block
+    - field.storage.block_content.field_video
     - media.type.remote_video
-    - paragraphs.paragraphs_type.video_text
-id: paragraph.video_text.field_video
+id: block_content.video_text_block.field_video
 field_name: field_video
-entity_type: paragraph
-bundle: video_text
+entity_type: block_content
+bundle: video_text_block
 label: Video
 description: ''
 required: false

@@ -1,0 +1,33 @@
+uuid: a3fc0ee7-bee4-4595-aea4-1f3d04c354e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.messages
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: 'block-message bock-header col-auto'
+id: views_block__messages_block_fp_header
+theme: wwd
+region: header
+weight: -4
+provider: null
+plugin: 'views_block:messages-block_fp_header'
+settings:
+  id: 'views_block:messages-block_fp_header'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '2'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

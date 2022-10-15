@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * WWD Theme override to display a block.
+ */
+#}
+
+{{ attach_library('wwd/b--video-text') }}
+
+{%
+  set classes = [
+    'block',
+    'block--video-text-block',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {%- if label -%}
+          <h2{{ title_attributes.addClass('h1', 'block--title') }}>
+            {{- label -}}
+          </h2>
+        {%- endif -%}
+
+        {{- content.field_video -}}
+      </div>
+
+      <div class="col-md-6 d-flex flex-column align-items-start">
+        {{- content|without('field_video') -}}
+      </div>
+    </div>
+  </div>
+</div>

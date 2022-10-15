@@ -7,25 +7,24 @@
 
 {% extends "page.html.twig" %}
 
+{% block wrap_header %}
+  <header
+    {{- header_attribute
+      .setAttribute('id', 'header')
+      .addclass(header_classes, use_banner and use_gradient == 0 ? 'bg-tr')
+    -}}
+  >
+    {% block header %}
+      {%- include '@wwd/components/sections/header/header.html.twig' -%}
+    {% endblock %}
+  </header>
+{% endblock %}
+
 {% block wrap_main %}
   {% if use_banner %}
-    <div class="banner--wrap">
-      <div class="banner--wrapp-background" style="{{ use_gradient ? background_gradient|render|striptags|trim : ''}}">
-        {% if use_gradient == 0 %}
-          {% if has_video %}
-            <video autoplay muted loop id="video-background">
-              <source src="{{- media_url|render|striptags|trim -}}" type="video/mp4">
-            </video>
-          {% else %}
-            <img src="{{- media_url|render|striptags|trim -}}"/>
-          {% endif %}
-        {% endif %}
-      </div>
-      <div class="banner--wrap-title">
-        {{ banner_title }}
-      </div>
-    </div>
+    {% include '@wwd/components/wwd/page-banner/page-banner.html.twig' %}
   {% endif %}
+
   <main role="main" class="flex-grow-1">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 

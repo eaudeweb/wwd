@@ -1,16 +1,16 @@
-uuid: 54481cba-f3de-4fed-820e-393d4ddfc68b
+uuid: f7b191d3-598e-4f0e-b8e4-80f389a08baf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_description
-    - paragraphs.paragraphs_type.video_text
+    - block_content.type.video_text_block
+    - field.storage.block_content.field_description
   module:
     - text
-id: paragraph.video_text.field_description
+id: block_content.video_text_block.field_description
 field_name: field_description
-entity_type: paragraph
-bundle: video_text
+entity_type: block_content
+bundle: video_text_block
 label: Description
 description: ''
 required: false

@@ -196,36 +196,39 @@ class WwdThemeProcess implements ContainerInjectionInterface {
    * Preprocess page.
    */
   public function preprocessPage(&$variables) {
-    $node = $variables['node'];
-    if ($node instanceof NodeInterface) {
-      if ($node->getType() == 'page') {
-        if ($node->get('field_add_banner')->value == 1) {
-          $variables['use_banner'] = TRUE;
-        }
-        // Retrieve gradients if any.
-        if ($node->get('field_use_gradient')->value == 1) {
-          $variables['use_gradient'] = TRUE;
-          if (!$node->get('field_background_gradient')->isEmpty()) {
-            $paragraph = $node->get('field_background_gradient')->entity;
-            if ($paragraph instanceof Paragraph && $paragraph->bundle() == 'background_gradient') {
-              $variables['background_gradient'] = $this->entityTypeManager->getViewBuilder('paragraph')
-                ->view($paragraph);
-            }
-          }
+    if (!empty($variables['node'])) {
+      $node = $variables['node'];
 
-        }
-        // Retrieve banner title.
-        $bannerTitle = $node->get('field_banner_title')->getString();
-        $variables['banner_title'] = $bannerTitle !== '' ? $bannerTitle : $node->getTitle();
-        // Set background.
-        $variables['has_video'] = FALSE;
-        if (!$node->get('field_media_image')->isEmpty()) {
-          $media = $node->get('field_media_image')->entity;
-          if ($media->bundle() == 'video') {
-            $variables['has_video'] = TRUE;
+      if ($node instanceof NodeInterface) {
+        if ($node->getType() == 'page') {
+          if ($node->get('field_add_banner')->value == 1) {
+            $variables['use_banner'] = TRUE;
           }
-          $variables['media_url'] = $this->entityTypeManager->getViewBuilder('media')
-            ->view($media, 'background');
+          // Retrieve gradients if any.
+          if ($node->get('field_use_gradient')->value == 1) {
+            $variables['use_gradient'] = TRUE;
+            if (!$node->get('field_background_gradient')->isEmpty()) {
+              $paragraph = $node->get('field_background_gradient')->entity;
+              if ($paragraph instanceof Paragraph && $paragraph->bundle() == 'background_gradient') {
+                $variables['background_gradient'] = $this->entityTypeManager->getViewBuilder('paragraph')
+                  ->view($paragraph);
+              }
+            }
+  
+          }
+          // Retrieve banner title.
+          $bannerTitle = $node->get('field_banner_title')->getString();
+          $variables['banner_title'] = $bannerTitle !== '' ? $bannerTitle : $node->getTitle();
+          // Set background.
+          $variables['has_video'] = FALSE;
+          if (!$node->get('field_media_image')->isEmpty()) {
+            $media = $node->get('field_media_image')->entity;
+            if ($media->bundle() == 'video') {
+              $variables['has_video'] = TRUE;
+            }
+            $variables['media_url'] = $this->entityTypeManager->getViewBuilder('media')
+              ->view($media, 'background');
+          }
         }
       }
     }

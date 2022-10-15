@@ -41,12 +41,17 @@ n--message--slider:
     component:
       css/components/content/message/vm-slider/style.css: {}
 
-# Components.
-## Video text.
-c--video-text:
+n--message--teaser-xs:
   css:
     component:
-      css/components/video-text/style.css: {}
+      css/components/content/message/vm-teaser-xs/style.css: {}
+
+# WWD Components.
+## Front Page banner.
+c--page-banner:
+  css:
+    component:
+      css/components/wwd/page-banner/style.css: {}
 
 # Blocks.
 ## Partners.
@@ -54,6 +59,12 @@ b--partners:
   css:
     component:
       css/components/block/partners/style.css: {}
+
+## Video text.
+b--video-text:
+  css:
+    component:
+      css/components/block/video-text/style.css: {}
 
 # Paragraph.
 ## Card.

@@ -1,0 +1,10 @@
+uuid: edbdeda7-8c69-4301-8b80-657373722cb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_xs
+label: 'Teaser xs'
+targetEntityType: node
+cache: true
