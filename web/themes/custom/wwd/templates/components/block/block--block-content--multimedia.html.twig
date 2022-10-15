@@ -25,7 +25,7 @@
   <div class="multimedia-rows">
     {% for type, rows in content.referenced_nodes %}
       {% for row in rows %}
-        <div class="row-{{ type }}">{{ row }}</div>
+        <div class="row-{{ type }}">{{ row|render }}</div>
       {% endfor %}
     {% endfor %}
   </div>

@@ -15,7 +15,7 @@ bundle: important_messages
 label: Background
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -30,8 +30,5 @@ settings:
         enabled: true
       card:
         weight: 5
-        enabled: false
-      video_text:
-        weight: 6
         enabled: false
 field_type: entity_reference_revisions

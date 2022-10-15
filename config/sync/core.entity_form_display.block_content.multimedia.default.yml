@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.multimedia
     - field.field.block_content.multimedia.body
     - field.field.block_content.multimedia.field_cta
-    - field.field.block_content.multimedia.field_include_video_list
     - field.field.block_content.multimedia.field_multimedia_type
     - field.field.block_content.multimedia.field_poster
   module:
@@ -35,13 +34,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_include_video_list:
-    type: boolean_checkbox
-    weight: 4
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_multimedia_type:
     type: options_select

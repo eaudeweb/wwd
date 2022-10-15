@@ -17,6 +17,9 @@ settings:
     -
       value: posters
       label: 'Poster Listing'
+    -
+      value: videos
+      label: 'Video Listing'
   allowed_values_function: ''
 module: options
 locked: false
