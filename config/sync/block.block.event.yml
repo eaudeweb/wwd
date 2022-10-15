@@ -1,0 +1,29 @@
+uuid: 435eafa1-3f7f-4669-be4c-931d1e789b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.event
+  module:
+    - block_class
+    - system
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+id: event
+theme: wwd
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:event'
+settings:
+  id: 'system_menu_block:event'
+  label: Event
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

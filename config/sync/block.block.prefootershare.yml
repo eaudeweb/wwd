@@ -1,0 +1,29 @@
+uuid: 6647ab8d-3f6d-4f78-ac43-0cabd801ed79
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_share:7df0b3cf-883f-4256-9ec6-855a29fd6e2c'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+id: prefootershare
+theme: wwd
+region: pre_footer
+weight: 0
+provider: null
+plugin: 'block_content:7df0b3cf-883f-4256-9ec6-855a29fd6e2c'
+settings:
+  id: 'block_content:7df0b3cf-883f-4256-9ec6-855a29fd6e2c'
+  label: 'Pre Footer share'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

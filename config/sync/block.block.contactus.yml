@@ -1,0 +1,29 @@
+uuid: 1d213a7f-ca34-4462-a19a-5fbdf65c4e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.contact-us
+  module:
+    - block_class
+    - system
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+id: contactus
+theme: wwd
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:contact-us'
+settings:
+  id: 'system_menu_block:contact-us'
+  label: 'Contact Us'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
