@@ -1,0 +1,29 @@
+uuid: 7f0df89e-a75d-4a45-8aa9-c3a3c0c69d12
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:08ae27c5-971e-4867-8c5c-bd01f6aff8ab'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: null
+id: getinvolved
+theme: wwd
+region: footer_left
+weight: 0
+provider: null
+plugin: 'block_content:08ae27c5-971e-4867-8c5c-bd01f6aff8ab'
+settings:
+  id: 'block_content:08ae27c5-971e-4867-8c5c-bd01f6aff8ab'
+  label: 'Get Involved'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

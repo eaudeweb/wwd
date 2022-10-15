@@ -1,0 +1,30 @@
+uuid: 12f4aba7-e786-41ea-8803-5bd6a7121bd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - wwd_core
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: 'b-header-social col-auto'
+id: socialfollowlinks_2
+theme: wwd
+region: header
+weight: -9
+provider: null
+plugin: add_to_any_follow_block
+settings:
+  id: add_to_any_follow_block
+  label: 'Social Follow Links'
+  label_display: '0'
+  provider: wwd_core
+  facebook: WorldWildlifeDay
+  twitter: wildlifeday
+  instagram: worldwildlifeday
+  youtube: WorldWildlifeDay
+  flickr: worldwildlifeday
+  drop_button: 1
+visibility: {  }

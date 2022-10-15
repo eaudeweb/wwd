@@ -15,7 +15,7 @@ _core:
 id: wwd_syndicate
 theme: wwd
 region: disable_region
-weight: 0
+weight: -9
 provider: null
 plugin: node_syndicate_block
 settings:
