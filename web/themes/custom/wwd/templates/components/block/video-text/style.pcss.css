@@ -33,3 +33,7 @@
     display: flex; /* remove white space bottom. */
   }
 }
+
+.multimedia-rows {
+  gap: 20px;
+}

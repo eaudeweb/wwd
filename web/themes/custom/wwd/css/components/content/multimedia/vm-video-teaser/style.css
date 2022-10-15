@@ -15,4 +15,6 @@
     }.node--multimedia--video-teaser .field--name-field-video {
     min-width: 40%;
     max-width: 40%;
+  }.node--multimedia--video-teaser .field--name-field-media-oembed-video {
+    display: flex;
   }
