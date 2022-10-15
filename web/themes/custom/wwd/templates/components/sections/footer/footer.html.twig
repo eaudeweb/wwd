@@ -5,14 +5,20 @@
  */
 #}
 
-{% if page.footer %}
+{% if page.pre_footer %}
+  {{ page.pre_footer }}
+{% endif %}
+
+{% if page.footer or page.footer_left or page.footer_bottom %}
   <footer
     {{- footer_attribute
       .setAttribute('id', 'footer')
       .addclass(footer_classes)
     -}}
   >
+    {{- page.footer_left -}}
     {{- page.footer -}}
+    {{- page.footer_bottom -}}
   </footer>
 {% endif %}
 
