@@ -30,9 +30,15 @@ p:last-child {
   padding-block: var(--p-block);
 }
 
+/* Header classes. */
+.head-banner {
+  height: 0;
+}
+
 .navbar {
   min-height: var(--navbar-mh);
-  background-color: rgba(var(--white-rgb), .12);
+  background-color: var(--navbar-bg, var(--c-white));
+  transition: .3s all linear;
   position: relative;
 
   &:after {
@@ -47,10 +53,35 @@ p:last-child {
   & .navbar-nav {
     & .nav-link {
       --bs-nav-link-font-weight: 700;
-      --bs-nav-link-color: var(--c-white);
-      --bs-nav-link-hover-color: var(--c-gray-100);
+      --bs-nav-link-color: #3B4B68;
+      --bs-nav-link-hover-color: #51E3C0;
+      --bs-navbar-active-color: var(--bs-nav-link-hover-color);
       --bs-nav-link-padding-y: 14px;
       text-transform: uppercase;
+    }
+  }
+}
+
+.h-sticky {
+  --navbar-mh: 80px;
+
+  .navbar {
+    margin-bottom: 20px;
+  }
+}
+
+.bg-tr {
+  & .navbar {
+    --navbar-bg: rgba(var(--white-rgb), .12);
+  }
+
+  & .path-c {
+    fill: var(--c-white);
+  }
+
+  & .navbar-nav {
+    & .nav-link {
+      --bs-nav-link-color: var(--c-white);
     }
   }
 }
@@ -67,11 +98,12 @@ p:last-child {
   }
 }
 
-/* Social */
+/* Social. */
 .a2a_default_style:not(.a2a_flex_style) a:not(:last-child) {
   padding-right: 14px;
 }
 
+/* Carousel. */
 .carousel {
   & .carousel-indicators {
     position: relative;
@@ -109,4 +141,10 @@ p:last-child {
 .carousel-control-next {
   width: 90px;
   left: 100%;
+}
+
+/* Temp. */
+.nav-tabs.primary {
+  justify-content: center;
+  margin-bottom: 1rem;
 }

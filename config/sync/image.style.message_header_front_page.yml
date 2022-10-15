@@ -1,0 +1,15 @@
+uuid: 2a60ee80-7581-4335-9ca4-ee68f5c39237
+langcode: en
+status: true
+dependencies: {  }
+name: message_header_front_page
+label: 'Message header front page (80 x 72)'
+effects:
+  1b3dc6e9-f2ee-468f-9d96-ca29a19eb5ff:
+    uuid: 1b3dc6e9-f2ee-468f-9d96-ca29a19eb5ff
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 80
+      height: 72
+      anchor: center-center

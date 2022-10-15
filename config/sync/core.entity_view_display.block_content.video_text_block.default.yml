@@ -4,22 +4,44 @@ status: true
 dependencies:
   config:
     - block_content.type.video_text_block
-    - field.field.block_content.video_text_block.field_component
+    - field.field.block_content.video_text_block.field_cta
+    - field.field.block_content.video_text_block.field_description
+    - field.field.block_content.video_text_block.field_video
   module:
-    - entity_reference_revisions
+    - link
+    - text
 id: block_content.video_text_block.default
 targetEntityType: block_content
 bundle: video_text_block
 mode: default
 content:
-  field_component:
-    type: entity_reference_revisions_entity_view
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video:
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
-      link: ''
+      link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   addtoany: true

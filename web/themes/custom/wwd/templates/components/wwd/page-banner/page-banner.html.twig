@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * WWD theme implementation Page banner.
+ */
+#}
+
+{{ attach_library('wwd/c--page-banner') }}
+<div class="page-banner pb-region" style="{{ use_gradient ? background_gradient|render|striptags|trim : ''}}">
+  <div class="page-banner--background">
+    {% if use_gradient == 0 %}
+      {% if has_video %}
+        <video autoplay muted loop id="video-background">
+          <source src="{{- media_url|render|striptags|trim -}}" type="video/mp4">
+        </video>
+      {% else %}
+        <img src="{{- media_url|render|striptags|trim -}}"/>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xm-10 col-md-8 col-lg-6 col-xl-5 pt-region">
+        <h1 class="page-banner--title text-white">
+          {{- banner_title -}}
+        </h1>
+      </div>
+    </div>
+
+    {{- page.header -}}
+  </div>
+
+  <div class="page-banner--content">
+  </div>
+</div>

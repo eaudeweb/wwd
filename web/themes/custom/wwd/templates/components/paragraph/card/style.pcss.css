@@ -1,12 +1,28 @@
 .paragraph--card {
-  padding: 60px 40px 90px;
+  padding: 60px 40px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   & .paragraph--title {
     padding-bottom: 26px;
   }
 
+  & .field--name-field-description {
+    flex-grow: 1;
+  }
+
+  & .field--name-field-cta-link {
+    margin-top: 50px;
+  }
+
   & .btn-link {
     --btn-color: var(--c-white);
+    --btn-hover-color: var(--c-white);
+  }
+
+  & .btn-arrow:after {
+    content: url("../../../../img/icons/btn-arrow-white.svg");
   }
 }

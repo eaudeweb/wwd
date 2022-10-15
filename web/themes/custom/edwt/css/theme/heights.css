@@ -1,35 +1,25 @@
+// Align Top classes.
 .alignTop {
   top: 0;
-
-  .toolbar-fixed:not(.toolbar-tray-open) & {
-    top: 2.4375rem;
-  }
-
-  .toolbar-fixed.toolbar-horizontal.toolbar-tray-open & {
-    top: 4.9375rem;
-  }
 }
 
+.toolbar-fixed:not(.toolbar-tray-open) .alignTop {
+  top: 2.4375rem;
+}
+
+.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .alignTop {
+  top: 4.9375rem;
+}
+
+// Min Height classes.
 .min-height {
   min-height:100vh;
-
-  .toolbar-fixed:not(.toolbar-tray-open) & {
-    min-height:calc(100vh - 2.4375rem);
-  }
-
-  .toolbar-fixed.toolbar-horizontal.toolbar-tray-open & {
-    min-height:calc(100vh - 4.9375rem);
-  }
 }
 
-.img-fit {
-  width: 100%;
-  height: 100vh;
+.toolbar-fixed:not(.toolbar-tray-open) .min-height {
+  min-height:calc(100vh - 2.4375rem);
+}
 
-  img {
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .min-height {
+  min-height:calc(100vh - 4.9375rem);
 }

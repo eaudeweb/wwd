@@ -55,7 +55,7 @@
   color: var(--bs-navbar-brand-hover-color);
 }
 
-.navbar-nav {
+:where(.navbar-nav) {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 1rem;
   --bs-nav-link-font-weight: ;
@@ -70,14 +70,14 @@
   list-style: none;
 }
 
-.navbar-nav .show > .nav-link,
-.navbar-nav .nav-link.active {
-  color: var(--bs-navbar-active-color);
-}
+:where(.navbar-nav) .show > .nav-link,
+  :where(.navbar-nav) .nav-link.active {
+    color: var(--bs-navbar-active-color);
+  }
 
-.navbar-nav .dropdown-menu {
-  position: static;
-}
+:where(.navbar-nav) .dropdown-menu {
+    position: static;
+  }
 
 .navbar-text {
   padding-top: 1rem;

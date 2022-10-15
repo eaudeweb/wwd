@@ -14,7 +14,7 @@ _core:
 id: wwd_primary_admin_actions
 theme: wwd
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

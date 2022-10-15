@@ -55,7 +55,7 @@
   color: var(--bs-navbar-brand-hover-color);
 }
 
-.navbar-nav {
+:where(.navbar-nav) {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 1rem;
   --bs-nav-link-font-weight: ;
@@ -68,15 +68,15 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-}
 
-.navbar-nav .show > .nav-link,
-.navbar-nav .nav-link.active {
-  color: var(--bs-navbar-active-color);
-}
+  & .show > .nav-link,
+  & .nav-link.active {
+    color: var(--bs-navbar-active-color);
+  }
 
-.navbar-nav .dropdown-menu {
-  position: static;
+  & .dropdown-menu {
+    position: static;
+  }
 }
 
 .navbar-text {
