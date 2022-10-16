@@ -11,7 +11,7 @@ dependencies:
     - wwd
 third_party_settings:
   block_class:
-    classes: null
+    classes: col-lg-4
 id: info
 theme: wwd
 region: footer

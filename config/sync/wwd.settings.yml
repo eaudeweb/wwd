@@ -70,7 +70,7 @@ sr__container_footer_top: none
 sr__container_position_footer_top: before
 sr__extra_class_footer_top: ''
 sr__clean_footer: 0
-sr__class_footer: ''
+sr__class_footer: 'col-lg-7 row'
 sr__container_footer: none
 sr__container_position_footer: before
 sr__extra_class_footer: ''
@@ -114,3 +114,18 @@ sl__color: '#000000'
 sl__h_color: '#000000'
 sl__decoration: none
 sl__h_decoration: ''
+sr__clean_pre_footer: 0
+sr__class_pre_footer: ''
+sr__container_pre_footer: none
+sr__container_position_pre_footer: before
+sr__extra_class_pre_footer: ''
+sr__clean_footer_left: 0
+sr__class_footer_left: col-lg-5
+sr__container_footer_left: none
+sr__container_position_footer_left: before
+sr__extra_class_footer_left: ''
+sr__clean_footer_bottom: 0
+sr__class_footer_bottom: 'row justify-content-between'
+sr__container_footer_bottom: container
+sr__container_position_footer_bottom: before
+sr__extra_class_footer_bottom: ''

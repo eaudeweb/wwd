@@ -16,7 +16,7 @@ dependencies:
     - datetime
     - layout_builder
     - media
-    - text
+    - smart_trim
     - user
 third_party_settings:
   layout_builder:
@@ -28,10 +28,21 @@ bundle: message
 mode: slider
 content:
   body:
-    type: text_trimmed
+    type: smart_trim
     label: hidden
     settings:
-      trim_length: 200
+      trim_length: 75
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: trim
+      trim_options:
+        text: false
+        trim_zero: false
     third_party_settings: {  }
     weight: 3
     region: content

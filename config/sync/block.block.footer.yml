@@ -11,7 +11,7 @@ dependencies:
     - wwd
 third_party_settings:
   block_class:
-    classes: nav-inline
+    classes: 'nav-inline col-auto'
 id: footer
 theme: wwd
 region: footer_bottom
@@ -21,7 +21,7 @@ plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
   label: Footer
-  label_display: visible
+  label_display: '0'
   provider: system
   level: 1
   depth: 0
