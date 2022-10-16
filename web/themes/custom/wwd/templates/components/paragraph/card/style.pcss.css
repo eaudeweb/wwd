@@ -17,12 +17,9 @@
     margin-top: 50px;
   }
 
-  & .btn-link {
+  & .btn-arrow {
+    --btn--arrow--white: url("../../img/icons/btn-arrow-white.svg");
     --btn-color: var(--c-white);
     --btn-hover-color: var(--c-white);
-  }
-
-  & .btn-arrow:after {
-    content: url("../../../../img/icons/btn-arrow-white.svg");
   }
 }
