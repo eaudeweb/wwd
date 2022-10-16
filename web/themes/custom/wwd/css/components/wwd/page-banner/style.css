@@ -13,7 +13,8 @@
   top: calc(var(--navbar-mh)*-1);
 }
 
-.page-banner--background img {
+.page-banner--background img,
+  .page-banner--background video {
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%;
