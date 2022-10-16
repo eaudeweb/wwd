@@ -135,7 +135,6 @@
             "Issue #3101231: Fix multilingual site's layout edit context issue": "https://www.drupal.org/files/issues/2022-02-16/layout-builder-translation-issue-3101231-34.patch"
         },
           "drupal/paragraphs": {
-            "Issue #2904705: Support asymm translations": "https://www.drupal.org/files/issues/2020-11-27/paragraphs_support_asym_translations-2904705-122.patch",
             "Issue #3090200: Access control issues": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
           }
         },
