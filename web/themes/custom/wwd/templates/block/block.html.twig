@@ -15,7 +15,11 @@
   ]
 %}
 
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}
+  {%- if content.field_background.0 -%}
+    style="{{- content.field_background|render|striptags -}}"
+  {%- endif -%}
+>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes.addClass('h1', 'block--title') }}>
@@ -28,7 +32,7 @@
 
   {% block content %}
     <div{{ content_attributes.addClass('block__content') }}>
-      {{ content }}
+      {{ content|without('field_background') }}
     </div>
   {% endblock %}
 </div>

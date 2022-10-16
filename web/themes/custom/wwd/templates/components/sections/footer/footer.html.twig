@@ -5,6 +5,12 @@
  */
 #}
 
+{%
+  set footer_classes = [
+    'footer',
+  ]
+%}
+
 {% if page.pre_footer %}
   {{ page.pre_footer }}
 {% endif %}
@@ -16,9 +22,14 @@
       .addclass(footer_classes)
     -}}
   >
-    {{- page.footer_left -}}
-    {{- page.footer -}}
-    {{- page.footer_bottom -}}
+    <div class="container">
+      <div class="row py-region">
+        {{- page.footer_left -}}
+        {{- page.footer -}}
+      </div>
+
+      {{- page.footer_bottom -}}
+    </div>
   </footer>
 {% endif %}
 
