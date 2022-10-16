@@ -9,7 +9,8 @@
   z-index: -1;
   top: calc(var(--navbar-mh) * -1);
 
-  & img {
+  & img,
+  & video {
     object-fit: cover;
     width: 100%;
     height: 100%;
