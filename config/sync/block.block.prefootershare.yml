@@ -11,7 +11,7 @@ dependencies:
     - wwd
 third_party_settings:
   block_class:
-    classes: null
+    classes: 'py-region b--prefooter--share'
 id: prefootershare
 theme: wwd
 region: pre_footer
