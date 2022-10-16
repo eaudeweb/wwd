@@ -256,3 +256,11 @@ p:last-child {
   align-items: center;
   justify-content: end;
 }
+
+.w--footer-social .social-rect {
+    fill: transparent;
+  }
+
+.w--footer-social .social-icon {
+    fill: var(--c-white);
+  }
