@@ -1,4 +1,4 @@
-:where(.btn) {
+.btn {
   --btn-padding-x: 0.75rem;
   --btn-padding-y: 0.375rem;
   --btn-font-family: ;
