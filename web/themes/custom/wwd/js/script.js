@@ -18,9 +18,9 @@ window.addEventListener('scroll', function() {
 
   if (scrollpos >= 50) {
     header.classList.remove("bg-tr")
-    header.classList.add("h-sticky")
+    header.classList.add(...["h-sticky", "shadow"])
   } else {
     header.classList.add("bg-tr")
-    header.classList.remove("h-sticky")
+    header.classList.remove(...["h-sticky", "shadow"])
   }
 })

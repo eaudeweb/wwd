@@ -2,12 +2,12 @@ body {
   --navbar-mh: 100px;
 }
 
-p:last-child {
-  margin-bottom: 0;
+.toolbar-oriented .toolbar-bar {
+  z-index: 1502;
 }
 
-.header {
-  z-index: 1;
+p:last-child {
+  margin-bottom: 0;
 }
 
 .mt-block {
@@ -144,7 +144,12 @@ p:last-child {
 }
 
 .w--img-fluid {
-  img {
+  /* temp for Upcoming Events image */
+  display: flex;
+  justify-content: center;
+  /* end temp */
+
+  & img {
     max-width: 100%;
     height: auto;
   }
@@ -245,4 +250,13 @@ p:last-child {
 
 .b--footer--social {
   background-color: transparent !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--bs-columns, 12), 1fr);
+  gap: var(--bs-gap, 1.5rem);
+  justify-items: center;
+  align-items: center;
+  justify-content: end;
 }

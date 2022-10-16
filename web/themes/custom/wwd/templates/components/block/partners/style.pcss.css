@@ -1,7 +1,7 @@
-.row.g-partners {
-  --gutter-x: 82px;
-}
-
 .block-views-blockpartners-block {
   padding-block: var(--p-block);
+}
+
+.grid-partners {
+  --bs-columns: 5;
 }
