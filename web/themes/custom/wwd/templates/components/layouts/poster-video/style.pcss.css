@@ -1,8 +1,8 @@
-.user-mode .layout-region--video {
+.layout-region--video {
   & .block {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - 68px);
   }
 
   & .block__content {
@@ -13,5 +13,11 @@
   & .views-view-grid {
     position: absolute;
     inset: 0;
+  }
+}
+
+.user-mode .layout-region--video {
+  & .block {
+    height: 100%;
   }
 }
