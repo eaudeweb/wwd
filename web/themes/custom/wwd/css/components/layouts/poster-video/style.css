@@ -1,15 +1,19 @@
 
-  .user-mode .layout-region--video .block {
+  .layout-region--video .block {
     display: flex;
     flex-direction: column;
-    height: 100%;
-  }.user-mode .layout-region--video .block__content {
+    height: calc(100% - 4.25rem);
+  }.layout-region--video .block__content {
     flex-grow: 1;
     overflow-x: hidden;
-  }.user-mode .layout-region--video .views-view-grid {
+  }.layout-region--video .views-view-grid {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+  }
+
+.user-mode .layout-region--video .block {
+    height: 100%;
   }

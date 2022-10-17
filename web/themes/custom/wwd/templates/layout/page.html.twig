@@ -12,6 +12,7 @@
   set header_classes = [
     'header',
     'alignTop',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
     navbar.position ? navbar.position,
     'position-relative',
   ]
