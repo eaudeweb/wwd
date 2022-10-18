@@ -49,20 +49,19 @@ function edwt_preprocess_page(&$variables) {
     'container' => theme_get_setting('sg__container'),
   ];
 
-  $route = \Drupal::routeMatch()->getRouteName();
-  if (!str_starts_with( $route, 'layout_builder' )) {
-    $ns_position = theme_get_setting('ns__navbar_position');
-  }
-
   // Navbar settings
   $variables['navbar'] = [
-    'position' => $ns_position,
     'expand' => theme_get_setting('ns__navbar_expand'),
     'color' => theme_get_setting('ns__navbar_color'),
     'bg' => theme_get_setting('ns__navbar_bg'),
     'out' => theme_get_setting('ns__navbar_out'),
     'align' => theme_get_setting('ns__navbar_align'),
   ];
+
+  $route = \Drupal::routeMatch()->getRouteName();
+  if (!str_starts_with( $route, 'layout_builder' )) {
+    $variables['navbar']['position'] = theme_get_setting('ns__navbar_position');
+  }
 }
 
 /**
