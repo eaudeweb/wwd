@@ -1,0 +1,32 @@
+.view--messages--page {
+  padding-bottom: var(--p-block);
+
+  & .wrap {
+    border-left: 1px solid var(--c-primary);
+  }
+
+  & .list-message {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-block);
+  }
+
+  & .list-item {
+    padding-inline: max(8.3333vh, 30px);
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 0;
+      background-color: var(--c-primary);
+      width: calc(8.3333vh - 20px);
+      height: 1px;
+    }
+  }
+
+  & .btn-arrow {
+    --btn-padding-y: 0;
+  }
+}

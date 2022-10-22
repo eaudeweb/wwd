@@ -1,0 +1,47 @@
+.node--message--teaser {
+  & .node--title {
+    --headings-margin-bottom: 10px;
+    --headings-color: #3B4B68;
+  }
+
+  & .field--name-field-message-position {
+    text-transform: uppercase;
+    color: var(--c-primary);
+    font-weight: 700;
+    min-height: 39px;
+  }
+
+  & > .row + .row {
+    margin-top: 20px;
+  }
+
+  & .field--name-field-media-image {
+    aspect-ratio: 4 / 3;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .node--content,
+  & .field--name-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  & .node--content {
+    border: 1px solid #EDEFF3;
+    background-color: var(--c-white);
+    padding: 32px;
+    height: 100%;
+    color: #3B4B68;
+  }
+
+  & .field--name-body {
+    flex-grow: 1;
+    justify-content: center;
+  }
+}

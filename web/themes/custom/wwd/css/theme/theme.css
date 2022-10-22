@@ -2,6 +2,14 @@ body {
   --navbar-mh: 6.25rem;
 }
 
+.page-title {
+  --headings-color: var(--c-white);
+
+  font-size: 3.25rem;
+  margin-bottom: 0;
+  max-width: 44%;
+}
+
 .toolbar-oriented .toolbar-bar {
   z-index: 1502;
 }
