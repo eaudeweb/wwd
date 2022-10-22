@@ -2,6 +2,14 @@ body {
   --navbar-mh: 100px;
 }
 
+.page-title {
+  --headings-color: var(--c-white);
+
+  font-size: 52px;
+  margin-bottom: 0;
+  max-width: 44%;
+}
+
 .toolbar-oriented .toolbar-bar {
   z-index: 1502;
 }

@@ -41,10 +41,21 @@ n--message--slider:
     component:
       css/components/content/message/vm-slider/style.css: {}
 
+n--message--teaser:
+  css:
+    component:
+      css/components/content/message/vm-teaser/style.css: {}
+
 n--message--teaser-xs:
   css:
     component:
       css/components/content/message/vm-teaser-xs/style.css: {}
+
+# Views
+v--message--page:
+  css:
+    component:
+      css/components/views/page--message/style.css: {}
 
 # WWD Components.
 ## Front Page banner.

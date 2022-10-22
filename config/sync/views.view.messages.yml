@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.slider
+    - core.entity_view_mode.node.teaser
     - core.entity_view_mode.node.teaser_xs
     - node.type.message
     - system.menu.main
@@ -197,6 +198,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: bg-gray-light
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -389,11 +391,13 @@ display:
           relationship: none
           view_mode: teaser_xs
       defaults:
+        css_class: false
         pager: false
         style: false
         row: false
         filters: false
         filter_groups: false
+      css_class: ''
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -415,6 +419,24 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      title: 'Messages for World Wildlife Day 2022'
+      pager:
+        type: none
+        options:
+          offset: null
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:
@@ -572,11 +594,13 @@ display:
           view_mode: slider
       defaults:
         title: false
+        css_class: false
         pager: false
         style: false
         row: false
         filters: false
         filter_groups: false
+      css_class: ''
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:

@@ -1,7 +1,7 @@
 .bg-gray-light {
-  background: #F8FBFD;
+  background-color: #F8FBFD;
 }
 
-.bg-g-sky-blue {
-  background: linear-gradient(225deg, #0AD3FF 0%, #3F9BD0 100%);
+.bgg-blue {
+  background: linear-gradient(92deg, #3f9bd0 0%, #0ad3ff 100%);
 }

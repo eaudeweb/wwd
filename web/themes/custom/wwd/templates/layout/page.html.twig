@@ -35,7 +35,12 @@
 
 {% block wrap_main %}
   <main role="main" class="flex-grow-1">
-    {{ page.highlighted }}
+    {% if use_banner %}
+      {% include '@wwd/components/wwd/page-banner/page-banner.html.twig' %}
+    {% else %}
+      {{ page.highlighted }}
+      {{ page.title }}
+    {% endif %}
 
     {% block main %}
       {% include '@wwd/components/sections/main/main.html.twig' %}

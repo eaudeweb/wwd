@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * WWD override to display a node.
+ */
+#}
+
+{{ attach_library('wwd/n--message--teaser') }}
+
+{%
+  set classes = [
+    'node',
+    'node--' ~ node.bundle|clean_class,
+    'node--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <h2 class="node--title">
+    {{ label }}
+  </h2>
+
+  <div class="row">
+    <div class="col-lg-4">
+      {{ content.field_message_position }}
+    </div>
+
+    <div class="col-lg-8">
+      <a href="/node/1123" class="btn btn-outline-primary btn-video">
+        {{- "Video"|t -}}
+      </a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      {{ content.field_media_image }}
+    </div>
+
+    <div class="col-lg-8">
+      <div class="node--content">
+        {{ content.body }}
+
+        <a href="{{ url }}" class="btn btn-link btn-arrow mt-2 p-0">
+          {{- 'Read more'|t -}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+</article>
