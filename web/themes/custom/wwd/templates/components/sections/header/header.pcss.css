@@ -1,0 +1,49 @@
+/* Header classes. */
+.navbar {
+  min-height: var(--navbar-mh, 100px);
+  background-color: var(--navbar-bg, var(--c-white));
+  transition: .3s all linear;
+  position: relative;
+
+  /* Border bottsa */
+  &:after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  }
+
+  & .navbar-nav {
+    & .nav-link {
+      --bs-nav-link-font-weight: 700;
+      --bs-nav-link-color: #3B4B68;
+      --bs-nav-link-hover-color: #51E3C0;
+      --bs-navbar-active-color: var(--bs-nav-link-hover-color);
+      --bs-nav-link-padding-y: 14px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.h-sticky {
+  --navbar-mh: 80px;
+  margin-bottom: 20px;
+}
+
+.bg-tr:not(.h-sticky) {
+  & .navbar {
+    --navbar-bg: rgba(var(--white-rgb), .12);
+  }
+
+  & .path-c {
+    fill: var(--c-white);
+  }
+
+  & .navbar-nav {
+    & .nav-link {
+      --bs-nav-link-color: var(--c-white);
+    }
+  }
+}
