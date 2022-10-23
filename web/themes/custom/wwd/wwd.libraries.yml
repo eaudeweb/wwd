@@ -90,3 +90,12 @@ l--poster-video:
   css:
     component:
       css/components/layouts/poster-video/style.css: {}
+
+# Sections.
+## Header
+s--nav:
+  css:
+    component:
+      css/components/sections/header/header.css: {}
+  js:
+    templates/components/sections/header/script.js: {}
