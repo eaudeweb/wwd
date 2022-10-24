@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.events.field_country
     - field.field.node.events.field_email
     - field.field.node.events.field_event_date
+    - field.field.node.events.field_event_info
     - field.field.node.events.field_hashtag
     - field.field.node.events.field_image
     - field.field.node.events.field_link
@@ -54,6 +55,13 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_event_info:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
     region: content
   field_hashtag:
     type: string
