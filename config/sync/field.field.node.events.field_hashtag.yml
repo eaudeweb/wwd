@@ -1,0 +1,21 @@
+uuid: 0b41121e-2e57-42ed-b771-5293ab6cefef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hashtag
+    - node.type.events
+id: node.events.field_hashtag
+field_name: field_hashtag
+entity_type: node
+bundle: events
+label: Hashtag
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '#worldwildlifeday #wwd2022'
+default_value_callback: ''
+settings: {  }
+field_type: string

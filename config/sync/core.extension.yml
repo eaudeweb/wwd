@@ -34,6 +34,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  geocoder: 0
+  geofield: 0
   google_analytics: 0
   help: 0
   history: 0
@@ -58,9 +60,10 @@ module:
   metatag_views: 0
   mysql: 0
   node: 0
+  oembed_lazyload: 0
+  oembed_lazyload_youtube: 0
   options: 0
   page_cache: 0
-  paragraphs_asymmetric_translation_widgets: 0
   path: 0
   path_alias: 0
   rabbit_hole: 0
