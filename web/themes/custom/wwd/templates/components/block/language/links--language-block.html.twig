@@ -26,8 +26,7 @@
       {%- for item in links -%}
         <li{{ item.attributes }}>
           {%- if item.link -%}
-            {% set link =  item.link|merge({ '#options': { 'attributes': { 'class': [ 'dropdown-item' ] }}}) %}
-            {{ link }}
+            {{ item.link }}
           {%- elseif item.text_attributes -%}
             <span{{ item.text_attributes }}>{{ item.text }}</span>
           {%- else -%}

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.multimedia.field_media_image
     - field.field.node.multimedia.field_type
     - field.field.node.multimedia.field_video
+    - image.style.max_1300x1300
     - node.type.multimedia
   module:
     - layout_builder
@@ -41,7 +42,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: max_1300x1300
       image_loading:
         attribute: lazy
     third_party_settings: {  }

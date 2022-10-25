@@ -214,13 +214,14 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           $bannerTitle = $node->get('field_banner_title')->getString();
           $variables['banner_title'] = $bannerTitle !== '' ? $bannerTitle : $node->getTitle();
           // Set background.
-          $variables['has_video'] = FALSE;
           if (!$node->get('field_media_image')->isEmpty()) {
             $media = $node->get('field_media_image')->entity;
-            if ($media->bundle() == 'video') {
-              $variables['has_video'] = TRUE;
-            }
             $variables['media_url'] = $this->entityTypeManager->getViewBuilder('media')
+              ->view($media, 'background');
+          }
+          if (!$node->get('field_video')->isEmpty()) {
+            $media = $node->get('field_video')->entity;
+            $variables['video_url'] = $this->entityTypeManager->getViewBuilder('media')
               ->view($media, 'background');
           }
         }
