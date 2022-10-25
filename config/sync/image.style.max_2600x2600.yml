@@ -13,8 +13,14 @@ effects:
   9b311dd1-0351-45a1-9500-cd069e4670cb:
     uuid: 9b311dd1-0351-45a1-9500-cd069e4670cb
     id: image_scale
-    weight: 3
+    weight: -10
     data:
       width: 2600
       height: 2600
       upscale: false
+  a6a40965-7f63-42c7-8e2d-eed4f2e36230:
+    uuid: a6a40965-7f63-42c7-8e2d-eed4f2e36230
+    id: image_convert
+    weight: -9
+    data:
+      extension: webp

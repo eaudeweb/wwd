@@ -101,5 +101,10 @@ function wwd_preprocess_html(&$variables) {
  */
 function wwd_preprocess_links__language_block(&$variables) {
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-  $variables['links'][$language]['text_attributes']['class'][] = "is-active";
+  if (is_array($variables['links'])) {
+    foreach ($variables['links'] as &$link) {
+      $link['link']['#options']['attributes']['class'][] = "dropdown-item";
+    }
+    $variables['links'][$language]['text_attributes']['class'][] = "is-active";
+  }
 }

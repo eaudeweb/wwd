@@ -1,17 +1,17 @@
-uuid: 8b179e1e-1f71-4705-b729-87adfc8459a5
+uuid: 0a42d355-107d-4290-9758-9b73ba0057e2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_media_image
-    - media.type.image
+    - field.storage.node.field_video
+    - media.type.video
     - node.type.page
-id: node.page.field_media_image
-field_name: field_media_image
+id: node.page.field_video
+field_name: field_video
 entity_type: node
 bundle: page
-label: 'Banner Image'
-description: 'Used as main image (if video is not set) or as fallback image for low bandwith / mobile phones.'
+label: 'Banner Video'
+description: ''
 required: false
 translatable: true
 default_value: {  }
@@ -20,10 +20,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      video: video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: image
+    auto_create_bundle: ''
 field_type: entity_reference
