@@ -16,7 +16,7 @@
         </video>
       {% endif %}
       {% if media_url %}
-        <img class="d-block d-sm-none" src="{{- media_url|render|striptags|trim -}}"/>
+        <img class="d-block {{ video_url is not empty ? 'd-sm-none' : '' }}" src="{{- media_url|render|striptags|trim -}}"/>
       {% endif %}
     {% endif %}
   </div>

@@ -11,7 +11,7 @@ field_name: field_media_image
 entity_type: node
 bundle: page
 label: 'Banner Image'
-description: 'Used as main image (if video is not set) or as fallback image for low bandwith / mobile phones.'
+description: 'Used as main image (if the video is not set) or as a fallback image for low bandwidth / mobile phones.'
 required: false
 translatable: true
 default_value: {  }
