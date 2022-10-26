@@ -4,6 +4,8 @@ description: 'Contains core functionality for wwd custom implementations.'
 core: 8.x
 package: 'Custom'
 core_version_requirement: ^8 || ^9
+configure: wwd_core.nominatim_settings
 
 dependencies:
   - drupal:addtoany
+  - drupal:geolocation

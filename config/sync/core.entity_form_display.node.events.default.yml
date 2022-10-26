@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.events.field_email
     - field.field.node.events.field_event_date
     - field.field.node.events.field_event_info
-    - field.field.node.events.field_hashtag
+    - field.field.node.events.field_geolocation
     - field.field.node.events.field_image
     - field.field.node.events.field_link
     - field.field.node.events.field_organizer
@@ -17,6 +17,8 @@ dependencies:
     - node.type.events
   module:
     - datetime
+    - field_states_ui
+    - geolocation
     - link
     - path
     - svg_image
@@ -67,13 +69,11 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_hashtag:
-    type: string_textfield
-    weight: 20
+  field_geolocation:
+    type: geolocation_latlng
+    weight: 21
     region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_image:
     type: image_image
@@ -90,7 +90,12 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
   field_organizer:
     type: string_textfield
     weight: 11
