@@ -1,0 +1,8 @@
+uuid: 5e5ad995-8f9f-474b-81d5-4a7091a36587
+langcode: en
+status: true
+dependencies: {  }
+name: Country
+vid: country
+description: 'Contains UN country list'
+weight: 0

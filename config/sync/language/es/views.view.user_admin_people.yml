@@ -23,6 +23,8 @@ display:
             past_format: 'Hace @interval'
         operations:
           label: Operaciones
+        mail:
+          separator: ', '
       pager:
         options:
           tags:
@@ -39,6 +41,8 @@ display:
           submit_button: Filtro
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       filters:
         combine:
           expose:

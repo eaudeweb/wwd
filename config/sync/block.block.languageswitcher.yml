@@ -1,0 +1,24 @@
+uuid: 7dc52d76-1aa2-4020-b1dd-41da35a681f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - language
+  theme:
+    - wwd
+third_party_settings:
+  block_class:
+    classes: 'col-auto mt-0'
+id: languageswitcher
+theme: wwd
+region: nav_additional
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

@@ -5,11 +5,14 @@ namespace Drupal\wwd;
 use Drupal\views\Views;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Path\CurrentPathStack;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Drupal\block_content\Entity\BlockContent;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 
@@ -19,6 +22,8 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
  * @internal
  */
 class WwdThemeProcess implements ContainerInjectionInterface {
+
+  use StringTranslationTrait;
 
   /**
    * The Entity Type Manager service.
@@ -42,6 +47,20 @@ class WwdThemeProcess implements ContainerInjectionInterface {
   protected $routeMatch;
 
   /**
+   * Current user.
+   *
+   * @var \Drupal\Core\Session\AccountProxyInterface
+   */
+  protected $currentUser;
+
+  /**
+   * Current path.
+   *
+   * @var \Drupal\Core\Path\CurrentPathStack
+   */
+  protected $currentPath;
+
+  /**
    * Constructs a new EntityOperations object.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -50,14 +69,23 @@ class WwdThemeProcess implements ContainerInjectionInterface {
    *   The language manager service.
    * @param \Drupal\Core\Routing\CurrentRouteMatch $route_match
    *   Current route match.
+   * @param \Drupal\Core\Sesssion\AccountProxyInterface $account
+   *   Current user.
+   * @param \Drupal\Core\Path\CurrentPathStack $path
+   *   Current path.
    */
   public function __construct(
     EntityTypeManagerInterface $entity_type_manager,
     LanguageManagerInterface $language_manager,
-    CurrentRouteMatch $route_match) {
+    CurrentRouteMatch $route_match,
+    AccountProxyInterface $account,
+    CurrentPathStack $path
+  ) {
     $this->entityTypeManager = $entity_type_manager;
     $this->languageManager = $language_manager;
     $this->routeMatch = $route_match;
+    $this->currentUser = $account;
+    $this->currentPath = $path;
   }
 
   /**
@@ -67,12 +95,16 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     return new static(
       $container->get('entity_type.manager'),
       $container->get('language_manager'),
-      $container->get('current_route_match')
+      $container->get('current_route_match'),
+      $container->get('current_user'),
+      $container->get('path.current')
     );
   }
 
   /**
    * Preprocess blocks.
+   *
+   * @see hook_preprocess_block()
    */
   public function preprocessBlock(&$variables) {
     // Apply certain classes to blocks.
@@ -175,19 +207,46 @@ class WwdThemeProcess implements ContainerInjectionInterface {
 
   /**
    * Preprocess html.
+   *
+   * @see hook_preprocess_html()
    */
   public function preprocessHtml(&$variables) {
     $node = $this->routeMatch->getParameter('node');
+    // Add conditional body class if banner is added or not.
     if ($node instanceof Node) {
       if ($node->hasField('field_add_banner') &&
         $node->get('field_add_banner')->value == 1) {
         $variables['attributes']['class'][] = 'use-banner';
       }
     }
+    $currentPath = $this->currentPath->getPath();
+    // For registering new event page, change the default title.
+    if (strpos($currentPath, '/node/add/events') !== FALSE) {
+      if ($this->currentUser->isAnonymous()) {
+        $variables['head_title']['title'] = $this->t('Register your event');
+      }
+    }
+  }
+
+  /**
+   * Preprocess page title from branding block.
+   *
+   * @see hook_preprocess_page_title()
+   */
+  public function preprocessPageTitle(&$variables) {
+    $currentPath = $this->currentPath->getPath();
+    // For registering new event page, change the default title.
+    if (strpos($currentPath, '/node/add/events') !== FALSE) {
+      if ($this->currentUser->isAnonymous()) {
+        $variables['title'] = $this->t('Register your event');
+      }
+    }
   }
 
   /**
    * Preprocess page.
+   *
+   * @see hook_preprocess_page()
    */
   public function preprocessPage(&$variables) {
     if (!empty($variables['node'])) {
@@ -214,13 +273,14 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           $bannerTitle = $node->get('field_banner_title')->getString();
           $variables['banner_title'] = $bannerTitle !== '' ? $bannerTitle : $node->getTitle();
           // Set background.
-          $variables['has_video'] = FALSE;
           if (!$node->get('field_media_image')->isEmpty()) {
             $media = $node->get('field_media_image')->entity;
-            if ($media->bundle() == 'video') {
-              $variables['has_video'] = TRUE;
-            }
             $variables['media_url'] = $this->entityTypeManager->getViewBuilder('media')
+              ->view($media, 'background');
+          }
+          if (!$node->get('field_video')->isEmpty()) {
+            $media = $node->get('field_video')->entity;
+            $variables['video_url'] = $this->entityTypeManager->getViewBuilder('media')
               ->view($media, 'background');
           }
         }

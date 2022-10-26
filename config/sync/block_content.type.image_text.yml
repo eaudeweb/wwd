@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: image_text
-label: 'Image Text'
+label: 'Footer Images/Text Block'
 revision: 1
 description: 'Simple image with text block'

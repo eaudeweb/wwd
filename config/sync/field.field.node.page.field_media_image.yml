@@ -5,14 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_media_image
     - media.type.image
-    - media.type.video
     - node.type.page
 id: node.page.field_media_image
 field_name: field_media_image
 entity_type: node
 bundle: page
-label: 'Banner Image/Video'
-description: ''
+label: 'Banner Image'
+description: 'Used as main image (if the video is not set) or as a fallback image for low bandwidth / mobile phones.'
 required: false
 translatable: true
 default_value: {  }
@@ -22,7 +21,6 @@ settings:
   handler_settings:
     target_bundles:
       image: image
-      video: video
     sort:
       field: _none
       direction: ASC
