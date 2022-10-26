@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * WWD override for a main view template.
+ */
+#}
+{# 
+{{ attach_library('wwd/v--message--page') }} #}
+
+{%
+  set classes = [
+    'view',
+    'view--' ~ id|clean_class ~ '--' ~ display_id,
+    'd-flex',
+    'flex-column',
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% if rows %}
+    {{ rows }}
+  {% elseif empty %}
+    <div class="view-empty">
+      {{ empty }}
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+
+  {% if more %}
+    {{ more }}
+  {% endif %}
+</div>

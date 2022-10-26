@@ -15,7 +15,7 @@ global-styling:
 theme-fonts:
   css:
     theme:
-      'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap': { type: external, minified: true }
+      'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap': { type: external, minified: true }
 
 # Node.
 ## Page.
@@ -50,6 +50,12 @@ n--message--teaser-xs:
   css:
     component:
       css/components/content/message/vm-teaser-xs/style.css: {}
+
+## Events.
+n--events--teaser:
+  css:
+    component:
+      css/components/content/events/vm-teaser/style.css: {}
 
 # Views
 v--message--page:
