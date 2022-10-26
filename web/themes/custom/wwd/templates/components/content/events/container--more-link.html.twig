@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * WWD Theme implementation of a container used to wrap child elements.
+ */
+#}
+
+{%
+  set classes = [
+    'btn',
+    'btn-outline-primary',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>

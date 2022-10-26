@@ -1,0 +1,8 @@
+uuid: 850c5992-da89-4ef9-b486-c856b8e74ec6
+langcode: en
+status: true
+dependencies: {  }
+id: events_short_date
+label: 'Events short date'
+locked: false
+pattern: 'd, M'

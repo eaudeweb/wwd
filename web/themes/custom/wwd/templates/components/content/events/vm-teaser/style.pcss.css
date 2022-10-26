@@ -1,0 +1,103 @@
+.node--events--teaser {
+  --e-p: 20px;
+
+  padding: var(--e-p);
+  border: 1px solid #EDEFF3;
+  background: var(--c-white);
+
+  & .node--content {
+    max-width: 80%;
+  }
+
+  & > .row {
+    --gutter-x: 0;
+    gap: var(--e-p);
+    align-items: stretch;
+  }
+
+  & .field--name-field-event-date {
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6C7D9E;
+    font-family: var(--headings-font-family);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+
+    & span {
+      display: block;
+      font-size: 34px;
+      font-weight: 700;
+    }
+  }
+
+  & .field--name-field-image {
+    max-width: 180px;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .node--title {
+    color: var(--c-primary);
+    font-size: 24px;
+    font-weight: 600;
+    min-height: 56px;
+  }
+
+  & .field--name-field-country {
+    color: #6C7D9E;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    & svg {
+      margin-right: 12px;
+    }
+  }
+
+  & .field--name-field-organizer {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+
+  & .btn-plus {
+    --btn-padding-x: 0;
+    --btn-color: #5BC09C;
+
+    &:after {
+      content: url("../../../../../img/icons/btn-plus.svg");
+      transition: var(--transition-base);
+      margin-left: var(--btn-arrow-ml, .5rem);
+    }
+
+    &:hover {
+      --btn-arrow-ml: 1rem
+    }
+  }
+
+  & .collapse {
+    margin-top: var(--e-p);
+  }
+}
+
+.btn.btn-outline-primary.more-link  {
+  --btn-padding-x: 24px;
+  --btn-padding-y: 14px;
+  --btn-font-size: 1rem;
+  font-family: var(--body-font-family);
+  border-radius: 3em;
+
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
