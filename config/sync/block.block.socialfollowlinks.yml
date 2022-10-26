@@ -9,10 +9,10 @@ dependencies:
     - wwd
 third_party_settings:
   block_class:
-    classes: b-footer--social
+    classes: 'col-auto w--footer-social'
 id: socialfollowlinks
 theme: wwd
-region: disable_region
+region: footer_bottom
 weight: 0
 provider: null
 plugin: add_to_any_follow_block

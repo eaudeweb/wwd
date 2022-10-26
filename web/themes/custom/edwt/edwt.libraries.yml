@@ -103,15 +103,15 @@ c--carousel:
 #     component:
 #       css-sass/bootstrap/close.css: {}
 
-bc--dropdowns:
+c--dropdowns:
   css:
     component:
       css/components/dropdowns.css: {}
 
-# bc--forms:
-#   css:
-#     component:
-#       css-sass/bootstrap/forms.css: {}
+c--forms:
+  css:
+    component:
+      css/components/forms.css: {}
 
 # bc--list-group:
 #   css:

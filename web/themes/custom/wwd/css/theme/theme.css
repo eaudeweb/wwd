@@ -192,12 +192,8 @@ p:last-child {
   }
 
 .region-footer-bottom .addtoany_list {
-    display: flex;
-    gap: 1.75rem;
-  }
-
-.b--footer--social {
-  background-color: transparent !important;
+  display: flex;
+  gap: 1.75rem;
 }
 
 .grid {

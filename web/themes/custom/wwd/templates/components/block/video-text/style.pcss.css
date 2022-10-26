@@ -28,10 +28,6 @@
     height: auto;
     aspect-ratio: 16 / 9;
   }
-
-  & .field--name-field-media-oembed-video {
-    display: flex; /* remove white space bottom. */
-  }
 }
 
 .multimedia-rows {
