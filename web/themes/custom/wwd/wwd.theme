@@ -97,6 +97,15 @@ function wwd_preprocess_html(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_page_title().
+ */
+function wwd_preprocess_page_title(&$variables) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(WwdThemeProcess::class)
+    ->preprocessPageTitle($variables);
+}
+
+/**
  * Implements hook_preprocess_links__language_block().
  */
 function wwd_preprocess_links__language_block(&$variables) {

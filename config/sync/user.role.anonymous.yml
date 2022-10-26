@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - node.type.events
   module:
     - comment
     - contact
     - filter
     - media
+    - node
     - search
     - system
 _core:
@@ -21,6 +23,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'create events content'
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'

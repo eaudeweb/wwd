@@ -30,12 +30,14 @@ module:
   entity_reference_revisions: 0
   field: 0
   field_group: 0
+  field_permissions: 0
   field_states_ui: 0
   field_ui: 0
   file: 0
   filter: 0
   geocoder: 0
-  geofield: 0
+  geocoder_field: 0
+  geolocation: 0
   google_analytics: 0
   help: 0
   history: 0
@@ -58,6 +60,7 @@ module:
   metatag_hreflang: 0
   metatag_open_graph: 0
   metatag_views: 0
+  module_missing_message_fixer: 0
   mysql: 0
   node: 0
   oembed_lazyload: 0

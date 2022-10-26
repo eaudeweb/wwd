@@ -1,0 +1,7 @@
+uuid: 8f630cf7-cca8-4c70-be4c-82d1dedeb361
+langcode: en
+status: true
+dependencies: {  }
+formId: node_events_form
+captchaType: recaptcha/reCAPTCHA
+label: node_events_form

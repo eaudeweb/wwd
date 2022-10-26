@@ -5,6 +5,10 @@
  * Contains hooks and custom functions for WWD Core module.
  */
 
+use Drupal\wwd_core\FormOperations;
+use Drupal\wwd_core\EntityOperations;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -36,4 +40,70 @@ function wwd_core_theme() {
       'template' => 'social-follow-links-block',
     ],
   ];
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function wwd_core_entity_type_alter(array &$entity_types) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(EntityOperations::class)
+    ->entityTypeAlter($entity_types);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function wwd_core_entity_update(EntityInterface $entity) {
+  $type = $entity->getEntityTypeId();
+  if ($type == 'node') {
+    return \Drupal::service('class_resolver')
+      ->getInstanceFromDefinition(EntityOperations::class)
+      ->processNode($entity, 'update');
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function wwd_core_entity_insert(EntityInterface $entity) {
+  $type = $entity->getEntityTypeId();
+  if ($type == 'node') {
+    return \Drupal::service('class_resolver')
+      ->getInstanceFromDefinition(EntityOperations::class)
+      ->processNode($entity, 'insert');
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function wwd_core_entity_presave(EntityInterface $entity) {
+  $type = $entity->getEntityTypeId();
+  if ($type == 'node') {
+    return \Drupal::service('class_resolver')
+      ->getInstanceFromDefinition(EntityOperations::class)
+      ->processNode($entity, 'presave');
+  }
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function wwd_core_entity_delete(EntityInterface $entity) {
+  $type = $entity->getEntityTypeId();
+  if ($type == 'node') {
+    return \Drupal::service('class_resolver')
+      ->getInstanceFromDefinition(EntityOperations::class)
+      ->processNode($entity, 'delete');
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function wwd_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(FormOperations::class)
+    ->formAlter($form, $form_state, $form_id);
 }
