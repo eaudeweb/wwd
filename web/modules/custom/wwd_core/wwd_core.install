@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the WWD Core module.
+ */
+
+/**
+ * Install geolocation module.
+ */
+function wwd_core_update_9002() {
+  try {
+    if (!\Drupal::service('module_handler')->moduleExists('geolocation')) {
+      \Drupal::service('module_installer')->install(['geolocation']);
+    }
+  }
+  catch (\Exception $e) {
+    \Drupal::messenger()
+      ->addWarning('Could not install the Geolocation module. Reason : ' . $e->getMessage());
+  }
+}
