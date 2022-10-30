@@ -1,0 +1,8 @@
+uuid: 3f198556-f8b0-40a2-89a9-6c51d5e2b27b
+langcode: en
+status: true
+dependencies: {  }
+id: mapbox
+label: MapBox
+revision: 1
+description: 'Contains Mapbox map integration.'

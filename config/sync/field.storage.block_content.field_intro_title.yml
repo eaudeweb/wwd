@@ -1,22 +1,20 @@
-uuid: e435222d-bd08-4683-b98a-8f3fefb858bc
+uuid: 9a80551f-35a8-4a33-8344-3574be99609b
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - entity_reference_revisions
     - field_permissions
-    - paragraphs
 third_party_settings:
   field_permissions:
     permission_type: public
-id: block_content.field_background
-field_name: field_background
+id: block_content.field_intro_title
+field_name: field_intro_title
 entity_type: block_content
-type: entity_reference_revisions
+type: string_long
 settings:
-  target_type: paragraph
-module: entity_reference_revisions
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

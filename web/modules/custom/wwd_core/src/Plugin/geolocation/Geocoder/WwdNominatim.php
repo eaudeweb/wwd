@@ -249,7 +249,7 @@ class WwdNominatim extends GeocoderBase implements GeocoderInterface {
    *   Base URL.
    */
   protected function getRequestUrlBase() {
-    $config = $this->configFactory->get('wwd_core.nominatim_settings');
+    $config = $this->configFactory->get('wwd_core.settings');
 
     if (!empty($config->get('nominatim_base_url'))) {
       $request_url = $config->get('nominatim_base_url');
@@ -267,7 +267,7 @@ class WwdNominatim extends GeocoderBase implements GeocoderInterface {
    *   Get Request Email.
    */
   protected function getRequestEmail() {
-    $config = $this->configFactory->get('wwd_core.nominatim_settings');
+    $config = $this->configFactory->get('wwd_core.settings');
 
     if (!empty($config->get('nominatim_email'))) {
       $request_email = $config->get('nominatim_email');

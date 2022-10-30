@@ -8,6 +8,7 @@ use Drupal\node\NodeInterface;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Routing\CurrentRouteMatch;
+use Drupal\wwd_core\Services\EventsManager;
 use Drupal\block_content\Entity\BlockContent;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -61,6 +62,13 @@ class WwdThemeProcess implements ContainerInjectionInterface {
   protected $currentPath;
 
   /**
+   * Events manager.
+   *
+   * @var \Drupal\wwd_core\Services\EventsManager
+   */
+  protected $eventsManager;
+
+  /**
    * Constructs a new EntityOperations object.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -73,19 +81,23 @@ class WwdThemeProcess implements ContainerInjectionInterface {
    *   Current user.
    * @param \Drupal\Core\Path\CurrentPathStack $path
    *   Current path.
+   * @param \Drupal\wwd_core\Services\EventsManager $events_manager
+   *   Events manager.
    */
   public function __construct(
     EntityTypeManagerInterface $entity_type_manager,
     LanguageManagerInterface $language_manager,
     CurrentRouteMatch $route_match,
     AccountProxyInterface $account,
-    CurrentPathStack $path
+    CurrentPathStack $path,
+    EventsManager $events_manager
   ) {
     $this->entityTypeManager = $entity_type_manager;
     $this->languageManager = $language_manager;
     $this->routeMatch = $route_match;
     $this->currentUser = $account;
     $this->currentPath = $path;
+    $this->eventsManager = $events_manager;
   }
 
   /**
@@ -97,7 +109,8 @@ class WwdThemeProcess implements ContainerInjectionInterface {
       $container->get('language_manager'),
       $container->get('current_route_match'),
       $container->get('current_user'),
-      $container->get('path.current')
+      $container->get('path.current'),
+      $container->get('wwd_core.events_manager')
     );
   }
 
@@ -114,6 +127,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     }
     // Get block element.
     $element =& $variables['elements'];
+    $nodeManager = $this->entityTypeManager->getStorage('node');
     $view_builder = $this->entityTypeManager->getViewBuilder('node');
     // Get current langcode.
     $langcode = $this->languageManager->getCurrentLanguage()->getId();
@@ -201,6 +215,44 @@ class WwdThemeProcess implements ContainerInjectionInterface {
 
           $variables['gradient_options'] = $gradientOptions;
         }
+      }
+    }
+    // Parse mapbox block.
+    if ($element['#derivative_plugin_id'] == 'mapbox' ||
+    (!empty($content->type->target_id) &&
+    $content->type->target_id == 'mapbox')) {
+      $theme = $content->get('field_theme')->value;
+      $variables['theme'] = $theme;
+      // For homepage theme add the latest upcoming event to the list.
+      if ($theme == 'homepage') {
+        $query = $nodeManager->getQuery()
+          ->condition('type', 'events')
+          ->condition('status', 1)
+          ->range(0, 1)
+          ->sort('field_event_date', 'DESC');
+        $nodeId = $query->execute();
+        if (!empty($nodeId)) {
+          $nodeId = reset($nodeId);
+          $event = $nodeManager->load($nodeId);
+          // Pre-render event node.
+          $variables['event'] = $view_builder
+            ->view($event, 'teaser', $langcode);
+        }
+      }
+      else {
+        // Grab the filters by country.
+        $countries = $this->eventsManager->getCountryIsoCodes(TRUE);
+        if (!empty($countries)) {
+          $variables['filters'] = [
+            '#type' => 'select',
+            '#options' => ['_none' => 'Select Country'] + $countries,
+            '#required' => FALSE,
+            '#default_value' => '_none',
+            '#empty_option' => $this->t('Select Country'),
+            '#empty_value' => '_none',
+          ];
+        }
+
       }
     }
   }

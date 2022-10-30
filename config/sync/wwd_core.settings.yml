@@ -1,0 +1,4 @@
+nominatim_base_url: 'https://nominatim.openstreetmap.org'
+nominatim_email: nick@selk.global
+mapbox_style: 'mapbox://styles/selkpro/cl9sixxbb00ce14o2xyn081l4'
+mapbox_token: pk.eyJ1Ijoic2Vsa3BybyIsImEiOiJjbDlyN200YnQwY3B3M29vN3U3NGpzdGRsIn0.cH9w3ocLhbWiSvTXO9OTug
