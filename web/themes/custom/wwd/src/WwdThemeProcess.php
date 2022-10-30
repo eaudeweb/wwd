@@ -250,6 +250,11 @@ class WwdThemeProcess implements ContainerInjectionInterface {
             '#default_value' => '_none',
             '#empty_option' => $this->t('Select Country'),
             '#empty_value' => '_none',
+            '#attributes' => [
+              'class' => [
+                'event-country-filter',
+              ],
+            ],
           ];
         }
 

@@ -7,6 +7,7 @@
         var $token = drupalSettings.wwd_map.access_token;
         var $map_style = drupalSettings.wwd_map.map_style;
         var $markers = [];
+        const $countries = drupalSettings.wwd_map.countries;
         // Initiate the map.
         mapboxgl.accessToken = $token;
         const map = new mapboxgl.Map({
@@ -44,13 +45,27 @@
           }
         }
         // Fly to selected country.
-        document.getElementById('fly').addEventListener('click', () => {
-          // Fly to a random location.
-          map.flyTo({
-            center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
-            essential: true,
-          });
+        $(context).on('change', '.event-country-filter', function () {
+          let $iso = this.value;
+          let $found = $countries.find(country => country.iso3 === $iso);
+          if (typeof $found === 'object' && $found !== null) {
+            map.flyTo({
+              center: [$found.lng, $found.lat],
+              essential: true,
+              zoom: 6,
+            });
+          }
+          else {
+            // Fly to default location.
+            map.flyTo({
+              center: [12.323947, 30.811214],
+              essential: true,
+              zoom: 2,
+            });
+          }
+
         });
+
       });
 
     }

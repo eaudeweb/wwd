@@ -5,3 +5,11 @@ wwd_core.general_settings:
     _title: 'WWD Core settings'
   requirements:
     _permission: 'administer site configuration'
+
+wwd_core.country_coords_form:
+  path: '/admin/config/services/wwd/import-coords'
+  defaults:
+    _form: '\Drupal\wwd_core\Form\CountryCoordsImportForm'
+    _title: 'Import countries coordonates'
+  requirements:
+    _permission: 'administer site configuration'
