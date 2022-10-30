@@ -1,0 +1,110 @@
+uuid: b840e096-f565-4dd5-9775-1c20a14a71ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mapbox
+    - field.field.block_content.mapbox.body
+    - field.field.block_content.mapbox.field_background
+    - field.field.block_content.mapbox.field_cta
+    - field.field.block_content.mapbox.field_intro_title
+    - field.field.block_content.mapbox.field_theme
+  module:
+    - field_states_ui
+    - link
+    - paragraphs
+    - text
+id: block_content.mapbox.default
+targetEntityType: block_content
+bundle: mapbox
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_background:
+    type: paragraphs
+    weight: 26
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_cta:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            3aa663fd-1888-468d-801c-11f7da0eeb6c:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          3aa663fd-1888-468d-801c-11f7da0eeb6c:
+            uuid: 3aa663fd-1888-468d-801c-11f7da0eeb6c
+            id: visible
+            data:
+              target: field_theme
+              comparison: value
+              value: homepage
+              submit: 'Add Cancel'
+  field_intro_title:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_theme:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 97914961-ba33-427f-898f-719a1bb644a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mapbox
+    - field.storage.block_content.field_intro_title
+id: block_content.mapbox.field_intro_title
+field_name: field_intro_title
+entity_type: block_content
+bundle: mapbox
+label: 'Intro title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

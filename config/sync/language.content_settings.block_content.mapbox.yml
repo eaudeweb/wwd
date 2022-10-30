@@ -1,0 +1,16 @@
+uuid: b676cb87-7128-4e7a-90b2-925e36bb13d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mapbox
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.mapbox
+target_entity_type_id: block_content
+target_bundle: mapbox
+default_langcode: site_default
+language_alterable: true

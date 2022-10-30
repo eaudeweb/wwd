@@ -1,0 +1,22 @@
+uuid: 7e70cdd0-d83f-44dc-ab74-7b9a58e0ae3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: messages
+label: Messages
+type: 'canonical_entities:node'
+pattern: '/message/[node:title]'
+selection_criteria:
+  e58275d5-7f66-406c-933a-5823120d4353:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e58275d5-7f66-406c-933a-5823120d4353
+    context_mapping:
+      node: node
+    bundles:
+      message: message
+selection_logic: and
+weight: -5
+relationships: {  }

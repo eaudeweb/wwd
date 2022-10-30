@@ -1,0 +1,12 @@
+uuid: 9810f82e-f29e-42ca-89cf-f59c32f885be
+langcode: en
+status: true
+dependencies: {  }
+id: content_in_container
+label: 'Content in container'
+classes: content-container
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

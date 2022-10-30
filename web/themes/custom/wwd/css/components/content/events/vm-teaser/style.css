@@ -1,0 +1,76 @@
+.node--events--teaser {
+  --e-p: 1.25rem;
+
+  padding: var(--e-p);
+  border: 1px solid #EDEFF3;
+  background: var(--c-white);
+}.node--events--teaser .node--content {
+    max-width: 80%;
+  }.node--events--teaser > .row {
+    --gutter-x: 0;
+    gap: var(--e-p);
+    align-items: stretch;
+  }.node--events--teaser .field--name-field-event-date {
+    min-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6C7D9E;
+    font-family: var(--headings-font-family);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }.node--events--teaser .field--name-field-event-date span {
+      display: block;
+      font-size: 2.125rem;
+      font-weight: 700;
+    }.node--events--teaser .field--name-field-image {
+    max-width: 11.25rem;
+  }.node--events--teaser .field--name-field-image img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }.node--events--teaser .node--title {
+    color: var(--c-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    min-height: 3.5rem;
+  }.node--events--teaser .field--name-field-country {
+    color: #6C7D9E;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }.node--events--teaser .field--name-field-country svg {
+      margin-right: 0.75rem;
+    }.node--events--teaser .field--name-field-organizer {
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }.node--events--teaser .btn-plus {
+    --btn-padding-x: 0;
+    --btn-color: #5BC09C;
+  }.node--events--teaser .btn-plus:after {
+      content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16' viewBox='0 0 8 16'%3e  %3cg id='Group_1' data-name='Group 1' transform='translate(-1137 -520)'%3e    %3cpath id='Path_5' data-name='Path 5' d='M3.06,7.774V4.894H.468V3.184H3.06V.376H5V3.184h2.61v1.71H5v2.88Z' transform='translate(1136.532 525.624)' fill='%235bc09c'/%3e    %3crect id='Rectangle_6' data-name='Rectangle 6' width='8' height='16' transform='translate(1137 520)' fill='none'/%3e  %3c/g%3e%3c/svg%3e");
+      transition: var(--transition-base);
+      margin-left: var(--btn-arrow-ml, .5rem);
+    }.node--events--teaser .btn-plus:hover {
+      --btn-arrow-ml: 1rem
+    }.node--events--teaser .collapse {
+    margin-top: var(--e-p);
+  }
+
+.btn.btn-outline-primary.more-link  {
+  --btn-padding-x: 1.5rem;
+  --btn-padding-y: 0.875rem;
+  --btn-font-size: 1rem;
+  font-family: var(--body-font-family);
+  border-radius: 3em;
+
+  margin-top: 2.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
