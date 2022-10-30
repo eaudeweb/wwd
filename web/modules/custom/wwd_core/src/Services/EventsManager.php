@@ -117,6 +117,8 @@ class EventsManager implements EventsManagerInterface {
         $countries[$id] = [
           'iso3' => $term->get('field_iso3_code')->getString(),
           'name' => $term->getName(),
+          'lat' => $term->get('field_latitude')->getString(),
+          'lng' => $term->get('field_longitude')->getString(),
         ];
       }
     }
