@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.country.field_iso3_code
+    - field.field.taxonomy_term.country.field_latitude
+    - field.field.taxonomy_term.country.field_longitude
     - taxonomy.vocabulary.country
   module:
     - text
@@ -26,6 +28,22 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_latitude:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_longitude:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   langcode: true

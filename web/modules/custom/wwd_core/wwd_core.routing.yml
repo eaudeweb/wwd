@@ -1,7 +1,7 @@
-wwd_core.nominatim_settings:
-  path: '/admin/config/services/wwd/nominatim'
+wwd_core.general_settings:
+  path: '/admin/config/services/wwd/settings'
   defaults:
-    _form: '\Drupal\wwd_core\Form\NominatimSettings'
-    _title: 'Nominatim geocoding settings'
+    _form: '\Drupal\wwd_core\Form\WwdSettings'
+    _title: 'WWD Core settings'
   requirements:
     _permission: 'administer site configuration'

@@ -4,10 +4,30 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.country.field_iso3_code
+    - field.field.taxonomy_term.country.field_latitude
+    - field.field.taxonomy_term.country.field_longitude
     - taxonomy.vocabulary.country
   module:
+    - field_group
     - path
     - text
+third_party_settings:
+  field_group:
+    group_geolocation:
+      children:
+        - field_latitude
+        - field_longitude
+      label: Geolocation
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: taxonomy_term.country.default
 targetEntityType: taxonomy_term
 bundle: country
@@ -29,9 +49,25 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_latitude:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_longitude:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings:
       include_locked: true
@@ -46,24 +82,24 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,20 +1,22 @@
-uuid: 73974fd0-88bd-4a7a-b699-dd9db1224e79
+uuid: 5839cd43-d20b-4361-b70e-5916fe279c36
 langcode: en
 status: true
 dependencies:
   module:
-    - block_content
     - field_permissions
-    - link
+    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: block_content.field_cta
-field_name: field_cta
-entity_type: block_content
-type: link
-settings: {  }
-module: link
+id: taxonomy_term.field_latitude
+field_name: field_latitude
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

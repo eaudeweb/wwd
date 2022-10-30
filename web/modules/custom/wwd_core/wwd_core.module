@@ -39,6 +39,10 @@ function wwd_core_theme() {
       ],
       'template' => 'social-follow-links-block',
     ],
+    'events_map_block' => [
+      'variables' => [],
+      'template' => 'events-map-block',
+    ],
   ];
 }
 

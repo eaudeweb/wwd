@@ -1,0 +1,21 @@
+uuid: bfb23801-4bad-4de4-9210-9fe4b40faa80
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mapbox
+    - field.storage.block_content.field_theme
+  module:
+    - options
+id: block_content.mapbox.field_theme
+field_name: field_theme
+entity_type: block_content
+bundle: mapbox
+label: Theme
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

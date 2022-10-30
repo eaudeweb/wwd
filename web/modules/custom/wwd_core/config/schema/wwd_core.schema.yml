@@ -1,6 +1,6 @@
-wwd_core.nominatim_settings:
+wwd_core.settings:
   type: config_object
-  label: 'Nominatim geocoding settings'
+  label: 'WWD Core settings'
   mapping:
     nominatim_base_url:
       type: string
@@ -8,3 +8,9 @@ wwd_core.nominatim_settings:
     nominatim_email:
       type: email
       label: 'Custom Email for Nominatim Requests'
+    mapbox_style:
+      type: text
+      label: 'Mapbox Style url'
+    mapbox_token:
+      type: text
+      label: 'Mapbox Token'

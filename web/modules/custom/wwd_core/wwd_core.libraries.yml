@@ -1,0 +1,13 @@
+map:
+  version: VERSION
+  js:
+    'https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js': { type: external }
+    'assets/js/wwd-map.js': {}
+  css:
+    component:
+      'https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css': { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal
+    - core/once
