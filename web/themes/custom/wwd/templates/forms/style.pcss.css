@@ -1,5 +1,6 @@
 form {
   --color-label: #6C7D9E;
+  --fs-label: 16px;
 
   & .description {
     color: var(--color-label);
@@ -9,14 +10,25 @@ form {
   }
 }
 
-.form-item:not(fieldset) {
+.form-item {
   position: relative;
-  background-color: #F0F4F9;
   display: flex;
   flex-direction: column-reverse;
-  min-height: 56px;
-  padding-inline: 16px;
-  justify-content: center;
+
+  &.form-type-textarea {
+    & label {
+      --fs-label: 12px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &:not(fieldset):not(.form-type-vertical-tabs) {
+    background-color: #F0F4F9;
+    min-height: 56px;
+    padding-inline: 16px;
+    padding-block: 8px;
+    justify-content: center;
+  }
 }
 
 .form-wrapper + .form-wrapper {
@@ -33,7 +45,14 @@ input:not(.button) {
   outline: none;
 }
 
+textarea {
+  border: none;
+  background-color: transparent;
+  padding-inline: 0;
+}
+
 label {
+  font-size: var(--fs-label);
   color: var(--color-label);
   line-height: 18px;
   transition: .3s all linear;
@@ -49,6 +68,14 @@ label {
   transition: .3s all linear;
 }
 
+.form-actions {
+  margin-top: 20px;
+}
+
+.g-recaptcha {
+  margin-top: 22px;
+}
+
 /* Temp */
 fieldset.form-item {
   & > legend {
@@ -56,14 +83,58 @@ fieldset.form-item {
   }
 }
 
+.form-type-managed-file {
+  position: relative;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start !important;
+
+  & label {
+    position: absolute;
+    inset: 0;
+    padding-inline: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  & input[type=file] {
+    max-height: inherit !important;
+    vertical-align: middle;
+    direction: rtl;
+    color: var(--color-label);
+    font-weight: 500;
+    font-size: 12px;
+
+    &::file-selector-button {
+      background-image: url('../../img/icons/upload-img.svg');
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: 24px;
+      background-color: transparent;
+      min-height: 24px;
+      min-width: 32px;
+      text-indent: -100vh;
+      border: none;
+    }
+  }
+}
+
+.form-select {
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 .form-control {
   &:focus,
   &:not(:placeholder-shown) {
-    max-height: 22px;
+    min-height: 22px;
     opacity: 1;
 
     & + label {
-      font-size: 12px;
+      --fs-label: 12px;
     }
   }
 }
@@ -92,4 +163,12 @@ fieldset.form-item {
       }
     }
   }
+}
+
+form {
+  background-color: var(--c-white);
+  padding: 60px;
+  width: max(75%, 800px);
+  max-width: 100%;
+  margin-inline: auto;
 }

@@ -13,11 +13,18 @@
 .btn.btn-outline-primary {
   --btn-bg: var(--c-white);
   --btn-color: var(--c-primary);
-  --btn-border-color: #EDEFF3;
+  --btn-border-color: var(--c-primary);
   --btn-padding-x: 1.25rem;
   --btn-padding-y: .35rem;
   --btn-font-size: 14px;
   border-radius: 3em;
+}
+
+.btn.btn-lg {
+  --btn-font-size: 16px;
+  --btn-padding-x: 24px;
+  --btn-padding-y: 10px;
+  min-width: 148px;
 }
 
 .btn-link {
@@ -30,7 +37,7 @@
   &:after {
     content: var(--btn--arrow--white, url("../../img/icons/btn-arrow.svg"));
     transition: var(--transition-base);
-    margin-left: var(--btn-arrow-ml, .5rem);
+     margin-left: var(--btn-arrow-ml, .5rem);
   }
 
   &:hover {
