@@ -1,3 +1,7 @@
+:root {
+  --container: 1296px;
+}
+
 .page-title {
   --headings-color: var(--c-white);
 

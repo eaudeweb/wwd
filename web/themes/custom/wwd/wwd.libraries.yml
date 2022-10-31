@@ -88,6 +88,18 @@ b--video-text:
     component:
       css/components/block/video-text/style.css: {}
 
+## Mapbox.
+b--mapbox:
+  css:
+    component:
+      css/components/block/mapbox/style.css: {}
+
+## Image text.
+b--img-text:
+  css:
+    component:
+      css/components/block/img-text/style.css: {}
+
 # Paragraph.
 ## Card.
 p--card:

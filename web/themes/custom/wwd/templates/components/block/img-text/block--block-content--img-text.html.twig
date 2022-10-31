@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * WWD Theme override to display a block.
+ */
+#}
+
+{{ attach_library('wwd/b--img-text') }}
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'block--img-text',
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <span class="block--info-bg" style="{{- content.field_background|render|striptags -}}"></span>
+
+  <div class="block--info">
+    {%- if label -%}
+      <h2{{title_attributes.addClass('h1','block--title')}}>
+        {{- label -}}
+      </h2>
+    {%- endif -%}
+
+    {{- content.field_description -}}
+    {{- content.field_cta -}}
+  </div>
+
+  <div class="block--img">
+    {{- content.field_image -}}
+  </div>
+</div>
+

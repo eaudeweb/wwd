@@ -35,13 +35,18 @@
   --btn-padding-x: 0;
 
   &:after {
-    content: var(--btn--arrow--white, url("../../img/icons/btn-arrow.svg"));
+    content: var(--btn--arrow, url("../../img/icons/btn-arrow.svg"));
     transition: var(--transition-base);
      margin-left: var(--btn-arrow-ml, .5rem);
   }
 
   &:hover {
     --btn-arrow-ml: 1rem
+  }
+
+  &.white {
+    --btn--arrow: url("../../img/icons/btn-arrow-white.svg");
+    color: var(--c-white);
   }
 }
 
