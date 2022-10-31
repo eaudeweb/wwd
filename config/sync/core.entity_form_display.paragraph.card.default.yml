@@ -44,7 +44,7 @@ content:
       placeholder_url: ''
       placeholder_title: ''
       link_class_mode: force_class
-      link_class_force: 'btn btn-link btn-arrow white-arrow'
+      link_class_force: 'btn btn-link btn-arrow white'
       link_class_select: ''
     third_party_settings:
       field_states_ui:
