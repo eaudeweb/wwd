@@ -1,174 +1,174 @@
-form {
-  --color-label: #6C7D9E;
-  --fs-label: 16px;
+.node-events-form {
+  &form {
+    --color-label: #6C7D9E;
+    --fs-label: 16px;
 
-  & .description {
-    color: var(--color-label);
-    margin-top: 4px;
-    font-size: 12px;
-    padding-inline: 16px;
-  }
-}
+    background-color: var(--c-white);
+    padding: 60px;
+    width: max(75%, 800px);
+    max-width: 100%;
+    margin-inline: auto;
 
-.form-item {
-  position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-
-  &.form-type-textarea {
-    & label {
-      --fs-label: 12px;
-      margin-bottom: 8px;
+    & .description {
+      color: var(--color-label);
+      margin-top: 4px;
+      font-size: 12px;
+      padding-inline: 16px;
     }
   }
 
-  &:not(fieldset):not(.form-type-vertical-tabs) {
-    background-color: #F0F4F9;
-    min-height: 56px;
-    padding-inline: 16px;
-    padding-block: 8px;
-    justify-content: center;
+  & .form-item {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &.form-type-textarea {
+      & label {
+        --fs-label: 12px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &:not(fieldset):not(.form-type-vertical-tabs) {
+      background-color: #F0F4F9;
+      min-height: 56px;
+      padding-inline: 16px;
+      padding-block: 8px;
+      justify-content: center;
+    }
   }
-}
 
-.form-wrapper + .form-wrapper {
-  margin-top: 22px;
-}
-
-input:not(.button) {
-  max-width: 100%;
-  border: none;
-  background: transparent;
-  max-height: 0px;
-  opacity: 0;
-  transition: .3s all linear;
-  outline: none;
-}
-
-textarea {
-  border: none;
-  background-color: transparent;
-  padding-inline: 0;
-}
-
-label {
-  font-size: var(--fs-label);
-  color: var(--color-label);
-  line-height: 18px;
-  transition: .3s all linear;
-}
-
-.from-item--border {
-  position: absolute;
-  bottom: 0;
-  inset-inline: 0;
-  width: 0;
-  height: 2px;
-  background-color: transparent;
-  transition: .3s all linear;
-}
-
-.form-actions {
-  margin-top: 20px;
-}
-
-.g-recaptcha {
-  margin-top: 22px;
-}
-
-/* Temp */
-fieldset.form-item {
-  & > legend {
-    display: none;
+  & .form-wrapper + .form-wrapper {
+    margin-top: 22px;
   }
-}
 
-.form-type-managed-file {
-  position: relative;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: flex-start !important;
+  & input:not(.button) {
+    max-width: 100%;
+    border: none;
+    background: transparent;
+    max-height: 0px;
+    opacity: 0;
+    transition: .3s all linear;
+    outline: none;
+  }
+
+  & textarea {
+    border: none;
+    background-color: transparent;
+    padding-inline: 0;
+  }
 
   & label {
-    position: absolute;
-    inset: 0;
-    padding-inline: 16px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  & input[type=file] {
-    max-height: inherit !important;
-    vertical-align: middle;
-    direction: rtl;
+    font-size: var(--fs-label);
     color: var(--color-label);
-    font-weight: 500;
-    font-size: 12px;
+    line-height: 18px;
+    transition: .3s all linear;
+  }
 
-    &::file-selector-button {
-      background-image: url('../../img/icons/upload-img.svg');
-      background-repeat: no-repeat;
-      background-position: center right;
-      background-size: 24px;
-      background-color: transparent;
-      min-height: 24px;
-      min-width: 32px;
-      text-indent: -100vh;
-      border: none;
+  & .from-item--border {
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: .3s all linear;
+  }
+
+  & .form-actions {
+    margin-top: 20px;
+  }
+
+  & .g-recaptcha {
+    margin-top: 22px;
+  }
+
+  /* Temp */
+  & fieldset.form-item {
+    & > legend {
+      display: none;
     }
   }
-}
 
-.form-select {
-  background-color: transparent;
-  border: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
+  & .form-type-managed-file {
+    position: relative;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start !important;
 
-.form-control {
-  &:focus,
-  &:not(:placeholder-shown) {
-    min-height: 22px;
-    opacity: 1;
-
-    & + label {
-      --fs-label: 12px;
+    & label {
+      position: absolute;
+      inset: 0;
+      padding-inline: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
     }
-  }
-}
 
-.form-control:valid {
-  &:not(:focus):not(:placeholder-shown) {
-    & + label {
-      color: #6C7D9E;
+    & input[type=file] {
+      max-height: inherit !important;
+      vertical-align: middle;
+      direction: rtl;
+      color: var(--color-label);
+      font-weight: 500;
+      font-size: 12px;
 
-      & + .from-item--border {
-        width: 100%;
-        background-color: #76BE9E;
+      &::file-selector-button {
+        background-image: url('../../img/icons/upload-img.svg');
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 24px;
+        background-color: transparent;
+        min-height: 24px;
+        min-width: 32px;
+        text-indent: -100vh;
+        border: none;
       }
     }
   }
-}
 
-.form-control:invalid {
-  &:not(:focus):not(:placeholder-shown) {
-    & + label {
-      color: #D8514B;
+  & .form-select {
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 
-      & + .from-item--border {
-        width: 100%;
-        background-color: #D8514B;
+  & .form-control {
+    &:focus,
+    &:not(:placeholder-shown) {
+      min-height: 22px;
+      opacity: 1;
+
+      & + label {
+        --fs-label: 12px;
       }
     }
   }
-}
 
-form {
-  background-color: var(--c-white);
-  padding: 60px;
-  width: max(75%, 800px);
-  max-width: 100%;
-  margin-inline: auto;
+  & .form-control:valid {
+    &:not(:focus):not(:placeholder-shown) {
+      & + label {
+        color: #6C7D9E;
+
+        & + .from-item--border {
+          width: 100%;
+          background-color: #76BE9E;
+        }
+      }
+    }
+  }
+
+  & .form-control:invalid {
+    &:not(:focus):not(:placeholder-shown) {
+      & + label {
+        color: #D8514B;
+
+        & + .from-item--border {
+          width: 100%;
+          background-color: #D8514B;
+        }
+      }
+    }
+  }
 }
