@@ -1,7 +1,7 @@
 .node--message--teaser {
   & .node--title {
     --headings-margin-bottom: 10px;
-    --headings-color: #3B4B68;
+    --headings-color: var(--c-gray-800);
   }
 
   & .field--name-field-message-position {
@@ -37,7 +37,7 @@
     background-color: var(--c-white);
     padding: 32px;
     height: 100%;
-    color: #3B4B68;
+    color: var(--c-gray-800);
   }
 
   & .field--name-body {

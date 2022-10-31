@@ -25,12 +25,12 @@
   </div>
 
   <div class="node--content">
-    <a href="/events-list?country={{ node.field_country.entity.id }}">
+    <a href="/events-list?country={{ node.field_country.entity.id }}" class="link-field-country">
       {{- content.field_country -}}
     </a>
 
-    <h3 class="node--title">
-      {{ label }}
+    <h3 class="node--title mb-0">
+      {{- label -}}
     </h3>
 
     {{- content.field_organizer -}}

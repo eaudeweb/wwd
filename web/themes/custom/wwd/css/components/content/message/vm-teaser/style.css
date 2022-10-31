@@ -1,7 +1,7 @@
 
   .node--message--teaser .node--title {
     --headings-margin-bottom: 0.625rem;
-    --headings-color: #3B4B68;
+    --headings-color: var(--c-gray-800);
   }.node--message--teaser .field--name-field-message-position {
     text-transform: uppercase;
     color: var(--c-primary);
@@ -26,7 +26,7 @@
     background-color: var(--c-white);
     padding: 2rem;
     height: 100%;
-    color: #3B4B68;
+    color: var(--c-gray-800);
   }.node--message--teaser .field--name-body {
     flex-grow: 1;
     justify-content: center;
