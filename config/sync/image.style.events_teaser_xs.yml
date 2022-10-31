@@ -1,0 +1,15 @@
+uuid: 401b74f7-7dbc-4d01-8899-adf29d124b40
+langcode: en
+status: true
+dependencies: {  }
+name: events_teaser_xs
+label: 'Events teaser xs (300 x 150)'
+effects:
+  3124b8cf-3727-4442-8a31-18029335f838:
+    uuid: 3124b8cf-3727-4442-8a31-18029335f838
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 150
+      anchor: center-center

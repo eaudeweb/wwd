@@ -62,6 +62,11 @@ n--events--teaser:
     component:
       css/components/content/events/vm-teaser/style.css: {}
 
+n--events--teaser-xs:
+  css:
+    component:
+      css/components/content/events/vm-teaser-xs/style.css: {}
+
 # Views
 v--message--page:
   css:

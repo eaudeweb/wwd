@@ -1,7 +1,7 @@
 .node--message--teaser-xs {
   background: var(--c-white);
   border-end-end-radius: 60px;
-  color: #3B4B68;
+  color: var(--c-gray-800);
 
   & .node--content {
     padding: 12px 16px 12px 12px;

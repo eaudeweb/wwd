@@ -1,0 +1,85 @@
+.node--events--teaser-xs {
+  --net-xs-p: 20px;
+  background: var(--c-white);
+  border: 1px solid #EDEFF3;
+
+  & .node--header {
+    padding-top: var(--net-xs-p);
+    padding-right: var(--net-xs-p);
+    margin-left: -1px;
+    gap: var(--net-xs-p);
+  }
+
+  & .node--content {
+    padding: var(--net-xs-p);
+    text-align: left;
+  }
+
+  & .field--name-field-event-date {
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6C7D9E;
+    font-family: var(--headings-font-family);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    line-height: 34px;
+
+    & span {
+      display: block;
+      font-size: 34px;
+      font-weight: 700;
+    }
+  }
+
+  & .field--name-field-image {
+    aspect-ratio: 2 / 1;
+    width: 100%;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .link-field-country {
+    --link-hover-color: #069fda;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+
+    & svg {
+      margin-right: 12px;
+    }
+
+    &:hover {
+      --link-color: #069fda;
+    }
+  }
+
+  & h3.node--title {
+    --headings-color: var(--c-gray-800);
+    min-height: 68px;
+  }
+
+  & .field--name-field-organizer {
+    font-size: 12px;
+    line-height: 18px;
+    font-style: italic;
+    color: var(--c-gray-800);
+    margin-top: 12px;
+  }
+
+  .btn-arrow {
+    padding-block: 0;
+    margin-top: 20px
+  }
+}

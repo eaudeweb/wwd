@@ -14,7 +14,7 @@ dependencies:
     - field.field.node.events.field_link
     - field.field.node.events.field_organizer
     - field.field.node.events.field_street_address
-    - image.style.thumbnail
+    - image.style.events_teaser_xs
     - node.type.events
   module:
     - datetime
@@ -61,7 +61,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: thumbnail
+      image_style: events_teaser_xs
       svg_attributes:
         width: null
         height: null

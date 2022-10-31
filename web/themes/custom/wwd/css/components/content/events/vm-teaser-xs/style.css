@@ -1,0 +1,66 @@
+.node--events--teaser-xs {
+  --net-xs-p: 1.25rem;
+  background: var(--c-white);
+  border: 1px solid #EDEFF3;
+}.node--events--teaser-xs .node--header {
+    padding-top: var(--net-xs-p);
+    padding-right: var(--net-xs-p);
+    margin-left: -1px;
+    gap: var(--net-xs-p);
+  }.node--events--teaser-xs .node--content {
+    padding: var(--net-xs-p);
+    text-align: left;
+  }.node--events--teaser-xs .field--name-field-event-date {
+    min-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6C7D9E;
+    font-family: var(--headings-font-family);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    line-height: 2.125rem;
+  }.node--events--teaser-xs .field--name-field-event-date span {
+      display: block;
+      font-size: 2.125rem;
+      font-weight: 700;
+    }.node--events--teaser-xs .field--name-field-image {
+    aspect-ratio: 2 / 1;
+    width: 100%;
+  }.node--events--teaser-xs .field--name-field-image img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }.node--events--teaser-xs .link-field-country {
+    --link-hover-color: #069fda;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+  }.node--events--teaser-xs .link-field-country svg {
+      margin-right: 0.75rem;
+    }.node--events--teaser-xs .link-field-country:hover {
+      --link-color: #069fda;
+    }.node--events--teaser-xs h3.node--title {
+    --headings-color: var(--c-gray-800);
+    min-height: 4.25rem;
+  }.node--events--teaser-xs .field--name-field-organizer {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-style: italic;
+    color: var(--c-gray-800);
+    margin-top: 0.75rem;
+  }.node--events--teaser-xs {
+
+  .btn-arrow {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 1.25rem
+  }
+}
