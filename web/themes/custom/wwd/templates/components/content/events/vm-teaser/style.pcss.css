@@ -90,7 +90,7 @@
   }
 }
 
-.btn.btn-outline-primary.more-link  {
+.btn.btn-outline-primary.more-link {
   --btn-padding-x: 24px;
   --btn-padding-y: 14px;
   --btn-font-size: 1rem;
@@ -100,4 +100,10 @@
   margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.view--events--upcoming {
+  & .views-row + .views-row {
+    margin-top: 30px;
+  }
 }

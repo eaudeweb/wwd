@@ -5,10 +5,8 @@
  */
 #}
 
-{# {{ attach_library('wwd/sbc--forms') }} #}
+{{ attach_library('wwd/c--forms') }}
 
-{% block form %}
-  <form{{ attributes }}>
-    {{ children }}
-  </form>
-{% endblock %}
+<form{{ attributes }}>
+  {{ children }}
+</form>

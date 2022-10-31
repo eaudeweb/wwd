@@ -1,0 +1,8 @@
+uuid: ba5cec4b-eb73-47b2-85a2-898ef2864984
+langcode: en
+status: true
+dependencies: {  }
+id: img_text
+label: 'Image text'
+revision: 0
+description: 'Block with title, Image, text, CTA fields (background gradient/color) with the possibility to choose the position of the image (right/left).'

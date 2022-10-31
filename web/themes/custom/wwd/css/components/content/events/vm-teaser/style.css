@@ -63,7 +63,7 @@
     margin-top: var(--e-p);
   }
 
-.btn.btn-outline-primary.more-link  {
+.btn.btn-outline-primary.more-link {
   --btn-padding-x: 1.5rem;
   --btn-padding-y: 0.875rem;
   --btn-font-size: 1rem;
@@ -74,3 +74,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+.view--events--upcoming .views-row + .views-row {
+    margin-top: 1.875rem;
+  }

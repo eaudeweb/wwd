@@ -1,0 +1,16 @@
+uuid: 054628cf-0632-476d-9443-2e2c1394e577
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.img_text
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.img_text
+target_entity_type_id: block_content
+target_bundle: img_text
+default_langcode: site_default
+language_alterable: false

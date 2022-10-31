@@ -5,51 +5,61 @@
  */
 #}
 
+{{ attach_library('wwd/b--mapbox') }}
+
 {%
   set classes = [
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    'block--mapbox',
+    'homepage' in theme ? 'homepage' : 'filter',
   ]
 %}
 
-<div{{attributes.addClass(classes)}} style="{{- content.field_background|render|striptags -}}">
+<div{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title_suffix }}
-  <div class="container">
-    <div class="row">
-      <div class="intro-info col-md-6">
-        {%- if content.field_intro_title -%}
-          <h2{{title_attributes.addClass('h1','block--title')}}>
-            {{- content.field_intro_title -}}
-          </h2>
-        {%- endif -%}
 
-        {{- content.body -}}
-        {# Display filters is any #}
-        {% if filters is not empty %}
-          {{ filters }}
-        {% endif %}
-        {# If theme is homepage style, display CTA #}
-        {% if theme == 'homepage' %}
-          {% if content.field_cta %}
-            {{- content.field_cta -}}
-          {% endif %}
-          {% if event is not empty %}
-            {{- event -}}
-          {% endif %}
-        {% else %}
-          <a href="{{ path('node.add', {'node_type': 'events'}) }}">{{ "Register your event"|t }}</a>
-        {% endif %}
-      </div>
-      <div class="map-info col-md-6">
-        {% if theme == 'homepage' %}
-          <a href="{{ path('node.add', {'node_type': 'events'}) }}">{{ "Register your event"|t }}</a>
-        {% endif %}
-        {{ drupal_block('events_map_block', wrapper=false) }}
-      </div>
-    </div>
+  <span class="mapbox--bgg" style="{{- content.field_background|render|striptags -}}"></span>
+
+  <div class="intro-info">
+    {%- if content.field_intro_title -%}
+      <h2{{title_attributes.addClass('h1','block--title')}}>
+        {{- content.field_intro_title -}}
+      </h2>
+    {%- endif -%}
+
+    {{- content.body -}}
+    {# Display filters is any #}
+    {% if filters is not empty %}
+      {{ filters }}
+    {% endif %}
   </div>
 
+ <span class="mapbox--bgg-link"></span>
+  <div class="mapbox--link">
+    {# If theme is homepage style, display CTA #}
+    {% if theme == 'homepage' %}
+      {% if content.field_cta %}
+        {{- content.field_cta -}}
+      {% endif %}
+
+      {% if event is not empty %}
+        {{- event -}}
+      {% endif %}
+    {% else %}
+      <a href="{{ path('node.add', {'node_type': 'events'}) }}" class="btn btn-link btn-arrow white">
+        {{- "Register your event"|t -}}
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="map-info">
+    {% if theme == 'homepage' %}
+      <a href="{{ path('node.add', {'node_type': 'events'}) }}">{{ "Register your event"|t }}</a>
+    {% endif %}
+    {{ drupal_block('events_map_block', wrapper=false) }}
+  </div>
 </div>
 

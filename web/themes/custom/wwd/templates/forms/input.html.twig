@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * WWD override for an 'input' #type form element.
+ */
+#}
+
+{%
+  set classes = [
+    attributes.hasClass('button') ? 'btn btn-outline-primary btn-lg' : 'form-control',
+  ]
+%}
+
+<input{{ attributes.addClass(classes) }} />{{ children }}

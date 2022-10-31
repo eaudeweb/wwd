@@ -1,0 +1,21 @@
+uuid: c707ca6a-beac-465a-aa42-1c2d23cac780
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.img_text
+    - field.storage.block_content.field_description
+  module:
+    - text
+id: block_content.img_text.field_description
+field_name: field_description
+entity_type: block_content
+bundle: img_text
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

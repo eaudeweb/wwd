@@ -1,0 +1,46 @@
+.block--mapbox {
+  --container: 81rem;
+}.block--mapbox.filter {
+    display: grid;
+    grid-template-columns: auto calc(var(--container)*42/100) calc(var(--container)*58/100) auto;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }.block--mapbox.filter .intro-info {
+      grid-area: 1 / 2 / 2 / 3;
+      padding-top: 6.25rem;
+      padding-bottom: 6.25rem;
+      color: var(--c-white);
+    }.block--mapbox.filter .mapbox--bgg {
+      grid-area: 1 / 1 / 2 / 3;
+    }.block--mapbox.filter .map-info {
+      grid-area: 1 / 3 / 3 / 5;
+    }.block--mapbox.filter .mapbox--link {
+      grid-area: 2 / 2 / 3 / 3;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }.block--mapbox.filter .mapbox--bgg-link {
+      grid-area: 2 / 1 / 3 / 3;
+      background: linear-gradient(91.26deg, #0ABAFF 0%, #1BF1FF 99.76%);
+    }.block--mapbox .form-select {
+    margin-top: 2.875rem;
+    border: var(--c-primary) 1px solid;
+    border-radius: 5rem;
+    padding: 0.875rem 1.625rem;
+    min-width: 18.75rem;
+    font-weight: 700;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    background-image: url("data:image/svg+xml,%3csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.43301 8.25C5.24056 8.58333 4.75944 8.58333 4.56699 8.25L0.236861 0.750001C0.04441 0.416667 0.284972 9.36737e-07 0.669872 9.03088e-07L9.33013 1.45985e-07C9.71503 1.12336e-07 9.95559 0.416667 9.76314 0.75L5.43301 8.25Z' fill='url(%23paint0_linear_1_1074)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_1_1074' x1='11' y1='9' x2='-1.22842' y2='8.73137' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%230ABAFF'/%3e%3cstop offset='1' stop-color='%231BF1FF'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center right 26px;
+  }.block--mapbox .form-select option {
+      color: #3B4B68;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+    }.block--mapbox .events-map {
+    height: 100%;
+  }.block--mapbox .field--name-body {
+    width: 75%;
+  }

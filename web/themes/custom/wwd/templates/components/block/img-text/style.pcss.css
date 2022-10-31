@@ -1,0 +1,34 @@
+.block--img-text {
+  display: grid;
+  grid-template-columns: 1fr calc(var(--container) * 42 / 100) calc(var(--container) * 58 / 100) 1fr;
+
+  & .block--info {
+    grid-area: 1 / 2 / 2 / 3;
+    padding-block: 100px;
+    color: var(--c-white);
+    padding-right: 75px;
+  }
+
+  & .block--info-bg {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  & .block--img {
+    grid-area: 1 / 3 / 2 / 5;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .block--title {
+    --h1-font-size: 34px;
+  }
+
+  & .btn-arrow {
+    margin-top: 24px;
+  }
+
+}
