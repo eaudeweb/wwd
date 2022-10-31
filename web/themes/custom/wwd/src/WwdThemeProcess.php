@@ -236,7 +236,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           $event = $nodeManager->load($nodeId);
           // Pre-render event node.
           $variables['event'] = $view_builder
-            ->view($event, 'teaser', $langcode);
+            ->view($event, 'teaser_xs', $langcode);
         }
       }
       else {

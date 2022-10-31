@@ -34,8 +34,8 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-    }.node--events--teaser .node--title {
-    color: var(--c-primary);
+    }.node--events--teaser .node--content .node--title {
+    --headings-color: var(--c-primary);
     font-size: 1.5rem;
     font-weight: 600;
     min-height: 3.5rem;
@@ -53,15 +53,25 @@
   }.node--events--teaser .btn-plus {
     --btn-padding-x: 0;
     --btn-color: #5BC09C;
+    --btn-hover-color: #5BC09C;
   }.node--events--teaser .btn-plus:after {
-      content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16' viewBox='0 0 8 16'%3e  %3cg id='Group_1' data-name='Group 1' transform='translate(-1137 -520)'%3e    %3cpath id='Path_5' data-name='Path 5' d='M3.06,7.774V4.894H.468V3.184H3.06V.376H5V3.184h2.61v1.71H5v2.88Z' transform='translate(1136.532 525.624)' fill='%235bc09c'/%3e    %3crect id='Rectangle_6' data-name='Rectangle 6' width='8' height='16' transform='translate(1137 520)' fill='none'/%3e  %3c/g%3e%3c/svg%3e");
+      content: "+";
       transition: var(--transition-base);
       margin-left: var(--btn-arrow-ml, .5rem);
     }.node--events--teaser .btn-plus:hover {
       --btn-arrow-ml: 1rem
-    }.node--events--teaser .collapse {
+    }.node--events--teaser .content--collpase {
     margin-top: var(--e-p);
-  }
+  }.node--events--teaser .field--label-inline {
+    display: flex;
+  }.node--events--teaser .field--label-inline .field__label {
+      color: #5BC09C;
+      font-weight: 700;
+      margin-right: .5rem;
+      margin-bottom: 0.75rem;
+    }.node--events--teaser .field--label-inline .field__label:after {
+        content: ":";
+      }
 
 .btn.btn-outline-primary.more-link {
   --btn-padding-x: 1.5rem;

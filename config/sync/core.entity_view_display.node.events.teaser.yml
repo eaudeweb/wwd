@@ -28,7 +28,7 @@ mode: teaser
 content:
   field_city:
     type: string
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -44,7 +44,7 @@ content:
     region: content
   field_email:
     type: basic_string
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 5
@@ -82,13 +82,13 @@ content:
     region: content
   field_link:
     type: link
-    label: hidden
+    label: inline
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
     weight: 6
     region: content
@@ -102,7 +102,7 @@ content:
     region: content
   field_street_address:
     type: string
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

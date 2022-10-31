@@ -25,14 +25,19 @@
 
     <div class="col d-flex flex-column">
       <div class="node--content">
-        {{- content.field_country -}}
+        <a href="/events-list?country={{ node.field_country.entity.id }}">
+          {{- content.field_country -}}
+        </a>
 
-        <h3 class="node--title">
-          {{ label }}
-        </h3>
+        <a href="{{ content.field_link.0 }}">
+          <h3 class="node--title">
+            {{ label }}
+          </h3>
+        </a>
 
         {{- content.field_organizer -}}
-        {{- content.field_event_info -}}
+        {% set text = content.field_event_info|render|striptags %}
+        {{ text|length > 160 ? text|slice(0, 160)|raw ~ '...' : text|raw }}
       </div>
 
       <button
@@ -48,7 +53,7 @@
     </div>
   </div>
 
-  <div class="collapse" id="nid{{ node.id }}">
-    {{- content|without('field_event_date', 'field_image', 'field_country', 'field_organizer', 'field_event_info') -}}
+  <div class="content--collpase collapse" id="nid{{ node.id }}">
+    {{- content|without('field_event_date', 'field_image', 'field_country', 'field_organizer') -}}
   </div>
 </article>
