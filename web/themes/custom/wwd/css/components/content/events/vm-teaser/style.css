@@ -85,6 +85,10 @@
   margin-left: auto;
 }
 
-.view--events--upcoming .views-row + .views-row {
-    margin-top: 1.875rem;
+.view--events--upcoming {
+  gap: 1.375rem;
+}
+
+.view--events--upcoming .views-row {
+    width: 100%;
   }

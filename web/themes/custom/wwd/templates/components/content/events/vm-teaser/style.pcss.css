@@ -119,7 +119,9 @@
 }
 
 .view--events--upcoming {
-  & .views-row + .views-row {
-    margin-top: 30px;
+  gap: 22px;
+
+  & .views-row {
+    width: 100%;
   }
 }
