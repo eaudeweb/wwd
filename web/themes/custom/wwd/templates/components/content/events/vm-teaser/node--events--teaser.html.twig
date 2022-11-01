@@ -29,11 +29,9 @@
           {{- content.field_country -}}
         </a>
 
-        <a href="{{ content.field_link.0 }}">
-          <h3 class="node--title">
-            {{ label }}
-          </h3>
-        </a>
+        <h3 class="node--title">
+          {{ label }}
+        </h3>
 
         {{- content.field_organizer -}}
         {% set text = content.field_event_info|render|striptags %}
@@ -41,7 +39,7 @@
       </div>
 
       <button
-        class="btn btn-link btn-plus mt-2 ms-auto"
+        class="btn btn-link btn-plus mt-2 ms-auto collapsed"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#nid{{ node.id }}"

@@ -76,13 +76,19 @@
     --btn-hover-color: #5BC09C;
 
     &:after {
-      content: "+";
+      content: "-";
       transition: var(--transition-base);
       margin-left: var(--btn-arrow-ml, .5rem);
     }
 
     &:hover {
       --btn-arrow-ml: 1rem
+    }
+
+    &.collapsed{
+      &:after {
+        content: "+";
+      }
     }
   }
 
