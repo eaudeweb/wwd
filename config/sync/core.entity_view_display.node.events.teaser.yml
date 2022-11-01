@@ -32,7 +32,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_country:
     type: entity_reference_label
@@ -41,13 +41,6 @@ content:
       link: false
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_email:
-    type: basic_string
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_event_date:
     type: datetime_default
@@ -63,7 +56,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_image:
     type: image
@@ -85,12 +78,12 @@ content:
     label: inline
     settings:
       trim_length: null
-      url_only: true
+      url_only: false
       url_plain: true
-      rel: '0'
-      target: '0'
+      rel: nofollow
+      target: _blank
     third_party_settings: {  }
-    weight: 6
+    weight: 4
     region: content
   field_organizer:
     type: string
@@ -106,10 +99,11 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
 hidden:
   addtoany: true
+  field_email: true
   field_geolocation: true
   langcode: true
   links: true

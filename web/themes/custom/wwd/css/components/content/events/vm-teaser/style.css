@@ -55,12 +55,14 @@
     --btn-color: #5BC09C;
     --btn-hover-color: #5BC09C;
   }.node--events--teaser .btn-plus:after {
-      content: "+";
+      content: "-";
       transition: var(--transition-base);
       margin-left: var(--btn-arrow-ml, .5rem);
     }.node--events--teaser .btn-plus:hover {
       --btn-arrow-ml: 1rem
-    }.node--events--teaser .content--collpase {
+    }.node--events--teaser .btn-plus.collapsed:after {
+        content: "+";
+      }.node--events--teaser .content--collpase {
     margin-top: var(--e-p);
   }.node--events--teaser .field--label-inline {
     display: flex;
