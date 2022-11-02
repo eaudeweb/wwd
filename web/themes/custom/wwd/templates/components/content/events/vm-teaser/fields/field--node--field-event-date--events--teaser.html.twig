@@ -20,5 +20,9 @@
     </span>
 
     {{- item.content['#attributes']['datetime']|date("M") -}}
+    <div class="event-year small">
+      {{- item.content['#attributes']['datetime']|date("Y") -}}
+    </div>
+
   {% endfor %}
 </div>
