@@ -7,6 +7,10 @@
         var $token = drupalSettings.wwd_map.access_token;
         var $map_style = drupalSettings.wwd_map.map_style;
         var $markers = [];
+        const bounds = [
+          [-180, -78],
+          [180, 78]
+        ];
         const $countries = drupalSettings.wwd_map.countries;
         // Initiate the map.
         mapboxgl.accessToken = $token;
@@ -14,8 +18,9 @@
           container: 'events-map',
           style: $map_style,
           center: [12.323947, 30.811214],
-          zoom: 2,
+          zoom: 0.8,
           hash: false,
+          maxBounds: bounds,
         });
         // Add zoom and rotation controls to the map.
         map.addControl(new mapboxgl.NavigationControl());
@@ -29,8 +34,7 @@
           });
           for (const marker of $markers) {
             // Get all markers with the same coordinates.
-            const sameMarkers = $markers.filter(m => m.lat === marker.lat && m.lon === marker.lon);
-
+            const sameMarkers = $markers.filter(m => m._lngLat.lat === marker._lngLat.lat && m._lngLat.lng === marker._lngLat.lng);
             // Ff there is more than one marker with the same coordinates.
             if (sameMarkers.length > 1) {
               // Get the index of the current marker.
@@ -54,8 +58,7 @@
               essential: true,
               zoom: 6,
             });
-          }
-          else {
+          } else {
             // Fly to default location.
             map.flyTo({
               center: [12.323947, 30.811214],
