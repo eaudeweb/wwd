@@ -7,6 +7,7 @@ use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Drupal\wwd_core\Services\EventsManager;
 use Drupal\block_content\Entity\BlockContent;
@@ -16,6 +17,7 @@ use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 
 /**
  * Defines a class for reacting to entity/preprocess events.
@@ -225,11 +227,13 @@ class WwdThemeProcess implements ContainerInjectionInterface {
       $variables['theme'] = $theme;
       // For homepage theme add the latest upcoming event to the list.
       if ($theme == 'homepage') {
+        $now = new DrupalDateTime('now');
         $query = $nodeManager->getQuery()
           ->condition('type', 'events')
           ->condition('status', 1)
+          ->condition('field_event_date', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '>=')
           ->range(0, 1)
-          ->sort('field_event_date', 'DESC');
+          ->sort('field_event_date', 'ASC');
         $nodeId = $query->execute();
         if (!empty($nodeId)) {
           $nodeId = reset($nodeId);
