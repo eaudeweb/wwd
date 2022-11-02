@@ -2,6 +2,25 @@
   --p5: 72px;
   --p-block: 72px;
   --headings-font-weight: 600;
+  --container: 100%;
+}
+
+@media (min-width: 62rem) {
+  :root {
+    --container: 60rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  :root {
+    --container: 71.25rem;
+  }
+}
+
+@media (min-width: 87.5rem) {
+  :root {
+    --container: 1296px;
+  }
 }
 
 h1, .h1 {
