@@ -21,8 +21,6 @@ regions:
   hero: 'Hero (full width)'
   breadcrumb: Breadcrumbs
   content: 'Main content'
-  # sidebar_first: 'Sidebar first'
-  # sidebar_second: 'Sidebar second'
   pre_footer: 'Pre Footer'
   footer_left: Footer Left
   footer: Footer
