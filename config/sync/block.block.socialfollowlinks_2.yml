@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - block_class
+    - system
     - wwd_core
   theme:
     - wwd
@@ -27,4 +28,8 @@ settings:
   youtube: WorldWildlifeDay
   flickr: worldwildlifeday
   drop_button: 1
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,44 @@
+uuid: 6769b46b-dd84-4af6-b143-858e2f45b64d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.remote_url
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - layout_builder
+    - oembed_lazyload_youtube
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: zQoBQ0BtnMM_rlDdgftyu6eI4AVs9mo5K8xq7NFO2Zc
+id: media.remote_video.remote_url
+targetEntityType: media
+bundle: remote_video
+mode: remote_url
+content:
+  field_media_oembed_video:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      oembed_lazyload_youtube:
+        autoplay: true
+        modestbranding: false
+        enablejsapi: true
+        origin: true
+        hideinfo: false
+        rel: false
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

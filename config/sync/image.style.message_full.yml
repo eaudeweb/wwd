@@ -1,0 +1,15 @@
+uuid: 38fceda0-e2d7-4ea5-9cd4-6b239a62156f
+langcode: en
+status: true
+dependencies: {  }
+name: message_full
+label: 'Message full (max width 335}'
+effects:
+  02261658-97da-4fe4-ac2d-31b4ce2772a0:
+    uuid: 02261658-97da-4fe4-ac2d-31b4ce2772a0
+    id: image_scale
+    weight: 1
+    data:
+      width: 335
+      height: null
+      upscale: false

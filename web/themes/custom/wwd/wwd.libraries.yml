@@ -41,6 +41,11 @@ n--multimedia--video-teaser:
       css/components/content/multimedia/vm-video-teaser/style.css: {}
 
 ## Message.
+n--message--full:
+  css:
+    component:
+      css/components/content/message/vm-full/style.css: {}
+
 n--message--slider:
   css:
     component:

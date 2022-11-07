@@ -29,9 +29,9 @@
     </div>
 
     <div class="col-lg-8">
-      <a href="/node/1123" class="btn btn-outline-primary btn-video">
-        {{- "Video"|t -}}
-      </a>
+      {% if content.field_video.0 %}
+        {{ content.field_video }}
+      {% endif %}
     </div>
   </div>
 
