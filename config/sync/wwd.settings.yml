@@ -20,7 +20,7 @@ sr__container_nav_main: none
 sr__container_position_nav_main: before
 sr__extra_class_nav_main: ''
 sr__clean_header: 0
-sr__class_header: 'row pt-region justify-content-between align-items-center'
+sr__class_header: 'row g-4 pt-region justify-content-between align-items-center'
 sr__container_header: container
 sr__container_position_header: before
 sr__extra_class_header: ''
@@ -70,7 +70,7 @@ sr__container_footer_top: none
 sr__container_position_footer_top: before
 sr__extra_class_footer_top: ''
 sr__clean_footer: 0
-sr__class_footer: 'col-lg-7 row'
+sr__class_footer: 'row g-5 g-md-3'
 sr__container_footer: none
 sr__container_position_footer: before
 sr__extra_class_footer: ''
@@ -100,7 +100,7 @@ sc__gray_500: '#000000'
 sc__gray_600: '#000000'
 sc__gray_700: '#000000'
 sc__gray_800: '#3b4b68'
-sc__gray_900: '#000000'
+sc__gray_900: '#0d1b2a'
 sc__primary: '#0abaff'
 sc__secondary: '#000000'
 sc__success: '#000000'
@@ -125,7 +125,7 @@ sr__container_footer_left: none
 sr__container_position_footer_left: before
 sr__extra_class_footer_left: ''
 sr__clean_footer_bottom: 0
-sr__class_footer_bottom: 'row justify-content-between'
+sr__class_footer_bottom: 'row justify-content-between gap-4'
 sr__container_footer_bottom: container
 sr__container_position_footer_bottom: before
 sr__extra_class_footer_bottom: ''

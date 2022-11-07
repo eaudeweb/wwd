@@ -19,5 +19,6 @@
 .user-mode .layout-region--video {
   & .block {
     height: 100%;
+    min-height: 400px;
   }
 }

@@ -81,7 +81,7 @@
       align-items: flex-end;
 
       & .btn-outline-primary {
-        border-color: var(--c-white);
+        --btn-border-color: var(--c-white);
       }
 
       & .events-map {

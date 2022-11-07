@@ -16,13 +16,18 @@
     z-index: -1;
     top: 0;
     bottom: 0;
-    right: 55%;
-    width: 45vw;
+    right: 0;
+    width: 100%;
     max-height: 21.25rem;
   }.block--video-text-block .media-oembed-content {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+  }@media (min-width: 62rem) {
+    .block--video-text-block:after {
+      right: 55%;
+      width: 45vw;
+    }
   }
 
 .multimedia-rows {

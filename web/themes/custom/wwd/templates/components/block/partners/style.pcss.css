@@ -3,5 +3,11 @@
 }
 
 .grid-partners {
-  --bs-columns: 5;
+  --bs-columns: 3;
+}
+
+@media (min-width: 36rem) {
+  .grid-partners {
+    --bs-columns: 5;
+  }
 }

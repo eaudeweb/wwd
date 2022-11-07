@@ -70,7 +70,7 @@
       flex-direction: column;
       align-items: flex-end;
     }.block--mapbox.homepage .w--map .btn-outline-primary {
-        border-color: var(--c-white);
+        --btn-border-color: var(--c-white);
       }.block--mapbox.homepage .w--map .events-map {
         flex-grow: 1;
         width: 100%;
