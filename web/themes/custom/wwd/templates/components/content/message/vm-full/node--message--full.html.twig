@@ -34,17 +34,19 @@
   </div>
 
   <div class="container">
-    <div class="node--content row g-0">
-      <div class="col-1 col-message-left"></div>
+    <div class="node--content">
+      <div class="row g-0">
+        <div class="col-1 col-message-left"></div>
 
-      <div class="col-11 col-message-right">
-        {{ content.field_media_image }}
+        <div class="col-11 col-message-right">
+          {{ content.field_media_image }}
 
-        {{ content.body }}
+          {{ content.body }}
 
-        <a href="/messages" class="btn btn-outline-primary btn-back-message">
-          {{- 'PREVOIUS MESSAGES'|t -}}
-        </a>
+          <a href="/messages" class="btn btn-outline-primary btn-back-message">
+            {{- 'PREVOIUS MESSAGES'|t -}}
+          </a>
+        </div>
       </div>
     </div>
   </div>
