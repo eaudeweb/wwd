@@ -1,0 +1,10 @@
+uuid: 606c5568-ac65-44eb-98fc-b0877fd61083
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.remote_url
+label: 'Remote url'
+targetEntityType: media
+cache: true

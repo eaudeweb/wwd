@@ -1,0 +1,39 @@
+.page-node-type-message {
+  --body-bg: #F8FBFD;
+}
+
+.node--message--full {
+  & .node--title {
+    margin-bottom: 24px;
+  }
+
+  & .field--name-field-message-position {
+    font-size: 16px;
+    font-family: var(--body-font-family);
+  }
+
+  & .field--name-field-video {
+    margin-top: 24px;
+  }
+
+  & .node--content {
+    margin-bottom: 100px;
+  }
+
+  & .col-message-left {
+    border-left: 1px solid var(--c-primary);
+  }
+
+  & .col-message-right {
+    padding-bottom: 100px;
+    padding-top: 70px;
+  }
+
+  & .field--name-field-media-image {
+    margin-bottom: 28px;
+  }
+
+  & .btn-back-message {
+    margin-top: 100px;
+  }
+}

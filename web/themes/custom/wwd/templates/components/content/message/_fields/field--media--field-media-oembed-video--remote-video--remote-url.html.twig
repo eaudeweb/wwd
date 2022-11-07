@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * WWD override for a field.
+ */
+#}
+
+{% for item in items %}
+  <a href="{{ item.content|render }}" class="btn btn-outline-primary btn-video">
+    {{- "Video"|t -}}
+  </a>
+{% endfor %}

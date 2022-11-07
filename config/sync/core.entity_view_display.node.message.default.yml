@@ -9,9 +9,11 @@ dependencies:
     - field.field.node.message.field_message_position
     - field.field.node.message.field_video
     - field.field.node.message.field_weight
+    - image.style.message_full
     - node.type.message
   module:
     - datetime
+    - media
     - text
     - user
 id: node.message.default
@@ -27,10 +29,13 @@ content:
     weight: 101
     region: content
   field_media_image:
-    type: entity_reference_label
+    type: media_thumbnail
     label: hidden
     settings:
-      link: true
+      image_link: ''
+      image_style: message_full
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 104
     region: content
@@ -51,10 +56,11 @@ content:
     weight: 105
     region: content
   field_video:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      link: true
+      view_mode: remote_url
+      link: false
     third_party_settings: {  }
     weight: 106
     region: content
