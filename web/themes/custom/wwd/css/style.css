@@ -5,6 +5,18 @@
   --container: 100%;
 }
 
+@media (min-width: 36rem) {
+  :root {
+    --container: 33.75rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --container: 45rem;
+  }
+}
+
 @media (min-width: 62rem) {
   :root {
     --container: 60rem;

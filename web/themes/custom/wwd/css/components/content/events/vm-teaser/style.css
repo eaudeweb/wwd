@@ -28,7 +28,7 @@
       font-size: 2.125rem;
       font-weight: 700;
     }.node--events--teaser .field--name-field-image {
-    max-width: 11.25rem;
+    width: calc(100% - 6.25rem);
   }.node--events--teaser .field--name-field-image img {
       -o-object-fit: cover;
       object-fit: cover;
@@ -74,6 +74,12 @@
     }.node--events--teaser .field--label-inline .field__label:after {
         content: ":";
       }
+
+@media (min-width: 48rem) {
+    .node--events--teaser .field--name-field-image {
+      max-width: 11.25rem;
+    }
+}
 
 .btn.btn-outline-primary.more-link {
   --btn-padding-x: 1.5rem;

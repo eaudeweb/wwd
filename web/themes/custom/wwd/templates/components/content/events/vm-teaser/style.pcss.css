@@ -37,7 +37,7 @@
   }
 
   & .field--name-field-image {
-    max-width: 180px;
+    width: calc(100% - 100px);
 
     & img {
       object-fit: cover;
@@ -108,6 +108,14 @@
       &:after {
         content: ":";
       }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .node--events--teaser {
+    & .field--name-field-image {
+      max-width: 180px;
     }
   }
 }
