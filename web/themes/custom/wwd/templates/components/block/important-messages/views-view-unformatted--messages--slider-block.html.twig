@@ -8,8 +8,8 @@
 {% set id = 'im-' ~ view.id %}
 {% set cols = 2 %}
 
-<div id="{{ id }}" class="carousel slide carousel-fade" data-bs-ride="true">
-  <div class="carousel-inner">
+<div id="{{ id }}" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-inner gap-4 d-flex">
     {% for row in rows %}
       {% if loop.index0 % cols == 0 %}
         {%
@@ -19,10 +19,9 @@
           ]
         %}
         <div{{ row.attributes.addClass(row_classes) }}>
-          <div class="row">
+          <div class="row g-4">
       {% endif %}
-
-        <div class="col-md-6">
+        <div class="col-xl-6">
           {{- row.content -}}
         </div>
       {% if (loop.index0 % cols == cols - 1 or loop.last) %}

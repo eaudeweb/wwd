@@ -1,3 +1,14 @@
+:root {
+  --navbar-mh: 5rem;
+}
+
+.grid-flex {
+  --gf--width: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--gf--width), 1fr));
+}
+
 .page-title {
   --headings-color: var(--c-white);
 
@@ -164,6 +175,10 @@ p:last-child {
     flex-wrap: wrap;
     gap: 3rem;
   }
+
+.region-footer {
+  margin-top: 0 !important;
+}
 
 .region-footer-left .block + .block {
     margin-top: 3.75rem;

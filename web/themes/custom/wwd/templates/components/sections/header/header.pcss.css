@@ -1,9 +1,14 @@
 /* Header classes. */
 .navbar {
-  min-height: var(--navbar-mh, 100px);
+  min-height: var(--navbar-mh);
   background-color: var(--navbar-bg, var(--c-white));
   transition: .3s all linear;
   position: relative;
+
+  & .hamburger {
+    --ham--bgc: var(--c-gray-900);
+    --ham--with: 1.75rem;
+  }
 
   /* Border bottsa */
   &:after {
@@ -31,23 +36,38 @@
   }
 }
 
+@media only screen and (max-width: 74.99rem) {
+  .navbar-collapse {
+    background-color: rgba(255,255,255,.8);
+
+    /* & > div {
+      height: calc(100vh - var(--navbar-mh));
+    } */
+  }
+}
+
 .h-sticky {
-  --navbar-mh: 80px;
   margin-bottom: 20px;
 }
 
 .bg-tr:not(.h-sticky) {
+  --nav-bg-sticky: var(--c-white);
+
   & .navbar {
     --navbar-bg: rgba(var(--white-rgb), .12);
   }
 
   & .path-c {
-    fill: var(--c-white);
+    fill: var(--nav-bg-sticky);
+  }
+
+  & .hamburger {
+    --ham--bgc: var(--nav-bg-sticky);
   }
 
   & .navbar-nav {
     & .nav-link {
-      --bs-nav-link-color: var(--c-white);
+      --bs-nav-link-color: var(--nav-bg-sticky);
     }
   }
 }

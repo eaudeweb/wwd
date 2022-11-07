@@ -31,7 +31,7 @@ content:
     type: smart_trim
     label: hidden
     settings:
-      trim_length: 75
+      trim_length: 70
       trim_type: chars
       trim_suffix: ...
       wrap_output: false
@@ -39,10 +39,12 @@ content:
       more_link: false
       more_class: more-link
       more_text: More
+      more_aria_label: 'Read more about [node:title]'
       summary_handler: trim
       trim_options:
         text: false
         trim_zero: false
+        replace_tokens: false
     third_party_settings: {  }
     weight: 3
     region: content

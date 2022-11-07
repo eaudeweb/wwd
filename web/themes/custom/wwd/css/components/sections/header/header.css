@@ -1,12 +1,15 @@
 /* Header classes. */
 .navbar {
-  min-height: var(--navbar-mh, 100px);
+  min-height: var(--navbar-mh);
   background-color: var(--navbar-bg, var(--c-white));
   transition: .3s all linear;
   position: relative;
-
-  /* Border bottsa */
 }
+.navbar .hamburger {
+    --ham--bgc: var(--c-gray-900);
+    --ham--with: 1.75rem;
+  }
+/* Border bottsa */
 .navbar:after {
     content: "";
     position: absolute;
@@ -27,16 +30,30 @@
       --bs-nav-link-padding-y: 0.875rem;
       text-transform: uppercase;
     }
+@media only screen and (max-width: 74.99rem) {
+  .navbar-collapse {
+    background-color: rgba(255,255,255,.8);
+
+    /* & > div {
+      height: calc(100vh - var(--navbar-mh));
+    } */
+  }
+}
 .h-sticky {
-  --navbar-mh: 5rem;
   margin-bottom: 1.25rem;
+}
+.bg-tr:not(.h-sticky) {
+  --nav-bg-sticky: var(--c-white);
 }
 .bg-tr:not(.h-sticky) .navbar {
     --navbar-bg: rgba(var(--white-rgb), .12);
   }
 .bg-tr:not(.h-sticky) .path-c {
-    fill: var(--c-white);
+    fill: var(--nav-bg-sticky);
+  }
+.bg-tr:not(.h-sticky) .hamburger {
+    --ham--bgc: var(--nav-bg-sticky);
   }
 .bg-tr:not(.h-sticky) .navbar-nav .nav-link {
-      --bs-nav-link-color: var(--c-white);
+      --bs-nav-link-color: var(--nav-bg-sticky);
     }

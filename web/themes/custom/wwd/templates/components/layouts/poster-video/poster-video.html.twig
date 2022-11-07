@@ -38,7 +38,7 @@
 {% if content|render|striptags|trim is not empty %}
   <div{{ attributes.addClass(classes) }}>
     <div class="container">
-      <div class="row">
+      <div class="row gy-4">
         <div {{ region_attributes.poster.addClass(poster_classes) }}>
           {{ content.poster }}
         </div>

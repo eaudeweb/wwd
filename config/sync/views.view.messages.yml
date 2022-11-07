@@ -381,7 +381,7 @@ display:
           columns: 4
           automatic_width: false
           alignment: horizontal
-          row_class_custom: row
+          row_class_custom: 'row g-4'
           row_class_default: false
           col_class_custom: col-auto
           col_class_default: false

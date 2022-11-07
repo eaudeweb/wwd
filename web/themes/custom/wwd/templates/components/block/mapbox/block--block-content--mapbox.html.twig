@@ -26,7 +26,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4">
           {%- if content.field_intro_title -%}
             <h2{{title_attributes.addClass('h1','block--title')}}>
               {{- content.field_intro_title -}}
@@ -45,7 +45,7 @@
           {% endif %}
         </div>
 
-        <div class="col-md-8 text-end w--map">
+        <div class="col-lg-8 text-end w--map">
           <a href="{{ path('node.add', {'node_type': 'events'}) }}" class="btn btn-outline-primary my-3">
             {{- "Register your event"|t -}}
           </a>

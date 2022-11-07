@@ -10,8 +10,9 @@
     border-radius: 50%;
     overflow: hidden
   }.node--message--slider .node--title {
-    color: #0D1B2A;
+    color: var(--c-gray-900);
     font-size: 1.5rem;
+    min-height: 3.625rem;
   }.node--message--slider .field--name-field-message-date {
     color: #6C7D9E;
     font-size: 0.75rem;
@@ -23,4 +24,6 @@
     font-size: 0.875rem;
     line-height: 1.125rem;
     margin-bottom: 0.75rem;
+    height: 2.25rem;
+    overflow: hidden;
   }
