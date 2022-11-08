@@ -1,16 +1,15 @@
-
-  form.node-events-form {
-    --color-label: #6C7D9E;
-    --fs-label: 1rem;
-
+.node-events-form {
+  --color-label: #6C7D9E;
+  --fs-label: 1rem;
+  --nef-f-p: 0.625rem;
+}form.node-events-form {
     background-color: var(--c-white);
-    padding: 3.75rem;
+    padding: var(--nef-f-p);
     width: max(75%, 50rem);
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  form.node-events-form .description {
+  }form.node-events-form .description {
       color: var(--color-label);
       margin-top: 0.25rem;
       font-size: 0.75rem;
@@ -137,4 +136,13 @@
         }.node-events-form .form-control:invalid:not(:focus):not(:placeholder-shown) + label + .from-item--border {
           width: 100%;
           background-color: #D8514B;
-        }
+        }.node-events-form .g-recaptcha {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+@media only screen and (min-width: 45rem) {
+  .node-events-form {
+    --nef-f-p: 3.75rem;
+  }
+}

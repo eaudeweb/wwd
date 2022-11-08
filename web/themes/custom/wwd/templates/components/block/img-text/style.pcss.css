@@ -1,7 +1,7 @@
 .block--img-text {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr .75fr;
+  grid-template-rows: 1fr minmax(300px, .65fr);
 
   & .block--info {
     grid-area: 1 / 1 / 2 / 2;
@@ -18,7 +18,7 @@
   }
 
   & .block--img {
-    grid-area: 2 / 1 / 2 / 3;
+    grid-area: 2 / 1 / 4 / 3;
     position: relative;
 
     & img {
