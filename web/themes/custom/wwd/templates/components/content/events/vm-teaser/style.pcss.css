@@ -92,7 +92,7 @@
     }
   }
 
-  & .content--collpase {
+  & .content--collpase > *:first-child {
     margin-top: var(--e-p);
   }
 

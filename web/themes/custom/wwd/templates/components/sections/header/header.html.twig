@@ -23,28 +23,32 @@
 
 <nav{{ navbar_attribute.addclass(header_classes) }}>
   <div class="container">
-    {{ page.branding }}
+    <div class="exw">
+      {{ page.branding }}
 
-    <button
-      class="navbar-toggler collapsed hamburger hamburger--collapse"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainSidebar"
-      aria-controls="mainSidebar"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
+      <button
+        class="navbar-toggler collapsed hamburger hamburger--collapse"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainSidebar"
+        aria-controls="mainSidebar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
 
     <div class="collapse navbar-collapse" id="mainSidebar">
-      <div class={{ navbar.align }}>
-        {{ page.nav_main }}
-      </div>
+      <div class="container g-md-0">
+        <div class={{ navbar.align }}>
+          {{ page.nav_main }}
+        </div>
 
-      {{ page.nav_additional }}
+        {{ page.nav_additional }}
+      </div>
     </div>
   </div>
 </nav>

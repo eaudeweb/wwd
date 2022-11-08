@@ -1,3 +1,9 @@
+@custom-media --media-up-sm (min-width: 576px);
+@custom-media --media-up-md (min-width: 720px);
+@custom-media --media-up-lg (min-width: 992px);
+@custom-media --media-up-xl (min-width: 1140px);
+@custom-media --media-up-xxl (min-width: 1200px);
+
 .container,
 .container-fluid,
 .container-sm,

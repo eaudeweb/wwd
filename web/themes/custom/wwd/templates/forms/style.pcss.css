@@ -1,10 +1,11 @@
 .node-events-form {
-  &form {
-    --color-label: #6C7D9E;
-    --fs-label: 16px;
+  --color-label: #6C7D9E;
+  --fs-label: 16px;
+  --nef-f-p: 10px;
 
+  &form {
     background-color: var(--c-white);
-    padding: 60px;
+    padding: var(--nef-f-p);
     width: max(75%, 800px);
     max-width: 100%;
     margin-inline: auto;
@@ -170,5 +171,16 @@
         }
       }
     }
+  }
+
+  & .g-recaptcha {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .node-events-form {
+    --nef-f-p: 60px;
   }
 }

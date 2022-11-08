@@ -32,6 +32,11 @@
     margin-bottom: 1.75rem;
   }
 
+.node--message--full .field--name-field-media-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
 .node--message--full .btn-back-message {
     margin-top: 6.25rem;
   }

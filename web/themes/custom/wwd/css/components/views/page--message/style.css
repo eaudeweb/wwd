@@ -7,8 +7,8 @@
     flex-direction: column;
     gap: var(--p-block);
   }.view--messages--page .list-item {
-    padding-left: max(8.3333vh, 1.875rem);
-    padding-right: max(8.3333vh, 1.875rem);
+    padding-left: max(8.3333vw, 1.875rem);
+    padding-right: max(8.3333vw, 1.875rem);
     position: relative;
   }.view--messages--page .list-item:after {
       content: '';
@@ -16,7 +16,7 @@
       top: 1.25rem;
       left: 0;
       background-color: var(--c-primary);
-      width: calc(8.3333vh - 1.25rem);
+      width: calc(8.3333vw - 1.25rem);
       height: 1px;
     }.view--messages--page .btn-arrow {
     --btn-padding-y: 0;

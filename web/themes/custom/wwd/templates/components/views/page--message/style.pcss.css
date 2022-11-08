@@ -12,7 +12,7 @@
   }
 
   & .list-item {
-    padding-inline: max(8.3333vh, 30px);
+    padding-inline: max(8.3333vw, 30px);
     position: relative;
 
     &:after {
@@ -21,7 +21,7 @@
       top: 20px;
       left: 0;
       background-color: var(--c-primary);
-      width: calc(8.3333vh - 20px);
+      width: calc(8.3333vw - 20px);
       height: 1px;
     }
   }

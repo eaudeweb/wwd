@@ -4,11 +4,10 @@ const fs = require('fs');
 const postcssMixins = require('postcss-mixins');
 const postcss = require('postcss');
 const postcssCalc = require("postcss-calc");
-const postcssDropUnusedVars = require("postcss-dropunusedvars");
 const postcssImport = require('postcss-import');
 const postcssUrl = require('postcss-url');
 const postcssPresetEnv = require('postcss-preset-env');
-// cspell:ignore pxtorem
+const postcssCustomMedia = require('postcss-custom-media');
 const postcssPixelsToRem = require('postcss-pxtorem');
 
 module.exports = (filePath, callback) => {
@@ -35,7 +34,7 @@ module.exports = (filePath, callback) => {
        ],
       }),
       postcssMixins,
-      // postcssDropUnusedVars,
+      postcssCustomMedia,
       postcssPresetEnv({
         stage: 1,
         preserve: false,

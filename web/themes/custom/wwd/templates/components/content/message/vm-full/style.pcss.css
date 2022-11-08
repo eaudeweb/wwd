@@ -31,6 +31,11 @@
 
   & .field--name-field-media-image {
     margin-bottom: 28px;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   & .btn-back-message {
