@@ -1,0 +1,10 @@
+uuid: 13ebe38a-0d6c-447d-9388-8216071b793c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.video_teaser_column
+label: 'Video teaser column'
+targetEntityType: node
+cache: true
