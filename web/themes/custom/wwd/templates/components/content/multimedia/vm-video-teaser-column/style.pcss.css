@@ -1,4 +1,8 @@
-.node--multimedia--video-teaser {
+.node--multimedia--video-teaser-column {
+  & .node--content {
+    margin-top: 14px;
+  }
+
   & .node--date {
     font-size: 12px;
     font-style: italic;
@@ -12,14 +16,13 @@
     line-height: 16px;
     font-weight: 700;
     margin-bottom: 12px;
-
-    & a {
-      color: #5BC09C;
-    }
+    color: #5BC09C;
   }
 
-  & .field--name-field-video {
-    min-width: 40%;
-    max-width: 40%;
+  & .field--name-body {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #3B4B68;
   }
 }

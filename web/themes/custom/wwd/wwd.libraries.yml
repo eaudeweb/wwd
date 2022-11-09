@@ -40,6 +40,11 @@ n--multimedia--video-teaser:
     component:
       css/components/content/multimedia/vm-video-teaser/style.css: {}
 
+n--multimedia--video-teaser-column:
+  css:
+    component:
+      css/components/content/multimedia/vm-video-teaser-column/style.css: {}
+
 ## Message.
 n--message--full:
   css:
@@ -77,6 +82,11 @@ v--message--page:
   css:
     component:
       css/components/views/page--message/style.css: {}
+
+v--multimedia:
+  css:
+    component:
+      css/components/views/multimedia/style.css: {}
 
 # WWD Components.
 ## Front Page banner.

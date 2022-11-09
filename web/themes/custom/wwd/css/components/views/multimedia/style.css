@@ -1,0 +1,58 @@
+.grid-multimedia {
+  display: grid;
+  grid-template-columns: 33.333% auto 40%;
+  grid-template-rows: 0.5fr .5fr 1fr;
+  grid-gap: 1.25rem 1.25rem;
+  grid-template-areas:
+    "item1 item1 item-2"
+    "item1 item1 item-3"
+    "item-4 item-5 item-5";
+}
+
+.list-item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: item1;
+}
+
+.list-item-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: item-2;
+}
+
+.list-item-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: item-3;
+}
+
+.list-item-4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: item-4;
+}
+
+.list-item-5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: item-5;
+}
+
+.list-item {
+  position: relative;
+}
+
+.list-item article {
+    height: 100%;
+  }
+
+.list-item img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }

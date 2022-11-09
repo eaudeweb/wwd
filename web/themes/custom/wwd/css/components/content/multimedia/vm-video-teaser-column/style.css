@@ -1,0 +1,21 @@
+
+  .node--multimedia--video-teaser-column .node--content {
+    margin-top: 0.875rem;
+  }.node--multimedia--video-teaser-column .node--date {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #6C7D9E;
+    margin-bottom: 0.5rem;
+  }.node--multimedia--video-teaser-column .node--title {
+    --headings-font-family: var(--body-font-family);
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #5BC09C;
+  }.node--multimedia--video-teaser-column .field--name-body {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #3B4B68;
+  }

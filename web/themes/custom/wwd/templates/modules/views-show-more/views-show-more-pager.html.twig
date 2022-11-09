@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * The views show more pager template.
+ *
+ * Available variables:
+ * - heading_id: Pagination heading ID.
+ * - item: Show more pager item.
+ *
+ * @see views_show_more_preprocess_views_show_more_pager()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if item.text %}
+  <nav role="navigation" class="my-4" aria-labelledby="{{ heading_id }}">
+    <h4 id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination'|t }}</h4>
+      <ul{{ attributes.addClass('list-unstyled', 'd-flex', 'justify-content-center') }}>
+        <li class="pager__item">
+          {% if item.href %}
+            <a 
+              href="{{ item.href }}"
+              class="more-link btn btn-outline-primary"
+              title="{{ 'Go to next page'|t }}"
+              rel="next"
+            >
+              {{- item.text -}}
+            </a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+      </ul>
+  </nav>
+{% endif %}

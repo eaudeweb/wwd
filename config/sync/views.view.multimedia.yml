@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.poster_teaser
     - core.entity_view_mode.node.video_teaser
+    - core.entity_view_mode.node.video_teaser_column
     - node.type.multimedia
   module:
     - node
@@ -404,13 +405,21 @@ display:
         groups:
           1: AND
       style:
-        type: default
-        options: {  }
+        type: grid
+        options:
+          uses_fields: false
+          columns: 12
+          automatic_width: false
+          alignment: horizontal
+          row_class_custom: 'row g-3'
+          row_class_default: false
+          col_class_custom: 'col-xl-3 col-md-4 col-sm-6'
+          col_class_default: false
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: video_teaser
+          view_mode: video_teaser_column
       defaults:
         title: false
         use_ajax: false
@@ -765,7 +774,10 @@ display:
           1: AND
       style:
         type: default
-        options: {  }
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
