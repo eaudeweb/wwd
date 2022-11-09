@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: gradient_blossom
 label: 'Gradient Blossom'
-classes: gr-blossom
+classes: bg-gr-blossom
 type: section
 group: backgrounds
 block_restrictions: {  }
