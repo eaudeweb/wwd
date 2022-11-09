@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * WWD Theme override the display for multimedia block.
+ */
+#}
+
+{{ attach_library('wwd/b--flicker') }}
+
+{%
+  set classes = [
+    'block',
+    'block-flicker',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{attributes.addClass(classes)}} style="{{- content.field_background.0|render|striptags|spaceless -}}">
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center">
+      {{ content|without('field_background') }}
+    </div>
+  </div>
+</div>
+

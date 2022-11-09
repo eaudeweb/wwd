@@ -1,0 +1,83 @@
+uuid: 92136d08-3ec7-484d-860a-9b803bc39302
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flicker
+    - field.field.block_content.flicker.body
+    - field.field.block_content.flicker.field_background
+    - field.field.block_content.flicker.field_cta
+  module:
+    - field_states_ui
+    - link_class
+    - paragraphs
+    - text
+id: block_content.flicker.default
+targetEntityType: block_content
+bundle: flicker
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_background:
+    type: entity_reference_paragraphs
+    weight: 28
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: background_gradient
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+  field_cta:
+    type: link_class_field_widget
+    weight: 27
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: force_class
+      link_class_force: 'btn btn-link btn-arrow white'
+      link_class_select: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

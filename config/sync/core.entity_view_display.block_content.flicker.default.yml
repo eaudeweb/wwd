@@ -1,0 +1,49 @@
+uuid: 0af8b5f2-8e84-4a5c-b983-4ce7c43280e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flicker
+    - field.field.block_content.flicker.body
+    - field.field.block_content.flicker.field_background
+    - field.field.block_content.flicker.field_cta
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+id: block_content.flicker.default
+targetEntityType: block_content
+bundle: flicker
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_background:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

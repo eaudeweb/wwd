@@ -120,6 +120,12 @@ b--img-text:
     component:
       css/components/block/img-text/style.css: {}
 
+## Flicker.
+b--flicker:
+  css:
+    component:
+      css/components/block/flicker/style.css: {}
+
 # Paragraph.
 ## Card.
 p--card:
