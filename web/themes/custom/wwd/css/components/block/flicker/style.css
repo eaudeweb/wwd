@@ -1,0 +1,19 @@
+.block-flicker {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  color: var(--c-white);
+}.block-flicker .d-flex {
+    gap: 1.25rem;
+  }
+
+@media (min-width: 48rem) {
+    .block-flicker .field--name-body {
+      max-width: 65%;
+    }
+}
+
+@media (min-width: 62rem) {
+    .block-flicker .field--name-body {
+      max-width: 50%;
+    }
+}

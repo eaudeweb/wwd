@@ -1,0 +1,16 @@
+uuid: 8030d9f2-671a-4dc5-899a-5ef7107b0191
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flicker
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.flicker
+target_entity_type_id: block_content
+target_bundle: flicker
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,23 @@
+uuid: 148a88b4-1207-43fc-8292-8ddf3c6361eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flicker
+    - field.storage.block_content.field_cta
+  module:
+    - link
+id: block_content.flicker.field_cta
+field_name: field_cta
+entity_type: block_content
+bundle: flicker
+label: CTA
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

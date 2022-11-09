@@ -1,0 +1,8 @@
+uuid: 854119ce-97c6-48b5-b574-c9d121a545e7
+langcode: en
+status: true
+dependencies: {  }
+id: flicker
+label: Flicker
+revision: 0
+description: 'Flicker channel block text CTA background gradient'
