@@ -1,10 +1,10 @@
-uuid: 081d58c4-58c0-49cf-ad73-08fe9d5cba9f
+uuid: 6c2d9981-8cdd-45ca-a3be-49155c12cd38
 langcode: en
 status: true
 dependencies: {  }
-id: gradient_sky_blue
-label: 'Gradient Sky blue'
-classes: bg-gr-sky-blue
+id: background_white
+label: 'Background white'
+classes: bg-white
 type: section
 group: backgrounds
 block_restrictions: {  }
