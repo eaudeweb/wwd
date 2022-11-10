@@ -102,7 +102,7 @@
     }.block--mapbox .w--disclaimer {
     position: absolute;
     right: 3.125rem;
-    bottom: 2px;
+    bottom: 2.5rem;
   }
 
 @media (min-width: 62rem) {
