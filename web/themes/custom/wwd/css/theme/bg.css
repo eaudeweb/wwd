@@ -1,3 +1,7 @@
+body {
+  --body-bg: #F8FBFD;
+}
+
 .bg-gray-light {
   background-color: #F8FBFD;
 }

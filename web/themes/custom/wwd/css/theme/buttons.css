@@ -57,3 +57,27 @@
 .btn-video:hover:before {
       filter: brightness(0) invert(1);
     }
+
+.btn-video-cta {
+  display: flex;
+  align-items: center;
+  color: var(--c-white);
+}
+
+.btn-video-cta:after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='12.395' viewBox='0 0 11 12.395'%3E%3Cpath d='M11,6.137a1,1,0,0,1,0,1.732l-9,5.2A1,1,0,0,1,.5,12.2V1.807A1,1,0,0,1,2,.941Z' transform='translate(-0.5 -0.805)' fill='%230abaff'/%3E%3C/svg%3E");
+    display: inline-block;
+    margin-left: 1rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--c-white);
+    border-radius: 50%;
+  }
+
+.btn-video-cta:hover:after {
+      background: var(--c-primary);
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='12.395' viewBox='0 0 11 12.395'%3E%3Cpath d='M11,6.137a1,1,0,0,1,0,1.732l-9,5.2A1,1,0,0,1,.5,12.2V1.807A1,1,0,0,1,2,.941Z' transform='translate(-0.5 -0.805)' fill='%23ffffff'/%3E%3C/svg%3E");
+    }

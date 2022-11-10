@@ -126,6 +126,12 @@ b--flicker:
     component:
       css/components/block/flicker/style.css: {}
 
+## Body Basic page.
+b--body:
+  css:
+    component:
+      css/block/page-body.css: {}
+
 # Paragraph.
 ## Card.
 p--card:

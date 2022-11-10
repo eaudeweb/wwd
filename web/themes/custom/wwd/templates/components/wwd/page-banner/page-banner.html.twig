@@ -7,7 +7,7 @@
 
 {{ attach_library('wwd/c--page-banner') }}
 
-<div class="page-banner pb-region" style="{{ use_gradient ? background_gradient|render|striptags|trim : ''}}">
+<div class="page-banner pb-region {{ video_cta ? 'page-banner-cta' }}" style="{{ use_gradient ? background_gradient|render|striptags|trim : ''}}">
   <div class="page-banner--background">
     {% if use_gradient == 0 %}
       {% if video_url %}
@@ -31,5 +31,7 @@
     </div>
 
     {{- page.header -}}
+
+    {{- video_cta -}}
   </div>
 </div>

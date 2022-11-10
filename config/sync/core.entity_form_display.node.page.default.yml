@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_use_gradient
     - field.field.node.page.field_video
+    - field.field.node.page.field_video_cta
     - field.field.node.page.field_yoast_seo
     - field.field.node.page.layout_builder__layout
     - field.field.node.page.layout_builder__translation
@@ -18,6 +19,7 @@ dependencies:
   module:
     - field_group
     - field_states_ui
+    - link_class
     - media_library
     - metatag
     - paragraphs
@@ -33,6 +35,7 @@ third_party_settings:
         - field_media_image
         - field_use_gradient
         - field_background_gradient
+        - field_video_cta
       label: Banner
       region: content
       parent_name: ''
@@ -153,6 +156,22 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_video_cta:
+    type: link_class_field_widget
+    weight: 23
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: force_class
+      link_class_force: 'btn btn-link white btn-video-cta'
+      link_class_select: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
   field_yoast_seo:
     type: yoast_seo_widget
     weight: 15
