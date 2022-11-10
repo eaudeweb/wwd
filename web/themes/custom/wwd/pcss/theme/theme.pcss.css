@@ -257,3 +257,53 @@ p:last-child {
     fill: var(--c-white);
   }
 }
+
+.modal {
+  --headings-color: #0D1B2A;
+  --modal-color: #3B4B68;
+
+  & .modal-header {
+    border-color: var(--c-gray-200);
+  }
+
+  & .modal-footer {
+    border-color: var(--c-gray-200);
+  }
+}
+
+.style-input {
+  & .views-exposed-form {
+    & label {
+      display: none;
+    }
+
+    & .form-select {
+      margin-block: 20px;
+      border: var(--c-primary) 1px solid;
+      border-radius: 5rem;
+      padding: 8px 32px 8px 16px;
+      width: 300px;
+      max-width: 100%;
+      font-weight: 700;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: white;
+      background-image: url("../../img/icons/dropdown-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center right 16px;
+
+      & option {
+        color: var(--c-gray-800);
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+.input-right {
+  & .bef-exposed-form {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

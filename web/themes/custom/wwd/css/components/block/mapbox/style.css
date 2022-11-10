@@ -40,7 +40,6 @@
       width: 75%;
     }.block--mapbox.homepage {
     position: relative;
-    isolation: isolate;
     padding-top: 2.5rem;
     padding-bottom: 4.375rem;
     color: var(--c-white);
@@ -100,7 +99,11 @@
       color: var(--c-gray-800);
       font-size: 0.875rem;
       line-height: 1.125rem;
-    }
+    }.block--mapbox .w--disclaimer {
+    position: absolute;
+    right: 3.125rem;
+    bottom: 2px;
+  }
 
 @media (min-width: 62rem) {
     .block--mapbox.filter {

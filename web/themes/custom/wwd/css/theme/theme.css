@@ -255,3 +255,48 @@ p:last-child {
 .w--footer-social .social-icon {
     fill: var(--c-white);
   }
+
+.modal {
+  --headings-color: #0D1B2A;
+  --modal-color: #3B4B68;
+}
+
+.modal .modal-header {
+    border-color: var(--c-gray-200);
+  }
+
+.modal .modal-footer {
+    border-color: var(--c-gray-200);
+  }
+
+.style-input .views-exposed-form label {
+      display: none;
+    }
+
+.style-input .views-exposed-form .form-select {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+      border: var(--c-primary) 1px solid;
+      border-radius: 5rem;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      width: 18.75rem;
+      max-width: 100%;
+      font-weight: 700;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: white;
+      background-image: url("data:image/svg+xml,%3csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.43301 8.25C5.24056 8.58333 4.75944 8.58333 4.56699 8.25L0.236861 0.750001C0.04441 0.416667 0.284972 9.36737e-07 0.669872 9.03088e-07L9.33013 1.45985e-07C9.71503 1.12336e-07 9.95559 0.416667 9.76314 0.75L5.43301 8.25Z' fill='url(%23paint0_linear_1_1074)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_1_1074' x1='11' y1='9' x2='-1.22842' y2='8.73137' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%230ABAFF'/%3e%3cstop offset='1' stop-color='%231BF1FF'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: center right 16px;
+    }
+
+.style-input .views-exposed-form .form-select option {
+        color: var(--c-gray-800);
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+      }
+
+.input-right .bef-exposed-form {
+    display: flex;
+    justify-content: flex-end;
+  }

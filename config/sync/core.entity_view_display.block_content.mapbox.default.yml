@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.mapbox.body
     - field.field.block_content.mapbox.field_background
     - field.field.block_content.mapbox.field_cta
+    - field.field.block_content.mapbox.field_disclaimer_text
     - field.field.block_content.mapbox.field_intro_title
     - field.field.block_content.mapbox.field_theme
   module:
@@ -46,6 +47,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_disclaimer_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_intro_title:
     type: basic_string

@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.mapbox.body
     - field.field.block_content.mapbox.field_background
     - field.field.block_content.mapbox.field_cta
+    - field.field.block_content.mapbox.field_disclaimer_text
     - field.field.block_content.mapbox.field_intro_title
     - field.field.block_content.mapbox.field_theme
   module:
@@ -76,6 +77,14 @@ content:
               comparison: value
               value: homepage
               submit: 'Add Cancel'
+  field_disclaimer_text:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_intro_title:
     type: string_textarea
     weight: 4
