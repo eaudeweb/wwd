@@ -9,6 +9,8 @@ dependencies:
     - node.type.message
     - system.menu.main
   module:
+    - better_exposed_filters
+    - datetime
     - node
     - user
 id: messages
@@ -79,7 +81,7 @@ display:
         options:
           offset: 3
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Apply
           reset_button: false
@@ -88,6 +90,19 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
       access:
         type: perm
         options:
@@ -182,6 +197,75 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_date_value_op
+            label: 'Date/Time of the event (field_event_date)'
+            description: null
+            use_operator: false
+            operator: field_event_date_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_event_date_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Date/Time of the event (field_event_date)'
+            description: ''
+            identifier: field_event_date_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: '2022'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '0 yers'
+                  type: offset
+              2:
+                title: '2021'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '-1 yers'
+                  type: offset
+              3:
+                title: '2020'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '-2 yers'
+                  type: date
       style:
         type: default
       row:
@@ -198,7 +282,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: bg-gray-light
+      css_class: 'bg-gray-light style-input input-right'
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -207,6 +291,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -454,6 +539,7 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
