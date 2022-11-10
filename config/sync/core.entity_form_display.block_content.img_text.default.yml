@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.img_text.field_cta
     - field.field.block_content.img_text.field_description
     - field.field.block_content.img_text.field_image
+    - field.field.block_content.img_text.field_left_image_right_text
   module:
     - field_states_ui
     - link_class
@@ -66,6 +67,13 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_left_image_right_text:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   info:
     type: string_textfield

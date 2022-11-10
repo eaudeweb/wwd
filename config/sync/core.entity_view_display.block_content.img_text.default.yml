@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.img_text.field_cta
     - field.field.block_content.img_text.field_description
     - field.field.block_content.img_text.field_image
+    - field.field.block_content.img_text.field_left_image_right_text
   module:
     - entity_reference_revisions
     - link
@@ -56,6 +57,16 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_left_image_right_text:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
 hidden:
   addtoany: true
