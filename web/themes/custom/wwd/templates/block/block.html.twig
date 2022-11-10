@@ -17,7 +17,7 @@
 
 <div{{ attributes.addClass(classes) }}
   {%- if content.field_background.0 -%}
-    style="{{- content.field_background|render|striptags -}}"
+    style="{{- content.field_background|render|striptags|spaceless -}}"
   {%- endif -%}
 >
   {{ title_prefix }}

@@ -1,6 +1,12 @@
 .page-banner {
   position: relative;
   isolation: isolate;
+
+  & .field--name-field-video-cta {
+    padding-top: 15vw;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .page-banner--background {

@@ -18,7 +18,7 @@
   ]
 %}
 
-<div{{attributes.addClass(classes)}} style="{{- content.field_background|render|striptags -}}">
+<div{{attributes.addClass(classes)}} style="{{- content.field_background|render|striptags|spaceless -}}">
   {{ title_prefix }}
   {{ title_suffix }}
 

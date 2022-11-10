@@ -1,7 +1,3 @@
-.page-node-type-message {
-  --body-bg: #F8FBFD;
-}
-
 .node--message--full {
   & .node--title {
     margin-bottom: 24px;

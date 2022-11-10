@@ -344,6 +344,9 @@ class WwdThemeProcess implements ContainerInjectionInterface {
             $variables['video_url'] = $this->entityTypeManager->getViewBuilder('media')
               ->view($media, 'background');
           }
+          if (!$node->get('field_video_cta')->isEmpty()) {
+            $variables['video_cta'] = $node->field_video_cta->view(['label' => 'hidden']);
+          }
         }
       }
     }
