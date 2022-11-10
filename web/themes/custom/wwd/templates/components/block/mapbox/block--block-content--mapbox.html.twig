@@ -5,6 +5,7 @@
  */
 #}
 
+{{ attach_library('edwt/c--modal') }}
 {{ attach_library('wwd/b--mapbox') }}
 
 {%
@@ -17,12 +18,44 @@
   ]
 %}
 
+{% set modal %}
+  <div class="w--disclaimer">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      {{- 'Map Disclaimer'|t -}}
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">
+              {{- 'Map Disclaimer'|t -}}
+            </h3>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            {{- content.field_disclaimer_text -}}
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endset %}
+
+
 <div{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title_suffix }}
 
   {% if theme == 'homepage' %}
-    <span class="mapbox--bgg" style="{{- content.field_background|render|striptags -}}"></span>
+    <span class="mapbox--bgg" style="{{- content.field_background|render|striptags|spaceless -}}"></span>
 
     <div class="container">
       <div class="row">
@@ -45,12 +78,14 @@
           {% endif %}
         </div>
 
-        <div class="col-lg-8 text-end w--map">
+        <div class="col-lg-8 w--map position-relative">
           <a href="{{ path('node.add', {'node_type': 'events'}) }}" class="btn btn-outline-primary my-3">
             {{- "Register your event"|t -}}
           </a>
 
           {{ drupal_block('events_map_block', wrapper=false) }}
+
+          {{ modal }}
         </div>
       </div>
     </div>
@@ -80,8 +115,9 @@
       </a>
     </div>
 
-    <div class="map-info">
-      {{ drupal_block('events_map_block', wrapper=false) }}
+    <div class="map-info position-relative">
+      {{- drupal_block('events_map_block', wrapper=false) -}}
+      {{- modal -}}
     </div>
   {% endif %}
 </div>

@@ -98,10 +98,10 @@ c--carousel:
 #     component:
 #       css-sass/bootstrap/card.css: {}
 
-# bc--close:
-#   css:
-#     component:
-#       css-sass/bootstrap/close.css: {}
+c--close:
+  css:
+    component:
+      css/components/close.css: {}
 
 c--dropdowns:
   css:
@@ -118,12 +118,12 @@ c--forms:
 #     component:
 #       css-sass/bootstrap/list-group.css: {}
 
-# bc--modal:
-#   css:
-#     component:
-#       css-sass/bootstrap/modal.css: {}
-#   dependencies:
-#     - edwt/bc--close
+c--modal:
+  css:
+    component:
+      css/components/modal.css: {}
+  dependencies:
+    - edwt/c--close
 
 # bc--pagination:
 #   css:

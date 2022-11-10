@@ -47,7 +47,6 @@
 
   &.homepage {
     position: relative;
-    isolation: isolate;
     padding-block: 40px 70px;
     color: var(--c-white);
 
@@ -119,6 +118,12 @@
       font-size: 14px;
       line-height: 18px;
     }
+  }
+
+  & .w--disclaimer {
+    position: absolute;
+    right: 50px;
+    bottom: 2px;
   }
 }
 
