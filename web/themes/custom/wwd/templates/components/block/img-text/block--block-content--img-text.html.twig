@@ -7,12 +7,18 @@
 
 {{ attach_library('wwd/b--img-text') }}
 
+{% set bg %}
+  {{- content.field_background|render|striptags|spaceless -}}
+{% endset %}
+
 {%
   set classes = [
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
     'block--img-text',
+    '#ffffff' not in bg ? 'text-white',
+    '1' in content.field_left_image_right_text.0 ? 'direction-rtl',
   ]
 %}
 
@@ -20,7 +26,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <span class="block--info-bg" style="{{- content.field_background|render|striptags -}}"></span>
+  <span class="block--info-bg" style="{{- bg -}}"></span>
 
   <div class="block--info">
     {%- if label -%}

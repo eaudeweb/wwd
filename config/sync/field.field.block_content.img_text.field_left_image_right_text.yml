@@ -1,0 +1,23 @@
+uuid: e542a687-a4fc-4458-a5ca-2f40febbed51
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.img_text
+    - field.storage.block_content.field_left_image_right_text
+id: block_content.img_text.field_left_image_right_text
+field_name: field_left_image_right_text
+entity_type: block_content
+bundle: img_text
+label: 'Left image, right text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
