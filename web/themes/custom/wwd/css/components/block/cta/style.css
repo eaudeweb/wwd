@@ -1,0 +1,13 @@
+.block--cta {
+  color: var(--c-white);
+}.block--cta .field--name-field-cta .field__item {
+      border-bottom: 1px solid var(--c-white);
+      padding-right: 1.875rem;
+    }.block--cta .field--name-field-cta .field__item:last-child {
+        border-bottom: 0;
+      }.block--cta .field--name-field-cta a {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1.875rem;
+      padding-right: 3rem;
+    }

@@ -66,6 +66,12 @@ n--message--teaser-xs:
     component:
       css/components/content/message/vm-teaser-xs/style.css: {}
 
+## Press releases.
+n--press-releases--teaser:
+  css:
+    component:
+      css/components/content/press-releases/vm-teaser/style.css: {}
+
 ## Events.
 n--events--teaser:
   css:
@@ -125,6 +131,12 @@ b--flicker:
   css:
     component:
       css/components/block/flicker/style.css: {}
+
+## CTA.
+b--cta:
+  css:
+    component:
+      css/components/block/cta/style.css: {}
 
 ## Body Basic page.
 b--body:
