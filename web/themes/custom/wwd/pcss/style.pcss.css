@@ -3,6 +3,7 @@
   --p-block: 72px;
   --headings-font-weight: 600;
   --container: 100%;
+  --headings-color: #0D1B2A;
 }
 
 @media (min-width: 36rem) {

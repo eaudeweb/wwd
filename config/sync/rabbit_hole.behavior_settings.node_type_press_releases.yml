@@ -1,0 +1,14 @@
+uuid: b96e40cf-2128-444e-a73a-8e5a6dbbef0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press_releases
+id: node_type_press_releases
+entity_type_id: node_type
+entity_id: press_releases
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

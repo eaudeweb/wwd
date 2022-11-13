@@ -1,0 +1,20 @@
+.block--cta {
+  color: var(--c-white);
+
+  & .field--name-field-cta {
+    & .field__item {
+      border-bottom: 1px solid var(--c-white);
+      padding-right: 30px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    & a {
+      padding-block: calc(30px - .375rem);
+      padding-left: 30px;
+      padding-right: 48px;
+    }
+  }
+}
