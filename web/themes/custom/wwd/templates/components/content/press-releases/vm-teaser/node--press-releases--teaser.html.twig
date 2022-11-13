@@ -19,7 +19,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <div class="d-flex align-items-center">
+  <div class="d-flex align-items-md-center">
     {{ date }}
 
     <div class="d-flex flex-column align-items-md-center flex-md-row flex-grow-1 gap-3">
@@ -27,9 +27,11 @@
         {{- label -}}
       </h3>
 
-      <a href="{{ url }}" class="btn btn-link btn-arrow text-nowrap p-0">
-        {{- 'EXPLORE'|t -}}
-      </a>
+      <div class="w-btn">
+        <a href="{{ url }}" class="btn btn-link btn-arrow text-nowrap p-0">
+          {{- 'EXPLORE'|t -}}
+        </a>
+      </div>
     </div>
   </div>
 </article>

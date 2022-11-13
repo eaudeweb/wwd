@@ -55,6 +55,8 @@ c--alert:
   css:
     component:
       css/components/alert.css: {}
+  dependencies:
+    - edwt/c--close
 
 c--carousel:
   css:

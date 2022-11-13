@@ -148,6 +148,13 @@ p:last-child {
 }
 
 /* Temp. */
+.field--name-body {
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .nav-tabs.primary {
   justify-content: center;
   margin-bottom: 1rem;

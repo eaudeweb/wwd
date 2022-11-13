@@ -1,10 +1,10 @@
 .node--press-releases--teaser {
-  padding: 20px 80px 20px 20px;
+  padding: 20px;
   border: 1px solid #EDEFF3;
   background: var(--c-white);
 
   & .d-flex {
-    gap: 40px
+    gap: 20px;
   }
 
   & .field--name-created {
@@ -47,6 +47,16 @@
 
     &:hover {
       margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .node--press-releases--teaser {
+    padding: 20px 80px 20px 20px;
+
+    & .d-flex {
+      gap: 40px;
     }
   }
 }
