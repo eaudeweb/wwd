@@ -8,12 +8,15 @@
     --btn-padding-y: 0;
   }
 
-.btn-arrow.btn--max-width {
+.btn--max-width {
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   position: relative;
+}
+
+.btn-arrow.btn--max-width {
   padding-right: 3rem;
 }
 

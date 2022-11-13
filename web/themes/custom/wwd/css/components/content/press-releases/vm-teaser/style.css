@@ -1,9 +1,9 @@
 .node--press-releases--teaser {
-  padding: 1.25rem 5rem 1.25rem 1.25rem;
+  padding: 1.25rem;
   border: 1px solid #EDEFF3;
   background: var(--c-white);
 }.node--press-releases--teaser .d-flex {
-    gap: 2.5rem
+    gap: 1.25rem;
   }.node--press-releases--teaser .field--name-created {
     padding: 1.25rem 0.875rem;
     min-width: 5rem;
@@ -36,3 +36,13 @@
   }.node--press-releases--teaser .btn-arrow:hover {
       margin-left: 0;
     }
+
+@media (min-width: 48rem) {
+  .node--press-releases--teaser {
+    padding: 1.25rem 5rem 1.25rem 1.25rem;
+  }
+
+    .node--press-releases--teaser .d-flex {
+      gap: 2.5rem;
+    }
+}

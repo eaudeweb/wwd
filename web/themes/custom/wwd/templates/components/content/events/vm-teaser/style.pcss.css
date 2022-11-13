@@ -64,6 +64,23 @@
     }
   }
 
+  & .field--name-field-link {
+    & .field__item {
+      position: relative;
+      width: 100%;
+    }
+
+    & a {
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      position: absolute;
+      inset-inline: 0;
+      top: 0;
+    }
+  }
+
   & .field--name-field-organizer {
     font-size: 12px;
     font-style: italic;
@@ -98,12 +115,13 @@
 
   & .field--label-inline {
     display: flex;
+    margin-bottom: 12px;
 
     & .field__label {
       color: #5BC09C;
       font-weight: 700;
       margin-right: .5rem;
-      margin-bottom: 12px;
+      white-space: nowrap;
 
       &:after {
         content: ":";

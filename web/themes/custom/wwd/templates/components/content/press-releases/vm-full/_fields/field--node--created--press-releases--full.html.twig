@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * WWD override for a field.
+ */
+#}
+
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'text-primary',
+    'mb-4',
+    'h6',
+    'text-uppercase',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    {{- item.content['#attributes']['datetime']|date("d M Y") -}}
+  {% endfor %}
+</div>
