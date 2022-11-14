@@ -46,6 +46,18 @@
     margin-bottom: 0.75rem;
   }.node--events--teaser .field--name-field-country svg {
       margin-right: 0.75rem;
+    }.node--events--teaser .field--name-field-link .field__item {
+      position: relative;
+      width: 100%;
+    }.node--events--teaser .field--name-field-link a {
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
     }.node--events--teaser .field--name-field-organizer {
     font-size: 0.75rem;
     font-style: italic;
@@ -66,11 +78,12 @@
     margin-top: var(--e-p);
   }.node--events--teaser .field--label-inline {
     display: flex;
+    margin-bottom: 0.75rem;
   }.node--events--teaser .field--label-inline .field__label {
       color: #5BC09C;
       font-weight: 700;
       margin-right: .5rem;
-      margin-bottom: 0.75rem;
+      white-space: nowrap;
     }.node--events--teaser .field--label-inline .field__label:after {
         content: ":";
       }

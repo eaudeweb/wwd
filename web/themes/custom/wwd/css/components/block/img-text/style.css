@@ -45,7 +45,6 @@
     .block--img-text .block--info {
       grid-area: 1 / 2 / 2 / 3;
       padding-right: 4.6875rem;
-      padding-left: 0;
       padding-top: 6.25rem;
       padding-bottom: 6.25rem;
     }

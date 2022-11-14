@@ -5,31 +5,41 @@
   --container: 100%;
 }
 
-@media (min-width: 36rem) {
+/* sm */
+
+@media screen and (min-width: 36rem) {
   :root {
     --container: 33.75rem;
   }
 }
 
-@media (min-width: 48rem) {
+/* md */
+
+@media screen and (min-width: 48rem) {
   :root {
     --container: 45rem;
   }
 }
 
-@media (min-width: 62rem) {
+/* lg */
+
+@media screen and (min-width: 62rem) {
   :root {
     --container: 60rem;
   }
 }
 
-@media (min-width: 75rem) {
+/* xl */
+
+@media screen and (min-width: 75rem) {
   :root {
     --container: 71.25rem;
   }
 }
 
-@media (min-width: 87.5rem) {
+/* xxl */
+
+@media screen and (min-width: 87.5rem) {
   :root {
     --container: 81rem;
   }

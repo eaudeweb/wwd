@@ -10,6 +10,29 @@
   }
 }
 
+.btn--max-width {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.btn-arrow.btn--max-width {
+  padding-right: 48px;
+
+  &:after {
+    position: absolute;
+    right: 16px;
+  }
+
+  &:hover {
+    &:after {
+      right: 0;
+    }
+  }
+}
+
 .btn.btn-outline-primary {
   --btn-bg: var(--c-white);
   --btn-color: var(--c-primary);

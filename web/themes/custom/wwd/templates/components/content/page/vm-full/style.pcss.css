@@ -11,10 +11,6 @@
     }
   }
 
-  & .node--title {
-    --headings-color: var(--c-white);
-  }
-
   & .row + .row {
     padding-block: var(--p5);
   }

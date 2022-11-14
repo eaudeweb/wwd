@@ -1,0 +1,30 @@
+uuid: b098112b-dcc1-4508-b1b1-cf443b3ef47f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.press_releases.body
+    - node.type.press_releases
+  module:
+    - text
+    - user
+id: node.press_releases.default
+targetEntityType: node
+bundle: press_releases
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

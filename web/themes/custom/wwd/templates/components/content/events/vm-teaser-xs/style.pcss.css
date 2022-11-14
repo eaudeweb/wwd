@@ -65,7 +65,7 @@
     }
   }
 
-  & h3.node--title {
+  & .node--title {
     --headings-color: var(--c-gray-800);
     min-height: 68px;
   }

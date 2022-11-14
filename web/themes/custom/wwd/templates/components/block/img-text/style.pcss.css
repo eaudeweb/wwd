@@ -56,7 +56,6 @@
     & .block--info {
       grid-area: 1 / 2 / 2 / 3;
       padding-right: 75px;
-      padding-left: 0;
       padding-block: 100px;
     }
 

@@ -1,0 +1,8 @@
+uuid: b7fff5c1-55d0-4cf6-b3c6-f05d24c52144
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: CTA
+revision: 0
+description: 'CTA block with bg-gradient.'

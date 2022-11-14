@@ -1,0 +1,16 @@
+uuid: 15c783d2-c198-4442-9d1a-793c1d5f807b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.cta
+target_entity_type_id: block_content
+target_bundle: cta
+default_langcode: site_default
+language_alterable: true

@@ -47,7 +47,7 @@
       margin-right: 0.75rem;
     }.node--events--teaser-xs .link-field-country:hover {
       --link-color: #069fda;
-    }.node--events--teaser-xs h3.node--title {
+    }.node--events--teaser-xs .node--title {
     --headings-color: var(--c-gray-800);
     min-height: 4.25rem;
   }.node--events--teaser-xs .field--name-field-organizer {

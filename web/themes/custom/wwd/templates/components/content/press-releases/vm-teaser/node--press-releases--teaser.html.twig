@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * WWD override to display a node.
+ */
+#}
+
+{{ attach_library('wwd/n--press-releases--teaser') }}
+
+{%
+  set classes = [
+    'node',
+    'node--' ~ node.bundle|clean_class,
+    'node--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div class="d-flex align-items-md-center">
+    {{ date }}
+
+    <div class="d-flex flex-column align-items-md-center flex-md-row flex-grow-1 gap-3">
+      <h3 class="node--title flex-grow-1 mb-0">
+        {{- label -}}
+      </h3>
+
+      <div class="w-btn">
+        <a href="{{ url }}" class="btn btn-link btn-arrow text-nowrap p-0">
+          {{- 'EXPLORE'|t -}}
+        </a>
+      </div>
+    </div>
+  </div>
+</article>

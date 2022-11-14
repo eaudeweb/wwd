@@ -12,9 +12,7 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-    }.node--page--full .node--title {
-    --headings-color: var(--c-white);
-  }.node--page--full .row + .row {
+    }.node--page--full .row + .row {
     padding-top: var(--p5);
     padding-bottom: var(--p5);
   }
