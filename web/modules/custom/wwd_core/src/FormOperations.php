@@ -154,6 +154,24 @@ class FormOperations implements ContainerInjectionInterface {
         ];
       }
     }
+
+    // Alter node multimedia form.
+    if (strpos($form_id, 'node_multimedia') !== FALSE) {
+      // Hide logo fields unless logo type is selected.
+      $fieldsToHide = [
+        'field_ai_logo',
+        'field_eps_logo',
+        'field_image',
+      ];
+      foreach ($fieldsToHide as $fieldName) {
+        $form[$fieldName]['#states'] = [
+          'visible' => [
+            ':input[name="field_type"]' => ['value' => 'logo'],
+          ],
+        ];
+      }
+
+    }
   }
 
   /**
