@@ -2,8 +2,11 @@
 
 namespace Drupal\wwd_core;
 
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\geolocation\GeocoderManager;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -38,6 +41,13 @@ class EntityOperations implements ContainerInjectionInterface {
   protected $currentUser;
 
   /**
+   * Cache manager.
+   *
+   * @var \Drupal\Core\Cache\CacheBackendInterface
+   */
+  protected $staticCache;
+
+  /**
    * Constructs a new EntityOperations object.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -46,15 +56,19 @@ class EntityOperations implements ContainerInjectionInterface {
    *   The geocoder manager.
    * @param \Drupal\Core\Session\AccountProxyInterface $account
    *   Current user.
+   * @param \Drupal\Core\Cache\CacheBackendInterface $cache
+   *   Cache manager.
    */
   public function __construct(
     EntityTypeManagerInterface $entity_type_manager,
     GeocoderManager $geocoder,
-    AccountProxyInterface $account
+    AccountProxyInterface $account,
+    CacheBackendInterface $cache
   ) {
     $this->entityTypeManager = $entity_type_manager;
     $this->geocoderManager = $geocoder;
     $this->currentUser = $account;
+    $this->staticCache = $cache;
   }
 
   /**
@@ -64,7 +78,8 @@ class EntityOperations implements ContainerInjectionInterface {
     return new static(
       $container->get('entity_type.manager'),
       $container->get('plugin.manager.geolocation.geocoder'),
-      $container->get('current_user')
+      $container->get('current_user'),
+      $container->get('cache.default')
     );
   }
 
@@ -100,7 +115,29 @@ class EntityOperations implements ContainerInjectionInterface {
           $entity->set('status', 0);
         }
       }
+
     }
+
+    if ($entity->bundle() == 'message' &&
+    in_array($operation, ['presave'])) {
+      // Check if a message has a new year, and invalidate the
+      // options cached used in the custom views filter for filtering by year.
+      $cid = 'wwd:message:year';
+      $data = $this->staticCache->get($cid);
+      if ($data) {
+        $options = $data->data;
+        $date = $entity->field_message_date->value;
+        if ($date) {
+          $date = new DrupalDateTime($date, new \DateTimeZone('UTC'));
+          $year = $date->format('Y');
+          if (!isset($options[$year])) {
+            Cache::invalidateTags(['wwd:message:year']);
+          }
+        }
+      }
+
+    }
+
   }
 
   /**

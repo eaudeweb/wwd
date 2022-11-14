@@ -102,8 +102,10 @@ module:
   user: 0
   vefl: 0
   vefl_bef: 0
+  views_ajax_history: 0
   views_show_more: 0
   views_ui: 0
+  views_year_filter: 0
   viewsreference: 0
   webform: 0
   webform_submission_export_import: 0
