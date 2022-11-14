@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * WWD override to display a node.
+ */
+#}
+
+{{ attach_library('wwd/n--multimedia--logo-teaser') }}
+
+{%
+  set classes = [
+    'node',
+    'node--' ~ node.bundle|clean_class,
+    'node--' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <a class="colorbox-load" href="{{ node.field_flickr_link.0.url }}">
+    {{ content.field_image }}
+  </a>
+  <div class="additional-logos">
+    {{ "Vector format:"| t}}
+    {% if node.field_ai_logo is not empty %}
+      {{ content.field_ai_logo }}
+    {% endif %}
+    {% if node.field_eps_logo is not empty %}
+      {{ content.field_eps_logo }}
+    {% endif %}
+  </div>
+</article>
+

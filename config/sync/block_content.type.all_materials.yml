@@ -1,0 +1,8 @@
+uuid: 28bb1fae-84eb-4d3b-b7aa-af4456e8f4c8
+langcode: en
+status: true
+dependencies: {  }
+id: all_materials
+label: 'All Materials'
+revision: 1
+description: 'Pretty straightforward block designed for the Materials Outreach page'

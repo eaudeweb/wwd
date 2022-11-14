@@ -14,6 +14,8 @@ module:
   captcha: 0
   ckeditor: 0
   color_field: 0
+  colorbox: 0
+  colorbox_simple_load: 0
   comment: 0
   config: 0
   contact: 0
@@ -35,6 +37,7 @@ module:
   field_states_ui: 0
   field_ui: 0
   file: 0
+  file_download_link: 0
   filter: 0
   geocoder: 0
   geocoder_field: 0

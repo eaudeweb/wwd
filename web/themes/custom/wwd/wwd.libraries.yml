@@ -45,6 +45,11 @@ n--multimedia--video-teaser-column:
     component:
       css/components/content/multimedia/vm-video-teaser-column/style.css: {}
 
+n--multimedia--logo-teaser:
+  css:
+    component:
+      css/components/content/multimedia/vm-logo-teaser/style.css: {}
+
 ## Message.
 n--message--full:
   css:

@@ -4,16 +4,23 @@ status: true
 dependencies:
   config:
     - field.field.node.multimedia.body
+    - field.field.node.multimedia.field_ai_logo
+    - field.field.node.multimedia.field_eps_logo
+    - field.field.node.multimedia.field_flickr_link
+    - field.field.node.multimedia.field_image
     - field.field.node.multimedia.field_link
     - field.field.node.multimedia.field_media_image
     - field.field.node.multimedia.field_type
     - field.field.node.multimedia.field_video
+    - image.style.thumbnail
     - node.type.multimedia
   module:
     - field_states_ui
+    - file
     - link
     - media_library
     - path
+    - svg_image
     - text
 id: node.multimedia.default
 targetEntityType: node
@@ -54,6 +61,69 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_ai_logo:
+    type: file_generic
+    weight: 18
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+  field_eps_logo:
+    type: file_generic
+    weight: 19
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+  field_flickr_link:
+    type: link_default
+    weight: 17
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            a7bbb56e-76f0-48ca-a1c6-7baf07ee11e8:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          a7bbb56e-76f0-48ca-a1c6-7baf07ee11e8:
+            uuid: a7bbb56e-76f0-48ca-a1c6-7baf07ee11e8
+            id: visible
+            data:
+              target: field_type
+              comparison: value
+              value: logo
+              submit: 'Add Cancel'
+  field_image:
+    type: image_image
+    weight: 16
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
   field_link:
     type: link_default
     weight: 13

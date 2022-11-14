@@ -1,0 +1,10 @@
+uuid: 705b3fb1-2dbd-486e-bb23-9df76760e010
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.logo_teaser
+label: 'Logo Teaser'
+targetEntityType: node
+cache: true

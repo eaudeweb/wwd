@@ -144,6 +144,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
       $view_result = [];
       // Check what we want to show.
       $type = $content->get('field_multimedia_type')->getString();
+      $variables['multimedia_type'] = $type;
       switch ($type) {
         case 'individual':
           if (!$content->get('field_poster')->isEmpty()) {
@@ -161,6 +162,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           // Get view name.
           $viewName = 'multimedia';
           $displayId = 'posters_block';
+          $viewMode = 'poster_teaser';
           $view = Views::getView($viewName);
           // $view->setArguments($args);
           $view->setDisplay($displayId);
@@ -173,12 +175,26 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           // Get view name.
           $viewName = 'multimedia';
           $displayId = 'videos';
+          $viewMode = 'video_teaser';
           $view = Views::getView($viewName);
           // $view->setArguments($args);
           $view->setDisplay($displayId);
           $view->execute();
           // Get the results of the view.
           $view_result['videos'] = $view->result;
+          break;
+
+        case 'logos':
+          // Get view name.
+          $viewName = 'multimedia';
+          $displayId = 'logos';
+          $viewMode = 'logo_teaser';
+          $view = Views::getView($viewName);
+          // $view->setArguments($args);
+          $view->setDisplay($displayId);
+          $view->execute();
+          // Get the results of the view.
+          $view_result['logos'] = $view->result;
           break;
       }
       // Check if the view is not empty and return results.
@@ -188,7 +204,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           $node = $row->_entity;
           // Check for translation.
           $variables['content']['referenced_nodes'][$type][] = $view_builder
-            ->view($node, 'video_teaser', $langcode);
+            ->view($node, $viewMode, $langcode);
         }
       }
     }

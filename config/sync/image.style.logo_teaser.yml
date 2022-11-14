@@ -1,0 +1,15 @@
+uuid: cc7a6dc8-2cb6-43be-8342-9b45766a1b9a
+langcode: en
+status: true
+dependencies: {  }
+name: logo_teaser
+label: 'Logo Teaser (235 x 100)'
+effects:
+  49154b5d-f1e0-4f32-8217-19e0b190da2c:
+    uuid: 49154b5d-f1e0-4f32-8217-19e0b190da2c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 235
+      height: 100
+      anchor: center-center

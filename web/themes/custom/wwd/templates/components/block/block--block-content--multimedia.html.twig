@@ -21,7 +21,11 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
-
+  {% if multimedia_type == 'logos' %}
+    <div class="multimedia-info">
+      {{ content.body }}
+    </div>
+  {% endif %}
   <div{{ content_attributes.addClass('block__content') }}>
     <div class="row multimedia-rows">
       {% for type, rows in content.referenced_nodes %}
@@ -31,5 +35,13 @@
       {% endfor %}
     </div>
   </div>
+  {% if not multimedia_type == 'logos' %}
+    {% if content.body is not empty %}
+      <div class="multimedia-additional-info">
+        {{ content.body }}
+        {{ content.field_cta }}
+      </div>
+    {% endif %}
+  {% endif %}
 </div>
 
