@@ -1,0 +1,96 @@
+uuid: a876ee31-b797-44f1-9588-ffdb56405b89
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.logo_teaser
+    - field.field.node.multimedia.body
+    - field.field.node.multimedia.field_ai_logo
+    - field.field.node.multimedia.field_eps_logo
+    - field.field.node.multimedia.field_flickr_link
+    - field.field.node.multimedia.field_image
+    - field.field.node.multimedia.field_link
+    - field.field.node.multimedia.field_media_image
+    - field.field.node.multimedia.field_type
+    - field.field.node.multimedia.field_video
+    - image.style.logo_teaser
+    - node.type.multimedia
+  module:
+    - file_download_link
+    - layout_builder
+    - link
+    - svg_image
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.multimedia.logo_teaser
+targetEntityType: node
+bundle: multimedia
+mode: logo_teaser
+content:
+  field_ai_logo:
+    type: file_download_link
+    label: hidden
+    settings:
+      link_text: AI
+      link_title: AI
+      new_tab: false
+      force_download: true
+      custom_classes: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_eps_logo:
+    type: file_download_link
+    label: hidden
+    settings:
+      link_text: EPS
+      link_title: ''
+      new_tab: false
+      force_download: true
+      custom_classes: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_flickr_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: logo_teaser
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_link: true
+  field_media_image: true
+  field_type: true
+  field_video: true
+  langcode: true

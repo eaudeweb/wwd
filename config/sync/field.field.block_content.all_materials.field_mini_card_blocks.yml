@@ -1,0 +1,37 @@
+uuid: 8d2ada00-dafe-4e9a-9e6d-39a041f31509
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.all_materials
+    - field.storage.block_content.field_mini_card_blocks
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: block_content.all_materials.field_mini_card_blocks
+field_name: field_mini_card_blocks
+entity_type: block_content
+bundle: all_materials
+label: 'Mini Card Blocks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text: text
+    negate: 0
+    target_bundles_drag_drop:
+      background_gradient:
+        weight: 4
+        enabled: false
+      card:
+        weight: 5
+        enabled: false
+      text:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

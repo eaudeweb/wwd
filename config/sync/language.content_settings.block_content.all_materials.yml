@@ -1,0 +1,16 @@
+uuid: c4ac5fa8-407e-45d1-beb1-e1a90e7f0d0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.all_materials
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.all_materials
+target_entity_type_id: block_content
+target_bundle: all_materials
+default_langcode: site_default
+language_alterable: true

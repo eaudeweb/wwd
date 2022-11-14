@@ -4,14 +4,20 @@ status: true
 dependencies:
   config:
     - field.field.node.multimedia.body
+    - field.field.node.multimedia.field_ai_logo
+    - field.field.node.multimedia.field_eps_logo
+    - field.field.node.multimedia.field_flickr_link
+    - field.field.node.multimedia.field_image
     - field.field.node.multimedia.field_link
     - field.field.node.multimedia.field_media_image
     - field.field.node.multimedia.field_type
     - field.field.node.multimedia.field_video
     - node.type.multimedia
   module:
+    - file
     - link
     - options
+    - svg_image
     - text
     - user
 id: node.multimedia.default
@@ -25,6 +31,49 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_ai_logo:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_eps_logo:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_flickr_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 108
     region: content
   field_link:
     type: link

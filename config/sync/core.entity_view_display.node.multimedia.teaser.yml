@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.multimedia.body
+    - field.field.node.multimedia.field_ai_logo
+    - field.field.node.multimedia.field_eps_logo
+    - field.field.node.multimedia.field_flickr_link
+    - field.field.node.multimedia.field_image
     - field.field.node.multimedia.field_link
     - field.field.node.multimedia.field_media_image
     - field.field.node.multimedia.field_type
@@ -33,6 +37,10 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_ai_logo: true
+  field_eps_logo: true
+  field_flickr_link: true
+  field_image: true
   field_link: true
   field_media_image: true
   field_type: true

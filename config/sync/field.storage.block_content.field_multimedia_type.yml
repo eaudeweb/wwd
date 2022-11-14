@@ -20,6 +20,9 @@ settings:
     -
       value: videos
       label: 'Video Listing'
+    -
+      value: logos
+      label: Logos
   allowed_values_function: ''
 module: options
 locked: false

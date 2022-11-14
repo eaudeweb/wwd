@@ -1,0 +1,59 @@
+uuid: d9d65d35-fe20-49e9-a726-1b86d771348e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.all_materials
+    - field.field.block_content.all_materials.field_background
+    - field.field.block_content.all_materials.field_cta
+    - field.field.block_content.all_materials.field_image
+    - field.field.block_content.all_materials.field_mini_card_blocks
+  module:
+    - entity_reference_revisions
+    - link
+id: block_content.all_materials.default
+targetEntityType: block_content
+bundle: all_materials
+mode: default
+content:
+  field_background:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_mini_card_blocks:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

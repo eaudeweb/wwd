@@ -9,10 +9,16 @@
         "chat": "https://www.drupal.org/node/314178"
     },
     "repositories": [{
-        "type": "composer",
-        "url": "https://packages.drupal.org/8"
-    }],
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "require": {
+        "bower-asset/colorbox": "^1.6",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/address": "^1.11",
@@ -22,6 +28,8 @@
         "drupal/better_exposed_filters": "^6.0",
         "drupal/block_class": "^2.0",
         "drupal/color_field": "^2.5",
+        "drupal/colorbox": "^2.0",
+        "drupal/colorbox_simple_load": "^2.0",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
@@ -30,6 +38,7 @@
         "drupal/field_group": "^3.3",
         "drupal/field_permissions": "^1.2",
         "drupal/field_states_ui": "^2.0",
+        "drupal/file_download_link": "^2.0",
         "drupal/geocoder": "^3.31",
         "drupal/geofield": "^1.46",
         "drupal/geolocation": "^3.10",
@@ -54,14 +63,18 @@
         "drupal/svg_image": "^1.16",
         "drupal/twig_tweak": "^3.2",
         "drupal/vefl": "^3.0",
+        "drupal/views_ajax_history": "^1.6",
         "drupal/views_show_more": "^1.0",
+        "drupal/views_year_filter": "^2.0",
         "drupal/viewsreference": "^1.8",
         "drupal/webform": "^6.1",
         "drupal/yearonly": "^9.0",
         "drupal/yoast_seo": "^1.7",
         "drush/drush": "^11",
         "eaudeweb/heavy-lifter": "^2.0",
-        "geocoder-php/nominatim-provider": "^5.6"
+        "geocoder-php/nominatim-provider": "^5.6",
+        "npm-asset/dompurify": "^2.4",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -75,7 +88,8 @@
             "drupal/core-project-message": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
-            "neronmoon/scriptsdev": true
+            "neronmoon/scriptsdev": true,
+            "oomphinc/composer-installers-extender": true
         },
         "sort-packages": true
     },
@@ -104,12 +118,18 @@
                 "[web-root]/sites/example.settings.local.php": false
             }
         },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -134,19 +154,20 @@
             ]
         },
         "patches": {
-          "drupal/field_states_ui": {
-            "Issue #3225009: Enable conditional_fields for paragraphs": "https://www.drupal.org/files/issues/2022-03-07/3225009-5.patch",
-            "Issue #3196272: Not working with paragraphs": "https://www.drupal.org/files/issues/2021-06-08/3196272-3.patch",
-            "Issue : Undefined offset 0 for parents": "https://www.drupal.org/files/issues/2020-10-28/3145195-13661358_6.patch"
-          },
-          "drupal/core": {
-            "Issue #2946333: Allow synced Layout override Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2022-07-25/2946333-288.patch",
-            "Issue #3047022: Layout builder fails to assign inline block access dependencies": "https://www.drupal.org/files/issues/2021-11-16/2786735.patch",
-            "Issue #3101231: Fix multilingual site's layout edit context issue": "https://www.drupal.org/files/issues/2022-02-16/layout-builder-translation-issue-3101231-34.patch"
-        },
-          "drupal/paragraphs": {
-            "Issue #3090200: Access control issues": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
-          }
+            "drupal/field_states_ui": {
+                "Issue #3225009: Enable conditional_fields for paragraphs": "https://www.drupal.org/files/issues/2022-03-07/3225009-5.patch",
+                "Issue #3196272: Not working with paragraphs": "https://www.drupal.org/files/issues/2021-06-08/3196272-3.patch",
+                "Issue #3145195: Undefined offset 0 for parents": "https://www.drupal.org/files/issues/2020-10-28/3145195-13661358_6.patch",
+                "Issue #3012763: File/image fields unrecognized": "https://www.drupal.org/files/issues/2021-10-31/field_state_ui_file-field-unrecognized-3012763.patch"
+            },
+            "drupal/core": {
+                "Issue #2946333: Allow synced Layout override Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2022-07-25/2946333-288.patch",
+                "Issue #3047022: Layout builder fails to assign inline block access dependencies": "https://www.drupal.org/files/issues/2021-11-16/2786735.patch",
+                "Issue #3101231: Fix multilingual site's layout edit context issue": "https://www.drupal.org/files/issues/2022-02-16/layout-builder-translation-issue-3101231-34.patch"
+            },
+            "drupal/paragraphs": {
+                "Issue #3090200: Access control issues": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
+            }
         },
         "drupal-core-project-message": {
             "include-keys": [

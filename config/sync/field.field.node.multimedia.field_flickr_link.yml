@@ -1,0 +1,23 @@
+uuid: 6f2ed90b-02ad-4d63-9eb2-d4498f07abb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flickr_link
+    - node.type.multimedia
+  module:
+    - link
+id: node.multimedia.field_flickr_link
+field_name: field_flickr_link
+entity_type: node
+bundle: multimedia
+label: 'Flickr Link'
+description: 'Flickr link to view logo'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 16
+field_type: link
