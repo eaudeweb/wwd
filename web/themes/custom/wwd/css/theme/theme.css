@@ -59,7 +59,7 @@ p:last-child {
 }
 
 .block .block--title.h1 {
-    margin-bottom: 2.375rem;
+    margin-bottom: var(--btitle-mb, 2.375rem);
   }
 
 /* Social. */

@@ -21,20 +21,33 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
+
   {% if multimedia_type == 'logos' %}
     <div class="multimedia-info">
       {{ content.body }}
     </div>
   {% endif %}
+
   <div{{ content_attributes.addClass('block__content') }}>
-    <div class="row multimedia-rows">
-      {% for type, rows in content.referenced_nodes %}
-        {% for row in rows %}
-          <div class="row-{{ type }}">{{ row|render }}</div>
+    {{ attach_library('wwd/b--multimedia--poster') }}
+    {% if multimedia_type == 'posters' %}
+      <div class="grid-multimedia-posters">
+        {% for type, rows in content.referenced_nodes %}
+          {% for row in rows %}
+            <div class="list-item item-{{ type }}">{{ row|render }}</div>
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
-    </div>
+      </div>
+
+      <div class="row justify-content-center pt-3 pt-md-5">
+        <div class="col-md-11 col-lg-10 col-xl-8 text-center d-flex flex-column">
+          {{ content.body }}
+          {{ content.field_cta }}
+        </div>
+      </div>
+    {% endif %}
   </div>
+
   {% if not multimedia_type == 'logos' %}
     {% if content.body is not empty %}
       <div class="multimedia-additional-info">

@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * WWD Theme override the display for multimedia block.
+ */
+#}
+
+{{ attach_library('wwd/b--all-materials') }}
+
+{%
+  set classes = [
+    'block',
+    'block--all-materials',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+{% set bg %}
+  {{- content.field_background|render|striptags|spaceless -}}
+{% endset %}
+
+<div{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
+    <div class="bg-gradient" style="{{- bg -}}">
+      <div class="container">
+        <div class="w-header d-flex flex-column flex-lg-row justify-content-md-between">
+          {%- if label -%}
+          <h2{{title_attributes.addClass('h1','block--title', '#ffffff' not in bg ? 'text-white')}}>
+            {{- label -}}
+          </h2>
+          {%- endif -%}
+
+          {{ content|without('field_background', 'field_image', 'field_cta') }}
+        </div>
+      </div>
+    </div>
+  {{ title_suffix }}
+
+  <a href="{{- content.field_cta.0 -}}" class="link-img" target="_blank">
+    {{- content.field_image -}}
+  </a>
+</div>
+

@@ -451,7 +451,7 @@ display:
     display_plugin: block
     position: 3
     display_options:
-      title: Logos
+      title: 'Official logo'
       pager:
         type: none
         options:
@@ -576,9 +576,9 @@ display:
           columns: 8
           automatic_width: false
           alignment: horizontal
-          row_class_custom: grid-poster
+          row_class_custom: 'row g-0'
           row_class_default: false
-          col_class_custom: grid-poster-item
+          col_class_custom: 'col-sm-6 col-lg-4'
           col_class_default: false
       row:
         type: 'entity:node'
@@ -593,8 +593,10 @@ display:
         row: false
         filters: false
         filter_groups: false
+        header: false
       use_ajax: true
       display_description: ''
+      header: {  }
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:
         metatag_display_extender:

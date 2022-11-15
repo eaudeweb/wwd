@@ -143,6 +143,23 @@ b--cta:
     component:
       css/components/block/cta/style.css: {}
 
+## All Materials.
+b--all-materials:
+  css:
+    component:
+      css/components/block/all-materials/style.css: {}
+
+## Multimedia.
+b--multimedia--poster:
+  css:
+    component:
+      css/components/block/multimedia/poster.css: {}
+
+b--multimedia--logos:
+  css:
+    component:
+      css/components/block/multimedia/logos/style.css: {}
+
 ## Body Basic page.
 b--body:
   css:
