@@ -1,6 +1,7 @@
 :root {
   --p5: 72px;
   --p-block: 72px;
+  --headings-color: var(--c-gray-900);
   --headings-font-weight: 600;
   --container: 100%;
 }
