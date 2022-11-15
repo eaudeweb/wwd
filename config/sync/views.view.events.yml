@@ -12,7 +12,7 @@ dependencies:
     - node
     - taxonomy
     - user
-    - views_show_more
+    - views_infinite_scroll
 id: events
 label: Events
 module: views
@@ -213,7 +213,7 @@ display:
     position: 1
     display_options:
       pager:
-        type: show_more
+        type: infinite_scroll
         options:
           offset: 0
           items_per_page: 12
@@ -230,19 +230,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          result_display_method: append
-          show_more_text: 'Show more events'
-          show_more_empty_text: ''
-          initial: '0'
-          effects:
-            type: fade
-            speed_type: slow
-            speed_value: ''
-            scroll_offset: '50'
-            speed: slow
-          advance:
-            content_selector: ''
-            pager_selector: ''
+          views_infinite_scroll:
+            button_text: 'View more events'
+            automatically_load_content: false
+            initially_load_all_pages: true
       sorts:
         field_event_date_value:
           id: field_event_date_value
@@ -366,6 +357,7 @@ display:
           metatags: {  }
           tokenize: false
         simple_sitemap_display_extender: {  }
+        ajax_history: {  }
       path: events-list
     cache_metadata:
       max-age: -1
