@@ -13,23 +13,23 @@
       "item-4 item-5 item-5";
   }
 
-  .item-0 {
+  .litem-0 {
     grid-area: item-1;
   }
 
-  .item-1 {
+  .litem-1 {
     grid-area: item-2;
   }
 
-  .item-2 {
+  .litem-2 {
     grid-area: item-3;
   }
 
-  .item-3 {
+  .litem-3 {
     grid-area: item-4;
   }
 
-  .item-4 {
+  .litem-4 {
     grid-area: item-5;
   }
 
@@ -50,25 +50,25 @@
 }
 
 @media screen and (min-width: 36rem) {
-  .item-0 {
+  .litem-0 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
   }
-  .item-1 {
+  .litem-1 {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
   }
-  .item-2 {
+  .litem-2 {
     -ms-grid-row: 3;
     -ms-grid-column: 5;
   }
-  .item-3 {
+  .litem-3 {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
-  .item-4 {
+  .litem-4 {
     -ms-grid-row: 5;
     -ms-grid-column: 3;
     -ms-grid-column-span: 3;

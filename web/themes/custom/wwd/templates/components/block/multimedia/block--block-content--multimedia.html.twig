@@ -34,7 +34,7 @@
       <div class="grid-multimedia-posters">
         {% for type, rows in content.referenced_nodes %}
           {% for row in rows %}
-            <div class="list-item item-{{ type }}">{{ row|render }}</div>
+            <div class="list-item litem-{{ type }}">{{ row|render }}</div>
           {% endfor %}
         {% endfor %}
       </div>
