@@ -1,0 +1,7 @@
+uuid: 03f7b274-1eb1-4a88-b91f-4ddb973eb974
+langcode: en
+status: true
+dependencies: {  }
+name: all_materials
+label: 'All Materials ratio'
+effects: {  }

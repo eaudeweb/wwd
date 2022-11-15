@@ -59,7 +59,7 @@ p:last-child {
 
 .block {
   & .block--title.h1 {
-    margin-bottom: 38px;
+    margin-bottom: var(--btitle-mb, 2.375rem);
   }
 }
 

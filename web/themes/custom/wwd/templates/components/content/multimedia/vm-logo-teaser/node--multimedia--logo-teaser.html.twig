@@ -18,17 +18,15 @@
 <article{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title_suffix }}
+
   <a class="colorbox-load" href="{{ node.field_flickr_link.0.url }}">
     {{ content.field_image }}
   </a>
-  <div class="additional-logos">
+
+  <div class="additional-logos d-flex gap-4 mt-3 mt-sm-4 fst-italic small">
     {{ "Vector format:"| t}}
-    {% if node.field_ai_logo is not empty %}
-      {{ content.field_ai_logo }}
-    {% endif %}
-    {% if node.field_eps_logo is not empty %}
-      {{ content.field_eps_logo }}
-    {% endif %}
+    {{ content.field_ai_logo }}
+    {{ content.field_eps_logo }}
   </div>
 </article>
 
