@@ -177,7 +177,6 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           $displayId = 'videos';
           $viewMode = 'video_teaser';
           $view = Views::getView($viewName);
-          // $view->setArguments($args);
           $view->setDisplay($displayId);
           $view->execute();
           // Get the results of the view.
@@ -190,7 +189,6 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           $displayId = 'logos';
           $viewMode = 'logo_teaser';
           $view = Views::getView($viewName);
-          // $view->setArguments($args);
           $view->setDisplay($displayId);
           $view->execute();
           // Get the results of the view.

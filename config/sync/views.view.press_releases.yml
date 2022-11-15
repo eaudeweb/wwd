@@ -8,7 +8,7 @@ dependencies:
   module:
     - node
     - user
-    - views_show_more
+    - views_infinite_scroll
 id: press_releases
 label: 'Press releases'
 module: views
@@ -89,7 +89,7 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: show_more
+        type: infinite_scroll
         options:
           offset: 0
           items_per_page: 5
@@ -106,19 +106,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          result_display_method: append
-          show_more_text: 'Show more'
-          show_more_empty_text: ''
-          initial: '0'
-          effects:
-            type: none
-            speed_type: slow
-            speed_value: ''
-            scroll_offset: '50'
-            speed: slow
-          advance:
-            content_selector: ''
-            pager_selector: ''
+          views_infinite_scroll:
+            button_text: 'Show more'
+            automatically_load_content: false
+            initially_load_all_pages: true
       exposed_form:
         type: basic
         options:
@@ -272,6 +263,7 @@ display:
           metatags: {  }
           tokenize: false
         simple_sitemap_display_extender: {  }
+        ajax_history: {  }
       block_description: 'Press releases'
     cache_metadata:
       max-age: -1

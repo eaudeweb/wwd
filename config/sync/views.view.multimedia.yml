@@ -12,7 +12,7 @@ dependencies:
     - node
     - options
     - user
-    - views_show_more
+    - views_infinite_scroll
 id: multimedia
 label: Multimedia
 module: views
@@ -262,7 +262,7 @@ display:
     display_options:
       title: 'Outreach videos'
       pager:
-        type: show_more
+        type: infinite_scroll
         options:
           offset: 0
           items_per_page: 8
@@ -279,19 +279,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          result_display_method: append
-          show_more_text: 'View More Videos'
-          show_more_empty_text: ''
-          initial: '8'
-          effects:
-            type: scroll
-            speed_type: slow
-            speed_value: ''
-            scroll_offset: '50'
-            speed: slow
-          advance:
-            content_selector: ''
-            pager_selector: ''
+          views_infinite_scroll:
+            button_text: 'View More Videos'
+            automatically_load_content: false
+            initially_load_all_pages: true
       filters:
         status:
           id: status
@@ -437,6 +428,7 @@ display:
           metatags: {  }
           tokenize: false
         simple_sitemap_display_extender: {  }
+        ajax_history: {  }
     cache_metadata:
       max-age: -1
       contexts:

@@ -106,7 +106,7 @@ module:
   vefl: 0
   vefl_bef: 0
   views_ajax_history: 0
-  views_show_more: 0
+  views_infinite_scroll: 0
   views_ui: 0
   views_year_filter: 0
   viewsreference: 0
