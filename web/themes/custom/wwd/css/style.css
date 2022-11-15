@@ -1,6 +1,7 @@
 :root {
   --p5: 4.5rem;
   --p-block: 4.5rem;
+  --headings-color: var(--c-gray-900);
   --headings-font-weight: 600;
   --container: 100%;
 }

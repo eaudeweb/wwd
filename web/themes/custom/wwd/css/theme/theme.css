@@ -174,7 +174,7 @@ p:last-child {
   }
 
 .footer {
-  background-color: #0D1B2A;
+  background-color: var(--c-gray-900);
   color: var(--c-white);
 }
 
@@ -262,7 +262,6 @@ p:last-child {
   }
 
 .modal {
-  --headings-color: #0D1B2A;
   --modal-color: #3B4B68;
 }
 
