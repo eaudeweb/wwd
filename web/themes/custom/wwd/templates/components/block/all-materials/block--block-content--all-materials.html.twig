@@ -37,8 +37,12 @@
     </div>
   {{ title_suffix }}
 
-  <a href="{{- content.field_cta.0 -}}" class="link-img" target="_blank">
+  {% if content.field_cta.0 %}
+    <a href="{{- content.field_cta.0 -}}" aria-label="{{ "View image on Flicker"|t }}" class="link-img" target="_blank">
+  {% endif %}
     {{- content.field_image -}}
-  </a>
+  {% if content.field_cta.0 %}
+    </a>
+  {% endif %}
 </div>
 
