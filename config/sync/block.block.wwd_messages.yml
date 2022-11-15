@@ -14,8 +14,8 @@ _core:
   default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
 id: wwd_messages
 theme: wwd
-region: hero
-weight: -4
+region: highlighted
+weight: -9
 provider: null
 plugin: system_messages_block
 settings:

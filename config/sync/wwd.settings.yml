@@ -30,8 +30,8 @@ sr__container_nav_additional: none
 sr__container_position_nav_additional: before
 sr__extra_class_nav_additional: ''
 sr__clean_highlighted: 0
-sr__class_highlighted: ''
-sr__container_highlighted: none
+sr__class_highlighted: py-3
+sr__container_highlighted: container
 sr__container_position_highlighted: before
 sr__extra_class_highlighted: ''
 sr__clean_title: 0
@@ -39,7 +39,7 @@ sr__class_title: 'bgg-blue py-region'
 sr__container_title: container
 sr__container_position_title: after
 sr__extra_class_title: row
-sr__clean_hero: 0
+sr__clean_hero: 1
 sr__class_hero: ''
 sr__container_hero: none
 sr__container_position_hero: before

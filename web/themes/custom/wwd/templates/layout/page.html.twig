@@ -38,7 +38,6 @@
     {% if use_banner %}
       {% include '@wwd/components/wwd/page-banner/page-banner.html.twig' %}
     {% else %}
-      {{ page.highlighted }}
       {{ page.title }}
     {% endif %}
 
@@ -51,11 +50,3 @@
 {%- block footer -%}
   {%- include '@wwd/components/sections/footer/footer.html.twig' -%}
 {%- endblock -%}
-
-<a class="back-to-top" href="#main-content">
-  <span class="visually-hidden">{{ "Back to Top"|t }}</span>
-  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="50" height="50" rx="25" fill="rgba(255, 255, 255, .75)"/>
-    <path d="M28.6333 28.3459L24.8125 24.5251L20.9917 28.3459L19.8125 27.1668L24.8125 22.1668L29.8125 27.1668L28.6333 28.3459Z" fill="#0ABAFF"/>
-  </svg>
-</a>

@@ -1,0 +1,17 @@
+uuid: a81696e9-7364-4c9d-93a5-37264cfebdda
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Gradients
+type: gradients
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

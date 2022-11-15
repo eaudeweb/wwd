@@ -1,0 +1,11 @@
+uuid: cab558c7-aca3-485a-9a2d-d5fdda6925ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gradients
+id: node.gradients
+target_entity_type_id: node
+target_bundle: gradients
+default_langcode: site_default
+language_alterable: false

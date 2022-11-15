@@ -304,3 +304,33 @@ p:last-child {
     display: flex;
     justify-content: flex-end;
   }
+
+.radios-gradient {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.radios-gradient > .form-item {
+    position: relative;
+  }
+
+.radios-gradient > .form-item input {
+      position: absolute;
+      top: 0.25rem;
+      left: 0.25rem;
+      z-index: 1;
+    }
+
+.radios-gradient input:checked + label .gr-box {
+    opacity: 1;
+  }
+
+.gr-box {
+  width: 3.125rem;
+  height: 3.125rem;
+  background: linear-gradient(90deg, var(--bg-c1) 0%, var(--bg-c2) 100%);
+  border-radius: 0.5rem;
+  border: 2px solid var(--c-white);
+  box-shadow: 0px 0px 5px 0px rgba(128,128,128,0.7);
+  opacity: .7;
+}

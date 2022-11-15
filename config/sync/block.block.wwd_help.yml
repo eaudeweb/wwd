@@ -14,8 +14,8 @@ _core:
   default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
 id: wwd_help
 theme: wwd
-region: hero
-weight: -5
+region: highlighted
+weight: -10
 provider: null
 plugin: help_block
 settings:

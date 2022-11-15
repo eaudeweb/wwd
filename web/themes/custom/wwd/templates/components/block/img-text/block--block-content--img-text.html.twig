@@ -30,7 +30,7 @@
 
   <div class="block--info">
     {%- if label -%}
-      <h2{{title_attributes.addClass('h1','block--title')}}>
+      <h2{{title_attributes.addClass('h1','block--title', '#ffffff' not in bg ? 'text-white',)}}>
         {{- label -}}
       </h2>
     {%- endif -%}

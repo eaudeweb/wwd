@@ -1,0 +1,22 @@
+uuid: cfe0e31b-832a-40ca-bbc3-9bb8e8e9bd89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_colors
+    - node.type.gradients
+  module:
+    - color_field
+id: node.gradients.field_colors
+field_name: field_colors
+entity_type: node
+bundle: gradients
+label: Colors
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

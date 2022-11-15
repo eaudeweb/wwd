@@ -22,6 +22,18 @@
     required ? 'form-required',
   ]
 %}
+
+
 {% if title is not empty or required -%}
-  <label{{ attributes.addClass(classes) }}>{{ title }}{{ required ? ' *' }}</label>
+  <label{{ attributes.addClass(classes) }}>
+    {% if 'field-box-gradient' in attributes.for|render %}
+      {% set clearTitle = title|render|striptags %}
+      {% set splitTitle =  clearTitle|split('|') %}
+      <span class="visually-hidden">{{ title }}</span>
+      <div class="gr-box" style="--bg-c1: {{ splitTitle.0 }}; --bg-c2: {{ splitTitle.1 }};"></div>
+    {% else %}
+      {{ title }}
+      {{ required ? ' *' }}
+    {% endif %}
+  </label>
 {%- endif %}
