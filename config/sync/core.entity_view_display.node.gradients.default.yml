@@ -1,0 +1,28 @@
+uuid: 69664f09-c030-4a22-92ae-106c3da8fc19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gradients.field_colors
+    - node.type.gradients
+  module:
+    - color_field
+    - user
+id: node.gradients.default
+targetEntityType: node
+bundle: gradients
+mode: default
+content:
+  field_colors:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  langcode: true
+  links: true

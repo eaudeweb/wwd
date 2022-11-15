@@ -11,8 +11,14 @@
   {%- set deg = "180" -%}
 {%- endif -%}
 
+{{ content.field_box_gradient }}
+
 {%- if 'On' in content.field_use_gradient.0 -%}
-  background: {{ content.field_gradient_type.0 }}({{ deg }}deg, {{ content.field_gradient_first_color.0 }} 0%, {{ content.field_gradient_second_colour.0 }} 100%);
+  {% if content.field_box_gradient.0 %}
+    {{ content.field_box_gradient|render|striptags|spaceless }}
+  {% else %}
+    background: {{ content.field_gradient_type.0 }}({{ deg }}deg, {{ content.field_gradient_first_color.0 }} 0%, {{ content.field_gradient_second_colour.0 }} 100%);
+  {% endif %}
 {%- else -%}
   background-color: {{ content.field_background_color.0 }};
 {%- endif -%}

@@ -1,0 +1,50 @@
+uuid: e21df671-9075-4059-afa3-c0fd5be24ffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gradients.field_colors
+    - node.type.gradients
+  module:
+    - color_field
+    - field_states_ui
+id: node.gradients.default
+targetEntityType: node
+bundle: gradients
+mode: default
+content:
+  field_colors:
+    type: color_field_widget_html5
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  simple_sitemap: true
+  sticky: true
+  uid: true
+  url_redirects: true

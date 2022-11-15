@@ -1,0 +1,14 @@
+uuid: 983f77c5-3f9b-4e5d-b2df-7cdf87606962
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gradients
+id: node_type_gradients
+entity_type_id: node_type
+entity_id: gradients
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * WWD theme implementation for a 'radios' #type form element.
+ */
+#}
+
+{%
+  set classes = [
+    'field-box-gradient' in attributes.id|render ? 'radios-gradient'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>
