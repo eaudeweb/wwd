@@ -1,19 +1,18 @@
-uuid: 52ee4ada-a903-4bcd-99ff-c81c27f7e6ae
+uuid: 3ece1efe-c54f-43bf-a8c6-424a8003a766
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
     - paragraphs.paragraphs_type.text
-id: paragraph.text.field_title
-field_name: field_title
+id: paragraph.text.created
+field_name: created
 entity_type: paragraph
 bundle: text
-label: Title
-description: ''
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: created
