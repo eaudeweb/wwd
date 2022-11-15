@@ -46,16 +46,18 @@
   }
 
   &.homepage {
-    isolation: isolate;
     position: relative;
     padding-block: 40px 70px;
     color: var(--c-white);
+
+    & > .container {
+      position: relative;
+    }
 
     & .mapbox--bgg {
       position: absolute;
       inset: 0;
       height: 48%;
-      z-index: -1;
     }
 
     & .block--title {

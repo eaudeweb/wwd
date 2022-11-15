@@ -39,19 +39,19 @@
   .block--mapbox.filter .field--name-body {
       width: 75%;
     }.block--mapbox.homepage {
-    isolation: isolate;
     position: relative;
     padding-top: 2.5rem;
     padding-bottom: 4.375rem;
     color: var(--c-white);
-  }.block--mapbox.homepage .mapbox--bgg {
+  }.block--mapbox.homepage > .container {
+      position: relative;
+    }.block--mapbox.homepage .mapbox--bgg {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       height: 48%;
-      z-index: -1;
     }.block--mapbox.homepage .block--title {
       --btitle-mb: 1.625rem;
     }.block--mapbox.homepage .field--name-body {
