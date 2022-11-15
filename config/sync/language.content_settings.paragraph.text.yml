@@ -1,18 +1,18 @@
-uuid: 15c783d2-c198-4442-9d1a-793c1d5f807b
+uuid: f40a97b1-6c9d-4eee-8102-67b1b0f22715
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.cta
+    - paragraphs.paragraphs_type.text
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: block_content.cta
-target_entity_type_id: block_content
-target_bundle: cta
+id: paragraph.text
+target_entity_type_id: paragraph
+target_bundle: text
 default_langcode: site_default
-language_alterable: true
+language_alterable: false
