@@ -5,33 +5,62 @@
  */
 #}
 
+{{ attach_library('wwd/b--multimedia') }}
+{{ attach_library('wwd/b--multimedia--' ~ multimedia_type) }}
+
 {%
   set classes = [
     'block',
+    'block--multimedia',
+    'block--multimedia--' ~ multimedia_type,
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
   ]
 %}
 
-<div{{attributes.addClass(classes)}}>
-  {{ title_prefix }}
-  {% if label %}
+{% set grid_att = create_attribute() %}
+{%
+  set grid_classes = [
+    'grid-multimedia-' ~ multimedia_type,
+    multimedia_type == 'logos' ? 'col',
+    multimedia_type == 'logos' ? 'col',
+  ]
+%}
+
+{% if label -%}
+  {%- set wLabel -%}
     <h2{{title_attributes.addClass('h1', 'block--title')}}>
       {{- label -}}
     </h2>
-  {% endif %}
+  {%- endset -%}
+{%- endif %}
+
+<div{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
   {{ title_suffix }}
-
   {% if multimedia_type == 'logos' %}
-    <div class="multimedia-info">
-      {{ content.body }}
-    </div>
-  {% endif %}
+    <div class="row g-0 border">
+      <div class="col-xl-3 w-head">
+        {{- wLabel -}}
 
-  <div{{ content_attributes.addClass('block__content') }}>
-    {{ attach_library('wwd/b--multimedia--poster') }}
-    {% if multimedia_type == 'posters' %}
-      <div class="grid-multimedia-posters">
+        {{- content.body -}}
+      </div>
+
+      <div{{ grid_att.addClass(grid_classes) }}>
+        <div class="row g-0">
+          {% for type, rows in content.referenced_nodes %}
+            {% for row in rows %}
+              <div class="col-sm-6 col-lg-4 item-{{ type }}">{{ row|render }}</div>
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% else %}
+    {{- wLabel -}}
+
+    <div{{ content_attributes.addClass('block__content') }}>
+      <div{{ grid_att.addClass(grid_classes) }}>
         {% for type, rows in content.referenced_nodes %}
           {% for row in rows %}
             <div class="list-item litem-{{ type }}">{{ row|render }}</div>
@@ -39,22 +68,22 @@
         {% endfor %}
       </div>
 
-      <div class="row justify-content-center pt-3 pt-md-5">
-        <div class="col-md-11 col-lg-10 col-xl-8 text-center d-flex flex-column">
-          {{ content.body }}
-          {{ content.field_cta }}
-        </div>
-      </div>
-    {% endif %}
-  </div>
-
-  {% if not multimedia_type == 'logos' %}
-    {% if content.body is not empty %}
-      <div class="multimedia-additional-info">
-        {{ content.body }}
-        {{ content.field_cta }}
-      </div>
-    {% endif %}
+      {% if content.body|render is not empty %}
+        {% if multimedia_type == 'posters' %}
+          <div class="row justify-content-center pt-3 pt-md-5">
+            <div class="col-md-11 col-lg-10 col-xl-8 text-center d-flex flex-column">
+              {{ content.body }}
+              {{ content.field_cta }}
+            </div>
+          </div>
+        {% else %}
+          <div class="multimedia-additional-info">
+            {{ content.body }}
+            {{ content.field_cta }}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
   {% endif %}
 </div>
 

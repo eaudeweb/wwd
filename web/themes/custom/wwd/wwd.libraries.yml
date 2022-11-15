@@ -150,7 +150,12 @@ b--all-materials:
       css/components/block/all-materials/style.css: {}
 
 ## Multimedia.
-b--multimedia--poster:
+b--multimedia:
+  css:
+    component:
+      css/components/block/multimedia/style.css: {}
+
+b--multimedia--posters:
   css:
     component:
       css/components/block/multimedia/poster.css: {}
@@ -158,7 +163,7 @@ b--multimedia--poster:
 b--multimedia--logos:
   css:
     component:
-      css/components/block/multimedia/logos/style.css: {}
+      css/components/block/multimedia/logos.css: {}
 
 ## Body Basic page.
 b--body:
