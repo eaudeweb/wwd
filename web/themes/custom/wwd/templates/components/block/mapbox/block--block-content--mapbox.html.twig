@@ -22,7 +22,7 @@
   <div class="w--disclaimer">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      {{- 'Map Disclaimer'|t -}}
+      {{ 'Map Disclaimer'|t }}
     </button>
 
     <!-- Modal -->
@@ -31,7 +31,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h3 class="modal-title">
-              {{- 'Map Disclaimer'|t -}}
+              {{ 'Map Disclaimer'|t }}
             </h3>
 
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -80,7 +80,7 @@
 
         <div class="col-lg-8 w--map position-relative">
           <a href="{{ path('node.add', {'node_type': 'events'}) }}" class="btn btn-outline-primary my-3">
-            {{- "Register your event"|t -}}
+            {{ "Register your event"|t }}
           </a>
 
           {{ drupal_block('events_map_block', wrapper=false) }}
@@ -111,7 +111,7 @@
     <div class="mapbox--link">
       {# If theme is homepage style, display CTA #}
       <a href="{{ path('node.add', {'node_type': 'events'}) }}" class="btn btn-link btn-arrow white">
-        {{- "Register your event"|t -}}
+        {{ "Register your event"|t }}
       </a>
     </div>
 
