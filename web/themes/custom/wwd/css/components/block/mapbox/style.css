@@ -39,6 +39,7 @@
   .block--mapbox.filter .field--name-body {
       width: 75%;
     }.block--mapbox.homepage {
+    isolation: isolate;
     position: relative;
     padding-top: 2.5rem;
     padding-bottom: 4.375rem;
@@ -51,8 +52,8 @@
       left: 0;
       height: 48%;
       z-index: -1;
-    }.block--mapbox.homepage .block--title.h1 {
-      margin-bottom: 1.625rem;
+    }.block--mapbox.homepage .block--title {
+      --btitle-mb: 1.625rem;
     }.block--mapbox.homepage .field--name-body {
       font-size: 0.875rem;
       line-height: 1.125rem;

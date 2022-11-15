@@ -46,6 +46,7 @@
   }
 
   &.homepage {
+    isolation: isolate;
     position: relative;
     padding-block: 40px 70px;
     color: var(--c-white);
@@ -57,8 +58,8 @@
       z-index: -1;
     }
 
-    & .block--title.h1 {
-      margin-bottom: 26px;
+    & .block--title {
+      --btitle-mb: 26px;
     }
 
     & .field--name-body {
