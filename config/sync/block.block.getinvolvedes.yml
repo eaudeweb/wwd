@@ -1,9 +1,9 @@
-uuid: 7f0df89e-a75d-4a45-8aa9-c3a3c0c69d12
+uuid: 9fb652c5-5131-412e-93bf-edc7e58c78e3
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:08ae27c5-971e-4867-8c5c-bd01f6aff8ab'
+    - 'block_content:basic:cc61ac2c-fb7e-47d9-8e5b-c506bd6c8278'
   module:
     - block_class
     - block_content
@@ -13,15 +13,15 @@ dependencies:
 third_party_settings:
   block_class:
     classes: null
-id: getinvolved
+id: getinvolvedes
 theme: wwd
 region: footer_left
 weight: 0
 provider: null
-plugin: 'block_content:08ae27c5-971e-4867-8c5c-bd01f6aff8ab'
+plugin: 'block_content:cc61ac2c-fb7e-47d9-8e5b-c506bd6c8278'
 settings:
-  id: 'block_content:08ae27c5-971e-4867-8c5c-bd01f6aff8ab'
-  label: 'Get Involved'
+  id: 'block_content:cc61ac2c-fb7e-47d9-8e5b-c506bd6c8278'
+  label: 'Get Involved ES'
   label_display: '0'
   provider: block_content
   status: true
@@ -34,4 +34,4 @@ visibility:
     context_mapping:
       language: '@language.current_language_context:language_interface'
     langcodes:
-      en: en
+      es: es
