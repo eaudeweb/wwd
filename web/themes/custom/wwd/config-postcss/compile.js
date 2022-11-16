@@ -21,7 +21,6 @@ module.exports = (filePath, callback) => {
          // variables.
          postcss.plugin('remove-unwanted-comments-from-variables', (options) => {
            return css => {
-            console.log('aaa', css.source.input.file);
              if (css.source.input.file.indexOf('variables.pcss.css') !== -1) {
                css.walk(node => {
                  if (node.type === 'comment') {
