@@ -39,7 +39,7 @@
     }
   }
 
-  & .form-wrapper + .form-wrapper {
+  & .form-wrapper:not(:first-of-type) {
     margin-top: 22px;
   }
 

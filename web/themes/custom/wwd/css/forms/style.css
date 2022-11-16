@@ -30,7 +30,7 @@
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       justify-content: center;
-    }.node-events-form .form-wrapper + .form-wrapper {
+    }.node-events-form .form-wrapper:not(:first-of-type) {
     margin-top: 1.375rem;
   }.node-events-form input:not(.button) {
     max-width: 100%;
