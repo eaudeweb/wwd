@@ -1,0 +1,8 @@
+uuid: 77cf0c69-0abe-4d48-a218-d2f57ca14ada
+langcode: und
+status: true
+dependencies: {  }
+id: wwd_format_medium
+label: 'WWD Format medium'
+locked: false
+pattern: 'D, m/d/Y'

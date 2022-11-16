@@ -2,6 +2,7 @@
 
 namespace Drupal\wwd;
 
+use Drupal\Core\Url;
 use Drupal\views\Views;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
@@ -300,6 +301,33 @@ class WwdThemeProcess implements ContainerInjectionInterface {
       if ($this->currentUser->isAnonymous()) {
         $variables['head_title']['title'] = $this->t('Register your event');
       }
+    }
+  }
+
+  /**
+   * Node html.
+   *
+   * @see hook_preprocess_html()
+   */
+  public function preprocessNode(&$variables) {
+    $bundle = $variables['node']->bundle();
+    if($bundle =='multimedia') {
+      // $url = Url::fromUri('internal:/outreach-material', array (
+      //     'language' => \Drupal::languageManager()->getLanguage('fr'),
+      // ));
+      // $path = $url->toString();
+
+      // // $path = \Drupal::service('path_alias.manager')->getPathByAlias('/outreach-material');
+
+      // dpm($path);
+      // $url = '';
+      // if (preg_match('/node\/(\d+)/', $path, $matches)) {
+      //   $node = Node::load($matches[1]);
+      //   $language = \Drupal::languageManager()->getCurrentLanguage();
+      //   $url = $node->toUrl('canonical', ['language' => $language]);
+      // }
+
+      $variables['video_url'] = '/outreach-material';
     }
   }
 

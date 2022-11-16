@@ -28,12 +28,16 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
-  links:
-    settings: {  }
+  field_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   addtoany: true
@@ -44,5 +48,5 @@ hidden:
   field_link: true
   field_media_image: true
   field_type: true
-  field_video: true
   langcode: true
+  links: true
