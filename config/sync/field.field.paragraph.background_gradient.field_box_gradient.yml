@@ -9,8 +9,8 @@ id: paragraph.background_gradient.field_box_gradient
 field_name: field_box_gradient
 entity_type: paragraph
 bundle: background_gradient
-label: Gradient
-description: ''
+label: 'Predefined Gradient'
+description: 'Predefined Gradient list'
 required: false
 translatable: false
 default_value: {  }

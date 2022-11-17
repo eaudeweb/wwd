@@ -299,7 +299,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     // For registering new event page, change the default title.
     if (strpos($currentPath, '/node/add/events') !== FALSE) {
       if ($this->currentUser->isAnonymous()) {
-        $variables['head_title']['title'] = $this->t('Register your event');
+        $variables['head_title']['title'] = 'Register your event';
       }
     }
   }

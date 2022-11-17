@@ -29,10 +29,10 @@
     {% if 'field-box-gradient' in attributes.for|render %}
       {% set clearTitle = title|render|striptags %}
       {% set splitTitle =  clearTitle|split('|') %}
-      <span class="visually-hidden">{{ title }}</span>
+      <span class="visually-hidden">{{ title|t }}</span>
       <div class="gr-box" style="--bg-c1: {{ splitTitle.0 }}; --bg-c2: {{ splitTitle.1 }};"></div>
     {% else %}
-      {{ title }}
+      {{ title|t }}
       {{ required ? ' *' }}
     {% endif %}
   </label>
