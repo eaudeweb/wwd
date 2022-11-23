@@ -1,4 +1,5 @@
-wwd_core.general_settings:
-  route_name: wwd_core.general_settings
-  title: 'WWD Core settings'
-  parent: system.admin_config_services
+wwd_core.content_settings:
+  route_name: wwd_core.content_settings
+  title: 'WWD settings'
+  parent: 'system.admin'
+  weight: 100

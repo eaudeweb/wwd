@@ -2,15 +2,15 @@
 
 namespace Drupal\wwd_core;
 
+use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
-use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Messenger\MessengerTrait;
-use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\wwd_core\Services\EventsManager;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
@@ -33,11 +33,11 @@ class FormOperations implements ContainerInjectionInterface {
   protected $currentUser;
 
   /**
-   * Cache manager.
+   * Events manager.
    *
-   * @var \Drupal\Core\Cache\CacheBackendInterface
+   * @var \Drupal\wwd_core\Services\EventsManager
    */
-  protected $staticCache;
+  protected $eventsManager;
 
   /**
    * The Entity Type Manager service.
@@ -47,23 +47,34 @@ class FormOperations implements ContainerInjectionInterface {
   protected $entityTypeManager;
 
   /**
+   * The language manager service.
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected $languageManager;
+
+  /**
    * Constructs a new FormOperations object.
    *
    * @param \Drupal\Core\Session\AccountProxyInterface $account
    *   Current user.
-   * @param \Drupal\Core\Cache\CacheBackendInterface $cache
-   *   Cache manager.
+   * @param \Drupal\wwd_core\Services\EventsManager $events_manager
+   *   Events manager.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   Entity type manager service.
+   * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
+   *   The language manager service.
    */
   public function __construct(
     AccountProxyInterface $account,
-    CacheBackendInterface $cache,
-    EntityTypeManagerInterface $entity_type_manager
+    EventsManager $events_manager,
+    EntityTypeManagerInterface $entity_type_manager,
+    LanguageManagerInterface $language_manager
   ) {
     $this->currentUser = $account;
-    $this->staticCache = $cache;
+    $this->eventsManager = $events_manager;
     $this->entityTypeManager = $entity_type_manager;
+    $this->languageManager = $language_manager;
   }
 
   /**
@@ -72,8 +83,9 @@ class FormOperations implements ContainerInjectionInterface {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('current_user'),
-      $container->get('cache.default'),
-      $container->get('entity_type.manager')
+      $container->get('wwd_core.events_manager'),
+      $container->get('entity_type.manager'),
+      $container->get('language_manager')
     );
   }
 
@@ -84,6 +96,8 @@ class FormOperations implements ContainerInjectionInterface {
    */
   public function formAlter(&$form, FormStateInterface $form_state, $form_id) {
     $form_object = $form_state->getFormObject();
+    $contentSettings = $this->eventsManager
+      ->getSettings('wwd_core.content_settings');
     $isAnonymous = $this->currentUser->isAnonymous();
     // Perform some form alterations for content entities forms.
     if (is_a($form_object, ContentEntityForm::class)) {
@@ -92,6 +106,8 @@ class FormOperations implements ContainerInjectionInterface {
       if ($isAnonymous) {
         $form['revision_information']['#access'] = FALSE;
         $form['actions']['preview']['#access'] = FALSE;
+        $form['langcode']["#access"] = FALSE;
+        $form['actions']['submit']['#value'] = $this->t('Register');
       }
 
       // Custom redirect for anonymous users for events form.
@@ -114,44 +130,19 @@ class FormOperations implements ContainerInjectionInterface {
     if ($form_id == 'views_exposed_form') {
       // Adjust message date exposed filter.
       if (isset($form['#id']) && $form['#id'] == 'views-exposed-form-messages-page') {
-        $nodeStorage = $this->entityTypeManager->getStorage('node');
-        $options = &drupal_static(__FUNCTION__);
-        if (is_null($options)) {
-          $cid = 'wwd:message:year';
-          $data = $this->staticCache->get($cid);
-          if (!$data) {
-            $options = [];
-            $options[''] = new TranslatableMarkup('- All -');
-            $query = $nodeStorage->getQuery();
-            $query->condition('type', 'message')
-              ->condition('status', 1)
-              ->sort('field_message_date', 'ASC');
-            $result = $query->execute();
-            if ($result) {
-              $nodes = $nodeStorage->loadMultiple($result);
-              foreach ($nodes as $node) {
-                $date = $node->get('field_message_date')->value;
-                $date = new DrupalDateTime($date, new \DateTimeZone('UTC'));
-                $year = $date->format('Y');
-                if (!isset($options[$year])) {
-                  $options[$year] = $year;
-                }
-              }
-            }
-            $cache_tags = ['wwd:message:year'];
-            $this->staticCache->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
-          }
-          else {
-            $options = $data->data;
-          }
-        }
+        $options = $this->eventsManager->getEventYearOptions();
+        $defaultYear = $contentSettings->get('events.default_filter') ?? '';
         $form['message_year'] = [
           '#title' => NULL,
           '#type' => 'select',
           '#options' => $options,
           '#size' => NULL,
-          '#default_value' => NULL,
+          '#default_value' => FALSE,
         ];
+        $existingFilter = $form_state->getUserInput();
+        if (empty($existingFilter['message_year'])) {
+          $form_state->setUserInput(['message_year' => $defaultYear]);
+        }
       }
     }
 
@@ -179,8 +170,9 @@ class FormOperations implements ContainerInjectionInterface {
    */
   public function eventNodeSubmit($form, FormStateInterface $form_state) {
     if ($this->currentUser->isAnonymous()) {
-      $this->messenger()->addStatus($this->t('Thank you for registering a new event.'));
-      $form_state->setRedirect('<front>');
+      $language = $this->languageManager->getCurrentLanguage()->getId();
+      $url = Url::fromUserInput('/' . $language . '/event-registration-confirmation');
+      return $form_state->setRedirectUrl($url);
     }
   }
 

@@ -11,3 +11,9 @@ map:
     - core/drupalSettings
     - core/drupal
     - core/once
+
+toolbar:
+  version: VERSION
+  css:
+    theme:
+      assets/css/wwd-core.icons.css: {}

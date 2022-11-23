@@ -14,3 +14,15 @@ wwd_core.settings:
     mapbox_token:
       type: text
       label: 'Mapbox Token'
+
+wwd_core.content_settings:
+  type: config_object
+  label: 'WWD Core Content Settings'
+  mapping:
+    events:
+      type: mapping
+      label: 'Events Settings'
+      mapping:
+        default_filter:
+          type: text
+          label: 'Predefined year'

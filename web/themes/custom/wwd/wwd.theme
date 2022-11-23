@@ -98,7 +98,7 @@ function wwd_preprocess_html(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for html.html.twig.
+ * Implements hook_preprocess_HOOK() for node.html.twig.
  */
 function wwd_preprocess_node(&$variables) {
   return \Drupal::service('class_resolver')

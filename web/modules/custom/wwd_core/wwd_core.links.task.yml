@@ -1,9 +1,16 @@
+wwd_core.content_settings:
+  route_name: wwd_core.content_settings
+  title: 'Content Settings'
+  base_route: wwd_core.content_settings
+
 wwd_core.general_settings:
   route_name: wwd_core.general_settings
-  title: 'Settings'
-  base_route: wwd_core.general_settings
+  title: 'API Settings'
+  base_route: wwd_core.content_settings
 
 wwd_core.country_coords_form:
   route_name: wwd_core.country_coords_form
   title: 'Coords Import'
-  base_route: wwd_core.general_settings
+  base_route: wwd_core.content_settings
+
+
