@@ -111,3 +111,10 @@ function wwd_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     ->getInstanceFromDefinition(FormOperations::class)
     ->formAlter($form, $form_state, $form_id);
 }
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function wwd_core_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'wwd_core/toolbar';
+}

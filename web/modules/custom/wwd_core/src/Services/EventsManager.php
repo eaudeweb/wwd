@@ -5,9 +5,11 @@ namespace Drupal\wwd_core\Services;
 use Drupal\Core\Session\AccountProxy;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Logger\LoggerChannelTrait;
+use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 
@@ -48,6 +50,13 @@ class EventsManager implements EventsManagerInterface {
   protected $entityRepository;
 
   /**
+   * Cache manager.
+   *
+   * @var \Drupal\Core\Cache\CacheBackendInterface
+   */
+  protected $staticCache;
+
+  /**
    * Constructs a EventsManager object.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -58,17 +67,21 @@ class EventsManager implements EventsManagerInterface {
    *   Current user.
    * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
    *   The entity repository.
+   * @param \Drupal\Core\Cache\CacheBackendInterface $cache
+   *   Cache manager.
    */
   public function __construct(
     EntityTypeManagerInterface $entity_type_manager,
     ConfigFactoryInterface $config,
     AccountProxy $account,
-    EntityRepositoryInterface $entity_repository
+    EntityRepositoryInterface $entity_repository,
+    CacheBackendInterface $cache
   ) {
     $this->entityTypeManager = $entity_type_manager;
     $this->configFactory = $config;
     $this->currentUser = $account;
     $this->entityRepository = $entity_repository;
+    $this->staticCache = $cache;
   }
 
   /**
@@ -150,6 +163,43 @@ class EventsManager implements EventsManagerInterface {
     }
 
     return $results;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getEventYearOptions() {
+    $nodeStorage = $this->entityTypeManager->getStorage('node');
+    $options = &drupal_static(__FUNCTION__);
+    if (is_null($options)) {
+      $cid = 'wwd:message:year';
+      $data = $this->staticCache->get($cid);
+      if (!$data) {
+        $options = [];
+        $query = $nodeStorage->getQuery();
+        $query->condition('type', 'message')
+          ->condition('status', 1)
+          ->sort('field_message_date', 'ASC');
+        $result = $query->execute();
+        if ($result) {
+          $nodes = $nodeStorage->loadMultiple($result);
+          foreach ($nodes as $node) {
+            $date = $node->get('field_message_date')->value;
+            $date = new DrupalDateTime($date, new \DateTimeZone('UTC'));
+            $year = $date->format('Y');
+            if (!isset($options[$year])) {
+              $options[$year] = $year;
+            }
+          }
+        }
+        $cache_tags = ['wwd:message:year'];
+        $this->staticCache->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+      }
+      else {
+        $options = $data->data;
+      }
+    }
+    return $options;
   }
 
 }

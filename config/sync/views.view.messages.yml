@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - core.entity_view_mode.node.teaser_xs
     - node.type.message
-    - system.menu.main
   module:
     - better_exposed_filters
     - datetime
@@ -710,10 +709,14 @@ display:
           enable_history: true
       path: messages
       menu:
-        type: normal
+        type: none
         title: Messages
+        description: ''
+        weight: 0
+        expanded: false
         menu_name: main
         parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

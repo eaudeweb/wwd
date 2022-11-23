@@ -1,0 +1,6 @@
+events:
+  default_filter: '2022'
+homepage:
+  upcoming_event: null
+messages:
+  previous_messages_button: 'Previous Messages'

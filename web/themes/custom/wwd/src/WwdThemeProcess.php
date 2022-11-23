@@ -6,6 +6,7 @@ use Drupal\Core\Url;
 use Drupal\views\Views;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
+use Drupal\path_alias\AliasManager;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Datetime\DrupalDateTime;
@@ -72,6 +73,13 @@ class WwdThemeProcess implements ContainerInjectionInterface {
   protected $eventsManager;
 
   /**
+   * Path alias manager.
+   *
+   * @var \Drupal\path_alias\AliasManager
+   */
+  protected $pathAliasManager;
+
+  /**
    * Constructs a new EntityOperations object.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -86,6 +94,8 @@ class WwdThemeProcess implements ContainerInjectionInterface {
    *   Current path.
    * @param \Drupal\wwd_core\Services\EventsManager $events_manager
    *   Events manager.
+   * @param \Drupal\path_alias\AliasManager $alias_manager
+   *   Path alias manager.
    */
   public function __construct(
     EntityTypeManagerInterface $entity_type_manager,
@@ -93,7 +103,8 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     CurrentRouteMatch $route_match,
     AccountProxyInterface $account,
     CurrentPathStack $path,
-    EventsManager $events_manager
+    EventsManager $events_manager,
+    AliasManager $alias_manager
   ) {
     $this->entityTypeManager = $entity_type_manager;
     $this->languageManager = $language_manager;
@@ -101,6 +112,7 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     $this->currentUser = $account;
     $this->currentPath = $path;
     $this->eventsManager = $events_manager;
+    $this->pathAliasManager = $alias_manager;
   }
 
   /**
@@ -113,7 +125,8 @@ class WwdThemeProcess implements ContainerInjectionInterface {
       $container->get('current_route_match'),
       $container->get('current_user'),
       $container->get('path.current'),
-      $container->get('wwd_core.events_manager')
+      $container->get('wwd_core.events_manager'),
+      $container->get('path_alias.manager')
     );
   }
 
@@ -136,6 +149,9 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     $langcode = $this->languageManager->getCurrentLanguage()->getId();
     // Get content.
     $content = $element['content']['#block_content'] ?? NULL;
+    // Get wwd content settings.
+    $contentSettings = $this->eventsManager
+      ->getSettings('wwd_core.content_settings');
     // Parse multimedia block.
     if ($element['#derivative_plugin_id'] == 'multimedia' ||
     (!empty($content->type->target_id) &&
@@ -240,18 +256,25 @@ class WwdThemeProcess implements ContainerInjectionInterface {
     $content->type->target_id == 'mapbox')) {
       $theme = $content->get('field_theme')->value;
       $variables['theme'] = $theme;
-      // For homepage theme add the latest upcoming event to the list.
+      // Invalidate cache if new event is added or deleted/updated.
+      $variables['#cache']['tags'] = ['node_list:events'];
+      // For homepage theme add the latest upcoming event to the list
+      // In case its not preconfigured.
       if ($theme == 'homepage') {
-        $now = new DrupalDateTime('now');
-        $query = $nodeManager->getQuery()
-          ->condition('type', 'events')
-          ->condition('status', 1)
-          ->condition('field_event_date', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '>=')
-          ->range(0, 1)
-          ->sort('field_event_date', 'ASC');
-        $nodeId = $query->execute();
+        $nodeId = $contentSettings->get('homepage.upcoming_event') ?? NULL;
+        if (empty($nodeId)) {
+          // Fall back to upcoming event if it's not configured.
+          $now = new DrupalDateTime('now');
+          $query = $nodeManager->getQuery()
+            ->condition('type', 'events')
+            ->condition('status', 1)
+            ->condition('field_event_date', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '>=')
+            ->range(0, 1)
+            ->sort('field_event_date', 'ASC');
+          $nodeId = $query->execute();
+        }
         if (!empty($nodeId)) {
-          $nodeId = reset($nodeId);
+          $nodeId = is_array($nodeId) ? reset($nodeId) : $nodeId;
           $event = $nodeManager->load($nodeId);
           // Pre-render event node.
           $variables['event'] = $view_builder
@@ -305,29 +328,33 @@ class WwdThemeProcess implements ContainerInjectionInterface {
   }
 
   /**
-   * Node html.
+   * Preprocess node.
    *
-   * @see hook_preprocess_html()
+   * @see hook_preprocess_node()
    */
   public function preprocessNode(&$variables) {
     $bundle = $variables['node']->bundle();
-    if($bundle =='multimedia') {
-      // $url = Url::fromUri('internal:/outreach-material', array (
-      //     'language' => \Drupal::languageManager()->getLanguage('fr'),
-      // ));
-      // $path = $url->toString();
-
-      // // $path = \Drupal::service('path_alias.manager')->getPathByAlias('/outreach-material');
-
-      // dpm($path);
-      // $url = '';
-      // if (preg_match('/node\/(\d+)/', $path, $matches)) {
-      //   $node = Node::load($matches[1]);
-      //   $language = \Drupal::languageManager()->getCurrentLanguage();
-      //   $url = $node->toUrl('canonical', ['language' => $language]);
-      // }
-
-      $variables['video_url'] = '/outreach-material';
+    if ($bundle == 'multimedia') {
+      // Redirect multimedia teaser blocks to material outreach.
+      $currentLangCode = $this->languageManager->getCurrentLanguage()->getId();
+      $variables['video_url'] = Url::fromRoute('<current>')->toString();
+      $alias = $this->pathAliasManager
+        ->getPathByAlias('/material-outreach', 'en');
+      if (preg_match('/node\/(\d+)/', $alias, $matches)) {
+        $node = $this->entityTypeManager->getStorage('node')->load($matches[1]);
+        if ($node->hasTranslation($currentLangCode)) {
+          $node = $node->getTranslation($currentLangCode);
+        }
+        $variables['video_url'] = $node->toUrl('canonical', [
+          'language' => $node->language(),
+        ]);
+      }
+    }
+    if ($bundle == 'message') {
+      $contentSettings = $this->eventsManager
+        ->getSettings('wwd_core.content_settings');
+      $variables['previous_message_btn'] = $contentSettings
+        ->get('messages.previous_messages_button') ?? 'Previous Messages';
     }
   }
 

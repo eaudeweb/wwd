@@ -1,0 +1,19 @@
+/**
+ * @file
+ * WWD toolbar icon styling.
+ */
+
+.toolbar-bar .toolbar-icon-wwd-core-content-settings {
+  padding-left: 4em;
+  text-align: right;
+}
+.toolbar-bar .toolbar-icon-wwd-core-content-settings:before {
+  background-image: url("../icons/logo_standard.svg");
+  background-size: contain;
+  width: 72px;
+  background-position: left;
+}
+.toolbar-bar .toolbar-icon-wwd-core-content-settings:active:before,
+.toolbar-bar .toolbar-icon-wwd-core-content-settings.is-active:before {
+  background-image: url("../icons/logo_active.svg");
+}

@@ -13,3 +13,11 @@ wwd_core.country_coords_form:
     _title: 'Import countries coordonates'
   requirements:
     _permission: 'administer site configuration'
+
+wwd_core.content_settings:
+  path: '/admin/config/services/wwd/content-settings'
+  defaults:
+    _form: '\Drupal\wwd_core\Form\WwdContentSettings'
+    _title: 'WWD Content settings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,4 +1,4 @@
 services:
   wwd_core.events_manager:
     class: Drupal\wwd_core\Services\EventsManager
-    arguments: ['@entity_type.manager', '@config.factory', '@current_user', '@entity.repository']
+    arguments: ['@entity_type.manager', '@config.factory', '@current_user', '@entity.repository', '@cache.default']
