@@ -26,3 +26,17 @@ wwd_core.content_settings:
         default_filter:
           type: text
           label: 'Predefined year'
+    homepage:
+      type: mapping
+      label: 'Homepage Settings'
+      mapping:
+        upcoming_event:
+          type: text
+          label: 'Upcoming event'
+    messages:
+      type: mapping
+      label: 'Messages Settings'
+      mapping:
+        previous_messages_button:
+          type: text
+          label: 'Previous messages button'
