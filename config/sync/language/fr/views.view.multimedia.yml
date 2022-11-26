@@ -1,0 +1,14 @@
+display:
+  all_videos:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Afficher Plus de Vidéos'
+  posters_listing:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<div class=\"row justify-content-center pt-4\">\r\n<div class=\"col-md-11 col-lg-10 col-xl-8 text-center d-flex flex-column\">The posters were provided by Despina Kannaourou, Delphine Gilliard and Alice Kirby - please make sure to credit these incredible artists! Posters are available in the three official languages of CITES and can be downloaded in bigger format on the World Wildlife Day Flickr page.\r\n<div><a class=\"more-link btn btn-outline-primary d-block mt-4\" href=\"#\">View MORE on flicker</a></div>\r\n</div>\r\n</div>\r\n"
+            format: full_html

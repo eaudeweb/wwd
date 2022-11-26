@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_event_date_value:
+          expose:
+            description: ''
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+  page:
+    display_options:
+      title: 'MESSAGES POUR LA JOURNÉE MONDIALE DE LA FAUNE SAUVAGE 2022'

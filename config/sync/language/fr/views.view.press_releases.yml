@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      title: 'Communiqués de Presse'
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Montre plus'
+  block_1:
+    display_options:
+      block_description: 'Communiqués de Presse'

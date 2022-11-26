@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      title: Événements
+  upcoming:
+    display_options:
+      title: 'Événements à Venir'
+      use_more_text: 'Voir Plus D''événements'
+  listing:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Voir Plus D''événements'

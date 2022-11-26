@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      title: Eventos
+  upcoming:
+    display_options:
+      title: 'Próximos Eventos'
+      use_more_text: 'Ver Más Eventos'
