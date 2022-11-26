@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      title: 'MENSAJES PARA EL DÍA MUNDIAL DE LA VIDA SILVESTRE 2022'
+      filters:
+        field_event_date_value:
+          expose:
+            description: ''
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+  page:
+    display_options:
+      title: 'MENSAJES PARA EL DÍA MUNDIAL DE LA VIDA SILVESTRE 2022'
