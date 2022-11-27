@@ -22,27 +22,27 @@
 
 {% if content %}
   {% if wrapper %}
-      {{ content }}
+    {{ content }}
   {% else %}
     {% if 'none' not in container.type and 'before' in container.position %}
       <div class="{{ container.type }}">
-    {% endif %}
-      <div{{ attributes.addClass(classes) }}>
+      {% endif %}
+      <div{{attributes.addClass(classes)}}>
         {% if 'none' not in container.type and 'after' in container.position %}
           <div class="{{ container.type }}">
-          {% if not (extra_classes is empty) %}
-            <div class="{{ extra_classes }}">
-          {% endif %}
-        {% endif %}
-          {{ content }}
-        {% if 'none' not in container.type and 'after' in container.position %}
-          {% if not (extra_classes is empty) %}
-            </div>
-          {% endif %}
+            {% if not (extra_classes is empty) %}
+              <div class="{{ extra_classes }}">
+              {% endif %}
+            {% endif %}
+            {{ content }}
+            {% if 'none' not in container.type and 'after' in container.position %}
+              {% if not (extra_classes is empty) %}
+              </div>
+            {% endif %}
           </div>
         {% endif %}
       </div>
-    {% if 'none' not in container.type and 'before' in container.position %}
+      {% if 'none' not in container.type and 'before' in container.position %}
       </div>
     {% endif %}
   {% endif %}
