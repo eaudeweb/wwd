@@ -47,6 +47,10 @@ class GeolocationConstraintValidator extends ConstraintValidator implements Cont
     if ($entity->bundle() !== 'events') {
       return;
     }
+    // Wait for country validation first.
+    if (empty($entity->get('field_country')->entity)) {
+      return;
+    }
     // Grab all address fields and validate the location.
     $query['street'] = $entity->get('field_street_address')->getString();
     $query['country'] = $entity->get('field_country')->entity->getName();

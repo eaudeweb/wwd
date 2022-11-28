@@ -374,6 +374,22 @@ class WwdThemeProcess implements ContainerInjectionInterface {
   }
 
   /**
+   * Preprocess status messages.
+   *
+   * @see hook_preprocess_status_messages()
+   */
+  public function preprocessStatusMessages(&$variables) {
+    $node = $this->routeMatch->getParameter('node');
+    if ($node instanceof Node) {
+      $url = $node->toUrl()->toString();
+      // Disable status messages for event confirm page.
+      if (preg_match("/\bevent-registration-confirmation\b/i", $url)) {
+        $variables['message_list'] = [];
+      }
+    }
+  }
+
+  /**
    * Preprocess page.
    *
    * @see hook_preprocess_page()
