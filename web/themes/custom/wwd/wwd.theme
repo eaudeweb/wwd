@@ -116,6 +116,15 @@ function wwd_preprocess_page_title(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK().
+ */
+function wwd_preprocess_status_messages(&$variables) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(WwdThemeProcess::class)
+    ->preprocessStatusMessages($variables);
+}
+
+/**
  * Implements hook_preprocess_links__language_block().
  */
 function wwd_preprocess_links__language_block(&$variables) {
@@ -127,4 +136,3 @@ function wwd_preprocess_links__language_block(&$variables) {
     $variables['links'][$language]['text_attributes']['class'][] = "is-active";
   }
 }
-
