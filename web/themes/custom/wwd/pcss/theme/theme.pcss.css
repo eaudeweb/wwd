@@ -98,8 +98,7 @@ p:last-child {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    opacity: .5;
-
+    opacity: 0.5;
   }
   & .carousel-indicators [data-bs-target].active {
     opacity: 1;
@@ -111,7 +110,7 @@ p:last-child {
   opacity: 1;
 
   &:hover .arrow {
-    fill:var(--c-primary);
+    fill: var(--c-primary);
   }
 }
 
@@ -233,7 +232,12 @@ p:last-child {
     inset-inline: 0;
     top: 0;
     height: 1px;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   & .addtoany_list {
@@ -266,7 +270,7 @@ p:last-child {
 }
 
 .modal {
-  --modal-color: #3B4B68;
+  --modal-color: #3b4b68;
 
   & .modal-header {
     border-color: var(--c-gray-200);
@@ -340,8 +344,8 @@ p:last-child {
   background: linear-gradient(90deg, var(--bg-c1) 0%, var(--bg-c2) 100%);
   border-radius: 8px;
   border: 2px solid var(--c-white);
-  box-shadow: 0px 0px 5px 0px rgba(128,128,128,0.7);
-  opacity: .7;
+  box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.7);
+  opacity: 0.7;
 }
 
 #layout-builder-modal input.form-color {
@@ -350,12 +354,26 @@ p:last-child {
   background: linear-gradient(90deg, var(--bg-c1) 0%, var(--bg-c2) 100%);
   border-radius: 8px;
   border: 2px solid var(--c-white);
-  box-shadow: 0px 0px 5px 0px rgba(128,128,128,0.7);
-  opacity: .7;
+  box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.7);
+  opacity: 0.7;
   padding: 0;
   overflow: hidden;
 }
 
 .text-white {
   --headings-color: var(--c-white);
+}
+
+.field--type-text-with-summary {
+  & img {
+    margin-bottom: 8px;
+
+    &.align-left {
+      margin-right: 1rem;
+    }
+
+    &.align-right {
+      margin-left: 1rem;
+    }
+  }
 }

@@ -98,8 +98,7 @@ p:last-child {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    opacity: .5;
-
+    opacity: 0.5;
   }
 
 .carousel .carousel-indicators .active[data-bs-target] {
@@ -112,7 +111,7 @@ p:last-child {
 }
 
 .carousel-control-prev:hover .arrow, .carousel-control-next:hover .arrow {
-    fill:var(--c-primary);
+    fill: var(--c-primary);
   }
 
 .carousel-control-prev {
@@ -232,7 +231,12 @@ p:last-child {
     right: 0;
     top: 0;
     height: 1px;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
 .region-footer-bottom .addtoany_list {
@@ -262,7 +266,7 @@ p:last-child {
   }
 
 .modal {
-  --modal-color: #3B4B68;
+  --modal-color: #3b4b68;
 }
 
 .modal .modal-header {
@@ -331,8 +335,8 @@ p:last-child {
   background: linear-gradient(90deg, var(--bg-c1) 0%, var(--bg-c2) 100%);
   border-radius: 0.5rem;
   border: 2px solid var(--c-white);
-  box-shadow: 0px 0px 5px 0px rgba(128,128,128,0.7);
-  opacity: .7;
+  box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.7);
+  opacity: 0.7;
 }
 
 #layout-builder-modal input.form-color {
@@ -341,8 +345,8 @@ p:last-child {
   background: linear-gradient(90deg, var(--bg-c1) 0%, var(--bg-c2) 100%);
   border-radius: 0.5rem;
   border: 2px solid var(--c-white);
-  box-shadow: 0px 0px 5px 0px rgba(128,128,128,0.7);
-  opacity: .7;
+  box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.7);
+  opacity: 0.7;
   padding: 0;
   overflow: hidden;
 }
@@ -350,3 +354,20 @@ p:last-child {
 .text-white {
   --headings-color: var(--c-white);
 }
+
+.field--type-text-with-summary img {
+    margin-bottom: 0.5rem;
+  }
+
+.field--type-text-with-summary img.align-left {
+      margin-right: 1rem;
+    }
+
+.field--type-text-with-summary img.align-right {
+      margin-left: 1rem;
+    }
+
+.field--type-text-with-summary img.align-center {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
