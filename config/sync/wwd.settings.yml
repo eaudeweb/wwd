@@ -30,7 +30,7 @@ sr__container_nav_additional: none
 sr__container_position_nav_additional: before
 sr__extra_class_nav_additional: ''
 sr__clean_highlighted: 0
-sr__class_highlighted: py-3
+sr__class_highlighted: ''
 sr__container_highlighted: container
 sr__container_position_highlighted: before
 sr__extra_class_highlighted: ''
