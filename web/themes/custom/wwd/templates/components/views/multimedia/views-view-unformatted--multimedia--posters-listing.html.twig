@@ -9,9 +9,8 @@
 
 <div class="grid-multimedia">
   {% for row in rows %}
-    <div{{ row.attributes.addClass('list-item', 'list-item-' ~ loop.index) }}>
+    <div{{row.attributes.addClass('list-item','list-item-'~loop.index)}}>
       {{- row.content -}}
     </div>
   {% endfor %}
 </div>
-

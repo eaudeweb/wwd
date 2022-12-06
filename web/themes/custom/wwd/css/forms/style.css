@@ -141,8 +141,50 @@
     overflow: hidden;
   }
 
+.user-login-form .description + .form-item {
+    margin-top: 1.5rem;
+  }
+
+.user-pass .form-item + p {
+    color: var(--color-label);
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
 @media only screen and (min-width: 45rem) {
   .node-events-form {
     --nef-f-p: 3.75rem;
   }
 }
+
+.search-form .container-inline {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+.search-form .search-advanced,
+  .search-form .search-help-link {
+    display: none;
+  }
+
+.search-form .form-type-search label {
+      display: none;
+    }
+
+.search-form .form-search {
+    min-height: 2.75rem;
+    border: 1px solid var(--c-primary);
+    border-radius: 50rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+.search-form ~ h2 {
+    margin-bottom: 2rem;
+  }
+
+.search-form ~ ol {
+    margin-bottom: 2rem;
+  }
