@@ -403,7 +403,7 @@ display:
           columns: 12
           automatic_width: false
           alignment: horizontal
-          row_class_custom: 'row g-3'
+          row_class_custom: 'row g-3 infinite-scroll-row'
           row_class_default: false
           col_class_custom: 'col-xl-3 col-md-4 col-sm-6'
           col_class_default: false

@@ -1,5 +1,6 @@
-.node-events-form {
-  --color-label: #6C7D9E;
+.node-events-form,
+.user-login-form {
+  --color-label: #6c7d9e;
   --fs-label: 16px;
   --nef-f-p: 10px;
 
@@ -31,7 +32,7 @@
     }
 
     &:not(fieldset):not(.form-type-vertical-tabs) {
-      background-color: #F0F4F9;
+      background-color: #f0f4f9;
       min-height: 56px;
       padding-inline: 16px;
       padding-block: 8px;
@@ -49,7 +50,7 @@
     background: transparent;
     max-height: 0px;
     opacity: 0;
-    transition: .3s all linear;
+    transition: 0.3s all linear;
     outline: none;
   }
 
@@ -63,7 +64,7 @@
     font-size: var(--fs-label);
     color: var(--color-label);
     line-height: 18px;
-    transition: .3s all linear;
+    transition: 0.3s all linear;
   }
 
   & .from-item--border {
@@ -73,7 +74,7 @@
     width: 0;
     height: 2px;
     background-color: transparent;
-    transition: .3s all linear;
+    transition: 0.3s all linear;
   }
 
   & .form-actions {
@@ -106,7 +107,7 @@
       cursor: pointer;
     }
 
-    & input[type=file] {
+    & input[type="file"] {
       max-height: inherit !important;
       vertical-align: middle;
       direction: rtl;
@@ -115,7 +116,7 @@
       font-size: 12px;
 
       &::file-selector-button {
-        background-image: url('../../img/icons/upload-img.svg');
+        background-image: url("../../img/icons/upload-img.svg");
         background-repeat: no-repeat;
         background-position: center right;
         background-size: 24px;
@@ -150,11 +151,11 @@
   & .form-control:valid {
     &:not(:focus):not(:placeholder-shown) {
       & + label {
-        color: #6C7D9E;
+        color: #6c7d9e;
 
         & + .from-item--border {
           width: 100%;
-          background-color: #76BE9E;
+          background-color: #76be9e;
         }
       }
     }
@@ -163,11 +164,11 @@
   & .form-control:invalid {
     &:not(:focus):not(:placeholder-shown) {
       & + label {
-        color: #D8514B;
+        color: #d8514b;
 
         & + .from-item--border {
           width: 100%;
-          background-color: #D8514B;
+          background-color: #d8514b;
         }
       }
     }
