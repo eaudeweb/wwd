@@ -382,3 +382,24 @@ p:last-child {
     }
   }
 }
+
+.pager__items {
+  margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+
+  & .pager__item.active {
+    & .btn-outline-primary {
+      --btn-bg: var(--c-primary);
+      --btn-color: var(--c-white);
+    }
+  }
+
+  & .btn-outline-primary:hover {
+    --btn-hover-bg: var(--c-primary);
+    --btn-hover-border-color: var(--btn-hover-bg);
+  }
+}

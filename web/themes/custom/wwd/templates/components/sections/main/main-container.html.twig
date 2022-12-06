@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * WWD Theme Component.
+ */
+#}
+
+{% set main_content = create_attribute() %}
+{%
+  set main_content_classes = [
+    'container',
+    'g-0',
+  ]
+%}
+
+{{ page.breadcrumb }}
+{{ page.hero }}
+{{ page.highlighted }}
+
+<div{{main_content.addclass(main_content_classes)}}>
+  {{ page.content }}
+</div>
