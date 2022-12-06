@@ -1,29 +1,28 @@
-.node-events-form,
-.user-login-form {
+.node-events-form {
   --color-label: #6c7d9e;
   --fs-label: 1rem;
   --nef-f-p: 0.625rem;
-}form.node-events-form, form.user-login-form {
+}form.node-events-form {
     background-color: var(--c-white);
     padding: var(--nef-f-p);
     width: max(75%, 50rem);
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }form.node-events-form .description, form.user-login-form .description {
+  }form.node-events-form .description {
       color: var(--color-label);
       margin-top: 0.25rem;
       font-size: 0.75rem;
       padding-left: 1rem;
       padding-right: 1rem;
-    }.node-events-form .form-item, .user-login-form .form-item {
+    }.node-events-form .form-item {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-  }.node-events-form .form-item.form-type-textarea label, .user-login-form .form-item.form-type-textarea label {
+  }.node-events-form .form-item.form-type-textarea label {
         --fs-label: 0.75rem;
         margin-bottom: 0.5rem;
-      }.node-events-form .form-item:not(fieldset):not(.form-type-vertical-tabs), .user-login-form .form-item:not(fieldset):not(.form-type-vertical-tabs) {
+      }.node-events-form .form-item:not(fieldset):not(.form-type-vertical-tabs) {
       background-color: #f0f4f9;
       min-height: 3.5rem;
       padding-left: 1rem;
@@ -31,9 +30,9 @@
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       justify-content: center;
-    }.node-events-form .form-wrapper:not(:first-of-type), .user-login-form .form-wrapper:not(:first-of-type) {
+    }.node-events-form .form-wrapper:not(:first-of-type) {
     margin-top: 1.375rem;
-  }.node-events-form input:not(.button), .user-login-form input:not(.button) {
+  }.node-events-form input:not(.button) {
     max-width: 100%;
     border: none;
     background: transparent;
@@ -41,17 +40,17 @@
     opacity: 0;
     transition: 0.3s all linear;
     outline: none;
-  }.node-events-form textarea, .user-login-form textarea {
+  }.node-events-form textarea {
     border: none;
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
-  }.node-events-form label, .user-login-form label {
+  }.node-events-form label {
     font-size: var(--fs-label);
     color: var(--color-label);
     line-height: 1.125rem;
     transition: 0.3s all linear;
-  }.node-events-form .from-item--border, .user-login-form .from-item--border {
+  }.node-events-form .from-item--border {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -60,19 +59,19 @@
     height: 2px;
     background-color: transparent;
     transition: 0.3s all linear;
-  }.node-events-form .form-actions, .user-login-form .form-actions {
+  }.node-events-form .form-actions {
     margin-top: 1.25rem;
-  }.node-events-form .g-recaptcha, .user-login-form .g-recaptcha {
+  }.node-events-form .g-recaptcha {
     margin-top: 1.375rem;
-  }/* Temp */.node-events-form fieldset.form-item > legend, .user-login-form fieldset.form-item > legend {
+  }/* Temp */.node-events-form fieldset.form-item > legend {
       display: none;
-    }.node-events-form .form-type-managed-file, .user-login-form .form-type-managed-file {
+    }.node-events-form .form-type-managed-file {
     justify-content: flex-start !important;
-  }.node-events-form .form-type-managed-file, .user-login-form .form-type-managed-file {
+  }.node-events-form .form-type-managed-file {
     position: relative;
     flex-direction: row-reverse;
     align-items: center;
-  }.node-events-form .form-type-managed-file label, .user-login-form .form-type-managed-file label {
+  }.node-events-form .form-type-managed-file label {
       position: absolute;
       top: 0;
       right: 0;
@@ -83,15 +82,15 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-    }.node-events-form .form-type-managed-file input[type="file"], .user-login-form .form-type-managed-file input[type="file"] {
+    }.node-events-form .form-type-managed-file input[type="file"] {
       max-height: inherit !important;
-    }.node-events-form .form-type-managed-file input[type="file"], .user-login-form .form-type-managed-file input[type="file"] {
+    }.node-events-form .form-type-managed-file input[type="file"] {
       vertical-align: middle;
       direction: rtl;
       color: var(--color-label);
       font-weight: 500;
       font-size: 0.75rem;
-    }.node-events-form .form-type-managed-file input[type="file"]::file-selector-button, .user-login-form .form-type-managed-file input[type="file"]::file-selector-button {
+    }.node-events-form .form-type-managed-file input[type="file"]::file-selector-button {
         background-image: url("data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 0C5.37239 0 0 5.37239 0 12C0 18.6276 5.37266 24 12 24C18.6273 24 24 18.6273 24 12C24 5.37239 18.6273 0 12 0ZM12 5.60009L15.2001 10.4001H13.6002L13.5999 12V15.2001H10.3998L10.4001 12V10.4001H8.80018L12 5.60009ZM18.3999 16.8V18.3999H5.59982V16.8L5.60008 13.5999H7.19999V16.8H16.8004L16.8001 13.5999H18.4L18.3999 16.8Z' fill='%236C7D9E'/%3e%3c/svg%3e");
         background-repeat: no-repeat;
         background-position: center right;
@@ -101,45 +100,43 @@
         min-width: 2rem;
         text-indent: -100vh;
         border: none;
-      }.node-events-form .form-select, .user-login-form .form-select {
+      }.node-events-form .form-select {
     background-color: transparent;
     border: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-  }.node-events-form .form-control:not(:-moz-placeholder-shown), .user-login-form .form-control:not(:-moz-placeholder-shown) {
+  }.node-events-form .form-control:not(:-moz-placeholder-shown) {
       min-height: 1.375rem;
       opacity: 1;
     }.node-events-form .form-control:focus,
-    .user-login-form .form-control:focus,
-    .node-events-form .form-control:not(:placeholder-shown),
-    .user-login-form .form-control:not(:placeholder-shown) {
+    .node-events-form .form-control:not(:placeholder-shown) {
       min-height: 1.375rem;
       opacity: 1;
-    }.node-events-form .form-control:not(:-moz-placeholder-shown) + label, .user-login-form .form-control:not(:-moz-placeholder-shown) + label {
+    }.node-events-form .form-control:not(:-moz-placeholder-shown) + label {
         --fs-label: 0.75rem;
-      }.node-events-form .form-control:focus + label, .user-login-form .form-control:focus + label, .node-events-form .form-control:not(:placeholder-shown) + label, .user-login-form .form-control:not(:placeholder-shown) + label {
+      }.node-events-form .form-control:focus + label, .node-events-form .form-control:not(:placeholder-shown) + label {
         --fs-label: 0.75rem;
-      }.node-events-form .form-control:valid:not(:focus):not(:-moz-placeholder-shown) + label, .user-login-form .form-control:valid:not(:focus):not(:-moz-placeholder-shown) + label {
+      }.node-events-form .form-control:valid:not(:focus):not(:-moz-placeholder-shown) + label {
         color: #6c7d9e;
-      }.node-events-form .form-control:valid:not(:focus):not(:placeholder-shown) + label, .user-login-form .form-control:valid:not(:focus):not(:placeholder-shown) + label {
+      }.node-events-form .form-control:valid:not(:focus):not(:placeholder-shown) + label {
         color: #6c7d9e;
-      }.node-events-form .form-control:valid:not(:focus):not(:-moz-placeholder-shown) + label + .from-item--border, .user-login-form .form-control:valid:not(:focus):not(:-moz-placeholder-shown) + label + .from-item--border {
+      }.node-events-form .form-control:valid:not(:focus):not(:-moz-placeholder-shown) + label + .from-item--border {
           width: 100%;
           background-color: #76be9e;
-        }.node-events-form .form-control:valid:not(:focus):not(:placeholder-shown) + label + .from-item--border, .user-login-form .form-control:valid:not(:focus):not(:placeholder-shown) + label + .from-item--border {
+        }.node-events-form .form-control:valid:not(:focus):not(:placeholder-shown) + label + .from-item--border {
           width: 100%;
           background-color: #76be9e;
-        }.node-events-form .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) + label, .user-login-form .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) + label {
+        }.node-events-form .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) + label {
         color: #d8514b;
-      }.node-events-form .form-control:invalid:not(:focus):not(:placeholder-shown) + label, .user-login-form .form-control:invalid:not(:focus):not(:placeholder-shown) + label {
+      }.node-events-form .form-control:invalid:not(:focus):not(:placeholder-shown) + label {
         color: #d8514b;
-      }.node-events-form .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) + label + .from-item--border, .user-login-form .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) + label + .from-item--border {
+      }.node-events-form .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) + label + .from-item--border {
           width: 100%;
           background-color: #d8514b;
-        }.node-events-form .form-control:invalid:not(:focus):not(:placeholder-shown) + label + .from-item--border, .user-login-form .form-control:invalid:not(:focus):not(:placeholder-shown) + label + .from-item--border {
+        }.node-events-form .form-control:invalid:not(:focus):not(:placeholder-shown) + label + .from-item--border {
           width: 100%;
           background-color: #d8514b;
-        }.node-events-form .g-recaptcha, .user-login-form .g-recaptcha {
+        }.node-events-form .g-recaptcha {
     max-width: 100%;
     overflow: hidden;
   }
