@@ -20,17 +20,16 @@
   {{ title_suffix }}
 
   <div class="container">
-    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
+    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-stretch align-items-lg-center">
       {% if label %}
-        <h2{{title_attributes.addClass('h1', 'mb-4', 'mb-lg-0')}}>
+        <h2{{title_attributes.addClass('h1','mb-4','mb-lg-0')}}>
           {{- label -}}
         </h2>
       {% endif %}
 
-      <div{{ content_attributes.addClass('block__content') }}>
+      <div{{content_attributes.addClass('block__content')}}>
         {{ content }}
       </div>
     </div>
   </div>
 </div>
-

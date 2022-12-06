@@ -1,13 +1,13 @@
 .block--img-text {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr minmax(18.75rem, .65fr);
+  grid-template-rows: 1fr minmax(18.75rem, 0.65fr);
 }.block--img-text .block--info {
     grid-area: 1 / 1 / 2 / 2;
     padding-top: 3.125rem;
     padding-bottom: 3.125rem;
-    padding-right: .75rem;
-    padding-left: .75rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
     max-width: var(--container);
     margin-left: auto;
     margin-right: auto;
