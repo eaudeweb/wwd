@@ -19,7 +19,13 @@
   var pagerSelector = '[data-drupal-views-infinite-scroll-pager]';
 
   // The selector for the automatic pager.
-  var contentWrapperSelector = '[data-drupal-views-infinite-scroll-content-wrapper]';
+  if($('[data-drupal-views-infinite-scroll-content-wrapper] .infinite-scroll-row').length) {
+    console.log('merge');
+    var contentWrapperSelector = '[data-drupal-views-infinite-scroll-content-wrapper] .infinite-scroll-row';
+  } else {
+    var contentWrapperSelector = '[data-drupal-views-infinite-scroll-content-wrapper]';
+  }
+
 
   // The event and namespace that is bound to window for automatic scrolling.
   var scrollEvent = 'scroll.views_infinite_scroll';

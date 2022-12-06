@@ -9,12 +9,7 @@
 
 {% if links -%}
   <div class="dropdown">
-    <button
-      class="btn btn-round d-flex align-items-center justify-content-center"
-      type="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
+    <button class="btn btn-round d-flex align-items-center justify-content-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       {%- for item in links -%}
         {%- if 'is-active' in item.text_attributes.class -%}
           {{- item.attributes.hreflang -}}
@@ -22,13 +17,13 @@
       {%- endfor -%}
     </button>
 
-    <ul{{ attributes.addClass('dropdown-menu', 'dropdown-menu-end') }}>
+    <ul{{attributes.addClass('dropdown-menu','dropdown-menu-xl-end')}}>
       {%- for item in links -%}
-        <li{{ item.attributes }}>
+        <li{{item.attributes}}>
           {%- if item.link -%}
             {{ item.link }}
           {%- elseif item.text_attributes -%}
-            <span{{ item.text_attributes }}>{{ item.text }}</span>
+            <span{{item.text_attributes}}>{{ item.text }}</span>
           {%- else -%}
             {{ item.text }}
           {%- endif -%}
