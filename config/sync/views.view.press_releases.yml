@@ -218,10 +218,10 @@ display:
         type: grid
         options:
           uses_fields: false
-          columns: 50
+          columns: 500
           automatic_width: false
           alignment: horizontal
-          row_class_custom: 'row g-3'
+          row_class_custom: 'row g-3 infinite-scroll-row'
           row_class_default: false
           col_class_custom: col-12
           col_class_default: false
