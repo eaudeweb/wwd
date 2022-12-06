@@ -4,10 +4,21 @@
 }
 
 .grid-partners {
-  --bs-columns: 3;
+  --bs-columns: 2;
 }
 
-@media (min-width: 36rem) {
+.grid-partners img {
+    max-width: 100%;
+    height: auto;
+  }
+
+@media (min-width: 24rem) {
+  .grid-partners {
+    --bs-columns: 3;
+  }
+}
+
+@media (min-width: 48rem) {
   .grid-partners {
     --bs-columns: 5;
   }
