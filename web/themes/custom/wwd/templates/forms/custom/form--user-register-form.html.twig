@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * WWD Theme implementation for a 'form' element.
+ */
+#}
+
+{{ attach_library('wwd/c--forms') }}
+
+<form{{attributes.addClass('node-events-form')}}>
+  {{ children }}
+</form>

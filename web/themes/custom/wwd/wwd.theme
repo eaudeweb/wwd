@@ -65,6 +65,10 @@ function wwd_theme_suggestions_alter(
       }
       break;
 
+    case 'form':
+      $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+      break;
+
     default:
       break;
   }
