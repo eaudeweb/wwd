@@ -162,10 +162,14 @@
 .search-form .container-inline {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
 .search-form .search-advanced,
-  .search-form .search-help-link {
+  .search-form .search-help-link,
+  .search-form .from-item--border {
     display: none;
   }
 
@@ -179,6 +183,7 @@
     border-radius: 50rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    width: 100%;
   }
 
 .search-form ~ h2 {

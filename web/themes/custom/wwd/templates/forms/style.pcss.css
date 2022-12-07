@@ -203,10 +203,14 @@
 .search-form {
   & .container-inline {
     padding-block: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   & .search-advanced,
-  & .search-help-link {
+  & .search-help-link,
+  & .from-item--border {
     display: none;
   }
 
@@ -221,6 +225,7 @@
     border: 1px solid var(--c-primary);
     border-radius: 50rem;
     padding-inline: 1.5rem;
+    width: 100%;
   }
 
   & ~ h2 {

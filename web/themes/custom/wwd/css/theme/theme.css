@@ -73,7 +73,7 @@ p:last-child {
     align-items: flex-start;
   }
 
-  .block__content {
+  .b-header-social .block__content {
     min-height: 6.1875rem;
   }
 
