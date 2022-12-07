@@ -239,6 +239,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -263,7 +264,8 @@ display:
           metatags: {  }
           tokenize: false
         simple_sitemap_display_extender: {  }
-        ajax_history: {  }
+        ajax_history:
+          enable_history: false
       block_description: 'Press releases'
     cache_metadata:
       max-age: -1
