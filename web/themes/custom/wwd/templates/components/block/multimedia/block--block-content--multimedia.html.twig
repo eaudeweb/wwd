@@ -22,16 +22,16 @@
 {%
   set grid_classes = [
     'grid-multimedia-' ~ multimedia_type,
-    multimedia_type == 'logos' ? 'col',
+    content.referenced_nodes|length > 3 ? 'gm--big' : 'gm--small',
     multimedia_type == 'logos' ? 'col',
   ]
 %}
 
 {% if label -%}
   {%- set wLabel -%}
-    <h2{{title_attributes.addClass('h1', 'block--title')}}>
-      {{- label -}}
-    </h2>
+  <h2{{title_attributes.addClass('h1','block--title')}}>
+    {{- label -}}
+  </h2>
   {%- endset -%}
 {%- endif %}
 
@@ -46,7 +46,7 @@
         {{- content.body -}}
       </div>
 
-      <div{{ grid_att.addClass(grid_classes) }}>
+      <div{{grid_att.addClass(grid_classes)}}>
         <div class="row g-0">
           {% for type, rows in content.referenced_nodes %}
             {% for row in rows %}
@@ -59,8 +59,8 @@
   {% else %}
     {{- wLabel -}}
 
-    <div{{ content_attributes.addClass('block__content') }}>
-      <div{{ grid_att.addClass(grid_classes) }}>
+    <div{{content_attributes.addClass('block__content')}}>
+      <div{{grid_att.addClass(grid_classes)}}>
         {% for type, rows in content.referenced_nodes %}
           {% for row in rows %}
             <div class="list-item litem-{{ type }}">{{ row|render }}</div>
@@ -86,4 +86,3 @@
     </div>
   {% endif %}
 </div>
-

@@ -15,10 +15,10 @@
   ]
 %}
 
-<article{{ attributes.addClass(classes) }}>
+<article{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title_suffix }}
-  <a href="{{ content.field_link.0|render }}">
-    {{ content.field_media_image }}
+  <a href="{{ content.field_link.0|render }}" target="_blank">
+    {{- content.field_media_image -}}
   </a>
 </article>
