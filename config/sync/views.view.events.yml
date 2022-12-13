@@ -12,6 +12,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_custom_cache_tag
     - views_infinite_scroll
 id: events
 label: Events
@@ -131,8 +132,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: 'node_list:events'
       empty: {  }
       sorts:
         created:
@@ -581,6 +583,7 @@ display:
           metatags: {  }
           tokenize: false
         simple_sitemap_display_extender: {  }
+        ajax_history: {  }
     cache_metadata:
       max-age: -1
       contexts:

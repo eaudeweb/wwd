@@ -56,7 +56,7 @@
             map.flyTo({
               center: [$found.lng, $found.lat],
               essential: true,
-              zoom: 6,
+              zoom: 4,
             });
           } else {
             // Fly to default location.

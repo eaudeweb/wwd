@@ -14,6 +14,7 @@ use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 
 /**
  * Defines a class for form API hooks.
@@ -24,6 +25,7 @@ class FormOperations implements ContainerInjectionInterface {
 
   use MessengerTrait;
   use StringTranslationTrait;
+  use DependencySerializationTrait;
 
   /**
    * Current user.
