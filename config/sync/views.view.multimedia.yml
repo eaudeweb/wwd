@@ -12,6 +12,7 @@ dependencies:
     - node
     - options
     - user
+    - views_custom_cache_tag
     - views_infinite_scroll
 id: multimedia
 label: Multimedia
@@ -96,8 +97,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: 'node_list:multimedia'
       empty: {  }
       sorts:
         created:

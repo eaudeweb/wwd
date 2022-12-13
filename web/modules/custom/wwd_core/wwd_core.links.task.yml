@@ -13,4 +13,13 @@ wwd_core.country_coords_form:
   title: 'Coords Import'
   base_route: wwd_core.content_settings
 
+wwd_core.message_listing_order:
+  route_name: view.messages.page_1
+  title: 'Messages Listing Order'
+  base_route: wwd_core.content_settings
+
+wwd_core.message_slider_order:
+  route_name: view.messages.page_2
+  title: 'Messages Slider Order'
+  base_route: wwd_core.content_settings
 

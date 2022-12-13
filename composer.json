@@ -34,6 +34,7 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/ctools": "^4.0",
+        "drupal/draggableviews": "^2.1",
         "drupal/entity_embed": "^1.2",
         "drupal/field_group": "^3.3",
         "drupal/field_permissions": "^1.2",
@@ -65,6 +66,7 @@
         "drupal/twig_tweak": "^3.2",
         "drupal/vefl": "^3.0",
         "drupal/views_ajax_history": "^1.6",
+        "drupal/views_custom_cache_tag": "^1.2",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/views_show_more": "^1.0",
         "drupal/views_year_filter": "^2.0",
@@ -166,7 +168,8 @@
                 "Issue #3054197: Cannot add a custom block with a block description already used": "https://www.drupal.org/files/issues/2022-03-02/3054197-23.patch",
                 "Issue #2946333: Allow synced Layout override Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2022-07-25/2946333-288.patch",
                 "Issue #3047022: Layout builder fails to assign inline block access dependencies": "https://www.drupal.org/files/issues/2021-11-16/2786735.patch",
-                "Issue #3101231: Fix multilingual site's layout edit context issue": "https://www.drupal.org/files/issues/2022-02-16/layout-builder-translation-issue-3101231-34.patch"
+                "Issue #3101231: Fix multilingual site's layout edit context issue": "https://www.drupal.org/files/issues/2022-02-16/layout-builder-translation-issue-3101231-34.patch",
+                "Issue #2987548: Locale serialization failures": "https://www.drupal.org/files/issues/2022-02-01/local-lookup-fix-serialization-2987548-15.patch"
             },
             "drupal/paragraphs": {
                 "Issue #3090200: Access control issues": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
