@@ -8,8 +8,8 @@
     & .mapbox--link {
       width: var(--container);
       margin-inline: auto;
-      padding-right: .75rem;
-      padding-left: .75rem;
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
     }
 
     & .mapbox--bgg {
@@ -24,7 +24,7 @@
 
     & .mapbox--bgg-link {
       grid-area: 2 / 1 / 3 / 2;
-      background: linear-gradient(91.26deg, #0ABAFF 0%, #1BF1FF 99.76%);
+      background: linear-gradient(91.26deg, #0abaff 0%, #1bf1ff 99.76%);
     }
 
     & .mapbox--link {
@@ -81,7 +81,7 @@
         inset: 0;
         left: -26vw;
         z-index: -1;
-        background: linear-gradient(91.26deg, #0ABAFF 0%, #1BF1FF 99.76%);
+        background: linear-gradient(91.26deg, #0abaff 0%, #1bf1ff 99.76%);
       }
     }
 
@@ -128,12 +128,25 @@
     right: 50px;
     bottom: 40px;
   }
+
+  & .mapboxgl-popup {
+    top: 50%;
+    position: absolute;
+    right: 0px;
+    transform: translate(20px, -50%) !important;
+  }
+
+  & .mapboxgl-popup-tip {
+    display: none;
+  }
 }
 
 @media (min-width: 62rem) {
   .block--mapbox {
     &.filter {
-      grid-template-columns: auto calc(var(--container) * 42 / 100) calc(var(--container) * 58 / 100) auto;
+      grid-template-columns:
+        auto calc(var(--container) * 42 / 100) calc(var(--container) * 58 / 100)
+        auto;
       grid-template-rows: 1fr auto;
 
       & .intro-info {

@@ -13,12 +13,10 @@ dependencies:
     - field.field.node.multimedia.field_media_image
     - field.field.node.multimedia.field_type
     - field.field.node.multimedia.field_video
-    - image.style.max_1300x1300
     - node.type.multimedia
   module:
     - layout_builder
     - link
-    - media
     - user
 third_party_settings:
   layout_builder:
@@ -42,13 +40,11 @@ content:
     weight: 2
     region: content
   field_media_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: max_1300x1300
-      image_loading:
-        attribute: lazy
+      view_mode: posters
+      link: false
     third_party_settings: {  }
     weight: 1
     region: content

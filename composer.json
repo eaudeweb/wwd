@@ -40,6 +40,7 @@
         "drupal/field_permissions": "^1.2",
         "drupal/field_states_ui": "^2.0",
         "drupal/file_download_link": "^2.0",
+        "drupal/focal_point": "^1.5",
         "drupal/geocoder": "^3.31",
         "drupal/geofield": "^1.46",
         "drupal/geolocation": "^3.10",
