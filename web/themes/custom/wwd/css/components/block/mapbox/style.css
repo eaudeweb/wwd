@@ -9,8 +9,8 @@
       width: var(--container);
       margin-left: auto;
       margin-right: auto;
-      padding-right: .75rem;
-      padding-left: .75rem;
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
     }
   .block--mapbox.filter .mapbox--bgg {
       grid-area: 1 / 1 / 2 / 2;
@@ -23,7 +23,7 @@
     }
   .block--mapbox.filter .mapbox--bgg-link {
       grid-area: 2 / 1 / 3 / 2;
-      background: linear-gradient(91.26deg, #0ABAFF 0%, #1BF1FF 99.76%);
+      background: linear-gradient(91.26deg, #0abaff 0%, #1bf1ff 99.76%);
     }
   .block--mapbox.filter .mapbox--link {
       grid-area: 2 / 1 / 3 / 2;
@@ -72,7 +72,7 @@
         left: 0;
         left: -26vw;
         z-index: -1;
-        background: linear-gradient(91.26deg, #0ABAFF 0%, #1BF1FF 99.76%);
+        background: linear-gradient(91.26deg, #0abaff 0%, #1bf1ff 99.76%);
       }.block--mapbox.homepage .w--map {
       display: flex;
       flex-direction: column;
@@ -104,11 +104,21 @@
     position: absolute;
     right: 3.125rem;
     bottom: 2.5rem;
+  }.block--mapbox .mapboxgl-popup {
+    transform: translate(1.25rem, -50%) !important;
+  }.block--mapbox .mapboxgl-popup {
+    top: 50%;
+    position: absolute;
+    right: 0px;
+  }.block--mapbox .mapboxgl-popup-tip {
+    display: none;
   }
 
 @media (min-width: 62rem) {
     .block--mapbox.filter {
-      grid-template-columns: auto calc(var(--container)*42/100) calc(var(--container)*58/100) auto;
+      grid-template-columns:
+        auto calc(var(--container)*42/100) calc(var(--container)*58/100)
+        auto;
       grid-template-rows: 1fr auto;
     }
 

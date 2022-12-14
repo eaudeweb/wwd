@@ -1,0 +1,17 @@
+uuid: 17c37aa3-092f-4d0e-8a95-8fa12bb35cf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: block_image_text_xl
+label: 'Block image text xl'
+effects:
+  c2eb5b0f-5600-4656-a4cc-f97957a9a02a:
+    uuid: c2eb5b0f-5600-4656-a4cc-f97957a9a02a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 950
+      height: 550
+      crop_type: focal_point

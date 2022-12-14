@@ -1,0 +1,43 @@
+uuid: b1a705e8-5805-4456-9243-c6a0693577ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.block_image_text_lg
+    - image.style.block_image_text_md
+    - image.style.block_image_text_sm
+    - image.style.block_image_text_xl
+    - image.style.block_image_text_xs
+    - image.style.block_image_text_xxl
+  theme:
+    - wwd
+id: block_image_text
+label: 'Block Image text'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: block_image_text_xxl
+    breakpoint_id: wwd.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: block_image_text_xl
+    breakpoint_id: wwd.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: block_image_text_lg
+    breakpoint_id: wwd.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: block_image_text_md
+    breakpoint_id: wwd.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: block_image_text_sm
+    breakpoint_id: wwd.sm
+    multiplier: 1x
+breakpoint_group: wwd
+fallback_image_style: block_image_text_xs
