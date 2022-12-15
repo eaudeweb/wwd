@@ -9,3 +9,6 @@
 //     }
 //   };
 // })(jQuery, Drupal, once);
+
+const navHeight = document.getElementById('header').offsetHeight;
+document.documentElement.style.setProperty('--scroll-padding', navHeight + 'px');

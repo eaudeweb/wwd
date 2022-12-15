@@ -1,0 +1,10 @@
+uuid: 6f177788-5db7-4efb-98cb-5e981f303610
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.block_image_text
+label: 'Block Image text'
+targetEntityType: media
+cache: true

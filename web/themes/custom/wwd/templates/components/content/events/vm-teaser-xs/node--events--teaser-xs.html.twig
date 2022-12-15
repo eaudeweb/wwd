@@ -15,7 +15,7 @@
   ]
 %}
 
-<article{{ attributes.addClass(classes) }}>
+<article{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title_suffix }}
 
@@ -35,11 +35,7 @@
 
     {{- content.field_organizer -}}
 
-    <a
-      href={{ content.field_link.0 }}
-      class="btn btn-link btn-arrow me-auto"
-      type="button"
-    >
+    <a href="/events-list#eventId-{{ node.id }}" class="btn btn-link btn-arrow me-auto" type="button">
       {{ "Read More"|t }}
     </a>
   </div>

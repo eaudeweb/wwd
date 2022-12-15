@@ -20,7 +20,6 @@
 
   // The selector for the automatic pager.
   if($('[data-drupal-views-infinite-scroll-content-wrapper] .infinite-scroll-row').length) {
-    console.log('merge');
     var contentWrapperSelector = '[data-drupal-views-infinite-scroll-content-wrapper] .infinite-scroll-row';
   } else {
     var contentWrapperSelector = '[data-drupal-views-infinite-scroll-content-wrapper]';
