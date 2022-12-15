@@ -12,7 +12,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - link
-    - media
     - text
 id: block_content.img_text.default
 targetEntityType: block_content
@@ -48,13 +47,11 @@ content:
     weight: 3
     region: content
   field_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      view_mode: block_image_text
+      link: false
     third_party_settings: {  }
     weight: 2
     region: content

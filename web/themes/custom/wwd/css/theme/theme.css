@@ -2,6 +2,10 @@
   --navbar-mh: 5rem;
 }
 
+html {
+  scroll-padding-top: var(--scroll-padding, 90px);
+}
+
 .grid-flex {
   --gf--width: 20rem;
 

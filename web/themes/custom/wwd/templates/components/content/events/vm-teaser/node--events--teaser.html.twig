@@ -15,7 +15,9 @@
   ]
 %}
 
-<article{{ attributes.addClass(classes) }}>
+<div id="eventId-{{ node.id }}" class="visually-hiden anchor-link"></div>
+
+<article{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title_suffix }}
 
@@ -38,14 +40,7 @@
         {{ text|length > 160 ? text|slice(0, 160)|raw ~ '...' : text|raw }}
       </div>
 
-      <button
-        class="btn btn-link btn-plus mt-2 ms-auto collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#nid{{ node.id }}"
-        aria-expanded="true"
-        aria-controls="collapseOne"
-      >
+      <button class="btn btn-link btn-plus mt-2 ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nid{{ node.id }}" aria-expanded="true" aria-controls="collapseOne">
         {{ "Read More"|t }}
       </button>
     </div>
