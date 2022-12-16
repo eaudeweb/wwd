@@ -28,10 +28,12 @@
 
     & .litem-1 {
       grid-area: item-2;
+      max-height: 300px;
     }
 
     & .litem-2 {
       grid-area: item-3;
+      max-height: 300px;
     }
 
     & .litem-3 {
