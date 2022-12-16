@@ -25,6 +25,7 @@
 
     .grid-multimedia-posters .litem-0 {
       grid-area: item-1;
+      max-height: 18.75rem;
     }
 
     .grid-multimedia-posters .litem-1 {
@@ -34,7 +35,6 @@
 
     .grid-multimedia-posters .litem-2 {
       grid-area: item-3;
-      max-height: 18.75rem;
     }
 
     .grid-multimedia-posters .litem-3 {
