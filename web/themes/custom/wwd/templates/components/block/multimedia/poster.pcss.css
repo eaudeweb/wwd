@@ -24,6 +24,7 @@
 
     & .litem-0 {
       grid-area: item-1;
+      max-height: 300px;
     }
 
     & .litem-1 {
@@ -33,7 +34,6 @@
 
     & .litem-2 {
       grid-area: item-3;
-      max-height: 300px;
     }
 
     & .litem-3 {
