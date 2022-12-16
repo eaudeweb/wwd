@@ -29,10 +29,12 @@
 
     .grid-multimedia-posters .litem-1 {
       grid-area: item-2;
+      max-height: 18.75rem;
     }
 
     .grid-multimedia-posters .litem-2 {
       grid-area: item-3;
+      max-height: 18.75rem;
     }
 
     .grid-multimedia-posters .litem-3 {
