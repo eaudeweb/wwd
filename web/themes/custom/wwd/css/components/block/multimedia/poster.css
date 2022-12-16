@@ -9,7 +9,7 @@
   }
 
     .grid-multimedia-posters.gm--big {
-      grid-template-rows: 0.5fr 0.5fr 1fr;
+      grid-template-rows: max(18.75rem) max(18.75rem) auto;
       grid-template-areas:
         "item-1 item-1 item-2"
         "item-1 item-1 item-3"
@@ -29,12 +29,10 @@
 
     .grid-multimedia-posters .litem-1 {
       grid-area: item-2;
-      max-height: 18.75rem;
     }
 
     .grid-multimedia-posters .litem-2 {
       grid-area: item-3;
-      max-height: 18.75rem;
     }
 
     .grid-multimedia-posters .litem-3 {
