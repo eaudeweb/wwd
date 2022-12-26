@@ -1,0 +1,131 @@
+uuid: dfd1d446-fe08-4206-81d5-1bf19082bb0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.poster_teaser_vertical
+    - field.field.node.multimedia.body
+    - field.field.node.multimedia.field_ai_logo
+    - field.field.node.multimedia.field_eps_logo
+    - field.field.node.multimedia.field_flickr_link
+    - field.field.node.multimedia.field_image
+    - field.field.node.multimedia.field_link
+    - field.field.node.multimedia.field_media_image
+    - field.field.node.multimedia.field_poster_format
+    - field.field.node.multimedia.field_type
+    - field.field.node.multimedia.field_video
+    - node.type.multimedia
+  module:
+    - file
+    - layout_builder
+    - link
+    - options
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.multimedia.poster_teaser_vertical
+targetEntityType: node
+bundle: multimedia
+mode: poster_teaser_vertical
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ai_logo:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_eps_logo:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_flickr_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_media_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_poster_format:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  addtoany: true
+  langcode: true
+  links: true

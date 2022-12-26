@@ -4,3 +4,9 @@
     max-width: 100%;
     height: auto;
   }
+
+.node--multimedia--poster-teaser-square img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }

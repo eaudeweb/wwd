@@ -1,9 +1,9 @@
-uuid: 34dd251d-dd16-4304-90d0-1184182e50f5
+uuid: 25dd2792-eca2-4fa3-b676-30ed75916a05
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.poster_teaser
+    - core.entity_view_mode.node.poster_teaser_square
     - field.field.node.multimedia.body
     - field.field.node.multimedia.field_ai_logo
     - field.field.node.multimedia.field_eps_logo
@@ -23,20 +23,20 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: node.multimedia.poster_teaser
+id: node.multimedia.poster_teaser_square
 targetEntityType: node
 bundle: multimedia
-mode: poster_teaser
+mode: poster_teaser_square
 content:
   field_link:
     type: link
     label: hidden
     settings:
-      trim_length: null
-      url_only: true
-      url_plain: true
-      rel: '0'
-      target: '0'
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
     weight: 1
     region: content
@@ -44,7 +44,7 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: poster_horizontal
+      view_mode: poster_square
       link: false
     third_party_settings: {  }
     weight: 0
