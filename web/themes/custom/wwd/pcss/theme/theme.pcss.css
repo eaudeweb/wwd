@@ -407,3 +407,7 @@ p:last-child {
     --btn-hover-border-color: var(--btn-hover-bg);
   }
 }
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}

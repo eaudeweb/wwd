@@ -1,1 +1,14 @@
+.vc-offcial-posters {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+@media screen and (max-width: 48rem) {
+  .block--multimedia--posters {
+    & .col-12 {
+      margin-top: 1.5rem;
+    }
+  }
+}
