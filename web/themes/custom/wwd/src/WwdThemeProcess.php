@@ -181,11 +181,8 @@ class WwdThemeProcess implements ContainerInjectionInterface {
           $displayId = 'posters_block';
           $viewMode = 'poster_teaser';
           $view = Views::getView($viewName);
-          // $view->setArguments($args);
-          $view->setDisplay($displayId);
-          $view->execute();
           // Get the results of the view.
-          $view_result['posters'] = $view->result;
+          $variables['posters'] = $view->buildRenderable($displayId, []);
           break;
 
         case 'videos':
