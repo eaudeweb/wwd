@@ -32,7 +32,7 @@
       justify-content: center;
     }.node-events-form .form-wrapper:not(:first-of-type) {
     margin-top: 1.375rem;
-  }.node-events-form input:not(.button) {
+  }.node-events-form input:not(.button):not(.form-check-input) {
     max-width: 100%;
     border: none;
     background: transparent;
@@ -139,6 +139,14 @@
         }.node-events-form .g-recaptcha {
     max-width: 100%;
     overflow: hidden;
+  }.node-events-form .form-type-checkbox {
+    justify-content: flex-start !important;
+  }.node-events-form .form-type-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }.node-events-form .form-check-input {
+    margin-right: 0.5em;
   }
 
 .user-login-form .description + .form-item {

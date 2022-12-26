@@ -7,14 +7,17 @@
 
 {{ attach_library('wwd/c--page-banner') }}
 
+
 <div class="page-banner pb-region {{ video_cta ? 'page-banner-cta' }}" style="{{ use_gradient ? background_gradient|render|striptags|trim : ''}}">
-  <div class="page-banner--background">
+  <div class="page-banner--background{{ video_cta or use_gradient or video_url or media_url ? '': ' bgg-blue' }}">
+
     {% if use_gradient == 0 %}
       {% if video_url %}
         <video autoplay muted loop id="video-background" class="d-none d-sm-block">
           <source src="{{- video_url|render|striptags|trim -}}" type="video/mp4">
         </video>
       {% endif %}
+
       {% if media_url %}
         <img class="d-block {{ video_url is not empty ? 'd-sm-none' : '' }}" src="{{- media_url|render|striptags|trim -}}"/>
       {% endif %}
@@ -31,7 +34,6 @@
     </div>
 
     {{- page.header -}}
-
     {{- video_cta -}}
   </div>
 </div>
