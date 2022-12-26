@@ -9,7 +9,7 @@ id: node.events.field_consent
 field_name: field_consent
 entity_type: node
 bundle: events
-label: 'I have read and agree to the <a target="_blank" href="/guidelines-event-submissions">guidelines for submission</a>'
+label: 'I have read and agree to the <a target="_blank" href="/en/guidelines-event-submissions">guidelines for submission</a>'
 description: ''
 required: true
 translatable: true
