@@ -122,6 +122,10 @@ class FormOperations implements ContainerInjectionInterface {
             ];
           }
         }
+        $currentLangCode = $this->languageManager->getCurrentLanguage()->getId();
+        // Change link according to current language for consent checkbox.
+        $consentLabel = &$form['field_consent']['widget']['value']['#title'];
+        $consentLabel = str_replace('href="/en', 'href="/' . $currentLangCode, $consentLabel);
         // Remove link to event description for anonymous users.
         if ($isAnonymous) {
           $form['field_link']['widget'][0]['uri']['#description'] = NULL;
