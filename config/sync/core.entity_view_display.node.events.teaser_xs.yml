@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser_xs
     - field.field.node.events.field_city
+    - field.field.node.events.field_consent
     - field.field.node.events.field_country
     - field.field.node.events.field_email
     - field.field.node.events.field_event_date
@@ -106,6 +107,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_consent: true
   field_email: true
   field_event_info: true
   field_geolocation: true

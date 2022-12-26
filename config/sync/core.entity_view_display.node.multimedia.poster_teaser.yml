@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.multimedia.field_image
     - field.field.node.multimedia.field_link
     - field.field.node.multimedia.field_media_image
+    - field.field.node.multimedia.field_poster_format
     - field.field.node.multimedia.field_type
     - field.field.node.multimedia.field_video
     - node.type.multimedia
   module:
     - layout_builder
     - link
+    - options
     - user
 third_party_settings:
   layout_builder:
@@ -47,6 +49,13 @@ content:
       link: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_poster_format:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   links:
     settings: {  }

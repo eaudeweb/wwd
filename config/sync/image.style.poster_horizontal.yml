@@ -1,0 +1,17 @@
+uuid: 1a0bb4fb-915a-4392-9077-90b4594bbeb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: poster_horizontal
+label: 'Poster horizontal xl'
+effects:
+  bb2f29d7-8221-4549-a352-70b90f7cf6ee:
+    uuid: bb2f29d7-8221-4549-a352-70b90f7cf6ee
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 488
+      crop_type: focal_point

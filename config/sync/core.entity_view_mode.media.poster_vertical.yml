@@ -1,0 +1,10 @@
+uuid: 3ef51a96-bb8e-44dd-8022-fd76b78f0a84
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.poster_vertical
+label: 'Poster vertical'
+targetEntityType: media
+cache: true

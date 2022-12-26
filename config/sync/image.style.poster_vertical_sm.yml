@@ -1,0 +1,17 @@
+uuid: 6f5f68db-4b5c-4707-ab39-d541490828e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: poster_vertical_sm
+label: 'Poster vertical sm'
+effects:
+  2f13c9a7-dcd1-4d79-ae1d-c631ec626672:
+    uuid: 2f13c9a7-dcd1-4d79-ae1d-c631ec626672
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 1016
+      crop_type: focal_point

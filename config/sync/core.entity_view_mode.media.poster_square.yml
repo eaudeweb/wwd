@@ -1,0 +1,10 @@
+uuid: 0f4cd1bb-67c5-4658-9b58-76ebe37f1b32
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.poster_square
+label: 'Poster square'
+targetEntityType: media
+cache: true

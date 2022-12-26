@@ -1,0 +1,10 @@
+uuid: 1ed48990-7ba7-4dad-997e-4ffcb720a1cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.poster_horizontal
+label: 'Poster horizontal'
+targetEntityType: media
+cache: true

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.multimedia.field_image
     - field.field.node.multimedia.field_link
     - field.field.node.multimedia.field_media_image
+    - field.field.node.multimedia.field_poster_format
     - field.field.node.multimedia.field_type
     - field.field.node.multimedia.field_video
     - node.type.multimedia
@@ -94,6 +95,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_poster_format:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_type:
     type: list_default

@@ -1,0 +1,10 @@
+uuid: 8bb96756-fa5e-4982-bd1b-c9b0ebf5caa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.poster_teaser_vertical
+label: 'Poster Teaser vertical'
+targetEntityType: node
+cache: true

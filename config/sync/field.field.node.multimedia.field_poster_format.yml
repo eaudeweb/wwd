@@ -1,0 +1,23 @@
+uuid: 2761804c-a9db-4085-a43e-c5b906c682af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poster_format
+    - node.type.multimedia
+  module:
+    - options
+id: node.multimedia.field_poster_format
+field_name: field_poster_format
+entity_type: node
+bundle: multimedia
+label: 'Poster format'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: horizontal
+default_value_callback: ''
+settings: {  }
+field_type: list_string
