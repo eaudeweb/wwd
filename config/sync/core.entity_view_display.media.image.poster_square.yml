@@ -1,0 +1,45 @@
+uuid: f8db753a-8cf0-46b7-8155-f54c007a2e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.poster_square
+    - field.field.media.image.field_media_image
+    - image.style.large
+    - media.type.image
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.poster_square
+targetEntityType: media
+bundle: image
+mode: poster_square
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

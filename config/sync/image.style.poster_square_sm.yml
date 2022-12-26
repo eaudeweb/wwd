@@ -1,0 +1,17 @@
+uuid: cdccd008-6ab5-49dd-ad30-4f1f787570d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: poster_square_sm
+label: 'Poster square sm'
+effects:
+  534c7a73-1264-40d2-b97f-000d485a530f:
+    uuid: 534c7a73-1264-40d2-b97f-000d485a530f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1360
+      height: 1016
+      crop_type: focal_point

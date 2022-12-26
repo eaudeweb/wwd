@@ -1,0 +1,10 @@
+uuid: 04b5b629-e68e-498b-af4e-a6a98b5984be
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.poster_teaser_square
+label: 'Poster Teaser square'
+targetEntityType: node
+cache: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.events.field_city
+    - field.field.node.events.field_consent
     - field.field.node.events.field_country
     - field.field.node.events.field_email
     - field.field.node.events.field_event_date
@@ -40,6 +41,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_consent:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_country:
     type: options_select

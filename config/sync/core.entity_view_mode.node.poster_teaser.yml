@@ -5,6 +5,6 @@ dependencies:
   module:
     - node
 id: node.poster_teaser
-label: 'Poster Teaser'
+label: 'Poster Teaser horizontal'
 targetEntityType: node
 cache: true
