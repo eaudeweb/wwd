@@ -1,0 +1,11 @@
+version: "3.0"
+
+sites:
+  default:
+    sql:
+      dump:
+        location: web/sync/database.sql
+    files:
+      dump:
+        location: web/sync/files.tar.gz
+

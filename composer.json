@@ -79,7 +79,11 @@
         "eaudeweb/heavy-lifter": "^2.0",
         "geocoder-php/nominatim-provider": "^5.6",
         "npm-asset/dompurify": "^2.4",
-        "oomphinc/composer-installers-extender": "^2.0"
+        "oomphinc/composer-installers-extender": "^2.0",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "files": ["load.environment.php"]
     },
     "conflict": {
         "drupal/drupal": "*"
